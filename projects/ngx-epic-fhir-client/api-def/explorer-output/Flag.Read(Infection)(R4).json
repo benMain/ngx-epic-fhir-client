@@ -1,0 +1,191 @@
+{
+    "Id": 10201,
+    "Description": "<p>This web service retrieves high-level infection information from a patient's chart. An infection might be a laboratory-confirmed infection or colonization, such as influenza or methicillin-resistant Staphylococcus aureus, or a placeholder for a suspected infection, such as respiratory rule-out or suspected COVID-19.</p>\n\n<p>Like the Condition (Infection) web service, this web service evaluates infection (INF) records, but it returns only a brief overview of key information about those records, such as whether they are active and when they were resolved. If you need to return more detailed information, use the Condition (Infection) web service instead. </p>",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Flag/{ID}",
+    "SampleRequest": "/api/FHIR/R4/Flag/eFbv9LL28ikxKaUddrVLr-IVq.wf.k7BR.QGEqq8hfEM3",
+    "SampleResponse": "{\n    \"resourceType\": \"Flag\",\n    \"id\": \"eFbv9LL28ikxKaUddrVLr-IVq.wf.k7BR.QGEqq8hfEM3\",\n    \"extension\": [\n        {\n            \"valueReference\": {\n                \"reference\": \"Condition/erEuPdnY2OKSUOSC-Y9M6DQ3\",\n                \"display\": \"Influenza\"\n            },\n            \"url\": \"http://hl7.org/fhir/StructureDefinition/flag-detail\"\n        }\n    ],\n    \"status\": \"active\",\n    \"category\": [\n        {\n            \"coding\": [\n                {\n                    \"system\": \"http://open.epic.com/FHIR/StructureDefinition/flag-category\",\n                    \"code\": \"infection\",\n                    \"display\": \"Infection Flag\"\n                },\n                {\n                    \"system\": \"http://loinc.org\",\n                    \"code\": \"75323-6\",\n                    \"display\": \"condition\"\n                }\n            ],\n            \"text\": \"Infection Flag\"\n        }\n    ],\n    \"code\": {\n        \"coding\": [\n            {\n                \"system\": \"urn:oid:1.2.840.114350.1.13.861.1.7.4.698084.10375\",\n                \"code\": \"3\",\n                \"display\": \"Influenza\"\n            }\n        ],\n        \"text\": \"Influenza\"\n    },\n    \"subject\": {\n        \"reference\": \"Patient/exnWmPch0AyoUp7ZBplVf.Q3\",\n        \"display\": \"DXL, Contacts\"\n    },\n    \"period\": {\n        \"start\": \"2021-07-27\"\n    }\n}",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 436969,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 436970,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Flag FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 8740
+                }
+            },
+            "Order": 0,
+            "TypeId": 8739
+        },
+        "ResponseRootType": {
+            "Id": 436971,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Flag": {
+                    "Id": 436972,
+                    "Name": "Flag",
+                    "AltName": null,
+                    "Type": "Flag",
+                    "Description": "A single instance of a Flag resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 437039,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The Epic category ID for the infection, labeled “infection,” and the LOINC code for the infection, labeled “condition.”",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "code": {
+                            "Id": 437051,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The diagnosis code for the infection.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "encounter": {
+                            "Id": 437099,
+                            "Name": "encounter",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "A reference to the Encounter resource. Used only for encounter-level infections.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "flag-detail": {
+                            "Id": 437006,
+                            "Name": "extension",
+                            "AltName": "flag-detail",
+                            "Type": "Extension",
+                            "Description": "A reference to the Condition (Infection) resource.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 348
+                        },
+                        "id": {
+                            "Id": 436973,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The Flag FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8743
+                        },
+                        "period": {
+                            "Id": 437094,
+                            "Name": "period",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "The period during which the infection was marked as active.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {
+                                "end": {
+                                    "Id": 437097,
+                                    "Name": "end",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Date when the infection was marked as resolved.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 372
+                                },
+                                "start": {
+                                    "Id": 437096,
+                                    "Name": "start",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Date when the infection was added.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 371
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 369
+                        },
+                        "status": {
+                            "Id": 436976,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The status of the infection: active or inactive.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8746
+                        },
+                        "subject": {
+                            "Id": 437063,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "A reference to the Patient resource.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 8742
+                }
+            },
+            "Order": 10000,
+            "TypeId": 8741
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

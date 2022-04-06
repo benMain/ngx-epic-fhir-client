@@ -1,0 +1,56 @@
+{
+    "Id": 10170,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/BulkRequest/{BulkRequestID}",
+    "SampleRequest": "https://hostname/instance/api/FHIR/BulkRequest/00000000001755C1C7DB51C0082DA988",
+    "SampleResponse": "X-Progress:Searched 0 of 2 patients\n\n{\n    \"transactionTime\": \"2021-06-18T17:46:48Z\",\n    \"request\": \"https://hostname/instance/api/FHIR/r4/group/eK33625FpEX2HcV6nEGdHqdTeCkY1QCJ.81zzQqHDLmE3/$export\",\n    \"requiresAccessToken\": \"true\",\n    \"output\": [\n        {\n            \"type\": \"ImagingStudy\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/e1pvyleJ0NztMM4PA1YDVdg3\"\n        },\n        {\n            \"type\": \"List\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/e5jN74CQQ1fGusGOFwJVezA3\"\n        },\n        {\n            \"type\": \"Location\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/e79-6-iPihDniYzmry.zPpg3\"\n        },\n        {\n            \"type\": \"RequestGroup\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eAdwSFa8TR.bXUZrG.nD9fA3\"\n        },\n        {\n            \"type\": \"Practitioner\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eC0CVmiyf.k0-TNjcGHNTwg3\"\n        },\n        {\n            \"type\": \"DiagnosticReport\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eF5hWLcmU-WSBvOTMBaRvYQ3\"\n        },\n        {\n            \"type\": \"AllergyIntolerance\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eFbW3bq2TXRjuDm4.WkMbvQ3\"\n        },\n        {\n            \"type\": \"ServiceRequest\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eGRht0LE5A34bk8kSqpRhJg3\"\n        },\n        {\n            \"type\": \"Device\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eGepFATqcLlWwdx4DxmZxnA3\"\n        },\n        {\n            \"type\": \"DocumentReference\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eICboFx8dNhKANtvx7UBa9A3\"\n        },\n        {\n            \"type\": \"Coverage\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eJ4FoyrJAbCZupmuYl5rRUA3\"\n        },\n        {\n            \"type\": \"Observation\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eOghaxFx49w2E8YmbUIBD5Q3\"\n        },\n        {\n            \"type\": \"Medication\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eRnS3FHQSwnLeokq3Z4g7rQ3\"\n        },\n        {\n            \"type\": \"Condition\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eUxJlEInckpalXFg5-9jvsg3\"\n        },\n        {\n            \"type\": \"Encounter\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eXnUByVf6AlRoEE.LbaDarQ3\"\n        },\n        {\n            \"type\": \"Immunization\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eabiPckPn7UBVwzcneGevJg3\"\n        },\n        {\n            \"type\": \"Patient\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/echvPfT5KlPJXLpeScmPW0w3\"\n        },\n        {\n            \"type\": \"Organization\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/ehCgaoyDZePF93zTHL6Hq2Q3\"\n        },\n        {\n            \"type\": \"CarePlan\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/elR3VhkbmFuKWvq6rute3Nw3\"\n        },\n        {\n            \"type\": \"CareTeam\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/en9rceYLW0Dydk9NPoHbJDg3\"\n        },\n        {\n            \"type\": \"Procedure\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eoOLSy2lNRRPwV6v4vMhzUQ3\"\n        },\n        {\n            \"type\": \"MedicationRequest\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/eoR.pXFHgJN4BU9Rl7RL2SQ3\"\n        },\n        {\n            \"type\": \"Goal\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/esbPYn8MPrjxOuVRDphn4fQ3\"\n        },\n        {\n            \"type\": \"Specimen\",\n            \"url\": \"https://hostname/instance/api/FHIR/BulkRequest/10777542D05D11EB89CD6D045785C67F/etMnbdLTa1e1XWP.STt08dQ3\"\n        }\n    ],\n    \"error\": []\n}\n",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 414364,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "BulkRequestID": {
+                    "Id": 163132,
+                    "Name": "BulkRequestID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Adverse Event FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5680
+                }
+            },
+            "Order": 0,
+            "TypeId": 8840
+        },
+        "ResponseRootType": {
+            "Id": 414365,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {},
+            "Order": 10000,
+            "TypeId": 8841
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

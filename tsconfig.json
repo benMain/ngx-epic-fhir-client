@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-epic-fhir-client": [
+        "dist/ngx-epic-fhir-client/ngx-epic-fhir-client",
+        "dist/ngx-epic-fhir-client"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

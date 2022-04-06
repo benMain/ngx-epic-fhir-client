@@ -1,0 +1,216 @@
+{
+    "Id": 10083,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Organization?_id={_id}",
+    "SampleRequest": "/api/FHIR/R4/Organization?_id=eeNokRCBmmrYFeeVdV8l5fO9o5IYP-YzoXHEV2zjGzXM3",
+    "SampleResponse": "{\n\"resourceType\":\"Organization\",\n\"id\":\"eVXaQEpI-bfnEpBZYx7cX-OlRoRlWu76sVuuoMFQNWJ43\",\n\"extension\":[\n{\n\"valueCodeableConcept\":{\n\"coding\":[\n{\n\"system\":\"urn:oid:1.2.840.114350.1.72.1.7.7.10.688867.4150\",\n\"code\":\"10\",\n\"display\":\"Cardiology\"\n}\n]\n},\n\"url\":\"https://open.epic.com/fhir/extensions/specialty\"\n}\n],\n\"active\":true,\n\"name\":\"Test Department Display\",\n\"alias\":[\n\"sam 1\",\n\"sammy 2\"\n],\n\"telecom\":[\n{\n\"system\":\"phone\",\n\"value\":\"9978546312\",\n\"use\":\"work\"\n}\n],\n\"address\":[\n{\n\"line\":[\n\"4990234 23\"\n],\n\"city\":\"Anchorage\",\n\"state\":\"Alaska\",\n\"postalCode\":\"99577\",\n\"country\":\"USA\"\n}\n],\n\"partOf\":{\n\"reference\":\"Organization/e5WeMsGzHP5.qOXg0J5FpSm0pMcAVCQkRk-stl8PK6Z83\",\n\"display\":\"Test Location\"\n}\n}",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 321766,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {},
+            "Order": 0,
+            "TypeId": 6791
+        },
+        "ResponseRootType": {
+            "Id": 321767,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 321768,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 321835,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": null,
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 321846,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "ResourceContainer",
+                                    "Description": null,
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Organization": {
+                                            "Id": 321847,
+                                            "Name": "Organization",
+                                            "AltName": null,
+                                            "Type": "Organization",
+                                            "Description": "An instance of the R4 Organization FHIR resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "active": {
+                                                    "Id": 321851,
+                                                    "Name": "active",
+                                                    "AltName": null,
+                                                    "Type": "Boolean",
+                                                    "Description": "Whether the organization's record is in active use.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5218
+                                                },
+                                                "address": {
+                                                    "Id": 321939,
+                                                    "Name": "address",
+                                                    "AltName": null,
+                                                    "Type": "Address",
+                                                    "Description": "Address information.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5189
+                                                },
+                                                "alias": {
+                                                    "Id": 321853,
+                                                    "Name": "alias",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The synonyms for the organization.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5220
+                                                },
+                                                "id": {
+                                                    "Id": 321848,
+                                                    "Name": "id",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>The Organization FHIR ID.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5215
+                                                },
+                                                "identifier": {
+                                                    "Id": 321884,
+                                                    "Name": "identifier",
+                                                    "AltName": null,
+                                                    "Type": "Identifier",
+                                                    "Description": "<p>Organization identifier.</p>\n<p>The following organization ID types are supported for organizations in the Netherlands:</p>\n<table width=\"100%\" unselectable=\"on\">\n<thead><tr><th width=\"33%\"><p>ID Type</p></th><th width=\"33%\"><p>System OID</p></th><th width=\"34%\"><p>System URL returned in Identifier.system</p></th></tr></thead>\n<tbody><tr><td width=\"33%\"><p>URA</p></td><td width=\"33%\"><p>2.16.528.1.1007.3.3</p></td><td width=\"34%\">http://fhir.nl/fhir/NamingSystem/ura</td></tr><tr><td width=\"33%\"><p>AGB</p></td><td width=\"33%\"><p>2.16.840.1.113883.2.4.6.1</p></td><td width=\"34%\">http://fhir.nl/fhir/NamingSystem/agb-z</td></tr><tr><td width=\"33%\"><p>UZOVI</p></td><td width=\"33%\"><p>2.16.840.1.113883.2.4.6.4</p></td><td width=\"34%\">http://fhir.nl/fhir/NamingSystem/uzovi</td></tr></tbody>\n</table>",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 361
+                                                },
+                                                "name": {
+                                                    "Id": 321852,
+                                                    "Name": "name",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The name used for the organization.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5219
+                                                },
+                                                "partOf": {
+                                                    "Id": 321958,
+                                                    "Name": "partOf",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "For a department, the revenue location ID.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 373
+                                                },
+                                                "specialty": {
+                                                    "Id": 321882,
+                                                    "Name": "extension",
+                                                    "AltName": "specialty",
+                                                    "Type": "Extension",
+                                                    "Description": "The organization's specialities.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 348
+                                                },
+                                                "telecom": {
+                                                    "Id": 321927,
+                                                    "Name": "telecom",
+                                                    "AltName": null,
+                                                    "Type": "ContactPoint",
+                                                    "Description": "The phone number, fax number, and emergency phone number.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5131
+                                                },
+                                                "type": {
+                                                    "Id": 321915,
+                                                    "Name": "type",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "<p>The place of service type. This element supports the following extensible bindings:</p>\n<ul>\n<li>organizationType: The organization type.</li>\n<li>departmentSpecialty: The department specialty</li>\n</ul>",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 5214
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 360
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 416
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 405
+                }
+            },
+            "Order": 10000,
+            "TypeId": 6792
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

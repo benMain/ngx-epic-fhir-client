@@ -1,0 +1,154 @@
+{
+    "Id": 10122,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Observation/{ID}",
+    "SampleRequest": "/api/FHIR/r4/Observation/eK.YYu4CGX.bgDi.i48Ry0rwjGC3r1K2R6gMLL-cvPyTD.BkmsblugeJXH0AR7lq43",
+    "SampleResponse": "{\n&nbsp;&nbsp;&nbsp;&nbsp;\"resourceType\":&nbsp;\"Observation\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"id\":&nbsp;\"eK.YYu4CGX.bgDi.i48Ry0rwjGC3r1K2R6gMLL-cvPyTD.BkmsblugeJXH0AR7lq43\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;\"final\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"category\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"coding\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"system\":&nbsp;\"http://open.epic.com/FHIR/StructureDefinition/observation-category\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;\"functional-mental-status\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"Functional&nbsp;and&nbsp;Mental&nbsp;Status\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"coding\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"system\":&nbsp;\"http://snomed.info/sct\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;\"118228005\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"Functional&nbsp;finding\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"coding\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"system\":&nbsp;\"http://snomed.info/sct\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;\"384821006\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"Mental&nbsp;state,&nbsp;behavior&nbsp;and/or&nbsp;psychosocial&nbsp;function&nbsp;finding\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"text\":&nbsp;\"Body&nbsp;Movement&nbsp;in&nbsp;Desired&nbsp;Range\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"subject\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"reference\":&nbsp;\"Patient/enoCp373txQSghUte78RDIQ3\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"FHIR,&nbsp;Automation\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"effectivePeriod\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"start\":&nbsp;\"2021-05-04\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"end\":&nbsp;\"2021-05-07\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"valueCodeableConcept\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"text\":&nbsp;\"Progressing\"\n&nbsp;&nbsp;&nbsp;&nbsp;}\n}\n&nbsp;",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 381666,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 381667,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Observation FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5629
+                }
+            },
+            "Order": 0,
+            "TypeId": 5628
+        },
+        "ResponseRootType": {
+            "Id": 381668,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 381669,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "An instance of the R4 Observation resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 381806,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Type of observation. Always includes SNOMED codes 118228005 and 384821006, and custom code “functional-mental status”. ",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "code": {
+                            "Id": 381818,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The type of observation. Mapped values. If no mapping exists, only the text value is returned.   ",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "effectivePeriod": {
+                            "Id": 381923,
+                            "Name": "effectivePeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "Clinically relevant time period for the observation.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 369
+                        },
+                        "note": {
+                            "Id": 382130,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "Comments about the observation. A comment if flowsheet data or the associated note if inpatient goals. If using cascading flowsheets, the note element contains information about the additional flowsheet, if applicable, instead of the note. For example, a nurse documents flowsheet “daily activities” as abnormal, which opens flowsheet “mobility.” The nurse documents the value “highly mobile” in the flowsheet. The note element for “daily activities” is returned as “daily activities;highly mobile” if flowsheet “mobility” isn’t included in the Epic organization's configuration.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 379
+                        },
+                        "status": {
+                            "Id": 381673,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Always \"final\"",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5582
+                        },
+                        "subject": {
+                            "Id": 381830,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Who the observation is about. Reference to the patient resource.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "valueCodeableConcept": {
+                            "Id": 382034,
+                            "Name": "valueCodeableConcept",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Result of the observation",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 5578
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5630
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

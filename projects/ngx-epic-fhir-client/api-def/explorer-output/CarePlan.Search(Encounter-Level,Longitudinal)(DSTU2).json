@@ -1,0 +1,279 @@
+{
+    "Id": 5,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/careplan.html\" data-drive-link-file-url=\"1\">FHIR CarePlan resource</a> is a broad container for summarizing the plan of treatment for a patient. It includes links to the Condition resource (the patient&#39;s long term Problem List) and the Goal resource (the patient&#39;s longitudinal goals) as well as in-line detail about upcoming appointments, referral orders, and upcoming orders. The CarePlan resource is designed for provider planning and documentation, not patient interaction. This resource is also designed for stating specific activities related to a single patient, rather than generic protocols for condition treatment (a Protocol resource will be defined in a later version of FHIR). By default, only the patient&#39;s longitudinal CarePlan is returned. However, encounter-level CarePlans can also be requested. These encounter-level CarePlans include narrative content, such as patient instructions, and assassment and plan of treatment notes that are not associated with any particular condition.   </p>      <p>        The CarePlan resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Assessment and Plan of Treatment.         </p>                <p>    The Search interaction enables the client to query for the care plan for a given patient. The client, having established    the patient in question, now wishes to retrieve the plan of treatment for the patient. </p>       <div class=\"alert alert-info\">    <strong>Note:</strong> To ensure clinical safety for a patient, searches filtered with a <code>date</code> search parameter will return all active and future activities in addition to other data returned in the search.   </div>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/CarePlan?category={category}&patient={patient}&subject={subject}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/CarePlan?patient=TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"1\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/CarePlan?patient=TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/CarePlan/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/CarePlan/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;CarePlan&gt;</p><p>&lt;id value=\"TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fhir A Szitta\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;addresses&gt;</p><p>&lt;display value=\"Accident caused by a hypodermic needle\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TXxz.Vy8p6WP.GswNN9p0hgB\" /&gt;</p><p>&lt;/addresses&gt;</p><p>&lt;addresses&gt;</p><p>&lt;display value=\"Thalassemia-hemoglobin E disease\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TnGb-TNBPS8vDZqCh2pzfpQB\" /&gt;</p><p>&lt;/addresses&gt;</p><p>&lt;addresses&gt;</p><p>&lt;display value=\"Fabry disease\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TaREX5Mn41apJYQE4ZSLI3QB\" /&gt;</p><p>&lt;/addresses&gt;</p><p>&lt;addresses&gt;</p><p>&lt;display value=\"Hypertension\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TYvkTGqSpTsiKXJ6ubSrWuwB\" /&gt;</p><p>&lt;/addresses&gt;</p><p>&lt;addresses&gt;</p><p>&lt;display value=\"Anxiety\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TwzE0drZah1wfVRK.VehJqQB\" /&gt;</p><p>&lt;/addresses&gt;</p><p>&lt;goal&gt;</p><p>&lt;display value=\"Weight (lb) &amp;lt; 72.6 kg\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TsAFp7YTvFPY-.xQTSNH2LAB\" /&gt;</p><p>&lt;/goal&gt;</p><p>&lt;goal&gt;</p><p>&lt;display value=\"Blood Pressure &amp;lt; 120/80\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/T02q1MgA4yhd83CsNr4HJfwB\" /&gt;</p><p>&lt;/goal&gt;</p><p>&lt;goal&gt;</p><p>&lt;display value=\"Exercise 3x per week (30 min per time)\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TbTyIhidjA.4YdHp1G9xVAQB\" /&gt;</p><p>&lt;/goal&gt;</p><p>&lt;goal&gt;</p><p>&lt;display value=\"Reduce calorie intake to 2000 calories per day\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TFbH0CKUCgWA6xXjqXq2PuAB\" /&gt;</p><p>&lt;/goal&gt;</p><p>&lt;activity&gt;</p><p>&lt;detail&gt;</p><p>&lt;prohibited value=\"false\" /&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"encounter\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.4.642.1.63\" /&gt;</p><p>&lt;code value=\"encounter\" /&gt;</p><p>&lt;display value=\"encounter\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"FHIRCarePlanDetailCategory\" /&gt;</p><p>&lt;code value=\"encounter\" /&gt;</p><p>&lt;display value=\"encounter\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;scheduledPeriod&gt;</p><p>&lt;start value=\"2016-03-21T14:00:00\" /&gt;</p><p>&lt;end value=\"2016-03-21T14:15:00\" /&gt;</p><p>&lt;/scheduledPeriod&gt;</p><p>&lt;/detail&gt;</p><p>&lt;/activity&gt;</p><p>&lt;activity&gt;</p><p>&lt;detail&gt;</p><p>&lt;prohibited value=\"false\" /&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"procedure\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.4.642.1.63\" /&gt;</p><p>&lt;code value=\"procedure\" /&gt;</p><p>&lt;display value=\"procedure\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"FHIRCarePlanDetailCategory\" /&gt;</p><p>&lt;code value=\"referralorder\" /&gt;</p><p>&lt;display value=\"procedure\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AW REFERRAL\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;/detail&gt;</p><p>&lt;/activity&gt;</p><p>&lt;activity&gt;</p><p>&lt;detail&gt;</p><p>&lt;prohibited value=\"false\" /&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"procedure\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.4.642.1.63\" /&gt;</p><p>&lt;code value=\"procedure\" /&gt;</p><p>&lt;display value=\"procedure\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"FHIRCarePlanDetailCategory\" /&gt;</p><p>&lt;code value=\"referralorder\" /&gt;</p><p>&lt;display value=\"procedure\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMK REFERRAL TO CARDIOLOGY\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;/detail&gt;</p><p>&lt;/activity&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"Longitudinal\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.96\" /&gt;</p><p>&lt;code value=\"38717003\" /&gt;</p><p>&lt;display value=\"Longitudinal\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;/CarePlan&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 7251,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "_id": {
+                    "Id": 7252,
+                    "Name": "_id",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": null,
+                    "Optional": "Either patient or _id need to be populated, but not both",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 553
+                },
+                "category": {
+                    "Id": 7255,
+                    "Name": "category",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>Further refine which CarePlan resources are returned by category. There are two supported categories:</p>\n<ul>\n<li>38717003 returns only the Longitudinal care plan.</li>\n<li>734163000 returns encounter-level care plans.</li>\n</ul>\n<p>If no category is specified, the web service returns only the Longitudinal care plan.</p>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 556
+                },
+                "patient": {
+                    "Id": 7253,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 554
+                },
+                "subject": {
+                    "Id": 7254,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 555
+                }
+            },
+            "Order": 0,
+            "TypeId": 552
+        },
+        "ResponseRootType": {
+            "Id": 7256,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 7257,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 7264,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single entry in the resource bundle.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 7269,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "CarePlan": {
+                                            "Id": 7270,
+                                            "Name": "CarePlan",
+                                            "AltName": null,
+                                            "Type": "CarePlan",
+                                            "Description": "A single CarePlan resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "activity": {
+                                                    "Id": 7305,
+                                                    "Name": "activity",
+                                                    "AltName": null,
+                                                    "Type": "activity",
+                                                    "Description": "Action to occur as part of the plan.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "detail": {
+                                                            "Id": 7312,
+                                                            "Name": "detail",
+                                                            "AltName": null,
+                                                            "Type": "detail",
+                                                            "Description": "Description of the activity.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {
+                                                                "category": {
+                                                                    "Id": 7332,
+                                                                    "Name": "category",
+                                                                    "AltName": null,
+                                                                    "Type": "CodeableConcept",
+                                                                    "Description": "The type of activity. May be 'encounter' or 'procedure'.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 133
+                                                                },
+                                                                "code": {
+                                                                    "Id": 7340,
+                                                                    "Name": "code",
+                                                                    "AltName": null,
+                                                                    "Type": "CodeableConcept",
+                                                                    "Description": "Codes corresponding to the procedure. This may include SNOMED codes, external IDs, and procedure names.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 133
+                                                                },
+                                                                "prohibited": {
+                                                                    "Id": 7313,
+                                                                    "Name": "prohibited",
+                                                                    "AltName": null,
+                                                                    "Type": "Boolean",
+                                                                    "Description": "Flag indicating the activity should NOT be performed. Always 'false'.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 533
+                                                                },
+                                                                "scheduledPeriod": {
+                                                                    "Id": 7364,
+                                                                    "Name": "scheduledPeriod",
+                                                                    "AltName": null,
+                                                                    "Type": "Period",
+                                                                    "Description": "When this activity is scheduled to occur.",
+                                                                    "Optional": "True",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 141
+                                                                }
+                                                            },
+                                                            "Order": 10006,
+                                                            "TypeId": 532
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 531
+                                                },
+                                                "addresses": {
+                                                    "Id": 7284,
+                                                    "Name": "addresses",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The condition that the CarePlan addresses. Reference to a Condition resource.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "goal": {
+                                                    "Id": 7290,
+                                                    "Name": "goal",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The goal that the CarePlan is meant to achieve. Reference to a Goal resource.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "id": {
+                                                    "Id": 7271,
+                                                    "Name": "id",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The CarePlan FHIR ID.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 524
+                                                },
+                                                "status": {
+                                                    "Id": 7274,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Status of the CarePlan. Always returns \"Active\".",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 527
+                                                },
+                                                "subject": {
+                                                    "Id": 7275,
+                                                    "Name": "subject",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Subject of the CarePlan. Reference to a Patient resource.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 523
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 564
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 562
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 558
+                }
+            },
+            "Order": 10000,
+            "TypeId": 557
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

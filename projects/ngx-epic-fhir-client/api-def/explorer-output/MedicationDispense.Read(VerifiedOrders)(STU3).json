@@ -1,0 +1,459 @@
+{
+    "Id": 10213,
+    "Description": "<p>The read interaction enables the look up of a MedicationDispense resource by a constant server ID.</p>\n<p>This resource indicates how a medication product is to be or has been dispensed for a named person/patient. This resource records the pharmacist verification of medication dispenses, rather than the actual dispenses. <b>Note that MedicationDispense only functions for organizations in the Netherlands.</b></p>\n<p>The read interaction allows clients to store only the server ID, and with a single request, retrieve the most up-to-date result data on a patient. Read interactions typically begin with a client having previously established a relationship, often through querying for MedicationDispenses through the search interaction.</p>\n",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/STU3/MedicationDispense/{ID}",
+    "SampleRequest": "https://hostname/instance/api/FHIR/STU3/MedicationDispense/eG5E5vxkNjsZbn0WRnyH0OQ3",
+    "SampleResponse": "{\n    \"resourceType\": \"MedicationDispense\",\n    \"id\": \"eG5E5vxkNjsZbn0WRnyH0OQ3\",\n    \"meta\": {\n        \"profile\": [\n            \"http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement\"\n        ]\n    },\n    \"extension\": [\n        {\n            \"valueDateTime\": \"2021-10-19T20:38:25Z\",\n            \"url\": \"http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement-AuthoredOn\"\n        },\n        {\n            \"valuePeriod\": {\n                \"start\": \"2021-10-19T20:15:00Z\",\n                \"end\": \"2021-10-29T13:59:00Z\"\n            },\n            \"url\": \"http://nictiz.nl/fhir/StructureDefinition/zib-Medication-PeriodOfUse\"\n        },\n        {\n            \"valueDuration\": {\n                \"value\": 9.74,\n                \"unit\": \"days\",\n                \"system\": \"http://unitsofmeasure.org\",\n                \"code\": \"d\"\n            },\n            \"url\": \"http://nictiz.nl/fhir/StructureDefinition/zib-MedicationUse-Duration\"\n        }\n    ],\n    \"identifier\": [\n        {\n            \"use\": \"usual\",\n            \"system\": \"urn:oid:1.2.840.114350.1.13.51037.1.7.2.798268\",\n            \"value\": \"8657\"\n        }\n    ],\n    \"status\": \"active\",\n    \"category\": {\n        \"coding\": [\n            {\n                \"system\": \"http://snomed.info/sct\",\n                \"code\": \"422037009\",\n                \"display\": \"Provider medication administration instructions (procedure)\"\n            },\n            {\n                \"system\": \"http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category\",\n                \"code\": \"inpatient\",\n                \"display\": \"Inpatient\"\n            }\n        ]\n    },\n    \"medicationReference\": {\n        \"reference\": \"https://hostname/instance/api/FHIR/STU3/Medication/eN58HovjbaI5LGDt8VbNhSPgGtqBGimgRL.rLo70VKQ.ZR4R2t6pK0rzrBIJS4ISh3\",\n        \"display\": \"IBUPROFEN BRUISGRANULAAT 600MG\"\n    },\n    \"subject\": {\n        \"reference\": \"https://hostname/instance/api/FHIR/STU3/Patient/eRS6OIT4kpTEfLcud3Axh1w3\",\n        \"display\": \"Jansen, J.L.\"\n    },\n    \"context\": {\n        \"reference\": \"https://hostname/instance/api/FHIR/STU3/Encounter/eOC-VsvI9OdFVZHooIY1YcA3\",\n        \"display\": \"Hospital Encounter\"\n    },\n    \"authorizingPrescription\": [\n        {\n            \"reference\": \"https://hostname/instance/api/FHIR/STU3/MedicationRequest/eYdHQRllcxTxp7ldT3YMbBA3\",\n            \"display\": \"ibuprofen (BRUFEN) bruisgranulaat BRUISGRANULA 600 mg\"\n        }\n    ],\n    \"dosageInstruction\": [\n        {\n            \"extension\": [\n                {\n                    \"valueQuantity\": {\n                        \"value\": 600,\n                        \"unit\": \"mg\",\n                        \"system\": \"http://unitsofmeasure.org\",\n                        \"code\": \"mg\"\n                    },\n                    \"url\": \"https://open.epic.com/fhir/extensions/ordered-dose\"\n                }\n            ],\n            \"text\": \"600 mg, ORAAL, DAILY, 10 doses, First dose on di 19-10-21 at 15:15, Last dose on do 28-10-21 at 09:00\",\n            \"timing\": {\n                \"repeat\": {\n                    \"boundsPeriod\": {\n                        \"start\": \"2021-10-19T20:15:00Z\",\n                        \"end\": \"2021-10-29T13:59:00Z\"\n                    },\n                    \"count\": 10,\n                    \"frequency\": 1,\n                    \"period\": 1,\n                    \"periodUnit\": \"d\"\n                },\n                \"code\": {\n                    \"text\": \"once a day\"\n                }\n            },\n            \"asNeededBoolean\": false,\n            \"route\": {\n                \"coding\": [\n                    {\n                        \"system\": \"urn:oid:1.2.840.114350.1.13.51037.1.7.4.798268.7025\",\n                        \"code\": \"8\",\n                        \"display\": \"ORAAL\"\n                    }\n                ],\n                \"text\": \"ORAAL\"\n            }\n        }\n    ]\n}\n",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 446905,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 446906,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The MedicationDispense FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 10118
+                }
+            },
+            "Order": 0,
+            "TypeId": 10117
+        },
+        "ResponseRootType": {
+            "Id": 446907,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "MedicationDispense": {
+                    "Id": 446908,
+                    "Name": "MedicationDispense",
+                    "AltName": null,
+                    "Type": "MedicationDispense",
+                    "Description": "A single instance of the MedicationDispense resource. ",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "authoredOn": {
+                            "Id": 446944,
+                            "Name": "extension",
+                            "AltName": "authoredOn",
+                            "Type": "Extension",
+                            "Description": "The date of the dispense.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 14
+                        },
+                        "authorizingPrescription": {
+                            "Id": 447214,
+                            "Name": "authorizingPrescription",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the medication request that triggered the dispense.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 38
+                        },
+                        "category": {
+                            "Id": 447006,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>Type of medication dispense.</p> \n<p>Hard-coded to SNOMED code 422037009. </p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 31
+                        },
+                        "context": {
+                            "Id": 447090,
+                            "Name": "context",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the encounter associated with the dispense.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 38
+                        },
+                        "dosageInstruction": {
+                            "Id": 447368,
+                            "Name": "dosageInstruction",
+                            "AltName": null,
+                            "Type": "Dosage",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "additionalInstruction": {
+                                    "Id": 447375,
+                                    "Name": "additionalInstruction",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The instructions for the medication.",
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 31
+                                },
+                                "asNeededBoolean": {
+                                    "Id": 447373,
+                                    "Name": "asNeededBoolean",
+                                    "AltName": null,
+                                    "Type": "Boolean",
+                                    "Description": "Whether the frequency is PRN.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 4580
+                                },
+                                "doseQuantity": {
+                                    "Id": 447519,
+                                    "Name": "doseQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Amount of medication per dose. The amount of therapeutic or other substance given at one administration event.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 270
+                                },
+                                "doseRange": {
+                                    "Id": 447500,
+                                    "Name": "doseRange",
+                                    "AltName": null,
+                                    "Type": "Range",
+                                    "Description": "Parses the lower and upper end of a dose.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 268
+                                },
+                                "rateQuantity": {
+                                    "Id": 447600,
+                                    "Name": "rateQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "The high and low values or discrete value of a medication’s rate of infusion.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 270
+                                },
+                                "rateRange": {
+                                    "Id": 447581,
+                                    "Name": "rateRange",
+                                    "AltName": null,
+                                    "Type": "Range",
+                                    "Description": "The high and low values of a medication’s rate of infusion.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 268
+                                },
+                                "route": {
+                                    "Id": 447476,
+                                    "Name": "route",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The medication route.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 31
+                                },
+                                "text": {
+                                    "Id": 447371,
+                                    "Name": "text",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The medication instructions.\n\n",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 4578
+                                },
+                                "timing": {
+                                    "Id": 447387,
+                                    "Name": "timing",
+                                    "AltName": null,
+                                    "Type": "Timing",
+                                    "Description": "Element to describe timing.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "repeat": {
+                                            "Id": 447391,
+                                            "Name": "repeat",
+                                            "AltName": null,
+                                            "Type": "Repeat",
+                                            "Description": "Element indicating an event that occurs multiple times.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "boundsPeriod": {
+                                                    "Id": 447435,
+                                                    "Name": "boundsPeriod",
+                                                    "AltName": null,
+                                                    "Type": "Period",
+                                                    "Description": "The start and end dates for the medication.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 34
+                                                },
+                                                "duration": {
+                                                    "Id": 447395,
+                                                    "Name": "duration",
+                                                    "AltName": null,
+                                                    "Type": "Decimal",
+                                                    "Description": "The medication duration. If duration is expressed as a range, this element is populated with the minimum duration.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 256
+                                                },
+                                                "durationMax": {
+                                                    "Id": 447396,
+                                                    "Name": "durationMax",
+                                                    "AltName": null,
+                                                    "Type": "Decimal",
+                                                    "Description": "If duration is expressed as a range, this element is populated with the maximum duration.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 257
+                                                },
+                                                "frequency": {
+                                                    "Id": 447398,
+                                                    "Name": "frequency",
+                                                    "AltName": null,
+                                                    "Type": "Int32",
+                                                    "Description": "The frequency.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 259
+                                                },
+                                                "period": {
+                                                    "Id": 447400,
+                                                    "Name": "period",
+                                                    "AltName": null,
+                                                    "Type": "Decimal",
+                                                    "Description": "The period.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 261
+                                                },
+                                                "when": {
+                                                    "Id": 447405,
+                                                    "Name": "when",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The administration timing.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 266
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 252
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 249
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 4575
+                        },
+                        "identifier": {
+                            "Id": 446946,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "The order ID.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 26
+                        },
+                        "medicationReference": {
+                            "Id": 447030,
+                            "Name": "medicationReference",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The FHIR ID representation of the ordered medication.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 38
+                        },
+                        "meta": {
+                            "Id": 446916,
+                            "Name": "meta",
+                            "AltName": null,
+                            "Type": "Meta",
+                            "Description": "The document metadata.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "profile": {
+                                    "Id": 446920,
+                                    "Name": "profile",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/zib-AdministrationAgreement",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 13
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 9
+                        },
+                        "performer": {
+                            "Id": 447150,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "Performer",
+                            "Description": "The organization where the medication was verified.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "actor": {
+                                    "Id": 447154,
+                                    "Name": "actor",
+                                    "AltName": null,
+                                    "Type": "Reference",
+                                    "Description": "The organization where the medication was verified.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 38
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 10128
+                        },
+                        "periodOfUse": {
+                            "Id": 448685,
+                            "Name": "extension",
+                            "AltName": "periodOfUse",
+                            "Type": "Extension",
+                            "Description": "The start and end dates for the medication.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 14
+                        },
+                        "status": {
+                            "Id": 446912,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The status of the medication dispense. Can be either:</p>\n<ul>\n<li>Completed</li>\n<li>Entered-in-error</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 10124
+                        },
+                        "stopType": {
+                            "Id": 448684,
+                            "Name": "extension",
+                            "AltName": "stopType",
+                            "Type": "Extension",
+                            "Description": "Indicates whether a medication is temporarily or permanently inactive.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 14
+                        },
+                        "subject": {
+                            "Id": 447060,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The patient who the medication is being dispensed to.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 38
+                        },
+                        "usageDuration": {
+                            "Id": 448687,
+                            "Name": "extension",
+                            "AltName": "usageDuration",
+                            "Type": "Extension",
+                            "Description": "The duration of a medication’s use.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 14
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 10120
+                }
+            },
+            "Order": 10000,
+            "TypeId": 10119
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

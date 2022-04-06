@@ -1,0 +1,178 @@
+{
+    "Id": 10,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/DSTU2/diagnosticreport.html\">DiagnosticReport FHIR resource</a> represents resulted diagnostic orders and relevant data associated with the order and the patient. Supported diagnostic services include laboratory, radiology, and cardiology. If you are interested in querying for individual components from laboratory tests and text-based content, such as narratives or impressions, from radiology and cardiology results, these are returned in DiagnosticReport STU3 and R4 rather than DiagnosticReport DSTU2.</p>\n\n<p>     The DiagnosticReport resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Laboratory Tests.   </p>            \n\n<strong>Note: </strong>Some healthcare activities could be classified as either a diagnostic service or a procedure (e.g. endoscopic procedures, biopsies, etc.).&nbsp; Individual health systems can define which activities they classify for the Procedure vs. DiagnosticReport resource.&nbsp; As a result, you may see some procedures returned as a DiagnosticReport resource at some health systems, but as a Procedure resource at others.   </div> ",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/DiagnosticReport/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/ToZrehgqN3LTiFeKDB7yFJgB</p>",
+    "SampleResponse": "<p>&lt;DiagnosticReport xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;status value=\"Final result\" /&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T17:30:00\" /&gt;</p><p>&lt;issued value=\"2016-02-16T19:35:00\" /&gt;</p><p>&lt;id value=\"ToZrehgqN3LTiFeKDB7yFJgB\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"official\" /&gt;</p><p>&lt;system value=\"Epic\" /&gt;</p><p>&lt;value value=\"991774\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Placer Identifier\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ValueSet/identifier-type\" /&gt;</p><p>&lt;code value=\"PLAC\" /&gt;</p><p>&lt;display value=\"Placer Identifier\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMYLASE - Final result\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1798-8\" /&gt;</p><p>&lt;display value=\"Amylase [Enzymatic activity/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TgEfSWOatltrvRWYMDUWo8AB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: AMYLASE [U/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TkDOY1zCTUF-fwD9Nek3Vw92qgkvQaqp.wwvK842G7jIB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;/DiagnosticReport&gt;</p>",
+    "Remarks": "<p>Text based result content, such as narrative or impressions, will be represented as related Observations rather than in the text element inherited by DomainResource. If the results from a Search return medication orders, an error will be returned for those orders.</p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 1440,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 1441,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The DiagnosticReport FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 121
+                }
+            },
+            "Order": 0,
+            "TypeId": 120
+        },
+        "ResponseRootType": {
+            "Id": 1442,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "DiagnosticReport": {
+                    "Id": 1443,
+                    "Name": "DiagnosticReport",
+                    "AltName": null,
+                    "Type": "DiagnosticReport",
+                    "Description": "An instance of the DSTU2 DiagnosticReport resource.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 1468,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The service category.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "code": {
+                            "Id": 1476,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The Name/Code for this diagnostic report.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "effectiveDateTime": {
+                            "Id": 1445,
+                            "Name": "effectiveDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Clinically relevant time/time period for report.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 125
+                        },
+                        "identifier": {
+                            "Id": 1449,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "The business identifier for the report.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 129
+                        },
+                        "issued": {
+                            "Id": 1446,
+                            "Name": "issued",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "DateTime this version was released.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 126
+                        },
+                        "performer": {
+                            "Id": 1490,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Participants in producing the report. This is always a reference to the Practitioner resource.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "result": {
+                            "Id": 1499,
+                            "Name": "result",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Observations, simple or complex nested groups.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "status": {
+                            "Id": 1444,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The status of the report. You can find the list of values here: <a href=\"http://hl7.org/fhir/diagnostic-report-status\">http://hl7.org/fhir/diagnostic-report-status</a>.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 124
+                        },
+                        "subject": {
+                            "Id": 1484,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The subject of the report.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 123
+                }
+            },
+            "Order": 10000,
+            "TypeId": 122
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

@@ -1,0 +1,423 @@
+{
+    "Id": 28,
+    "Description": "<p>The Observation (Labs) resource returns component level data for lab results. Observation is not normally used on its own to access lab results, because it is limited to reading microbiology sensitivities (method level, isolate level, and sensitivity level) and textual (narrative and impression) Observations. Instead, a system queries the DiagnosticReport resource to identify all lab procedures performed for a patient. The DiagnosticReport results will contain pointers to one or more Observation resources that contain the component results. If you are familiar with HL7v2, DiagnosticReport is analogous to an OBR segment, where Observation is like an OBX segment.</p><p>For example, consider a CBC (Complete Blood Count) test. The overall CBC test would be represented as a DiagnosticReport resource. The component results (white blood cell count, red blood cell count, hemoglobin, platelet count, etc.) would each be returned in independent Observation resources.</p><p>Most systems expect to receive a LOINC code identifying each component. An Observation resource will be returned for a component result even if a LOINC code is not found, however the Observation.code property will be empty.</p><p>Some labs, such as pathology or cytology, often file a PDF, or a link to a PDF or other document as the result. We do not currently support returning PDF content or other reference pointer content via FHIR, however the test will be discoverable via a DiagnosticReport search.</p><p>For microbiology labs, the DiagnosticReport resource represents the culture. It includes references to Observation for each isolate. The isolates may then either reference an Observation for each method, or, if there is no method provided by the lab system, then the isolate will reference Observations for each sensitivity result. If methods are provided by the lab, then the method Observations will reference the sensitivity results. </p><p>The two potential structures are outlined below.</p><p>Microbiology results without methods:</p><ol><li>Culture (DiagnosticReport)<ol><li>Isolate A (Observation)<ol><li>Sensitivity results for antibiotic W (Observation)</li><li>Sensitivity results for antibiotic X (Observation)</li></ol></li><li>Isolate B (Observation)<ol><li>Sensitivity results for antibiotic W (Observation)</li><li>Sensitivity results for antibiotic X (Observation)</li></ol></li></ol></li></ol><p>Microbiology results with methods:</p><ol><li>Culture (DiagnosticReport)<ol><li>Isolate A (Observation)<ol><li>Method 1 (Observation)<br />a. Sensitivity results for antibiotic W (Observation)<br />b. Sensitivity results for antibiotic X (Observation)</li><li>Method 2 (Observation)<br />a. Sensitivity results for antibiotic W (Observation)<br />b. Sensitivity results for antibiotic X (Observation)</li></ol></li><li>Isolate B (Observation)<ol><li>Method 1 (Observation)<br />a. Sensitivity results for antibiotic W (Observation)<br />b. Sensitivity results for antibiotic X (Observation)</li><li>Method 2 (Observation)<br />a. Sensitivity results for antibiotic W (Observation)<br />b. Sensitivity results for antibiotic X (Observation)</li></ol></li></ol></li></ol>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Observation?code={code}&_id={_id}&patient={patient}&subject={subject}&category={category}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/Observation?patient=eTtVpZg2-.J.yFIP1qJbK4A3&amp;category=laboratory</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"23\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation?patient=Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB&amp;amp;code=1798-8,2951-2,2823-3,2075-0,2028-9,3094-0,2160-0,2345-7,17861-6,1863-0,48642-3\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1em6mVb6XttPcLHC4B8CxU7QB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1em6mVb6XttPcLHC4B8CxU7QB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"ANION GAP 3 IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1863-0\" /&gt;</p><p>&lt;display value=\"Anion gap 4 in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"21\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"30 mmol/L\" /&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"30\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eeV81sXgfu.Epcg4eYtTK90YB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eeV81sXgfu.Epcg4eYtTK90YB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"ANION GAP 3 IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1863-0\" /&gt;</p><p>&lt;display value=\"Anion gap 4 in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"20\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"30 mmol/L\" /&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"30\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TuHolDRplT8vByfjh7ltjfeQcN06N50yvxDd1ijKuQPYB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T17:30:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TuHolDRplT8vByfjh7ltjfeQcN06N50yvxDd1ijKuQPYB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMYLASE [U/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1798-8\" /&gt;</p><p>&lt;display value=\"Amylase [Enzymatic activity/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"101\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"25 - 110 U/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"25\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"110\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Tr4HWBRC5emIecTysb-3jzIa2yXlYTaDqTJMSOHBoFNAB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-05T17:45:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"Tr4HWBRC5emIecTysb-3jzIa2yXlYTaDqTJMSOHBoFNAB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMYLASE [U/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1798-8\" /&gt;</p><p>&lt;display value=\"Amylase [Enzymatic activity/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"104\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"25 - 110 U/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"25\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"110\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TCaYEKn6H1cEzh1Ac28C4eZzk0jiRkW4rCpI-XuKJptgB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-03T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TCaYEKn6H1cEzh1Ac28C4eZzk0jiRkW4rCpI-XuKJptgB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMYLASE [U/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1798-8\" /&gt;</p><p>&lt;display value=\"Amylase [Enzymatic activity/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"115\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"25 - 110 U/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"25\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"110\" /&gt;</p><p>&lt;unit value=\"U/L\" /&gt;</p><p>&lt;code value=\"U/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1enPvJEfnD82OKMVVu8wDfpIB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1enPvJEfnD82OKMVVu8wDfpIB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"UREA NITROGEN [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"3094-0\" /&gt;</p><p>&lt;display value=\"Urea nitrogen [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"16\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"4 - 21 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"4\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"21\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eebE9gzTqnTNHc2QZ0GsU9tYB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eebE9gzTqnTNHc2QZ0GsU9tYB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"UREA NITROGEN [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"3094-0\" /&gt;</p><p>&lt;display value=\"Urea nitrogen [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"14\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"4 - 21 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"4\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"21\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1epauxknhuTe22vDovA1Cv8oB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1epauxknhuTe22vDovA1Cv8oB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CARBON DIOXIDE, TOTAL [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2028-9\" /&gt;</p><p>&lt;display value=\"Carbon dioxide, total [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"19\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"13 - 22 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"13\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"22\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eeWh6ClhEomytvJfaw.MVmyEB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eeWh6ClhEomytvJfaw.MVmyEB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CARBON DIOXIDE, TOTAL [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2028-9\" /&gt;</p><p>&lt;display value=\"Carbon dioxide, total [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"17\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"13 - 22 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"13\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"22\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1euhlwX26bmOgG1zc2j40kOMB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1euhlwX26bmOgG1zc2j40kOMB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CREATININE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2160-0\" /&gt;</p><p>&lt;display value=\"Creatinine [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"1.0\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"0.5 - 1.1 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"0.5\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"1.1\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eefxr.Wfi6minINWkQhvm9BUB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eefxr.Wfi6minINWkQhvm9BUB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CREATININE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2160-0\" /&gt;</p><p>&lt;display value=\"Creatinine [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"0.9\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"0.5 - 1.1 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"0.5\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"1.1\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1etpdHuV3wi60NoMZUUd1CAEB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1etpdHuV3wi60NoMZUUd1CAEB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"POTASSIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2823-3\" /&gt;</p><p>&lt;display value=\"Potassium [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"4.9\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"3.4 - 5.3 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"3.4\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"5.3\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eedRvSEjFTtPoixO2vi1uF5AB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eedRvSEjFTtPoixO2vi1uF5AB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"POTASSIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2823-3\" /&gt;</p><p>&lt;display value=\"Potassium [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"4.9\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"3.4 - 5.3 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"3.4\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"5.3\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1enKhc64xyyBeDcZjWJQIVpwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1enKhc64xyyBeDcZjWJQIVpwB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"SODIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2951-2\" /&gt;</p><p>&lt;display value=\"Sodium [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"142\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"137 - 147 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"137\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"147\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eedgnWoPHjAVpfJJX8IrcmZQB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eedgnWoPHjAVpfJJX8IrcmZQB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"SODIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2951-2\" /&gt;</p><p>&lt;display value=\"Sodium [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"140\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"137 - 147 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"137\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"147\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1eiIlsCbOsa9N8oARtWZNLjcB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1eiIlsCbOsa9N8oARtWZNLjcB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CHLORIDE [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2075-0\" /&gt;</p><p>&lt;display value=\"Chloride [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"104\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"99 - 108 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"99\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"108\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eebrdJbzE5rDGc.asLRqcY4sB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eebrdJbzE5rDGc.asLRqcY4sB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CHLORIDE [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2075-0\" /&gt;</p><p>&lt;display value=\"Chloride [Moles/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"103\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"99 - 108 mmol/L\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"99\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"108\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1egK5wfVonvcxPS4z-to6PMIB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1egK5wfVonvcxPS4z-to6PMIB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"GLUCOSE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2345-7\" /&gt;</p><p>&lt;display value=\"Glucose [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"165\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"60 - 200 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"60\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"200\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eeRfXYmZjKqDcbO6fpkwLw5YB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eeRfXYmZjKqDcbO6fpkwLw5YB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"GLUCOSE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"2345-7\" /&gt;</p><p>&lt;display value=\"Glucose [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"180\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"60 - 200 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"60\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"200\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1ekRcJi1q7tE8TjxLLTgWdB8B\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1ekRcJi1q7tE8TjxLLTgWdB8B\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CALCIUM [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"17861-6\" /&gt;</p><p>&lt;display value=\"Calcium [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"9.5\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"8.7 - 10.7 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"8.7\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"10.7\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eeVnYwfvzYZDO7btvK8TAZD0B\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eeVnYwfvzYZDO7btvK8TAZD0B\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"CALCIUM [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"17861-6\" /&gt;</p><p>&lt;display value=\"Calcium [Mass/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"10\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"8.7 - 10.7 mg/dL\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"8.7\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"10.7\" /&gt;</p><p>&lt;unit value=\"mg/dL\" /&gt;</p><p>&lt;code value=\"mg/dL\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1emCgbFZ6pclxnoNryjoXvzgB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1emCgbFZ6pclxnoNryjoXvzgB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"GLOMERULAR FILTRATION RATE ML/MIN/1.73 SQ M.PREDICTED\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"48642-3\" /&gt;</p><p>&lt;display value=\"Glomerular filtration rate/1.73 sq M predicted among non-blacks by Creatinine-based formula (MDRD)\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"87.0\" /&gt;</p><p>&lt;unit value=\"mL/min/1.73m*2\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"60.0 mL/min/1.73m*2\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"60\" /&gt;</p><p>&lt;unit value=\"mL/min/1.73m*2\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TgnZLCpvPpFSE4m47wp.eeQ4PaLw9Y2k4HGsIFph4UXoB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Observation&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TgnZLCpvPpFSE4m47wp.eeQ4PaLw9Y2k4HGsIFph4UXoB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"GLOMERULAR FILTRATION RATE ML/MIN/1.73 SQ M.PREDICTED\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"48642-3\" /&gt;</p><p>&lt;display value=\"Glomerular filtration rate/1.73 sq M predicted among non-blacks by Creatinine-based formula (MDRD)\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"99.0\" /&gt;</p><p>&lt;unit value=\"mL/min/1.73m*2\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"60.0 mL/min/1.73m*2\" /&gt;</p><p>&lt;low&gt;</p><p>&lt;value value=\"60\" /&gt;</p><p>&lt;unit value=\"mL/min/1.73m*2\" /&gt;</p><p>&lt;/low&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;resource&gt;</p><p>&lt;OperationOutcome&gt;</p><p>&lt;issue&gt;</p><p>&lt;severity value=\"warning\" /&gt;</p><p>&lt;details value=\"This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system.\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"informational\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/issue-type\" /&gt;</p><p>&lt;code value=\"informational\" /&gt;</p><p>&lt;display value=\"informational\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;/issue&gt;</p><p>&lt;/OperationOutcome&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"outcome\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": "<p>When searching, a patient resource ID and LOINC code must be supplied. </p><p>Additionally, individual microbiology sensitivities can only be viewed when referenced directly and cannot be returned on their own with an Observation search. Instead, consider using the DiagnosticReport resource for this purpose, which will reference one or more observation resources containing the microbiology details . The Observation resource will still return microbiology-related concepts when executing a Read with the appropriate ID, for instance, the ones returned by the DiagnosticReport. </p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 9972,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "category": {
+                    "Id": 9979,
+                    "Name": "category",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Use \"laboratory\" to search for lab observations. ",
+                    "Optional": "Either this or code must be provided, but not both.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 841
+                },
+                "code": {
+                    "Id": 9973,
+                    "Name": "code",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The LOINC code of the Observation.",
+                    "Optional": "Either this or category must be provided, but not both.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 835
+                },
+                "date": {
+                    "Id": 9975,
+                    "Name": "date",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Date when the specimen was obtained.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 837
+                },
+                "patient": {
+                    "Id": 9976,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 838
+                },
+                "subject": {
+                    "Id": 9977,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 839
+                }
+            },
+            "Order": 0,
+            "TypeId": 834
+        },
+        "ResponseRootType": {
+            "Id": 9980,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 9981,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 9987,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single entry in the resource bundle.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 9992,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Observation": {
+                                            "Id": 9993,
+                                            "Name": "Observation",
+                                            "AltName": null,
+                                            "Type": "Observation",
+                                            "Description": "A single Observation FHIR resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "code": {
+                                                    "Id": 10002,
+                                                    "Name": "code",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "LOINC code for Observation. If no LOINC code is mapped, only \"text\" will be returned.  ",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "comments": {
+                                                    "Id": 9995,
+                                                    "Name": "comments",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Comments about the result.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 190
+                                                },
+                                                "effectiveDateTime": {
+                                                    "Id": 9996,
+                                                    "Name": "effectiveDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>The prioritized instant.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 191
+                                                },
+                                                "id": {
+                                                    "Id": 9999,
+                                                    "Name": "id",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The Observation FHIR ID.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 194
+                                                },
+                                                "interpretation": {
+                                                    "Id": 10024,
+                                                    "Name": "interpretation",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The level of abnormality. If the value isn't mapped we will just send the text value in the Codeable concept.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "performer": {
+                                                    "Id": 10073,
+                                                    "Name": "performer",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "A reference to the resulting agency's director's Practitioner resource.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "referenceRange": {
+                                                    "Id": 10082,
+                                                    "Name": "referenceRange",
+                                                    "AltName": null,
+                                                    "Type": "ReferenceRange",
+                                                    "Description": "Reference range (if available).",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "high": {
+                                                            "Id": 10090,
+                                                            "Name": "high",
+                                                            "AltName": null,
+                                                            "Type": "Quantity",
+                                                            "Description": "High range, if relevant.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 197
+                                                        },
+                                                        "low": {
+                                                            "Id": 10084,
+                                                            "Name": "low",
+                                                            "AltName": null,
+                                                            "Type": "Quantity",
+                                                            "Description": "Low range, if relevant.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 197
+                                                        },
+                                                        "text": {
+                                                            "Id": 10083,
+                                                            "Name": "text",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Textual reference range.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 204
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 203
+                                                },
+                                                "related": {
+                                                    "Id": 10117,
+                                                    "Name": "related",
+                                                    "AltName": null,
+                                                    "Type": "Related",
+                                                    "Description": "Related isolate level Observation.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 206
+                                                },
+                                                "status": {
+                                                    "Id": 9998,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The status of the lab order. ",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 193
+                                                },
+                                                "subject": {
+                                                    "Id": 10067,
+                                                    "Name": "subject",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The Patient FHIR ID associated with the order.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "valueCodeableConcept": {
+                                                    "Id": 10122,
+                                                    "Name": "valueCodeableConcept",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "This element is populated only if a SNOMED code is associated with the component.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "valueQuantity": {
+                                                    "Id": 10010,
+                                                    "Name": "valueQuantity",
+                                                    "AltName": null,
+                                                    "Type": "Quantity",
+                                                    "Description": "A result value. This element is populated only if the result is structured numeric and represents a quantity.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {
+                                                        "code": {
+                                                            "Id": 10014,
+                                                            "Name": "code",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Unit's coded value.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 201
+                                                        },
+                                                        "comparator": {
+                                                            "Id": 10012,
+                                                            "Name": "comparator",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "How to understand the value. Find a full list of potential values <a href=\"http://hl7.org/fhir/DSTU2/valueset-quantity-comparator.html\">here</a>.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 199
+                                                        },
+                                                        "system": {
+                                                            "Id": 10015,
+                                                            "Name": "system",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Applies to quantity unit's code.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 202
+                                                        },
+                                                        "unit": {
+                                                            "Id": 10013,
+                                                            "Name": "unit",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Quantity's unit.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 200
+                                                        },
+                                                        "value": {
+                                                            "Id": 10011,
+                                                            "Name": "value",
+                                                            "AltName": null,
+                                                            "Type": "Decimal",
+                                                            "Description": "Numeric value of the result. ",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 198
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 197
+                                                },
+                                                "valueString": {
+                                                    "Id": 9994,
+                                                    "Name": "valueString",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "A result value. This element is populated only if the result is a string.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 189
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 188
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 848
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 846
+                        },
+                        "total": {
+                            "Id": 9983,
+                            "Name": "total",
+                            "AltName": null,
+                            "Type": "Int32",
+                            "Description": "Total number of resources that matched the search criteria.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 845
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 843
+                }
+            },
+            "Order": 10000,
+            "TypeId": 842
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

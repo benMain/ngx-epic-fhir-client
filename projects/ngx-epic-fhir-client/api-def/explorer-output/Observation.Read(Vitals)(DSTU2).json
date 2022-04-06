@@ -1,0 +1,348 @@
+{
+    "Id": 449,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/observation.html\" data-drive-link-file-url=\"1\">FHIR Observation resource</a> defines information about a measurement or simple assertion made about a patient.  This web service will retrieve vital sign data from a patient&#39;s chart. This includes any data found in the patient&#39;s flowsheets across all encounters. This resource can be queried by a combination of patient ID and vital sign LOINC code(s).  The below documentation describes how the Observation resource is used to provide measurements gathered as a vital sign or flowsheet data point.   </p><p>      The Observation resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Vital Signs.   </p>                          <p>    The Read interaction enables the look up of an Observation resource by a constant server ID.    Clients can store only the server ID, and with a single request, retrieve the most up-to-date    information about the observation. Read interactions typically begin with a client having    previously established a relationship, often through querying for observations through the search interaction.   </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Observation/{ID}",
+    "SampleRequest": "<p>http://hostname/instance/api/FHIR/DSTU2/Observation/TzAezIZwcmkd582mzwBjyZuxdcyvHO42ACKhsr-Y7ACIn4US0-AyeZdwm3eQonaC1B</p>",
+    "SampleResponse": "<p>&lt;Observation xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-13T21:29:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TzAezIZwcmkd582mzwBjyZuxdcyvHO42ACKhsr-Y7ACIn4US0-AyeZdwm3eQonaC1B\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Body temperature\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"8310-5\" /&gt;</p><p>&lt;display value=\"Body temperature\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"37.3\" /&gt;</p><p>&lt;unit value=\"Cel\" /&gt;</p><p>&lt;code value=\"Cel\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"John Observation Doe\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/ToueZw1.F0ZmssWl-YvEOkzXHFyPqpsv.7zUXEqQjQ2QB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;/Observation&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 19875,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 19876,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 186
+                }
+            },
+            "Order": 0,
+            "TypeId": 185
+        },
+        "ResponseRootType": {
+            "Id": 1686,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 1687,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "A single Observation FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "bodySite": {
+                            "Id": 1726,
+                            "Name": "bodySite",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Body site the observation relates to.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "code": {
+                            "Id": 1696,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "A codeable concept. ",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "comments": {
+                            "Id": 1689,
+                            "Name": "comments",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Comments about the observation value.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 190
+                        },
+                        "dataAbsentReason": {
+                            "Id": 1710,
+                            "Name": "dataAbsentReason",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Why is the result missing - only present when no value is returned.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "effectiveDateTime": {
+                            "Id": 1690,
+                            "Name": "effectiveDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Date the observation applies to.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 191
+                        },
+                        "encounter": {
+                            "Id": 1773,
+                            "Name": "encounter",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Encounter this observation was made during.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "identifier": {
+                            "Id": 1742,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "Unique Id for this observation.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 129
+                        },
+                        "interpretation": {
+                            "Id": 1718,
+                            "Name": "interpretation",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "High, low, normal.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "issued": {
+                            "Id": 1691,
+                            "Name": "issued",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Date/Time this result was documented or made available.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 192
+                        },
+                        "performer": {
+                            "Id": 1767,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Who did the observation.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "referenceRange": {
+                            "Id": 1776,
+                            "Name": "referenceRange",
+                            "AltName": null,
+                            "Type": "ReferenceRange",
+                            "Description": null,
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "age": {
+                                    "Id": 1798,
+                                    "Name": "age",
+                                    "AltName": null,
+                                    "Type": "Range",
+                                    "Description": "Age range.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 205
+                                },
+                                "high": {
+                                    "Id": 1784,
+                                    "Name": "high",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "High range.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "low": {
+                                    "Id": 1778,
+                                    "Name": "low",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Low range.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "meaning": {
+                                    "Id": 1790,
+                                    "Name": "meaning",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Meaning of the reference range.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 133
+                                },
+                                "text": {
+                                    "Id": 1777,
+                                    "Name": "text",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Text based reference range.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 204
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 203
+                        },
+                        "related": {
+                            "Id": 1811,
+                            "Name": "related",
+                            "AltName": null,
+                            "Type": "Related",
+                            "Description": null,
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "target": {
+                                    "Id": 1813,
+                                    "Name": "target",
+                                    "AltName": null,
+                                    "Type": "Reference",
+                                    "Description": "Observation that is related to this one.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 144
+                                },
+                                "type": {
+                                    "Id": 1812,
+                                    "Name": "type",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "How is this related to the observation.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 207
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 206
+                        },
+                        "status": {
+                            "Id": 1692,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Status of the observation - hard coded to either Amended or Final depending on if the field has been corrected or not. Deleted observations will not be returned.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 193
+                        },
+                        "subject": {
+                            "Id": 1761,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Who this was about.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "valueQuantity": {
+                            "Id": 1704,
+                            "Name": "valueQuantity",
+                            "AltName": null,
+                            "Type": "Quantity",
+                            "Description": "Only one value[x] element will be returned - when a value has units we will use valueQuantity.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 197
+                        },
+                        "valueString": {
+                            "Id": 1688,
+                            "Name": "valueString",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Only one value[x] element will be returned - when we do not have a unit we will use valueString.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 189
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 188
+                }
+            },
+            "Order": 10000,
+            "TypeId": 187
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

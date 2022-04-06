@@ -1,0 +1,263 @@
+{
+    "Id": 10158,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/FamilyMemberHistory/{ID}",
+    "SampleRequest": "/api/FHIR/R4/FamilyMemberHistory/ePM.Qux3IY3tsLDfCmpxnDhhUJ4WWDI.DRtTk-LVsHD03",
+    "SampleResponse": "&lt;FamilyMemberHistory&nbsp;xmlns=\"http://hl7.org/fhir\"&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;id&nbsp;value=\"ePM.Qux3IY3tsLDfCmpxnDhhUJ4WWDI.DRtTk-LVsHD03\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;status&nbsp;value=\"completed\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;patient&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;reference&nbsp;value=\"Patient/eV6Ofju2.rCOp6TCunVM9Rg3\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display&nbsp;value=\"Smith,&nbsp;Sally\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/patient&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;date&nbsp;value=\"2021-07-05\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&nbsp;value=\"Paula\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;relationship&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;system&nbsp;value=\"http://terminology.hl7.org/CodeSystem/v3-RoleCode\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;code&nbsp;value=\"NMTH\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display&nbsp;value=\"Natural&nbsp;mother\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;system&nbsp;value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.10.698084.19350\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;code&nbsp;value=\"1\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display&nbsp;value=\"Mother\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relationship&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;sex&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;system&nbsp;value=\"http://hl7.org/fhir/administrative-gender\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;code&nbsp;value=\"female\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/sex&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;bornDate&nbsp;value=\"1968-07-05\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;deceasedBoolean&nbsp;value=\"false\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;note&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&nbsp;value=\"Estranged\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/note&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;condition&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;code&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;system&nbsp;value=\"http://snomed.info/sct\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;code&nbsp;value=\"160266009\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display&nbsp;value=\"No&nbsp;family&nbsp;history&nbsp;of\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;system&nbsp;value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.10.698084.19360\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;code&nbsp;value=\"1702\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display&nbsp;value=\"Healthy\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/coding&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/code&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;note&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&nbsp;value=\"Mother&nbsp;is healthy\"&nbsp;/&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/note&gt;\n&nbsp;&nbsp;&nbsp;&nbsp;&lt;/condition&gt;\n&lt;/FamilyMemberHistory&gt;",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 422112,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 422113,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "FHIR ID for this FamilyMemberHistory instance",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 8850
+                }
+            },
+            "Order": 0,
+            "TypeId": 8849
+        },
+        "ResponseRootType": {
+            "Id": 422114,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "FamilyMemberHistory": {
+                    "Id": 422115,
+                    "Name": "FamilyMemberHistory",
+                    "AltName": null,
+                    "Type": "FamilyMemberHistory",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "bornDate": {
+                            "Id": 422124,
+                            "Name": "bornDate",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Family member’s birth date",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8861
+                        },
+                        "bornPeriod": {
+                            "Id": 422260,
+                            "Name": "bornPeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "Range of dates between which family member was born",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 369
+                        },
+                        "condition": {
+                            "Id": 422399,
+                            "Name": "condition",
+                            "AltName": null,
+                            "Type": "Condition",
+                            "Description": "Condition that the related person had",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "code": {
+                                    "Id": 422405,
+                                    "Name": "code",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Condition that the related person had",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "note": {
+                                    "Id": 422461,
+                                    "Name": "note",
+                                    "AltName": null,
+                                    "Type": "Annotation",
+                                    "Description": "Comment on a single condition",
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 379
+                                },
+                                "onsetAge": {
+                                    "Id": 422429,
+                                    "Name": "onsetAge",
+                                    "AltName": null,
+                                    "Type": "Age",
+                                    "Description": "How old the family member was at the time of condition onset",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5430
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 8868
+                        },
+                        "dataAbsentReason": {
+                            "Id": 422193,
+                            "Name": "dataAbsentReason",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Reason a family member history may not exist, such as \"unable-to-obtain\".",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "date": {
+                            "Id": 422122,
+                            "Name": "date",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "When history was recorded or last updated",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8859
+                        },
+                        "deceasedBoolean": {
+                            "Id": 422128,
+                            "Name": "deceasedBoolean",
+                            "AltName": null,
+                            "Type": "Boolean",
+                            "Description": "Whether or not the family member is deceased",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8865
+                        },
+                        "id": {
+                            "Id": 422116,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "FHIR ID for this FamilyMemberHistory instance",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8853
+                        },
+                        "identifier": {
+                            "Id": 422162,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "Unique ID for the family member history",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 361
+                        },
+                        "name": {
+                            "Id": 422123,
+                            "Name": "name",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The family member described",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8860
+                        },
+                        "note": {
+                            "Id": 422362,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "General note about related person",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 379
+                        },
+                        "relationship": {
+                            "Id": 422236,
+                            "Name": "relationship",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Relationship to the patient, or \"FAMMEMB\" if the relationship is not clear.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "sex": {
+                            "Id": 422248,
+                            "Name": "sex",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Family member’s biological sex",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "status": {
+                            "Id": 422121,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Completion status for family member's history. Either \"health-unknown\" or \"completed\".",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 8858
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 8852
+                }
+            },
+            "Order": 10000,
+            "TypeId": 8851
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

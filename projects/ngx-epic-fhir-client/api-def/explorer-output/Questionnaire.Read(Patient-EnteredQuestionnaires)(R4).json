@@ -1,0 +1,166 @@
+{
+    "Id": 10025,
+    "Description": "<p>This web service will return the metadata for the set of questions contained in the questionnaire that a patient answers in the context of various workflows. Such contexts include answering a questionnaire related to an upcoming appointment or a series questionnaire that would track a patient’s progress over a period of time. </p>",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Questionnaire/{ID}",
+    "SampleRequest": "/api/FHIR/R4/Questionnaire/eWYNll5blHAhPi.ksDaG1YSwoiC7G1t-D2hudQj3j7FM3",
+    "SampleResponse": "&lt;Questionnaire xmlns=\"http://hl7.org/fhir\"&gt;\n&lt;id value=\"eWYNll5blHAhPi.ksDaG1YSwoiC7G1t-D2hudQj3j7FM3\"/&gt;\n&lt;name value=\"GENERIC PAIN QUESTIONNAIRE\"/&gt;\n&lt;title value=\"Pain Questionnaire\"/&gt;\n&lt;status value=\"active\"/&gt;\n&lt;date value=\"2020-12-11\"/&gt;\n&lt;code&gt;\n&lt;system value=\"THIRD PARTY QUESTIONNAIRE IDENTIFIER\"/&gt;\n&lt;code value=\"1152\"/&gt;\n&lt;/code&gt;\n&lt;/Questionnaire&gt;",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 19875,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 19876,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Questionaire Fhir ID",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 186
+                }
+            },
+            "Order": 0,
+            "TypeId": 185
+        },
+        "ResponseRootType": {
+            "Id": 257084,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Questionnaire": {
+                    "Id": 257085,
+                    "Name": "Questionnaire",
+                    "AltName": null,
+                    "Type": "Questionnaire",
+                    "Description": "An instance of the R4 Questionnaire FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "code": {
+                            "Id": 257280,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "Coding",
+                            "Description": "<p>The ID and ID type items of the questionnaire</p>",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 349
+                        },
+                        "copyright": {
+                            "Id": 257101,
+                            "Name": "copyright",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The questionnaire post-text</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6508
+                        },
+                        "date": {
+                            "Id": 257097,
+                            "Name": "date",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The date for a given version of the questionnaire</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6504
+                        },
+                        "identifier": {
+                            "Id": 257135,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "<p>The ID of the questionnaire.</p>",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 361
+                        },
+                        "name": {
+                            "Id": 257091,
+                            "Name": "name",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The name of the questionnaire.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6498
+                        },
+                        "status": {
+                            "Id": 257094,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Always \"active\"</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6501
+                        },
+                        "title": {
+                            "Id": 257092,
+                            "Name": "title",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The patient-facing name of the questionnaire.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6499
+                        },
+                        "version": {
+                            "Id": 257090,
+                            "Name": "version",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The version of the questionnaire.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6497
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 6492
+                }
+            },
+            "Order": 10000,
+            "TypeId": 6491
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

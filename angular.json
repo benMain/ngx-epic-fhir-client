@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-epic-fhir-client": {
+      "projectType": "library",
+      "root": "projects/ngx-epic-fhir-client",
+      "sourceRoot": "projects/ngx-epic-fhir-client/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-epic-fhir-client/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-epic-fhir-client/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-epic-fhir-client/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-epic-fhir-client/src/test.ts",
+            "tsConfig": "projects/ngx-epic-fhir-client/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-epic-fhir-client/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-epic-fhir-client"
 }

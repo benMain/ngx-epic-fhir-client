@@ -1,0 +1,203 @@
+{
+    "Id": 447,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/observation.html\">FHIR Observation resource</a> defines information about a measurement or simple assertion made about a patient.  The FHIR Observation Smoking History resource retrieves the status of a patient's tobacco use. This could be used to determine if the patient is a current or former tobacco user, what type of tobacco product is/was used, and the dates the patient started and, if a former user, stopped using tobacco.   </p><p>      The Observation resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" >Common Clinical Data Set</a> (CCDS) Elements: Smoking Status   </p>                          <p>    The Read interaction enables the look up of an Observation resource by a constant server ID.    Clients can store only the server ID, and with a single request, retrieve the most up-to-date    information about the observation. Read interactions typically begin with a client having    previously established a relationship, often through querying for observations through the search interaction.   </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Observation/{ID}",
+    "SampleRequest": "<p>http://hostname/instance/api/FHIR/DSTU2/Observation/TE8W3rK2.OY-eAQIFbovGO-5EtqnRnHScvBDg3VhNWFkB</p>",
+    "SampleResponse": "<p>&lt;Observation xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;comments value=\"This is a comment on Smoker.\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"TE8W3rK2.OY-eAQIFbovGO-5EtqnRnHScvBDg3VhNWFkB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Smoking History\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"72166-2\" /&gt;</p><p>&lt;display value=\"Smoking History\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"John Smoker Doe\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TE8W3rK2.OY-eAQIFbovGOw3YxmqXp-GmS6WnZ0Q.ZwEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Current Some Day Smoker\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"428041000124106\" /&gt;</p><p>&lt;display value=\"Current some day smoker\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/Observation&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 19875,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 19876,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 186
+                }
+            },
+            "Order": 0,
+            "TypeId": 185
+        },
+        "ResponseRootType": {
+            "Id": 19877,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 19878,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "A single Observation FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 20015,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Always \"social-history\".",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "code": {
+                            "Id": 19887,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The LOINC code for smoking history (72166-2).",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "comments": {
+                            "Id": 19880,
+                            "Name": "comments",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The comments. These are not sent in a MyChart context.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 190
+                        },
+                        "effectivePeriod": {
+                            "Id": 20156,
+                            "Name": "effectivePeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "Dates when a patient starts or ends smoking.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "end": {
+                                    "Id": 20158,
+                                    "Name": "end",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The date the patient quit smoking.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 143
+                                },
+                                "start": {
+                                    "Id": 20157,
+                                    "Name": "start",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The date the patient started smoking.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 142
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 141
+                        },
+                        "id": {
+                            "Id": 19884,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The Observation FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 194
+                        },
+                        "issued": {
+                            "Id": 19882,
+                            "Name": "issued",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The date this observation was documented.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 192
+                        },
+                        "status": {
+                            "Id": 19883,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "This value is always \"final\". If  Smoking Tobacco Use is 6 - Never Assessed, this value is \"unknown\".",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 193
+                        },
+                        "subject": {
+                            "Id": 19952,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The patient FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "valueCodeableConcept": {
+                            "Id": 20007,
+                            "Name": "valueCodeableConcept",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "SNOMED coded value of smoking status.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 188
+                }
+            },
+            "Order": 10000,
+            "TypeId": 187
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

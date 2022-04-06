@@ -1,0 +1,202 @@
+{
+    "Id": 966,
+    "Description": "<p>The FHIR Observation resource defines measurements and assertions about a patient, including vital signs, laboratory data, imaging results, devices measurements, clinical assessment tools, personal characteristics, social history, and core characteristics.</p><p>Obstetric information is categorized under social history.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/R4/Observation/{ID}",
+    "SampleRequest": "<p>https://hostname/instance-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/R4/Observation/eizmjygdN9YY0-abviOrMfWj2G7R8-XxrOOQJNTk9BFzvbtCzIYaUclwmo1GWuXod3</p>",
+    "SampleResponse": "<p>&lt;Observation xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;id value=\"eizmjygdN9YY0-abviOrMfWj2G7R8-XxrOOQJNTk9BFzvbtCzIYaUclwmo1GWuXod3\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/observation-category\" /&gt;</p><p>&lt;code value=\"social-history\" /&gt;</p><p>&lt;display value=\"Social History\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Social History\" /&gt;</p><p>&lt;/category&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"72166-2\" /&gt;</p><p>&lt;display value=\"Tobacco smoking status NHIS\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Smoking History\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;reference value=\"Patient/eZO66HeGXB6VCJemL-ciSKA3\" /&gt;</p><p>&lt;display value=\"Meiko Lufhir\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;effectivePeriod&gt;</p><p>&lt;start value=\"2018-08-28\" /&gt;</p><p>&lt;end value=\"2019-06-01\" /&gt;</p><p>&lt;/effectivePeriod&gt;</p><p>&lt;issued value=\"2019-09-05T05:00:00Z\" /&gt;</p><p>&lt;performer&gt;</p><p>&lt;reference value=\"Practitioner/euJOUNeZyX6mofWELWG0Ibg3\" /&gt;</p><p>&lt;display value=\"Starter Provider, MD\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"8517006\" /&gt;</p><p>&lt;display value=\"Former smoker\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Former Smoker\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/Observation&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 134786,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 134787,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The read interaction uses the given Observation FHIR ID to retrieve the most up-to-date information about a LDA (details and properties) or a LDA assessment.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5629
+                }
+            },
+            "Order": 0,
+            "TypeId": 5628
+        },
+        "ResponseRootType": {
+            "Id": 136648,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 136649,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "An instance of the R4 Observation resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "code": {
+                            "Id": 136798,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>The LOINC Code of the Observation.</p>\n\n<table>\n<tbody>\n<tr>\n<td>\n<p><strong>Observation Type</strong></p>\n</td>\n<td>\n<p><strong>LOINC Code</strong></p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Pregnancy Status</p>\n</td>\n<td>\n<p>82810-3</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Menstrual Status</p>\n</td>\n<td>\n<p>3146-8</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Lactation Status</p>\n</td>\n<td>\n<p>63895-7</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Smoking History</p>\n</td>\n<td>\n<p>72166-2</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Physical Findings of Uterus</p>\n</td>\n<td>\n<p>32486-3</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Estimated Delivery Date</p>\n</td>\n<td>\n<p>11778-8</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Last Menstrual Period</p>\n</td>\n<td>\n<p>8665-2</p>\n</td>\n</tr>\n</tbody>\n</table>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "dataAbsentReason": {
+                            "Id": 137086,
+                            "Name": "dataAbsentReason",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Populated if there is no last menstrual period but there is a last menstrual period comment or precision.\nPopulated if there is no lactation status but there is a lactation status comment.",
+                            "Optional": "As described.",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "derivedFrom": {
+                            "Id": 137328,
+                            "Name": "derivedFrom",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "References the corresponding menstrual status observation that the pregnancy status is derived from.",
+                            "Optional": "As described.",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "effectiveDateTime": {
+                            "Id": 136654,
+                            "Name": "effectiveDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The date/time when obstetric status observations were documented.",
+                            "Optional": "Required if there is an encounter where obstetric status observations were documented.",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5583
+                        },
+                        "interpretation": {
+                            "Id": 137098,
+                            "Name": "interpretation",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Precision of the last menstrual period.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "note": {
+                            "Id": 137110,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "Populated with last menstrual period comment or lactation status comment. If applicable, this appears within the last menstrual period or lactation status observations.",
+                            "Optional": "Requires last menstrual period or lactation status comment.",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 379
+                        },
+                        "status": {
+                            "Id": 136653,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "This is always \"final\".",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5582
+                        },
+                        "subject": {
+                            "Id": 136810,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The patient.",
+                            "Optional": "Not necessary for type \"Lactation Status\".",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "valueBoolean": {
+                            "Id": 136658,
+                            "Name": "valueBoolean",
+                            "AltName": null,
+                            "Type": "Boolean",
+                            "Description": "Yes/No answer to whether the patient has a uterus.",
+                            "Optional": "Used for Physical Findings of Uterus",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5587
+                        },
+                        "valueCodeableConcept": {
+                            "Id": 137014,
+                            "Name": "valueCodeableConcept",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The SNOMED code indicating whether the observation is present is used for Pregnancy Status and Lactation Status:\n<ul>\n<li>Yes (373066001)</li>\n<li>No (373067005)</li>\n<li>Unknown (261665006)</li>\n</ul>\n<p>An Epic category-based code specific to an organization or mapped to other SNOMED codes might be used for menstrual status.</p>",
+                            "Optional": "Used for Lactation Status, Pregnancy Status, and Menstrual Status.",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "valueDateTime": {
+                            "Id": 136661,
+                            "Name": "valueDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Estimated delivery date or the date of the last menstrual period, if applicable.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5590
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 5578
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5630
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

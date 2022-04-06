@@ -1,0 +1,800 @@
+{
+    "Id": 997,
+    "Description": "<p>You can use the search interaction to query for medication orders based on a patient and optionally status or category.</p><p>This resource can return various types of medications, including inpatient-ordered medications, clinic-administered medications (CAMS), patient-reported medications, and reconciled medications from Care Everywhere and other external sources.</p><p>The R4 version of this resource also returns patient-reported medications. Previously, patient-reported medications were not returned by the STU3 version of MedicationRequest and needed to be queried using the STU3 MedicationStatement resource. This is no longer the case. The R4 version of this resource returns patient-reported medications with the reportedBoolean element set to True. If the informant is known, it is also specified in the reportedReference element.</p><p>A user or staff member accessing this FHIR resource must have security to view medications.</p><p>A MyChart user accessing this FHIR resource must be authorized to view medications in MyChart.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/R4/MedicationRequest?patient={patient}&subject={subject}&category={category}&status={status}&authoredon={authoredon}&intent={intent}&_id={_id}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/R4/MedicationRequest?patient=ecfCE.KpaQpPtHuipuBpYVg3&amp;status=active</p>",
+    "SampleResponse": "<p>{</p><p>\"resourceType\": \"Bundle\",</p><p>\"type\": \"searchset\",</p><p>\"total\": 1,</p><p>\"link\": [</p><p>{</p><p>\"relation\": \"self\",</p><p>\"url\": \"https://hostname/instance/api/FHIR/R4/MedicationRequest?patient=ecfCE.KpaQpPtHuipuBpYVg3&amp;status=active\"</p><p>}</p><p>],</p><p>\"entry\": [</p><p>{</p><p>\"link\": [</p><p>{</p><p>\"relation\": \"self\",</p><p>\"url\": \"https://hostname/instance/api/FHIR/R4/MedicationRequest/e3z3q7cdqUZggo48677dtjX3R6Au9JglZpGYbtJNIhoc3\"</p><p>}</p><p>],</p><p>\"fullUrl\": \"https://hostname/instance/api/FHIR/R4/MedicationRequest/e3z3q7cdqUZggo48677dtjX3R6Au9JglZpGYbtJNIhoc3\",</p><p>\"resource\": {</p><p>\"resourceType\": \"MedicationRequest\",</p><p>\"id\": \"e3z3q7cdqUZggo48677dtjX3R6Au9JglZpGYbtJNIhoc3\",</p><p>\"identifier\": [</p><p>{</p><p>\"use\": \"usual\",</p><p>\"system\": \"urn:oid:1.2.840.114350.1.13.861.1.7.2.798268\",</p><p>\"value\": \"2454978\"</p><p>}</p><p>],</p><p>\"status\": \"active\",</p><p>\"intent\": \"order\",</p><p>\"category\": [</p><p>{</p><p>\"coding\": [</p><p>{</p><p>\"system\": \"http://terminology.hl7.org/CodeSystem/medicationrequest-category\",</p><p>\"code\": \"outpatient\",</p><p>\"display\": \"Outpatient\"</p><p>}</p><p>],</p><p>\"text\": \"Outpatient\"</p><p>}</p><p>],</p><p>\"medicationReference\": {</p><p>\"reference\": \"Medication/eFnx9hyX.YTNJ407PR9g4zpiT8lXCElOXkldLgGDYrAU-fszvYmrUZlYzRfJl-qKj3\",</p><p>\"display\": \"oxybutynin (DITROPAN XL) CR tablet\"</p><p>},</p><p>\"subject\": {</p><p>\"reference\": \"Patient/ecfCE.KpaQpPtHuipuBpYVg3\",</p><p>\"display\": \"Friend, All\"</p><p>},</p><p>\"encounter\": {</p><p>\"reference\": \"Encounter/eiUjKDnCzAklY4taV-ZqAfRDw-CztkJ5lLnQ5bCBa9Dw3\"</p><p>},</p><p>\"authoredOn\": \"2018-09-20T15:41:39Z\",</p><p>\"requester\": {</p><p>\"reference\": \"Practitioner/ef81ZrgFqs7ufzYI2X9ixcA3\",</p><p>\"display\": \"Epic User\"</p><p>},</p><p>\"recorder\": {</p><p>\"reference\": \"Practitioner/ef81ZrgFqs7ufzYI2X9ixcA3\",</p><p>\"display\": \"Epic User\"</p><p>},</p><p>\"dosageInstruction\": [</p><p>{</p><p>\"timing\": {</p><p>\"repeat\": {</p><p>\"boundsPeriod\": {</p><p>\"start\": \"2018-09-21T04:00:00Z\"</p><p>}</p><p>},</p><p>\"code\": {</p><p>\"text\": \"2100\"</p><p>}</p><p>},</p><p>\"asNeededBoolean\": false,</p><p>\"route\": {</p><p>\"coding\": [</p><p>{</p><p>\"system\": \"urn:oid:1.2.840.114350.1.13.861.1.7.4.798268.7025\",</p><p>\"code\": \"15\",</p><p>\"display\": \"Oral\"</p><p>},</p><p>{</p><p>\"system\": \"http://snomed.info/sct\",</p><p>\"code\": \"260548002\",</p><p>\"display\": \"Oral\"</p><p>}</p><p>],</p><p>\"text\": \"Oral\"</p><p>},</p><p>\"doseAndRate\": [</p><p>{</p><p>\"type\": {</p><p>\"coding\": [</p><p>{</p><p>\"system\": \"http://epic.com/CodeSystem/dose-rate-type\",</p><p>\"code\": \"calculated\",</p><p>\"display\": \"calculated\"</p><p>}</p><p>],</p><p>\"text\": \"calculated\"</p><p>},</p><p>\"doseQuantity\": {</p><p>\"value\": 15,</p><p>\"unit\": \"mg\",</p><p>\"system\": \"http://unitsofmeasure.org\",</p><p>\"code\": \"mg\"</p><p>}</p><p>},</p><p>{</p><p>\"type\": {</p><p>\"coding\": [</p><p>{</p><p>\"system\": \"http://epic.com/CodeSystem/dose-rate-type\",</p><p>\"code\": \"admin-amount\",</p><p>\"display\": \"admin-amount\"</p><p>}</p><p>],</p><p>\"text\": \"admin-amount\"</p><p>},</p><p>\"doseQuantity\": {</p><p>\"value\": 1,</p><p>\"unit\": \"tablet\",</p><p>\"system\": \"http://unitsofmeasure.org\",</p><p>\"code\": \"{tbl}\"</p><p>}</p><p>},</p><p>{</p><p>\"type\": {</p><p>\"coding\": [</p><p>{</p><p>\"system\": \"http://epic.com/CodeSystem/dose-rate-type\",</p><p>\"code\": \"ordered\",</p><p>\"display\": \"ordered\"</p><p>}</p><p>],</p><p>\"text\": \"ordered\"</p><p>},</p><p>\"doseQuantity\": {</p><p>\"value\": 10,</p><p>\"unit\": \"mg\",</p><p>\"system\": \"http://unitsofmeasure.org\",</p><p>\"code\": \"mg\"</p><p>}</p><p>}</p><p>]</p><p>}</p><p>]</p><p>},</p><p>\"search\": {</p><p>\"mode\": \"match\"</p><p>}</p><p>},</p><p>search\": {</p><p>\"mode\": \"match\"</p><p>}</p><p>}</p><p>]</p><p>}</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 176164,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "authoredon": {
+                    "Id": 176165,
+                    "Name": "authoredon",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "This parameter is allowed, but ignored.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5814
+                },
+                "category": {
+                    "Id": 176166,
+                    "Name": "category",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>The category of medication orders to search for. By default all categories are searched.</p>\nSupported categories:\n<ul>\n<li>Inpatient</li>\n<li>Outpatient (those administered in the clinic - CAMS)</li>\n<li>Community (prescriptions)</li>\n</ul>",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5815
+                },
+                "intent": {
+                    "Id": 176168,
+                    "Name": "intent",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Only ‘order’ and ‘plan’ are supported.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5817
+                },
+                "patient": {
+                    "Id": 176169,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The FHIR patient ID.",
+                    "Optional": "Either this element or Patient is required.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5818
+                },
+                "status": {
+                    "Id": 176170,
+                    "Name": "status",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>The status for medication orders. By default, all statuses are returned.</p>\nSupported statuses:\n<ul>\n<li>On-hold</li>\n<li>Completed</li>\n<li>Stopped</li>\n<li>Active</li>\n</ul>",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5819
+                },
+                "subject": {
+                    "Id": 176171,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The FHIR patient ID.",
+                    "Optional": "Either this element or Patient is required.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5820
+                }
+            },
+            "Order": 0,
+            "TypeId": 5813
+        },
+        "ResponseRootType": {
+            "Id": 176172,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 176173,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 176240,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "response": {
+                                    "Id": 177288,
+                                    "Name": "response",
+                                    "AltName": null,
+                                    "Type": "Response",
+                                    "Description": null,
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "outcome": {
+                                            "Id": 177296,
+                                            "Name": "outcome",
+                                            "AltName": null,
+                                            "Type": "ResourceContainer",
+                                            "Description": null,
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "MedicationRequest": {
+                                                    "Id": 177297,
+                                                    "Name": "MedicationRequest",
+                                                    "AltName": null,
+                                                    "Type": "MedicationRequest",
+                                                    "Description": "An instance of the R4 MedicationRequest FHIR resource.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {
+                                                        "authoredOn": {
+                                                            "Id": 177306,
+                                                            "Name": "authoredOn",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The date the prescription was written.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5794
+                                                        },
+                                                        "basedOn": {
+                                                            "Id": 177709,
+                                                            "Name": "basedOn",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "Reference to one or both of the following:\n<ul>\n<li>A CarePlan resource corresponding to the treatment plan or therapy plan from which the medication was ordered.</li>\n<li>A MedicationRequest resource corresponding to the order template. Included if the order is from a treatment or therapy plan. This type of reference is available starting in the February 2022 version of Epic or starting in the May 2021 version by special update.</li>\n</ul>",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "category": {
+                                                            "Id": 177382,
+                                                            "Name": "category",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "Type of medication usage. There are three categories:\n<ul>\n<li>Inpatient</li>\n<li>Outpatient (those administered in the clinic - CAMS)</li>\n<li>Community (prescriptions)</li>\n</ul>",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 366
+                                                        },
+                                                        "dispenseRequest": {
+                                                            "Id": 178110,
+                                                            "Name": "dispenseRequest",
+                                                            "AltName": null,
+                                                            "Type": "DispenseRequest",
+                                                            "Description": "Medication supply authorization.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {
+                                                                "expectedSupplyDuration": {
+                                                                    "Id": 178156,
+                                                                    "Name": "expectedSupplyDuration",
+                                                                    "AltName": null,
+                                                                    "Type": "Duration",
+                                                                    "Description": "The duration.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5096
+                                                                },
+                                                                "numberOfRepeatsAllowed": {
+                                                                    "Id": 178112,
+                                                                    "Name": "numberOfRepeatsAllowed",
+                                                                    "AltName": null,
+                                                                    "Type": "Int64",
+                                                                    "Description": "The number of discrete refills for the medication.",
+                                                                    "Optional": "True",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5807
+                                                                },
+                                                                "quantity": {
+                                                                    "Id": 178148,
+                                                                    "Name": "quantity",
+                                                                    "AltName": null,
+                                                                    "Type": "Quantity",
+                                                                    "Description": "The quantity.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5439
+                                                                },
+                                                                "validityPeriod": {
+                                                                    "Id": 178143,
+                                                                    "Name": "validityPeriod",
+                                                                    "AltName": null,
+                                                                    "Type": "Period",
+                                                                    "Description": "The start and end date for the medication. If the medication is a prescription and is not discontinued, this element doesn't include an end date.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 369
+                                                                }
+                                                            },
+                                                            "Order": 10006,
+                                                            "TypeId": 5805
+                                                        },
+                                                        "dosageInstruction": {
+                                                            "Id": 177851,
+                                                            "Name": "dosageInstruction",
+                                                            "AltName": null,
+                                                            "Type": "Dosage",
+                                                            "Description": "Dosage instruction details.",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {
+                                                                "asNeededBoolean": {
+                                                                    "Id": 177856,
+                                                                    "Name": "asNeededBoolean",
+                                                                    "AltName": null,
+                                                                    "Type": "Boolean",
+                                                                    "Description": "Whether the frequency is PRN.",
+                                                                    "Optional": "True",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5802
+                                                                },
+                                                                "doseAndRate": {
+                                                                    "Id": 177986,
+                                                                    "Name": "doseAndRate",
+                                                                    "AltName": null,
+                                                                    "Type": "DoseAndRate",
+                                                                    "Description": null,
+                                                                    "Optional": "False",
+                                                                    "IsArray": true,
+                                                                    "Children": {
+                                                                        "doseQuantity": {
+                                                                            "Id": 178021,
+                                                                            "Name": "doseQuantity",
+                                                                            "AltName": null,
+                                                                            "Type": "Quantity",
+                                                                            "Description": "Quantity value.",
+                                                                            "Optional": "False",
+                                                                            "IsArray": false,
+                                                                            "Children": {},
+                                                                            "Order": 10008,
+                                                                            "TypeId": 5439
+                                                                        },
+                                                                        "doseRange": {
+                                                                            "Id": 178002,
+                                                                            "Name": "doseRange",
+                                                                            "AltName": null,
+                                                                            "Type": "Range",
+                                                                            "Description": null,
+                                                                            "Optional": "False",
+                                                                            "IsArray": false,
+                                                                            "Children": {},
+                                                                            "Order": 10008,
+                                                                            "TypeId": 5437
+                                                                        },
+                                                                        "rateQuantity": {
+                                                                            "Id": 178067,
+                                                                            "Name": "rateQuantity",
+                                                                            "AltName": null,
+                                                                            "Type": "Quantity",
+                                                                            "Description": "Amount of medication per unit of time.",
+                                                                            "Optional": "False",
+                                                                            "IsArray": false,
+                                                                            "Children": {},
+                                                                            "Order": 10008,
+                                                                            "TypeId": 5439
+                                                                        },
+                                                                        "rateRange": {
+                                                                            "Id": 178048,
+                                                                            "Name": "rateRange",
+                                                                            "AltName": null,
+                                                                            "Type": "Range",
+                                                                            "Description": null,
+                                                                            "Optional": "False",
+                                                                            "IsArray": false,
+                                                                            "Children": {},
+                                                                            "Order": 10008,
+                                                                            "TypeId": 5437
+                                                                        },
+                                                                        "rateRatio": {
+                                                                            "Id": 178029,
+                                                                            "Name": "rateRatio",
+                                                                            "AltName": null,
+                                                                            "Type": "Ratio",
+                                                                            "Description": null,
+                                                                            "Optional": "False",
+                                                                            "IsArray": false,
+                                                                            "Children": {},
+                                                                            "Order": 10008,
+                                                                            "TypeId": 5517
+                                                                        },
+                                                                        "type": {
+                                                                            "Id": 177990,
+                                                                            "Name": "type",
+                                                                            "AltName": null,
+                                                                            "Type": "CodeableConcept",
+                                                                            "Description": "The kind of dose or rate specified. Supported code values include:\n<ul>\n<li>ordered</li>\n<li>calculated</li>\n<li>admin-amount</li>\n</ul>",
+                                                                            "Optional": "False",
+                                                                            "IsArray": false,
+                                                                            "Children": {},
+                                                                            "Order": 10008,
+                                                                            "TypeId": 366
+                                                                        }
+                                                                    },
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5803
+                                                                },
+                                                                "method": {
+                                                                    "Id": 177974,
+                                                                    "Name": "method",
+                                                                    "AltName": null,
+                                                                    "Type": "CodeableConcept",
+                                                                    "Description": "The dose delivery method.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 366
+                                                                },
+                                                                "patientInstruction": {
+                                                                    "Id": 177855,
+                                                                    "Name": "patientInstruction",
+                                                                    "AltName": null,
+                                                                    "Type": "String",
+                                                                    "Description": "<p>The patient instructions for the prescription.</p>\n<p>For a multi-line sig, this is the same.</p>",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5801
+                                                                },
+                                                                "route": {
+                                                                    "Id": 177962,
+                                                                    "Name": "route",
+                                                                    "AltName": null,
+                                                                    "Type": "CodeableConcept",
+                                                                    "Description": "The medication route.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 366
+                                                                },
+                                                                "sequence": {
+                                                                    "Id": 177853,
+                                                                    "Name": "sequence",
+                                                                    "AltName": null,
+                                                                    "Type": "Int32",
+                                                                    "Description": "This element is populated only for multi-line sigs.",
+                                                                    "Optional": "True",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5799
+                                                                },
+                                                                "text": {
+                                                                    "Id": 177854,
+                                                                    "Name": "text",
+                                                                    "AltName": null,
+                                                                    "Type": "String",
+                                                                    "Description": "<p>The patient instructions for the prescription.</p>\n<p>For a multi-line sig, this is the same.</p>",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5800
+                                                                },
+                                                                "timing": {
+                                                                    "Id": 177871,
+                                                                    "Name": "timing",
+                                                                    "AltName": null,
+                                                                    "Type": "Timing",
+                                                                    "Description": "Timing information.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {
+                                                                        "repeat": {
+                                                                            "Id": 177876,
+                                                                            "Name": "repeat",
+                                                                            "AltName": null,
+                                                                            "Type": "Repeat",
+                                                                            "Description": "Repeat occurrence information.",
+                                                                            "Optional": "False",
+                                                                            "IsArray": false,
+                                                                            "Children": {
+                                                                                "boundsPeriod": {
+                                                                                    "Id": 177921,
+                                                                                    "Name": "boundsPeriod",
+                                                                                    "AltName": null,
+                                                                                    "Type": "Period",
+                                                                                    "Description": "The start and end dates for the medication.",
+                                                                                    "Optional": "False",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 369
+                                                                                },
+                                                                                "count": {
+                                                                                    "Id": 177878,
+                                                                                    "Name": "count",
+                                                                                    "AltName": null,
+                                                                                    "Type": "Int64",
+                                                                                    "Description": "If the medication is not PRN, and CountType is Doses, this element is populated with the count value.",
+                                                                                    "Optional": "True",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5596
+                                                                                },
+                                                                                "countMax": {
+                                                                                    "Id": 177879,
+                                                                                    "Name": "countMax",
+                                                                                    "AltName": null,
+                                                                                    "Type": "Int64",
+                                                                                    "Description": "If the medication is PRN, this element is set to Count.",
+                                                                                    "Optional": "True",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5597
+                                                                                },
+                                                                                "dayOfWeek": {
+                                                                                    "Id": 177888,
+                                                                                    "Name": "dayOfWeek",
+                                                                                    "AltName": null,
+                                                                                    "Type": "String",
+                                                                                    "Description": "The day of the week.",
+                                                                                    "Optional": "False",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5606
+                                                                                },
+                                                                                "duration": {
+                                                                                    "Id": 177880,
+                                                                                    "Name": "duration",
+                                                                                    "AltName": null,
+                                                                                    "Type": "Decimal",
+                                                                                    "Description": "The medication duration.",
+                                                                                    "Optional": "True",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5598
+                                                                                },
+                                                                                "durationUnit": {
+                                                                                    "Id": 177882,
+                                                                                    "Name": "durationUnit",
+                                                                                    "AltName": null,
+                                                                                    "Type": "String",
+                                                                                    "Description": "The duration unit.",
+                                                                                    "Optional": "False",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5600
+                                                                                },
+                                                                                "frequency": {
+                                                                                    "Id": 177883,
+                                                                                    "Name": "frequency",
+                                                                                    "AltName": null,
+                                                                                    "Type": "Int64",
+                                                                                    "Description": "The frequency.",
+                                                                                    "Optional": "True",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5601
+                                                                                },
+                                                                                "period": {
+                                                                                    "Id": 177885,
+                                                                                    "Name": "period",
+                                                                                    "AltName": null,
+                                                                                    "Type": "Decimal",
+                                                                                    "Description": "The period.",
+                                                                                    "Optional": "True",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5603
+                                                                                },
+                                                                                "periodUnit": {
+                                                                                    "Id": 177887,
+                                                                                    "Name": "periodUnit",
+                                                                                    "AltName": null,
+                                                                                    "Type": "String",
+                                                                                    "Description": "The period unit.",
+                                                                                    "Optional": "False",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5605
+                                                                                },
+                                                                                "timeOfDay": {
+                                                                                    "Id": 177889,
+                                                                                    "Name": "timeOfDay",
+                                                                                    "AltName": null,
+                                                                                    "Type": "String",
+                                                                                    "Description": "The time of day.",
+                                                                                    "Optional": "False",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5607
+                                                                                },
+                                                                                "when": {
+                                                                                    "Id": 177890,
+                                                                                    "Name": "when",
+                                                                                    "AltName": null,
+                                                                                    "Type": "String",
+                                                                                    "Description": "The administration timing.",
+                                                                                    "Optional": "False",
+                                                                                    "IsArray": false,
+                                                                                    "Children": {},
+                                                                                    "Order": 10009,
+                                                                                    "TypeId": 5608
+                                                                                }
+                                                                            },
+                                                                            "Order": 10008,
+                                                                            "TypeId": 5594
+                                                                        }
+                                                                    },
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5591
+                                                                }
+                                                            },
+                                                            "Order": 10006,
+                                                            "TypeId": 5797
+                                                        },
+                                                        "encounter": {
+                                                            "Id": 177499,
+                                                            "Name": "encounter",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "Reference to the encounter resource that the request was placed on.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "groupIdentifier": {
+                                                            "Id": 177740,
+                                                            "Name": "groupIdentifier",
+                                                            "AltName": null,
+                                                            "Type": "Identifier",
+                                                            "Description": "The group ID and index for linked orders.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 361
+                                                        },
+                                                        "identifier": {
+                                                            "Id": 177339,
+                                                            "Name": "identifier",
+                                                            "AltName": null,
+                                                            "Type": "Identifier",
+                                                            "Description": "The order ID.",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 361
+                                                        },
+                                                        "intent": {
+                                                            "Id": 177302,
+                                                            "Name": "intent",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Returns “plan” for patient-reported and historical medications. Returns “order” for other medications.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5790
+                                                        },
+                                                        "medicationReference": {
+                                                            "Id": 177437,
+                                                            "Name": "medicationReference",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "The FHIR ID representation of the ordered medication. The ID is an encoded ORD and ERX.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "note": {
+                                                            "Id": 177814,
+                                                            "Name": "note",
+                                                            "AltName": null,
+                                                            "Type": "Annotation",
+                                                            "Description": "Comments from the medication order, and additional notes regarding linked orders. Comments are not returned to patients.",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 379
+                                                        },
+                                                        "priorPrescription": {
+                                                            "Id": 178224,
+                                                            "Name": "priorPrescription",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "The ID of the order from which this order was reordered.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "recorder": {
+                                                            "Id": 177635,
+                                                            "Name": "recorder",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "The provider ID. Otherwise, the user ID.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "reportedBoolean": {
+                                                            "Id": 177305,
+                                                            "Name": "reportedBoolean",
+                                                            "AltName": null,
+                                                            "Type": "Boolean",
+                                                            "Description": null,
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5793
+                                                        },
+                                                        "reportedReference": {
+                                                            "Id": 177394,
+                                                            "Name": "reportedReference",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "The informant who provided the information about the medication being taken differently or the patient reported medication.\nThis element only appears if reportedBoolean is set to true.\n",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "requester": {
+                                                            "Id": 177561,
+                                                            "Name": "requester",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "Who made the request. Starting in August 2021, this element can include a <a href=\"http://hl7.org/fhir/R4/extension-data-absent-reason.html\">Data Absent Reason Extension</a> if the requester is unknown.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "status": {
+                                                            "Id": 177301,
+                                                            "Name": "status",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The status of the medication request.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5789
+                                                        },
+                                                        "subject": {
+                                                            "Id": 177468,
+                                                            "Name": "subject",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "Who the medication request is for.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        },
+                                                        "substitution": {
+                                                            "Id": 178195,
+                                                            "Name": "substitution",
+                                                            "AltName": null,
+                                                            "Type": "Substitution",
+                                                            "Description": null,
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {
+                                                                "allowedBoolean": {
+                                                                    "Id": 178197,
+                                                                    "Name": "allowedBoolean",
+                                                                    "AltName": null,
+                                                                    "Type": "Boolean",
+                                                                    "Description": "The FHIR ID representation of the ordered medication. The ID is an encoded ORD and ERX.",
+                                                                    "Optional": "True",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 5812
+                                                                }
+                                                            },
+                                                            "Order": 10006,
+                                                            "TypeId": 5810
+                                                        },
+                                                        "supportingInformation": {
+                                                            "Id": 177530,
+                                                            "Name": "supportingInformation",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "This element is used for linked orders.",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 5785
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 360
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 431
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 416
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 405
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5821
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

@@ -1,0 +1,41 @@
+{
+    "Id": 10061,
+    "Description": "<p>Provides an Epic implementation of the <a href=\"https://github.com/smart-on-fhir/smart-scheduling-links\">SMART Scheduling Links standard</a>, a lightweight appointment availability publishing API designed to make it easy for organizations to publish COVID vaccine appointment slot availability in cooperation with outside websites, vendors, or government programs.</p>\n\n<p><b><a href=\"https://fhir.epic.com/Resources/file/covidsmartschedulinglinks\">View the specification here.</a></b></p>",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/epic/2021/Scheduling/Utility/CovidVaccineSlotAvailability/{state_code}",
+    "SampleRequest": null,
+    "SampleResponse": null,
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {
+        "-1": [
+            {
+                "Id": 1,
+                "Type": 808,
+                "Name": null,
+                "Content": null,
+                "XType": null,
+                "Opt": null,
+                "Unb": null,
+                "RelId": null
+            },
+            {
+                "Id": 2,
+                "Type": 809,
+                "Name": null,
+                "Content": null,
+                "XType": null,
+                "Opt": null,
+                "Unb": null,
+                "RelId": null
+            }
+        ]
+    },
+    "Parameters": null,
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

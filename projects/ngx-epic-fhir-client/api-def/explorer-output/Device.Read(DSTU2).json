@@ -1,0 +1,166 @@
+{
+    "Id": 8,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/device.html\" data-drive-link-file-url=\"1\">FHIR Device resource</a> describes information about a specific patient&#39;s durable, manufactured medical items.  The below documentation describes only medical devices implanted in a patient.   </p>   <p>    The Device resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Unique Device Identifiers (UDI).    </p>     <p>    The read interaction enables the lookup of a Device resource by a constant server ID. The read interaction allows clients to store only the server ID, and with a single request, retrieve the most up-to-date information about a device. Read interactions typically begin with a client having previously established a relationship, often through querying for Devices through the search interaction.   </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Device/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/Device/TD3asEm-BcI7MUquBrLe.wAB</p>",
+    "SampleResponse": "<p>&lt;Device xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;udi value=\"=/126843=,1931000=&amp;gt;017034&amp;amp;,11931002\" /&gt;</p><p>&lt;lotNumber value=\"1931002\" /&gt;</p><p>&lt;manufacturer value=\"Ace\" /&gt;</p><p>&lt;model value=\"1931001\" /&gt;</p><p>&lt;expiry value=\"2017-02-03T00:00:00\" /&gt;</p><p>&lt;id value=\"TD3asEm-BcI7MUquBrLe.wAB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"John Doe\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Screw\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"Screw\" /&gt;</p><p>&lt;display value=\"Screw\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 163131,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 163132,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Device FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5680
+                }
+            },
+            "Order": 0,
+            "TypeId": 5679
+        },
+        "ResponseRootType": {
+            "Id": 7746,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Device": {
+                    "Id": 7747,
+                    "Name": "Device",
+                    "AltName": null,
+                    "Type": "Device",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "expiry": {
+                            "Id": 7752,
+                            "Name": "expiry",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Date and time of expiry of this device (if applicable)</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 599
+                        },
+                        "lotNumber": {
+                            "Id": 7749,
+                            "Name": "lotNumber",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Lot number of manufacture</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 596
+                        },
+                        "manufacturer": {
+                            "Id": 7750,
+                            "Name": "manufacturer",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Name of device manufacturer</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 597
+                        },
+                        "model": {
+                            "Id": 7751,
+                            "Name": "model",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Model id assigned by the manufacturer</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 598
+                        },
+                        "patient": {
+                            "Id": 7758,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "<p>If the resource is affixed to a person</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "status": {
+                            "Id": 7754,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>We’ll send a status of entered-in-error for soft-deleted records.  All other records will have a status of available.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 601
+                        },
+                        "type": {
+                            "Id": 7761,
+                            "Name": "type",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>What kind of device this is DeviceKind  (Preferred)</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "udi": {
+                            "Id": 7748,
+                            "Name": "udi",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>FDA mandated Composite Unique Device Identifier</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 595
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 594
+                }
+            },
+            "Order": 10000,
+            "TypeId": 593
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

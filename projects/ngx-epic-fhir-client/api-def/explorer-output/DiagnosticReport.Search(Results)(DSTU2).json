@@ -1,0 +1,278 @@
+{
+    "Id": 11,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/DSTU2/diagnosticreport.html\">DiagnosticReport FHIR resource</a> represents resulted diagnostic orders and relevant data associated with the order and the patient. Supported diagnostic services include laboratory, radiology, and cardiology. If you are interested in querying for individual components from laboratory tests and text-based content, such as narratives or impressions, from radiology and cardiology results, these are returned in DiagnosticReport STU3 and R4 rather than DiagnosticReport DSTU2.</p>\n\n<p>     The DiagnosticReport resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Laboratory Tests.   </p>            \n\n<strong>Note: </strong>Some healthcare activities could be classified as either a diagnostic service or a procedure (e.g. endoscopic procedures, biopsies, etc.).&nbsp; Individual health systems can define which activities they classify for the Procedure vs. DiagnosticReport resource.&nbsp; As a result, you may see some procedures returned as a DiagnosticReport resource at some health systems, but as a Procedure resource at others.   </div> ",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/DiagnosticReport?patient={patient}&_id={_id}&subject={subject}&code={code}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport?patient=T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"5\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport?patient=T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/T8O0O6RlSva82VyURBzePmgB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/T8O0O6RlSva82VyURBzePmgB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;DiagnosticReport&gt;</p><p>&lt;status value=\"Final result\" /&gt;</p><p>&lt;effectiveDateTime value=\"2016-01-06T15:15:00\" /&gt;</p><p>&lt;issued value=\"2016-01-06T21:45:00\" /&gt;</p><p>&lt;id value=\"T8O0O6RlSva82VyURBzePmgB\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"official\" /&gt;</p><p>&lt;system value=\"Epic\" /&gt;</p><p>&lt;value value=\"991775\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Placer Identifier\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ValueSet/identifier-type\" /&gt;</p><p>&lt;code value=\"PLAC\" /&gt;</p><p>&lt;display value=\"Placer Identifier\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"BASIC METABOLIC PANEL - Final result\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"70219-1\" /&gt;</p><p>&lt;display value=\"Basic metabolic 2008 panel with ionized calcium - Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TgEfSWOatltrvRWYMDUWo8AB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: SODIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeAdh1BGisFUTqpElz3vP3BUB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: POTASSIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeB3.nSiF.WaGBlZGM3yV-48B\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CHLORIDE [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeEhtqKJAq8ZjfKGSdBLPF9wB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CARBON DIOXIDE, TOTAL [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeN0UfkD3sIwHhZEj7-qoDa8B\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: UREA NITROGEN [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeHFZZvgWViT1SfaRpQXQyLwB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CREATININE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeNzlcwoPfIGPJvq6ZvJOKHIB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: GLUCOSE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeHut1WCfqMBNdm0i210kBTsB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CALCIUM [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeNh40NgXPwrq5rJO-E8OG34B\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: ANION GAP 3 IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeE5k.sQJ0CKr9XCNMH6Y94cB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: GLOMERULAR FILTRATION RATE ML/MIN/1.73 SQ M.PREDICTED\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TmE5Cs5-FJWIWP8XzMKHDeJMyrKFbaxtDmiG8N4cFM7UB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;/DiagnosticReport&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/T.WjBOaU4G3BcwyZSxPkG4gB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/T.WjBOaU4G3BcwyZSxPkG4gB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;DiagnosticReport&gt;</p><p>&lt;status value=\"Final result\" /&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T14:15:00\" /&gt;</p><p>&lt;issued value=\"2016-02-16T21:56:00\" /&gt;</p><p>&lt;id value=\"T.WjBOaU4G3BcwyZSxPkG4gB\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"official\" /&gt;</p><p>&lt;system value=\"Epic\" /&gt;</p><p>&lt;value value=\"991776\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Placer Identifier\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ValueSet/identifier-type\" /&gt;</p><p>&lt;code value=\"PLAC\" /&gt;</p><p>&lt;display value=\"Placer Identifier\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"BASIC METABOLIC PANEL - Final result\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"70219-1\" /&gt;</p><p>&lt;display value=\"Basic metabolic 2008 panel with ionized calcium - Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TgEfSWOatltrvRWYMDUWo8AB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: SODIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke011td32xEmOKxeq6sD6at6CcB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: POTASSIUM [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke01-juD3gQbzjul5Slbd7pBEEB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CHLORIDE [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke015hKxt9KLeA5KPIUzdoK2mgB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CARBON DIOXIDE, TOTAL [MMOL/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke01.cIB8y7Cfh22P5Fn4ut4VgB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: UREA NITROGEN [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke0144C0qUy4dXdZAtdsZh4ryEB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CREATININE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke012VJbxU9K6MErslhHc2YAjQB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: GLUCOSE [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke01wmK3bmv.CBxIs6wmhGDTt0B\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: CALCIUM [MG/DL] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke012hRX6s.2iGfqcU-bCjQ29wB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: ANION GAP 3 IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke019aQG9b0cR1ArTVmSmu6wt8B\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: GLOMERULAR FILTRATION RATE ML/MIN/1.73 SQ M.PREDICTED\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/Txo93A2q4nARSXpYmJke017ejwBgJzhk9e9eDBht-gDgB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;/DiagnosticReport&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/Twv82wknQ25J-YYKLIXMSxAB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/Twv82wknQ25J-YYKLIXMSxAB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;DiagnosticReport&gt;</p><p>&lt;status value=\"Final result\" /&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-03T14:15:00\" /&gt;</p><p>&lt;issued value=\"2016-02-03T17:20:00\" /&gt;</p><p>&lt;id value=\"Twv82wknQ25J-YYKLIXMSxAB\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"official\" /&gt;</p><p>&lt;system value=\"Epic\" /&gt;</p><p>&lt;value value=\"991772\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Placer Identifier\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ValueSet/identifier-type\" /&gt;</p><p>&lt;code value=\"PLAC\" /&gt;</p><p>&lt;display value=\"Placer Identifier\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMYLASE - Final result\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1798-8\" /&gt;</p><p>&lt;display value=\"Amylase [Enzymatic activity/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TgEfSWOatltrvRWYMDUWo8AB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: AMYLASE [U/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/T9Anxpw7ouctvl65w0z7uLykGta0R.IbFLtsUurHajo0B\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;/DiagnosticReport&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/TV3h8wDr6Mnnd89wDSQiX1AB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/TV3h8wDr6Mnnd89wDSQiX1AB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;DiagnosticReport&gt;</p><p>&lt;status value=\"Final result\" /&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-05T17:45:00\" /&gt;</p><p>&lt;issued value=\"2016-02-05T21:45:00\" /&gt;</p><p>&lt;id value=\"TV3h8wDr6Mnnd89wDSQiX1AB\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"official\" /&gt;</p><p>&lt;system value=\"Epic\" /&gt;</p><p>&lt;value value=\"991773\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Placer Identifier\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ValueSet/identifier-type\" /&gt;</p><p>&lt;code value=\"PLAC\" /&gt;</p><p>&lt;display value=\"Placer Identifier\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMYLASE - Final result\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1798-8\" /&gt;</p><p>&lt;display value=\"Amylase [Enzymatic activity/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TgEfSWOatltrvRWYMDUWo8AB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: AMYLASE [U/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TAoipQXgi26J.P7sog-3jmKJK0P2TpeVkwkAFcJhI5.8B\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;/DiagnosticReport&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/ToZrehgqN3LTiFeKDB7yFJgB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/DiagnosticReport/ToZrehgqN3LTiFeKDB7yFJgB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;DiagnosticReport&gt;</p><p>&lt;status value=\"Final result\" /&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T17:30:00\" /&gt;</p><p>&lt;issued value=\"2016-02-16T19:35:00\" /&gt;</p><p>&lt;id value=\"ToZrehgqN3LTiFeKDB7yFJgB\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"official\" /&gt;</p><p>&lt;system value=\"Epic\" /&gt;</p><p>&lt;value value=\"991774\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Placer Identifier\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ValueSet/identifier-type\" /&gt;</p><p>&lt;code value=\"PLAC\" /&gt;</p><p>&lt;display value=\"Placer Identifier\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"AMYLASE - Final result\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1798-8\" /&gt;</p><p>&lt;display value=\"Amylase [Enzymatic activity/volume] in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9tA6WZi2ctFj0t10bq679Z84UsQZI6rpZh1RjWOsuAYB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TgEfSWOatltrvRWYMDUWo8AB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;result&gt;</p><p>&lt;display value=\"Component: AMYLASE [U/L] IN SER/PLAS\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Observation/TkDOY1zCTUF-fwD9Nek3Vw92qgkvQaqp.wwvK842G7jIB\" /&gt;</p><p>&lt;/result&gt;</p><p>&lt;/DiagnosticReport&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;resource&gt;</p><p>&lt;OperationOutcome&gt;</p><p>&lt;issue&gt;</p><p>&lt;severity value=\"warning\" /&gt;</p><p>&lt;details value=\"This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system.\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"informational\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/issue-type\" /&gt;</p><p>&lt;code value=\"informational\" /&gt;</p><p>&lt;display value=\"informational\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;/issue&gt;</p><p>&lt;/OperationOutcome&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"outcome\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": "<p>Text based result content, such as narratives, impressions, or addendums, will be represented as related Observations rather than in the text element inherited by DomainResource. If the results from a Search return medication orders, an error will be returned for those orders.</p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 1545,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "code": {
+                    "Id": 1549,
+                    "Name": "code",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "LOINC code of procedure(s).",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 170
+                },
+                "date": {
+                    "Id": 1550,
+                    "Name": "date",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Date when obtained.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 171
+                },
+                "patient": {
+                    "Id": 1546,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The patient FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 167
+                },
+                "subject": {
+                    "Id": 1548,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The patient FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 169
+                }
+            },
+            "Order": 0,
+            "TypeId": 166
+        },
+        "ResponseRootType": {
+            "Id": 1551,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 1552,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 1558,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single DiagnosticReport returned from the search.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 1563,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "DiagnosticReport": {
+                                            "Id": 1564,
+                                            "Name": "DiagnosticReport",
+                                            "AltName": null,
+                                            "Type": "DiagnosticReport",
+                                            "Description": "An instance of the DSTU2 DiagnosticReport resource.",
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "code": {
+                                                    "Id": 1597,
+                                                    "Name": "code",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "LOINC code for this report.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "effectiveDateTime": {
+                                                    "Id": 1566,
+                                                    "Name": "effectiveDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "User prioritized instant.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 125
+                                                },
+                                                "identifier": {
+                                                    "Id": 1570,
+                                                    "Name": "identifier",
+                                                    "AltName": null,
+                                                    "Type": "Identifier",
+                                                    "Description": "Identifiers used to refer to this report.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "type": {
+                                                            "Id": 1574,
+                                                            "Name": "type",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "Will be set to \"PLAC\" for placer identifier and \"FILL\" for filler identifier.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 133
+                                                        },
+                                                        "use": {
+                                                            "Id": 1571,
+                                                            "Name": "use",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Signifies the use of the report. Will be set to \"official\" or \"usual.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 130
+                                                        },
+                                                        "value": {
+                                                            "Id": 1573,
+                                                            "Name": "value",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Value of the identifier.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 132
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 129
+                                                },
+                                                "issued": {
+                                                    "Id": 1567,
+                                                    "Name": "issued",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Date when diagnostic report was released (result contact date/time).",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 126
+                                                },
+                                                "performer": {
+                                                    "Id": 1611,
+                                                    "Name": "performer",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The diagnostic service that is responsible for issuing the report.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "result": {
+                                                    "Id": 1620,
+                                                    "Name": "result",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "All observations related to this diagnostic report.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "status": {
+                                                    "Id": 1565,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The status of the report. You can find the list of values here: <a href=\"http://hl7.org/fhir/diagnostic-report-status\">http://hl7.org/fhir/diagnostic-report-status</a>.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 124
+                                                },
+                                                "subject": {
+                                                    "Id": 1605,
+                                                    "Name": "subject",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The patient.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 123
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 181
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 179
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 173
+                }
+            },
+            "Order": 10000,
+            "TypeId": 172
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

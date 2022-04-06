@@ -1,0 +1,264 @@
+{
+    "Id": 10226,
+    "Description": "This web service will return the metadata for a provider’s responses to order questions that were presented while ordering a code status order. Reference the Consent.Read (Code Status) web service to learn more about code status orders.",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/QuestionnaireResponse/{ID}",
+    "SampleRequest": "/api/FHIR/R4/QuestionnaireResponse/e1YCrNQzuB9H5gtKDHjkXnQ3",
+    "SampleResponse": "{\n\"resourceType\": \"QuestionnaireResponse\",\n\"id\": \"e1YCrNQzuB9H5gtKDHjkXnQ3\",\n\"basedOn\": [\n{\n\"reference\": \"ServiceRequest/eYqtELnEtyjRSWKGFepk2mFnlPXwHdMAAhSpwFXeZ6UE3\"\n}\n],\n\"status\": \"completed\",\n\"subject\": {\n\"reference\": \"Patient/ejhJ5AcIkLeU2HYq1TuE9RP8BKaTy54Jlyrxvg.KTUuc3\",\n\"display\": \"Zzz, Fhirconsent\"\n},\n\"encounter\": {\n\"reference\": \"Encounter/eEaf9FsTYjnDTMVh2RaULz-wTax74oKcQfSqgDWT.siQ3\",\n\"display\": \"Office Visit\"\n},\n\"item\": [\n{\n\"linkId\": \"1493\",\n\"text\": \"Allowable interventions for Partial Code:\",\n\"answer\": [\n{\n\"valueString\": \"DEFIBRILLATION\"\n},\n{\n\"valueString\": \"EXTERNAL CHEST COMPRESSION\"\n}\n]\n}\n]\n}\n",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 454543,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 454544,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "QuestionnaireResponse FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 6487
+                }
+            },
+            "Order": 0,
+            "TypeId": 6486
+        },
+        "ResponseRootType": {
+            "Id": 454545,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "QuestionnaireResponse": {
+                    "Id": 454546,
+                    "Name": "QuestionnaireResponse",
+                    "AltName": null,
+                    "Type": "QuestionnaireResponse",
+                    "Description": "An instance of the R4 QuestionnaireResponse FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "basedOn": {
+                            "Id": 454615,
+                            "Name": "basedOn",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "FHIR reference to the procedure order that represents the code status.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "encounter": {
+                            "Id": 454708,
+                            "Name": "encounter",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "FHIR reference to the encounter that the code status was placed in.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "id": {
+                            "Id": 454547,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "QuestionnaireResponse FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6465
+                        },
+                        "item": {
+                            "Id": 454801,
+                            "Name": "item",
+                            "AltName": null,
+                            "Type": "Item",
+                            "Description": "Information about the questions from the order. Each item contains the information for one question.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "answer": {
+                                    "Id": 454808,
+                                    "Name": "answer",
+                                    "AltName": null,
+                                    "Type": "Answer",
+                                    "Description": "<p>Contains information about the answer submitted for the question.</p>\n<p>Depending on the type of question, the value sent will be one of the following types:</p>\n<ul>\n<li>valueBoolean</li>\n<li>valueDecimal</li>\n<li>valueInteger</li>\n<li>valueDate</li>\n<li>valueTime</li>\n<li>valueString</li>\n<li>valueCoding</li>\n</ul>\n<p>Other types are not supported.</p>\n",
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {
+                                        "valueBoolean": {
+                                            "Id": 454810,
+                                            "Name": "valueBoolean",
+                                            "AltName": null,
+                                            "Type": "Boolean",
+                                            "Description": "Boolean value",
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 6478
+                                        },
+                                        "valueCoding": {
+                                            "Id": 454833,
+                                            "Name": "valueCoding",
+                                            "AltName": null,
+                                            "Type": "Coding",
+                                            "Description": "Coding value.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 349
+                                        },
+                                        "valueDate": {
+                                            "Id": 454813,
+                                            "Name": "valueDate",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "Date value",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 6481
+                                        },
+                                        "valueDecimal": {
+                                            "Id": 454811,
+                                            "Name": "valueDecimal",
+                                            "AltName": null,
+                                            "Type": "Decimal",
+                                            "Description": "Decimal value",
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 6479
+                                        },
+                                        "valueInteger": {
+                                            "Id": 454812,
+                                            "Name": "valueInteger",
+                                            "AltName": null,
+                                            "Type": "Int32",
+                                            "Description": null,
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 6480
+                                        },
+                                        "valueString": {
+                                            "Id": 454816,
+                                            "Name": "valueString",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "String value",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 6484
+                                        },
+                                        "valueTime": {
+                                            "Id": 454815,
+                                            "Name": "valueTime",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "Time value",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 6483
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 6476
+                                },
+                                "linkId": {
+                                    "Id": 454803,
+                                    "Name": "linkId",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The ID of the question that has been answered.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6473
+                                },
+                                "text": {
+                                    "Id": 454805,
+                                    "Name": "text",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The prompt for the question.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6475
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 6471
+                        },
+                        "status": {
+                            "Id": 454551,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Always set to ‘completed’.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6469
+                        },
+                        "subject": {
+                            "Id": 454677,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "FHIR reference to the patient that the code status applies to.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 6464
+                }
+            },
+            "Order": 10000,
+            "TypeId": 6488
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

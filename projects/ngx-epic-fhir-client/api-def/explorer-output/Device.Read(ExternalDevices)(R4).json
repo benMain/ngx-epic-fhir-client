@@ -1,0 +1,118 @@
+{
+    "Id": 10254,
+    "Description": "<p>The FHIR Device resource describes information about durable, manufactured medical items. The Epic implementation of this resource supports external medical devices.</p>\n<p>Read interactions begin with a client having previously established a relationship, typically when following a reference to this resource from another resource or through querying for devices through the search interaction.</p>",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Device/{ID}",
+    "SampleRequest": "https://hostname/instance/api/FHIR/R4/Device/eWLpiH.SLWEEL1QB0uWYOuOyR1ENczSmoNSlJFWCH10io8cU1jNQL50zfC4DNU0bF4N-0lWtziMwS-RlKH6gNYaa5HfBj--yGSgBFlmwTYvo3",
+    "SampleResponse": "{\n\t\"resourceType\": \"Device\",\n\t\"id\": \"eWLpiH.SLWEEL1QB0uWYOuOyR1ENczSmoNSlJFWCH10io8cU1jNQL50zfC4DNU0bF4N-0lWtziMwS-RlKH6gNYaa5HfBj--yGSgBFlmwTYvo3\",\n\t\"status\": \"active\",\n\t\"type\": {\n\t\t\"coding\": [\n\t\t\t{\n\t\t\t\t\"system\": \"http://snomed.info/sct\",\n\t\t\t\t\"code\": \"58938008\",\n\t\t\t\t\"display\": \"Wheelchair device (physical object)\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"system\": \"http://snomed.info/sct\",\n\t\t\t\t\"code\": \"705417005\",\n\t\t\t\t\"display\": \"Wheelchair accessory (physical object)\"\n\t\t\t}\n\t\t],\n\t\t\"text\": \"Wheelchair\"\n\t},\n\t\"patient\": {\n\t\t\"reference\": \"Patient/ePkoYQHmvWbfU.mZmNWGDtg3\",\n\t\t\"display\": \"Lufhir, Meiko\"\n\t}\n}",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 489664,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 489665,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Device FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5942
+                }
+            },
+            "Order": 0,
+            "TypeId": 5941
+        },
+        "ResponseRootType": {
+            "Id": 489666,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Device": {
+                    "Id": 489667,
+                    "Name": "Device",
+                    "AltName": null,
+                    "Type": "Device",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "id": {
+                            "Id": 489668,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The Device FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5945
+                        },
+                        "patient": {
+                            "Id": 489915,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Patient identifier.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "status": {
+                            "Id": 489671,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Hard-coded to a value of “active”.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5948
+                        },
+                        "type": {
+                            "Id": 489802,
+                            "Name": "type",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "A SNOMED or other device code.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 5944
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5943
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

@@ -1,0 +1,227 @@
+{
+    "Id": 1077,
+    "Description": "<p>Retrieves a Coverage resource by its FHIR ID. Coverage resources correspond to coverage records in Epic.</p><p>In Epic, coverage records exhibit the following characteristics:</p><ul><li>The patient-level coverage list represents all possible insurances that could be billed for services. A patient might have a long list of possible coverages that are applicable only for specific services. Examples include third party liability, worker's comp, black lung insurance, Medicaid for ESRD, Medicare, commercial, etc.</li><li>For any specific visit, an account record will indicate which coverages will be used for that visit.</li><li>A single visit-level account may have multiple coverages attached. Coverage filing order indicates which is billed first.</li><li>Coverages are specific to service area. For this reason, if you are searching across multiple service areas, a patient might have what appears to be duplicate coverages.</li></ul><p>This resource typically should not be used to determine which coverages are relevant for recent or upcoming visits and services. Instead, it returns all coverages that are potentially applicable to a patient. </p><p>This resource respects patient-level break-the-glass checks as configured in Epic. Audit events are logged to the patient audit trail when a coverage is accessed by this resource.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/STU3/Coverage/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/STU3/Coverage/elXVYEmbHxp3PH1L1zLolcd1pAKhctEHtzauwKkOcdrQ3</p>",
+    "SampleResponse": "<p>{</p><p>\"resourceType\": \"Coverage\",</p><p>\"id\": \"elXVYEmbHxp3PH1L1zLolcd1pAKhctEHtzauwKkOcdrQ3\",</p><p>\"identifier\": [</p><p>{</p><p>\"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.2.678671\",</p><p>\"value\": \"11104\"</p><p>}</p><p>],</p><p>\"status\": \"active\",</p><p>\"subscriber\": {</p><p>\"reference\": \"https://server/instance/api/FHIR/STU3/Patient/ee7NTBargpnWU-MaI95A5fA3\",</p><p>\"display\": \"Washington, Janae\"</p><p>},</p><p>\"subscriberId\": \"xxx053B\",</p><p>\"beneficiary\": {</p><p>\"reference\": \"https://server/instance/api/FHIR/STU3/Patient/ee7NTBargpnWU-MaI95A5fA3\",</p><p>\"display\": \"Washington, Janae\"</p><p>},</p><p>\"relationship\": {</p><p>\"coding\": [</p><p>{</p><p>\"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.10.678671.305\",</p><p>\"code\": \"01\",</p><p>\"display\": \"Self\"</p><p>},</p><p>{</p><p>\"system\": \"http://terminology.hl7.org/CodeSystem/subscriber-relationship\",</p><p>\"code\": \"self\",</p><p>\"display\": \"Self\"</p><p>}</p><p>],</p><p>\"text\": \"Self\"</p><p>},</p><p>\"period\": {</p><p>\"start\": \"2018-11-15\",</p><p>\"end\": \"2034-11-15\"</p><p>},</p><p>\"payor\": [</p><p>{</p><p>\"display\": \"HOMETOWN PAYOR\"</p><p>}</p><p>]</p><p>}</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 163131,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 163132,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Coverage FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5680
+                }
+            },
+            "Order": 0,
+            "TypeId": 5679
+        },
+        "ResponseRootType": {
+            "Id": 234411,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Coverage": {
+                    "Id": 234412,
+                    "Name": "Coverage",
+                    "AltName": null,
+                    "Type": "Coverage",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "beneficiary": {
+                            "Id": 234554,
+                            "Name": "beneficiary",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "<p>The beneficiary</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 38
+                        },
+                        "carrier": {
+                            "Id": 462318,
+                            "Name": "extension",
+                            "AltName": "carrier",
+                            "Type": "Extension",
+                            "Description": "The carrier.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 14
+                        },
+                        "dependent": {
+                            "Id": 234418,
+                            "Name": "dependent",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The dependent.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6312
+                        },
+                        "identifier": {
+                            "Id": 234452,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "<p>Coverage ID.</p>\n<p>This element also includes the UZOVI code for Dutch organizations.</p>",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 26
+                        },
+                        "meta": {
+                            "Id": 234422,
+                            "Name": "meta",
+                            "AltName": null,
+                            "Type": "Meta",
+                            "Description": "The document metadata.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "profile": {
+                                    "Id": 234426,
+                                    "Name": "profile",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/zib-Payer",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 13
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 9
+                        },
+                        "payor": {
+                            "Id": 234601,
+                            "Name": "payor",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "<p>The payer name. Starting in the November 2021 version of Epic, this is a reference to the Organization resource. </p>",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 38
+                        },
+                        "period": {
+                            "Id": 234596,
+                            "Name": "period",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "<p>Effective dates</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 34
+                        },
+                        "qualifying-patient-access": {
+                            "Id": 234450,
+                            "Name": "extension",
+                            "AltName": "qualifying-patient-access",
+                            "Type": "Extension",
+                            "Description": "Boolean indicating if coverage is a qualifying coverage based on Patient Access API.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 14
+                        },
+                        "relationship": {
+                            "Id": 234584,
+                            "Name": "relationship",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>Patient (beneficiary) relationship to subscriber.</p>\n<ul>\n  <li>self</li>\n  <li>spouse</li>\n  <li>child</li>\n  <li>employee</li>\n  <li>unknown</li>\n</ul>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 31
+                        },
+                        "status": {
+                            "Id": 234416,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Financial Resource Status Code. The following values are supported:</p>\n<ul>\n  <li>active</li>\n  <li>cancelled</li>\n  <li>draft</li>\n</ul>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6310
+                        },
+                        "subscriber": {
+                            "Id": 234524,
+                            "Name": "subscriber",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "<p>The subscriber</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 38
+                        },
+                        "subscriberId": {
+                            "Id": 234417,
+                            "Name": "subscriberId",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Subscriber ID",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6311
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 6306
+                }
+            },
+            "Order": 10000,
+            "TypeId": 6305
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

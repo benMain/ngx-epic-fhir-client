@@ -1,0 +1,289 @@
+{
+    "Id": 7,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/condition.html\" data-drive-link-file-url=\"1\">FHIR Condition resource</a> defines detailed information about a Condition, problem, or    diagnosis relevant to the health of the patient. Conditions are typically associated with other    resources, such as the reason for a prescription, procedure, diagnostic test, etc. A Condition    might be acute or chronic, but it is not used to represent an adverse reaction or an    allergy intolerance.   </p>   <p>    The Condition resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Problems and Health Concerns.    </p>                  <p>    The Search interaction enables the client to query for all problems associated with    a given patient&#39;s Conditions. The client, having established the patient in question,    now wishes to retrieve the list of that patient&#39;s problems or documented health concerns.  </p>  <p>Note that this resource retrieves only data stored in problem list records. As a result, medical history data documented outside of a patient's problem list isn't available to applications using this service unless that data is retrieved using another method.</p>  ",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Condition?patient={patient}&_id={_id}&clinicalStatus={clinicalStatus}&category={category}&subject={subject}",
+    "SampleRequest": "<p>http://hostname/instance/api/FHIR/DSTU2/Condition?patient=T0hY1cLFnO.TSydQJmt.mnZlFY0oi78v5x9iaxuyWOmUB&amp;category=diagnosis</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"2\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Condition?patient=T0hY1cLFnO.TSydQJmt.mnZlFY0oi78v5x9iaxuyWOmUB&amp;amp;category=diagnosis\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TFS10M6fD5mCLGAkbXhbQ7AB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TFS10M6fD5mCLGAkbXhbQ7AB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Condition&gt;</p><p>&lt;dateRecorded value=\"2016-01-13T00:00:00\" /&gt;</p><p>&lt;clinicalStatus value=\"active\" /&gt;</p><p>&lt;onsetDateTime value=\"2016-01-13T00:00:00\" /&gt;</p><p>&lt;verificationStatus value=\"confirmed\" /&gt;</p><p>&lt;id value=\"TFS10M6fD5mCLGAkbXhbQ7AB\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"John Condition Doe\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T0hY1cLFnO.TSydQJmt.mneK9ATxa9uysPCZFPmn2KygB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;asserter&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/asserter&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Pneumonia\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.90\" /&gt;</p><p>&lt;code value=\"J18.9\" /&gt;</p><p>&lt;display value=\"Pneumonia\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"233604007\" /&gt;</p><p>&lt;display value=\"Pneumonia (disorder)\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"Diagnosis\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.loinc.org\" /&gt;</p><p>&lt;code value=\"29308-4\" /&gt;</p><p>&lt;display value=\"Diagnosis\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"439401001\" /&gt;</p><p>&lt;display value=\"Diagnosis\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/condition-category\" /&gt;</p><p>&lt;code value=\"diagnosis\" /&gt;</p><p>&lt;display value=\"Diagnosis\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;severity&gt;</p><p>&lt;text value=\"High\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"24484000\" /&gt;</p><p>&lt;display value=\"Severe\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/severity&gt;</p><p>&lt;/Condition&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TKucVI9PtvImxUTclJmmLDwB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TKucVI9PtvImxUTclJmmLDwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Condition&gt;</p><p>&lt;dateRecorded value=\"2016-01-19T00:00:00\" /&gt;</p><p>&lt;clinicalStatus value=\"active\" /&gt;</p><p>&lt;onsetDateTime value=\"2016-01-19T00:00:00\" /&gt;</p><p>&lt;verificationStatus value=\"confirmed\" /&gt;</p><p>&lt;id value=\"TKucVI9PtvImxUTclJmmLDwB\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"John Condition Doe\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T0hY1cLFnO.TSydQJmt.mneK9ATxa9uysPCZFPmn2KygB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;asserter&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/asserter&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Broken leg\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.90\" /&gt;</p><p>&lt;code value=\"S82.90XA\" /&gt;</p><p>&lt;display value=\"Broken leg\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"46866001\" /&gt;</p><p>&lt;display value=\"Fracture of lower limb (disorder)\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"Diagnosis\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.loinc.org\" /&gt;</p><p>&lt;code value=\"29308-4\" /&gt;</p><p>&lt;display value=\"Diagnosis\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"439401001\" /&gt;</p><p>&lt;display value=\"Diagnosis\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/condition-category\" /&gt;</p><p>&lt;code value=\"diagnosis\" /&gt;</p><p>&lt;display value=\"Diagnosis\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;severity&gt;</p><p>&lt;text value=\"Med\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"6736007\" /&gt;</p><p>&lt;display value=\"Moderate\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/severity&gt;</p><p>&lt;/Condition&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 7600,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "category": {
+                    "Id": 7604,
+                    "Name": "category",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Type of condition – must be “Diagnosis”.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 582
+                },
+                "clinicalStatus": {
+                    "Id": 7603,
+                    "Name": "clinicalStatus",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>Status of the condition</p>\n<table class=\"table table-hover\">\n<tr>\n<th>FHIR Status</th>\n<th>Epic Status</th>\n</tr>\n<tr>\n<td>active</td>\n<td>active conditions</td>\n</tr>\n<tr>\n<td>resolved</td>\n<td> resolved conditions</td>\n</tr>\n<tr>\n<td>inactive</td>\n<td>deleted conditions</td>\n</tr>\n</table>\n<p>If no status is specified all active (confirmed) conditions will be returned. </p>\n<p>*Note: Any FHIR Status not listed in the above table is not returned.</p>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 581
+                },
+                "patient": {
+                    "Id": 7601,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Patient FHIR resource ID.",
+                    "Optional": " Either patient or subject must be specified. If both are specified, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 579
+                },
+                "subject": {
+                    "Id": 7605,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Subject of the condition.",
+                    "Optional": "Either subject or patient must be specified. If both are specified, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 583
+                }
+            },
+            "Order": 0,
+            "TypeId": 578
+        },
+        "ResponseRootType": {
+            "Id": 7606,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 7607,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 7613,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 7618,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": null,
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Condition": {
+                                            "Id": 7619,
+                                            "Name": "Condition",
+                                            "AltName": null,
+                                            "Type": "Condition",
+                                            "Description": "A single Condition resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "abatementDateTime": {
+                                                    "Id": 7623,
+                                                    "Name": "abatementDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Date the problem was resolved.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 572
+                                                },
+                                                "asserter": {
+                                                    "Id": 7652,
+                                                    "Name": "asserter",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "User who first added the problem. ",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "category": {
+                                                    "Id": 7663,
+                                                    "Name": "category",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "This is always Diagnosis.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "clinicalStatus": {
+                                                    "Id": 7621,
+                                                    "Name": "clinicalStatus",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The status of the problem. Can be active, inactive, or resolved. ",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 570
+                                                },
+                                                "code": {
+                                                    "Id": 7655,
+                                                    "Name": "code",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The external codes associated with the problem. Uses SNOMED codes, or returns a name only if no SNOMED code is mapped.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "dateRecorded": {
+                                                    "Id": 7620,
+                                                    "Name": "dateRecorded",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Date the problem was added to the patient’s chart.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 569
+                                                },
+                                                "id": {
+                                                    "Id": 7626,
+                                                    "Name": "id",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The Condition FHIR ID.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 575
+                                                },
+                                                "notes": {
+                                                    "Id": 7624,
+                                                    "Name": "notes",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Free text comment.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 573
+                                                },
+                                                "onsetDateTime": {
+                                                    "Id": 7622,
+                                                    "Name": "onsetDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Date the problem began.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 571
+                                                },
+                                                "patient": {
+                                                    "Id": 7646,
+                                                    "Name": "patient",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Reference to the Patient associated with the Condition.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "severity": {
+                                                    "Id": 7671,
+                                                    "Name": "severity",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The priority of the problem.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 568
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 590
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 588
+                        },
+                        "total": {
+                            "Id": 7609,
+                            "Name": "total",
+                            "AltName": null,
+                            "Type": "Int32",
+                            "Description": null,
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 587
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 585
+                }
+            },
+            "Order": 10000,
+            "TypeId": 584
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

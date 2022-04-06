@@ -1,0 +1,239 @@
+{
+    "Id": 338,
+    "Description": "<p>The <a href=\"http://hl7.org/fhir/medicationstatement.html\">FHIR MedicationStatement resource</a> defines detailed information about medications being consumed by a patient. The medication information may come from e.g. the patient's memory, from a prescription bottle, or from a list of medications the patient, clinician or other party maintains and therefore can be less specific than the MedicationOrder resource. The MedicationStatement resource is a high-level summary of medications being used, reported by patients or care providers. It is not a listing of specific prescriptions or administrations, which instead are available in the MedicationOrder and MedicationAdministration resources, respectively.</p>\n<p>The Read interaction enables the look up of a MedicationStatement resource by a constant server ID. Clients can store only the server ID, and with a single request, retrieve the most up-to-date information about the MedicationStatement. Read interactions typically begin with a client having previously established a relationship, often through querying for patients through the Search interaction.   </p>",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/MedicationStatement/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/MedicationStatement?patient=Tbt3KuCY0B5PSrJvCu2j-PlK.aiHsu2xUjUM8bWpetXoB&amp;status=active,completed</p>",
+    "SampleResponse": "<p>&lt;?xml version=\"1.0\"?&gt;</p><p>&lt;MedicationStatement xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;status value=\"completed\"/&gt;</p><p>&lt;id value=\"TEYRqlko22AB6J.Fi4MCvpwB\"/&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\"/&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.0.1.7.2.798268\"/&gt;</p><p>&lt;value value=\"971096\"/&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\"/&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.0.1.7.3.798268.801\"/&gt;</p><p>&lt;value value=\"971096:0396167050\"/&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Jason Argonaut\"/&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tbt3KuCY0B5PSrJvCu2j-PlK.aiHsu2xUjUM8bWpetXoB\"/&gt;</p><p>&lt;/patient&gt;</p><p>&lt;informationSource&gt;</p><p>&lt;display value=\"Physician Family Medicine\"/&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T3Mz3KLBDVXXgaRoee3EKAAB\"/&gt;</p><p>&lt;/informationSource&gt;</p><p>&lt;effectivePeriod&gt;</p><p>&lt;start value=\"2015-08-24T00:00:00Z\"/&gt;</p><p>&lt;end value=\"2015-09-03T00:00:00Z\"/&gt;</p><p>&lt;/effectivePeriod&gt;</p><p>&lt;medicationCodeableConcept&gt;</p><p>&lt;text value=\"amoxicillin (AMOXIL) 500 MG capsule\"/&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.nlm.nih.gov/research/umls/rxnorm\"/&gt;</p><p>&lt;code value=\"308191\"/&gt;</p><p>&lt;display value=\"amoxicillin (AMOXIL) 500 MG capsule\"/&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/medicationCodeableConcept&gt;</p><p>&lt;dosage&gt;</p><p>&lt;text value=\"Take 1 capsule (500 mg total) by mouth 3 (three) times a day for 10 days.\"/&gt;</p><p>&lt;asNeededBoolean value=\"false\"/&gt;</p><p>&lt;timing&gt;</p><p>&lt;repeat&gt;</p><p>&lt;frequency value=\"1\"/&gt;</p><p>&lt;period value=\"8\"/&gt;</p><p>&lt;periodUnits value=\"h\"/&gt;</p><p>&lt;boundsPeriod&gt;</p><p>&lt;start value=\"2015-08-24T00:00:00Z\"/&gt;</p><p>&lt;end value=\"2015-09-03T00:00:00Z\"/&gt;</p><p>&lt;/boundsPeriod&gt;</p><p>&lt;/repeat&gt;</p><p>&lt;/timing&gt;</p><p>&lt;route&gt;</p><p>&lt;text value=\"Oral\"/&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.0.1.7.4.698288.330\"/&gt;</p><p>&lt;code value=\"15\"/&gt;</p><p>&lt;display value=\"Oral\"/&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/route&gt;</p><p>&lt;method&gt;</p><p>&lt;text value=\"Take\"/&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.0.1.7.4.798268.8600\"/&gt;</p><p>&lt;code value=\"11\"/&gt;</p><p>&lt;display value=\"Take\"/&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/method&gt;</p><p>&lt;quantityQuantity&gt;</p><p>&lt;value value=\"1\"/&gt;</p><p>&lt;unit value=\"capsule\"/&gt;</p><p>&lt;/quantityQuantity&gt;</p><p>&lt;/dosage&gt;</p><p>&lt;/MedicationStatement&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 19342,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 19343,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The FHIR ID of the MedicationStatement resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4377
+                }
+            },
+            "Order": 0,
+            "TypeId": 4376
+        },
+        "ResponseRootType": {
+            "Id": 19344,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "MedicationStatement": {
+                    "Id": 19345,
+                    "Name": "MedicationStatement",
+                    "AltName": null,
+                    "Type": "MedicationStatement",
+                    "Description": "An instance of the DSTU2 MedicationStatement resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "dosage": {
+                            "Id": 19415,
+                            "Name": "dosage",
+                            "AltName": null,
+                            "Type": "Dosage",
+                            "Description": "The value and unit of the dosage.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "asNeededBoolean": {
+                                    "Id": 19417,
+                                    "Name": "asNeededBoolean",
+                                    "AltName": null,
+                                    "Type": "Boolean",
+                                    "Description": "True if taken as needed (PRN). False otherwise.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 4388
+                                },
+                                "method": {
+                                    "Id": 19509,
+                                    "Name": "method",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The dose delivery method.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 133
+                                },
+                                "quantityQuantity": {
+                                    "Id": 19517,
+                                    "Name": "quantityQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "The medication administer amount.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "route": {
+                                    "Id": 19501,
+                                    "Name": "route",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The route where the medication is taken.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 133
+                                },
+                                "timing": {
+                                    "Id": 19418,
+                                    "Name": "timing",
+                                    "AltName": null,
+                                    "Type": "Timing",
+                                    "Description": "The frequency.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 789
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 4386
+                        },
+                        "effectiveDateTime": {
+                            "Id": 19349,
+                            "Name": "effectiveDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The effective date and time when the patient started taking the medication.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 4383
+                        },
+                        "effectivePeriod": {
+                            "Id": 19396,
+                            "Name": "effectivePeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "The effective date and time when the patient started and stopped taking the medication.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 659
+                        },
+                        "identifier": {
+                            "Id": 19352,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "The identifier associated with the MedicationStatement.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 129
+                        },
+                        "informationSource": {
+                            "Id": 19374,
+                            "Name": "informationSource",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the source of information. Can include reference to a Patient, Practitioner, or RelatedPerson.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "medicationCodeableConcept": {
+                            "Id": 19404,
+                            "Name": "medicationCodeableConcept",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The name of the medication/mixture.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "medicationReference": {
+                            "Id": 19412,
+                            "Name": "medicationReference",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The medication ID unless it is a mixture.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "patient": {
+                            "Id": 19371,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the Patient resource.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "status": {
+                            "Id": 19347,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The order status of the medication.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 4381
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 4379
+                }
+            },
+            "Order": 10000,
+            "TypeId": 4378
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

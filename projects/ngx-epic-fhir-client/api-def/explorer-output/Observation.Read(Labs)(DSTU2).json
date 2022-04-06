@@ -1,0 +1,361 @@
+{
+    "Id": 27,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/observation.html\" data-drive-link-file-url=\"1\">FHIR Observation resource</a> defines information about a measurement or simple assertion made about a patient.    The below documentation describes how the Observation resource is used to describe analyte level result information or sensitivities and isolates from a microbiology analysis.</p><p>      The Observation resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Laboratory Values/Results and Laboratory Tests.   </p>                          <p>    The Read interaction enables the look up of an Observation resource by a constant server ID.    Clients can store only the server ID, and with a single request, retrieve the most up-to-date    information about the observation. Read interactions typically begin with a client having    previously established a relationship, often through querying for observations through the search interaction.   </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Observation/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/Observation/T7W3P4gfS128KkAvYVaU1em6mVb6XttPcLHC4B8CxU7QB</p>",
+    "SampleResponse": "<p>&lt;Observation xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;effectiveDateTime value=\"2016-02-16T21:56:00Z\" /&gt;</p><p>&lt;status value=\"final\" /&gt;</p><p>&lt;id value=\"T7W3P4gfS128KkAvYVaU1em6mVb6XttPcLHC4B8CxU7QB\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"ANION GAP 3 IN SER/PLAS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://loinc.org\" /&gt;</p><p>&lt;code value=\"1863-0\" /&gt;</p><p>&lt;display value=\"Anion gap 4 in Serum or Plasma\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueQuantity&gt;</p><p>&lt;value value=\"21\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/valueQuantity&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;referenceRange&gt;</p><p>&lt;text value=\"30 mmol/L\" /&gt;</p><p>&lt;high&gt;</p><p>&lt;value value=\"30\" /&gt;</p><p>&lt;unit value=\"mmol/L\" /&gt;</p><p>&lt;code value=\"mmol/L\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/high&gt;</p><p>&lt;/referenceRange&gt;</p><p>&lt;/Observation&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 9672,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 9673,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Observation FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 186
+                }
+            },
+            "Order": 0,
+            "TypeId": 185
+        },
+        "ResponseRootType": {
+            "Id": 9674,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 9675,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "A single Observation FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 9812,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The Observation type. Always \"laboratory\".",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "code": {
+                            "Id": 9684,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "LOINC code for Observation. If no LOINC code is mapped, only \"text\" will be returned.  ",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "comments": {
+                            "Id": 9677,
+                            "Name": "comments",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Comments about the result.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 190
+                        },
+                        "effectiveDateTime": {
+                            "Id": 9678,
+                            "Name": "effectiveDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The prioritized instant. This is the instant the results were last updated.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 191
+                        },
+                        "id": {
+                            "Id": 9681,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The Observation FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 194
+                        },
+                        "interpretation": {
+                            "Id": 9706,
+                            "Name": "interpretation",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The level of abnormality. If the value isn't mapped we will just send the text value in the Codeable concept.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "performer": {
+                            "Id": 9755,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "A reference to the Practitioner resource for the director of the associated resulting agency.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "referenceRange": {
+                            "Id": 9764,
+                            "Name": "referenceRange",
+                            "AltName": null,
+                            "Type": "ReferenceRange",
+                            "Description": "Reference range (if available).",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "high": {
+                                    "Id": 9772,
+                                    "Name": "high",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "High range, if relevant.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "low": {
+                                    "Id": 9766,
+                                    "Name": "low",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Low range, if relevant.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "text": {
+                                    "Id": 9765,
+                                    "Name": "text",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Textual reference range.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 204
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 203
+                        },
+                        "related": {
+                            "Id": 9799,
+                            "Name": "related",
+                            "AltName": null,
+                            "Type": "Related",
+                            "Description": "Related isolate level Observation.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "target": {
+                                    "Id": 9801,
+                                    "Name": "target",
+                                    "AltName": null,
+                                    "Type": "Reference",
+                                    "Description": "Observation FHIR ID for the isolate.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 144
+                                },
+                                "type": {
+                                    "Id": 9800,
+                                    "Name": "type",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Always \"has-member\".",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 207
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 206
+                        },
+                        "status": {
+                            "Id": 9680,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The status of the lab order. ",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 193
+                        },
+                        "subject": {
+                            "Id": 9749,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The patient FHIR ID associated with the order.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "valueCodeableConcept": {
+                            "Id": 9804,
+                            "Name": "valueCodeableConcept",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "This element is populated only if a SNOMED code is associated with the component.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "valueQuantity": {
+                            "Id": 9692,
+                            "Name": "valueQuantity",
+                            "AltName": null,
+                            "Type": "Quantity",
+                            "Description": "A result value. This element is populated only if the result is structured numeric and represents a quantity.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "code": {
+                                    "Id": 9696,
+                                    "Name": "code",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Unit's coded value.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 201
+                                },
+                                "comparator": {
+                                    "Id": 9694,
+                                    "Name": "comparator",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "How to understand the value. Find a full list of potential values <a href=\"http://hl7.org/fhir/DSTU2/valueset-quantity-comparator.html\">here</a>.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 199
+                                },
+                                "system": {
+                                    "Id": 9697,
+                                    "Name": "system",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Applies to quantity unit's code.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 202
+                                },
+                                "unit": {
+                                    "Id": 9695,
+                                    "Name": "unit",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Quantity's unit.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 200
+                                },
+                                "value": {
+                                    "Id": 9693,
+                                    "Name": "value",
+                                    "AltName": null,
+                                    "Type": "Decimal",
+                                    "Description": "Numeric value of the result. ",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 198
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 197
+                        },
+                        "valueString": {
+                            "Id": 9676,
+                            "Name": "valueString",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "A result value. This element is populated only if the result is a string.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 189
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 188
+                }
+            },
+            "Order": 10000,
+            "TypeId": 187
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

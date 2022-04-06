@@ -1,0 +1,241 @@
+{
+    "Id": 9,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/device.html\" data-drive-link-file-url=\"1\">FHIR Device resource</a> describes information about a specific patient&#39;s durable, manufactured medical items.  The below documentation describes only medical devices implanted in a patient.   </p>   <p>    The Device resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Unique Device Identifiers (UDI).    </p>                      <p>    The Search interaction enables the client to query for the devices of a given patient. The client, having established    the patient in question, now wishes to retrieve the implanted devices for the patient. Clients can further refine their search by device type or UDI.  </p>   <div class=\"alert alert-info\">    <strong>Note:</strong> To ensure clinical safety for a patient, a search filtered via the <code>_lastUpdated</code> search parameter will return all currently implanted devices for the patient in addition to other data returned in the search.   </div>   ",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Device?_id={_id}&patient={patient}&type={type}&udi={udi}&subject={subject}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/Device?patient=TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"10\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device?patient=TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TpvjYd30iuam-C9dJJ.V87wB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TpvjYd30iuam-C9dJJ.V87wB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"+7821/$$31702031931005/S1931003\" /&gt;</p><p>&lt;lotNumber value=\"1931005\" /&gt;</p><p>&lt;manufacturer value=\"Ace\" /&gt;</p><p>&lt;model value=\"1931004\" /&gt;</p><p>&lt;expiry value=\"2017-02-03T00:00:00\" /&gt;</p><p>&lt;id value=\"TpvjYd30iuam-C9dJJ.V87wB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Plate\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"Plate\" /&gt;</p><p>&lt;display value=\"Plate\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TD3asEm-BcI7MUquBrLe.wAB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TD3asEm-BcI7MUquBrLe.wAB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"=/126843=,1931000=&amp;gt;017034&amp;amp;,11931002\" /&gt;</p><p>&lt;lotNumber value=\"1931002\" /&gt;</p><p>&lt;manufacturer value=\"Ace\" /&gt;</p><p>&lt;model value=\"1931001\" /&gt;</p><p>&lt;expiry value=\"2017-02-03T00:00:00\" /&gt;</p><p>&lt;id value=\"TD3asEm-BcI7MUquBrLe.wAB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Screw\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"Screw\" /&gt;</p><p>&lt;display value=\"Screw\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TDlrEzziaSB-975OGPIv.EwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"hhttps://hostname/instance/api/FHIR/DSTU2/Device/TDlrEzziaSB-975OGPIv.EwB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"(01)01654(17)161123(10)1931007(21)1931008\" /&gt;</p><p>&lt;lotNumber value=\"1931007\" /&gt;</p><p>&lt;manufacturer value=\"PetroChem Medical\" /&gt;</p><p>&lt;model value=\"1931006\" /&gt;</p><p>&lt;expiry value=\"2016-11-23T00:00:00\" /&gt;</p><p>&lt;id value=\"TDlrEzziaSB-975OGPIv.EwB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Bolt\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"Bolt\" /&gt;</p><p>&lt;display value=\"Bolt\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TJk48hW2XT-.-AKxolbUXygB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TJk48hW2XT-.-AKxolbUXygB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"(01)56321(17)220204(10)984(21)654\" /&gt;</p><p>&lt;lotNumber value=\"984\" /&gt;</p><p>&lt;manufacturer value=\"Boston Scientific\" /&gt;</p><p>&lt;model value=\"987\" /&gt;</p><p>&lt;expiry value=\"2022-02-04T00:00:00\" /&gt;</p><p>&lt;id value=\"TJk48hW2XT-.-AKxolbUXygB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Bolt\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"Bolt\" /&gt;</p><p>&lt;display value=\"Bolt\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/ToIW.h05cIU0MLEHE48VVXwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/ToIW.h05cIU0MLEHE48VVXwB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"=/124=,6546=&amp;gt;017159&amp;amp;,1351\" /&gt;</p><p>&lt;lotNumber value=\"351\" /&gt;</p><p>&lt;manufacturer value=\"3M\" /&gt;</p><p>&lt;model value=\"65498\" /&gt;</p><p>&lt;expiry value=\"2017-06-08T00:00:00\" /&gt;</p><p>&lt;id value=\"ToIW.h05cIU0MLEHE48VVXwB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Pump\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"PUMP\" /&gt;</p><p>&lt;display value=\"Pump\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TL.yozmtsRWpiXdGschWujwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TL.yozmtsRWpiXdGschWujwB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"+165132165/$$3170505158/S6654\" /&gt;</p><p>&lt;lotNumber value=\"158\" /&gt;</p><p>&lt;manufacturer value=\"Boston Scientific\" /&gt;</p><p>&lt;model value=\"324\" /&gt;</p><p>&lt;expiry value=\"2017-05-05T00:00:00\" /&gt;</p><p>&lt;id value=\"TL.yozmtsRWpiXdGschWujwB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Mesh\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"Mesh\" /&gt;</p><p>&lt;display value=\"Mesh\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/T7hhIor12ufDN4oOrRmAu.wB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/T7hhIor12ufDN4oOrRmAu.wB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"(01)65489(11)140210(17)170210(10)651(21)984\" /&gt;</p><p>&lt;lotNumber value=\"651\" /&gt;</p><p>&lt;manufacturer value=\"Ace\" /&gt;</p><p>&lt;model value=\"654\" /&gt;</p><p>&lt;expiry value=\"2017-02-10T00:00:00\" /&gt;</p><p>&lt;id value=\"T7hhIor12ufDN4oOrRmAu.wB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"EFW Implant\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"EFW Table\" /&gt;</p><p>&lt;display value=\"EFW Implant\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TQCRu7tlOsu4T5G5UZlqbsgB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/TQCRu7tlOsu4T5G5UZlqbsgB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"=/65421=,516=&amp;gt;019042&amp;amp;,1651\" /&gt;</p><p>&lt;lotNumber value=\"651\" /&gt;</p><p>&lt;manufacturer value=\"Ace\" /&gt;</p><p>&lt;model value=\"651\" /&gt;</p><p>&lt;expiry value=\"2019-02-11T00:00:00\" /&gt;</p><p>&lt;id value=\"TQCRu7tlOsu4T5G5UZlqbsgB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Clamp\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"Clamp\" /&gt;</p><p>&lt;display value=\"Clamp\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/T7.N4tLpdWgNv0CTPxjMTnQB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/T7.N4tLpdWgNv0CTPxjMTnQB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"(01)561(10)2351\" /&gt;</p><p>&lt;lotNumber value=\"2351\" /&gt;</p><p>&lt;model value=\"841\" /&gt;</p><p>&lt;id value=\"T7.N4tLpdWgNv0CTPxjMTnQB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Insert\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"INSERT\" /&gt;</p><p>&lt;display value=\"Insert\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Device/Te0p2-tobal.LEqHf.VaOtwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Device/Te0p2-tobal.LEqHf.VaOtwB\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;Device&gt;</p><p>&lt;udi value=\"(01)561(10)2351\" /&gt;</p><p>&lt;lotNumber value=\"2351\" /&gt;</p><p>&lt;model value=\"841\" /&gt;</p><p>&lt;id value=\"Te0p2-tobal.LEqHf.VaOtwB\" /&gt;</p><p>&lt;status value=\"available\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Emily Device Williams\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;type&gt;</p><p>&lt;text value=\"Insert\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.1.737780.70.1931002\" /&gt;</p><p>&lt;code value=\"INSERT\" /&gt;</p><p>&lt;display value=\"Insert\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/Device&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 7823,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "_id": {
+                    "Id": 7824,
+                    "Name": "_id",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": null,
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 610
+                },
+                "patient": {
+                    "Id": 7825,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>Patient is always required.</p>",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 611
+                },
+                "type": {
+                    "Id": 7826,
+                    "Name": "type",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>The type of the device.</p>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 612
+                },
+                "udi": {
+                    "Id": 7827,
+                    "Name": "udi",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>FDA mandated Unique Device Identifier.</p>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 613
+                }
+            },
+            "Order": 0,
+            "TypeId": 609
+        },
+        "ResponseRootType": {
+            "Id": 7829,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 7830,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 7836,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 7841,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": null,
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Device": {
+                                            "Id": 7842,
+                                            "Name": "Device",
+                                            "AltName": null,
+                                            "Type": "Device",
+                                            "Description": null,
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "expiry": {
+                                                    "Id": 7847,
+                                                    "Name": "expiry",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>Date and time of expiry of this device (if applicable). This parameter does not respect MyChart filtering.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 599
+                                                },
+                                                "lotNumber": {
+                                                    "Id": 7844,
+                                                    "Name": "lotNumber",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "</p>Lot number of manufacture. This parameter does not respect MyChart filtering.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 596
+                                                },
+                                                "manufacturer": {
+                                                    "Id": 7845,
+                                                    "Name": "manufacturer",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>Name of device manufacturer. This parameter does not respect MyChart filtering.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 597
+                                                },
+                                                "model": {
+                                                    "Id": 7846,
+                                                    "Name": "model",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>Model ID assigned by the manufacturer. This parameter does not respect MyChart filtering.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 598
+                                                },
+                                                "patient": {
+                                                    "Id": 7853,
+                                                    "Name": "patient",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "<p>If the resource is affixed to a person. This parameter does not respect MyChart filtering.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "status": {
+                                                    "Id": 7849,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>This parameter does not respect MyChart filtering.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 601
+                                                },
+                                                "type": {
+                                                    "Id": 7856,
+                                                    "Name": "type",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "<p>The type of the device. This parameter respects MyChart filtering.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "udi": {
+                                                    "Id": 7843,
+                                                    "Name": "udi",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>FDA mandated Composite Unique Device Identifier.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 595
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 594
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 621
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 619
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 616
+                }
+            },
+            "Order": 10000,
+            "TypeId": 615
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

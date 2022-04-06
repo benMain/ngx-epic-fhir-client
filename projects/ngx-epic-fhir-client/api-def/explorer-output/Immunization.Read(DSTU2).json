@@ -1,0 +1,362 @@
+{
+    "Id": 21,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/immunization.html\" data-drive-link-file-url=\"1\">FHIR Immunization Resource</a> provides information about a patient&#39;s immunizations, including the vaccine administered and details regarding the administration.   </p>   <p>    The Immunization resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Immunizations.   </p>     <p>    The read interaction enables the lookup of an Immunization resource by a constant server ID. The read interaction allows clients to store only the server ID, and with a single request, retrieve the most up-to-date information about an immunization. Read interactions typically begin with a client having previously established a relationship, often through querying for Immunizations through the search interaction.   </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Immunization/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/Immunization/TbsCKcp1c5uHfqf3O5g22wAB</p>",
+    "SampleResponse": "<p>&lt;Immunization xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;status value=\"completed\" /&gt;</p><p>&lt;date value=\"2016-02-11T16:19:00\" /&gt;</p><p>&lt;wasNotGiven value=\"false\" /&gt;</p><p>&lt;reported value=\"false\" /&gt;</p><p>&lt;lotNumber value=\"43295210\" /&gt;</p><p>&lt;id value=\"TbsCKcp1c5uHfqf3O5g22wAB\" /&gt;</p><p>&lt;vaccineCode&gt;</p><p>&lt;text value=\"Dt/Tetanus\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/sid/cvx\" /&gt;</p><p>&lt;code value=\"7\" /&gt;</p><p>&lt;display value=\"DT/TETANUS\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/vaccineCode&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fhir A Szitta\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;performer&gt;</p><p>&lt;display value=\"Tim Szitta, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T261TVJilfMxfUGfuXuDQpQB\" /&gt;</p><p>&lt;/performer&gt;</p><p>&lt;manufacturer&gt;</p><p>&lt;display value=\"Merck, Sharp, Dohme\" /&gt;</p><p>&lt;/manufacturer&gt;</p><p>&lt;site&gt;</p><p>&lt;text value=\"Left deltoid\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.4.768076.4040\" /&gt;</p><p>&lt;code value=\"LD\" /&gt;</p><p>&lt;display value=\"Left deltoid\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/site&gt;</p><p>&lt;route&gt;</p><p>&lt;text value=\"Intramuscular\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.4.768076.4030\" /&gt;</p><p>&lt;code value=\"IM\" /&gt;</p><p>&lt;display value=\"Intramuscular\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/route&gt;</p><p>&lt;doseQuantity&gt;</p><p>&lt;value value=\"1\" /&gt;</p><p>&lt;unit value=\"EA\" /&gt;</p><p>&lt;code value=\"EA\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;/doseQuantity&gt;</p><p>&lt;note&gt;</p><p>&lt;text value=\"given this\" /&gt;</p><p>&lt;/note&gt;</p><p>&lt;/Immunization&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 8769,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 8770,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Immunization FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 744
+                }
+            },
+            "Order": 0,
+            "TypeId": 743
+        },
+        "ResponseRootType": {
+            "Id": 8771,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Immunization": {
+                    "Id": 8772,
+                    "Name": "Immunization",
+                    "AltName": null,
+                    "Type": "Immunization",
+                    "Description": "A single Immunization FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "date": {
+                            "Id": 8774,
+                            "Name": "date",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Vaccination administration date.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 748
+                        },
+                        "doseQuantity": {
+                            "Id": 8835,
+                            "Name": "doseQuantity",
+                            "AltName": null,
+                            "Type": "Quantity",
+                            "Description": "Information about the amount of vaccine administered.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "unit": {
+                                    "Id": 8838,
+                                    "Name": "unit",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Unit of amount of vaccine administered.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 200
+                                },
+                                "value": {
+                                    "Id": 8836,
+                                    "Name": "value",
+                                    "AltName": null,
+                                    "Type": "Decimal",
+                                    "Description": "Amount of vaccine administered.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 198
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 197
+                        },
+                        "expirationDate": {
+                            "Id": 8779,
+                            "Name": "expirationDate",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Vaccine expiration date.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 753
+                        },
+                        "explanation": {
+                            "Id": 8848,
+                            "Name": "explanation",
+                            "AltName": null,
+                            "Type": "Explanation",
+                            "Description": "Vaccine administration/non-administration reasons.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "reasonNotGiven": {
+                                    "Id": 8849,
+                                    "Name": "reasonNotGiven",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Why immunization did not occur. Only sent if 'wasNotGiven' is true.",
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 133
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 754
+                        },
+                        "id": {
+                            "Id": 8778,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Immunization FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 752
+                        },
+                        "identifier": {
+                            "Id": 8780,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "Additional identifiers for the Immunization.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 129
+                        },
+                        "lotNumber": {
+                            "Id": 8777,
+                            "Name": "lotNumber",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Vaccine lot number.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 751
+                        },
+                        "manufacturer": {
+                            "Id": 8816,
+                            "Name": "manufacturer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Vaccine manufacturer information.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "display": {
+                                    "Id": 8817,
+                                    "Name": "display",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Vaccine manufacturer name.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 145
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "note": {
+                            "Id": 8841,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "Vaccination notes.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 230
+                        },
+                        "patient": {
+                            "Id": 8807,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the Patient who was immunized.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "performer": {
+                            "Id": 8810,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the Practitioner who administered the vaccine.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "reported": {
+                            "Id": 8776,
+                            "Name": "reported",
+                            "AltName": null,
+                            "Type": "Boolean",
+                            "Description": "Indicates a self-reported record.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 750
+                        },
+                        "requester": {
+                            "Id": 8813,
+                            "Name": "requester",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the Practitioner who ordered the vaccine.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "route": {
+                            "Id": 8827,
+                            "Name": "route",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "How the vaccine entered the body.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "site": {
+                            "Id": 8819,
+                            "Name": "site",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Body site where the vaccine was administered.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "status": {
+                            "Id": 8773,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Status of the Immunization. Possible values are:</p>\n<ul>\n<li>completed</li>\n<li>entered-in-error</li>\n<li>in-progress</li>\n<li>on-hold</li>\n</ul>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 747
+                        },
+                        "vaccineCode": {
+                            "Id": 8799,
+                            "Name": "vaccineCode",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Vaccine product administered.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {
+                                "coding": {
+                                    "Id": 8801,
+                                    "Name": "coding",
+                                    "AltName": null,
+                                    "Type": "Coding",
+                                    "Description": "Vaccine code. Includes CVX and NDC codes.",
+                                    "Optional": "False",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 135
+                                },
+                                "text": {
+                                    "Id": 8800,
+                                    "Name": "text",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Vaccine product name.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 134
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "wasNotGiven": {
+                            "Id": 8775,
+                            "Name": "wasNotGiven",
+                            "AltName": null,
+                            "Type": "Boolean",
+                            "Description": "Flag for whether the immunization was given.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 749
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 746
+                }
+            },
+            "Order": 10000,
+            "TypeId": 745
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

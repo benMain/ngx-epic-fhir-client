@@ -1,0 +1,155 @@
+{
+    "Id": 488,
+    "Description": "<p>This web service implements the OAuth2 token introspection endpoint defined by RFC 7662. It allows an application using OAuth2 secured services to get data associated with an OAuth2 token. One particularly useful function of this service is to allow the client application to determine the user associated with the OAuth2 token. You can also use an API manager to validate a token when choosing to allow a request through.</p><p>Requests can be formatted as application/x-www-form-urlencoded in accordance with RFC 7662, but Epic also supports a JSON request body.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "None",
+    "HttpMethod": "POST",
+    "UrlTemplate": "oauth2/Introspect",
+    "SampleRequest": "<p>{\"token\":\"-iIFMi62E3oYtXOH3ffjeoRnRywNMC0pb5e2E_pOLqUszQNCM46w6QWaXYEpPY9uEQBi7x_WkL4Wxunodn5aoBbfi8TIE3aEWWo-csLR42Ho0YahqjvrcCYY81N_t2Jl\",</p><p>\"epic_user_id_type\":\"internal\"}</p>",
+    "SampleResponse": "<p>{ \"active\": true,</p><p>\"scope\": \"ADVERSEEVENT.READ ADVERSEEVENT.SEARCH ADVERSEREACTION.READ ADVERSEREACTION.SEARCH ALLERGYINTOLERANCE.READ ALLERGYINTOLERANCE.SEARCH APPOINTMENT.READ APPOINTMENT.SEARCH APPOINTMENTRESPONSE.READ APPOINTMENTRESPONSE.SEARCH AUDITEVENT.READ BINARY.READ BINARY.SEARCH CAREPLAN.READ CAREPLAN.SEARCH CARETEAM.READ CARETEAM.SEARCH CODESYSTEM.READ CODESYSTEM.SEARCH CONDITION.READ CONDITION.SEARCH CONFORMANCE.READ DARYL.READ DEVICE.READ DEVICE.SEARCH DIAGNOSTICORDER.READ DIAGNOSTICORDER.SEARCH DIAGNOSTICREPORT.READ DIAGNOSTICREPORT.SEARCH DIRECTORY.SEARCH DOCUMENTREFERENCE.READ DOCUMENTREFERENCE.SEARCH ENCOUNTER.READ ENCOUNTER.SEARCH ENDPOINT.READ FAMILYHISTORY.READ FAMILYHISTORY.SEARCH FAMILYMEMBERHISTORY.SEARCH FAMILYMEMBERHISTORY.WRITE FHIRSERVICE.READ GOAL.READ GOAL.SEARCH IMMUNIZATION.READ IMMUNIZATION.SEARCH LIST.READ LOCATION.READ LOCATION.SEARCH MEDICATION.READ MEDICATION.SEARCH MEDICATIONORDER.READ MEDICATIONORDER.SEARCH MEDICATIONPRESCRIPTION.READ MEDICATIONPRESCRIPTION.SEARCH MEDICATIONREQUEST.READ MEDICATIONREQUEST.SEARCH MEDICATIONSTATEMENT.READ MEDICATIONSTATEMENT.SEARCH OBSERVATION.READ OBSERVATION.SEARCH ORGANIZATION.READ ORGANIZATION.SEARCH PARAMETERS.READ PARSEREQUEST.SEARCH PATIENT.READ PATIENT.SEARCH PERSON.READ PRACTITIONER.READ PRACTITIONER.SEARCH PRACTITIONERROLE.READ PRACTITIONERROLE.SEARCH PROCEDURE.READ PROCEDURE.SEARCH PROCEDUREREQUEST.READ PROCEDUREREQUEST.SEARCH SLOT.READ SUBSCRIPTION.READ SUBSTANCE.READ SUBSTANCE.SEARCH VALUESET.READ VALUESET.SEARCH\",</p><p>\"client_id\": \"3330fa1443fe11e4b959520281306b0a\",</p><p>\"username\": \"EPICUSER\",</p><p>\"exp\": 1507168257,</p><p>\"sub\": \" 1\",</p><p>\"iss\": \"https://hostname/instance/oauth2/token\",</p><p>\"jti\": \"B8AFFD4D680C4FF6A859FD91DE56CDF5\",</p><p>\"epic_user_type\": \"EMP\"}</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {
+        "3744093": [
+            {
+                "Id": 3744165,
+                "Type": 802,
+                "Name": "token",
+                "Content": "<p>The OAuth2 token to perform introspection on.</p>",
+                "XType": "String",
+                "Opt": false,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744177,
+                "Type": 802,
+                "Name": "epic_user_id_type",
+                "Content": "<p>The desired format to have the user id returned in. Options include Internal, External, and any valid IIT descriptor. If omitted, the service uses FHIR by default, which is the practitioner resource for users (EMP) and patient resource for patient access accounts (WPR).</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            }
+        ],
+        "3744094": [
+            {
+                "Id": 3744192,
+                "Type": 802,
+                "Name": "active",
+                "Content": "<p>Boolean indicator of whether or not the token is active.</p>",
+                "XType": "Boolean",
+                "Opt": false,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744194,
+                "Type": 802,
+                "Name": "scope",
+                "Content": "<p>A space separated list of the scopes associated with the token.</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744195,
+                "Type": 802,
+                "Name": "client_id",
+                "Content": "<p>The identifier of the OAuth2 client that requested the token.</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744196,
+                "Type": 802,
+                "Name": "username",
+                "Content": "<p>A human-readable identifier for the user who authorized this token. This is System Login (I EMP 45) for users (EMP) and MyChart Login (I WPR 110) for patient access accounts (WPR).</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744197,
+                "Type": 802,
+                "Name": "exp",
+                "Content": "<p>The token's expiration time formatted as Unix Epoch time.</p>",
+                "XType": "Long",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744198,
+                "Type": 802,
+                "Name": "sub",
+                "Content": "<p>The identifier of the subject of the token. (User ID)</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744199,
+                "Type": 802,
+                "Name": "iss",
+                "Content": "<p>The identifier of the issuer of the token.</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744200,
+                "Type": 802,
+                "Name": "jti",
+                "Content": "<p>Unique string identifier for the token.</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            },
+            {
+                "Id": 3744201,
+                "Type": 802,
+                "Name": "epic_user_type",
+                "Content": "<p>The master file associated with the user ID returned in the \"sub\" response property. (EMP or WPR)</p>",
+                "XType": "String",
+                "Opt": true,
+                "Unb": false,
+                "RelId": null
+            }
+        ],
+        "-1": [
+            {
+                "Id": 3744093,
+                "Type": 808,
+                "Name": null,
+                "Content": null,
+                "XType": null,
+                "Opt": null,
+                "Unb": null,
+                "RelId": null
+            },
+            {
+                "Id": 3744094,
+                "Type": 809,
+                "Name": null,
+                "Content": null,
+                "XType": null,
+                "Opt": null,
+                "Unb": null,
+                "RelId": null
+            }
+        ]
+    },
+    "Parameters": null,
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

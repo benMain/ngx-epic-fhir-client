@@ -1,0 +1,239 @@
+{
+    "Id": 10237,
+    "Description": "<p>The DeviceRequest resource describes a request for a patient to employ a medical device. This resource applies only to external devices, such as wheelchairs or hearing aids.</p>\n<p>Read interactions typically begin with a client having previously established a relationship, typically when following a reference to this resource from another resource or through querying for requests through the search interaction.</p>",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/DeviceRequest/{ID}",
+    "SampleRequest": "https://hostname/instance/api/FHIR/R4/DeviceRequest/e2JR1dQ7Vmz-RGiLKEmdSuVtIlNBmaSewKvaitAlvI7g3",
+    "SampleResponse": "{\n    \"resourceType\": \"DeviceRequest\",\n    \"id\": \"e2JR1dQ7Vmz-RGiLKEmdSuVtIlNBmaSewKvaitAlvI7g3\",\n    \"identifier\": [\n        {\n            \"use\": \"usual\",\n            \"type\": {\n                \"coding\": [\n                    {\n                        \"system\": http://terminology.hl7.org/CodeSystem/v2-0203,\n                        \"code\": \"PLAC\",\n                        \"display\": \"Placer Identifier\"\n                    }\n                ],\n                \"text\": \"Placer Identifier\"\n            },\n            \"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.2.798268\",\n            \"value\": \"6001356372\"\n        }\n    ],\n    \"status\": \"revoked\",\n    \"intent\": \"order\",\n    \"priority\": \"Routine\",\n    \"codeCodeableConcept\": {\n        \"coding\": [\n            {\n                \"system\": http://www.ama-assn.org/go/cpt,\n                \"code\": \"64947002\",\n                \"display\": \"ORD PROC SUPPLIES\"\n            }\n        ],\n        \"text\": \"ORD PROC SUPPLIES\"\n    },\n    \"subject\": {\n        \"reference\": \"Patient/ee7VHp66HKnpv1ekGVK5Cqi-fOWZqgXoCP4oDantOoZk3\",\n        \"display\": \"Falk, Supplies\"\n    },\n    \"encounter\": {\n        \"reference\": \"Encounter/e2.Ujq2mBwCX6yepqT0XXQvnXep3-P6GYs.MsHIhr-ME3\",\n        \"display\": \"Office Visit\"\n    },\n    \"occurrencePeriod\": {\n        \"start\": \"2021-09-07T21:48:30Z\",\n        \"end\": \"2021-09-08T04:59:59Z\"\n    },\n    \"authoredOn\": \"2021-09-07T21:48:30Z\",\n    \"requester\": {\n        \"reference\": \"Practitioner/e4WpPThq5zmJc8uRqG4kNrw3\",\n        \"display\": \"Ted Falk, MD\"\n    }\n}",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 163131,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 163132,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The DeviceRequest FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5680
+                }
+            },
+            "Order": 0,
+            "TypeId": 5679
+        },
+        "ResponseRootType": {
+            "Id": 462323,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "DeviceRequest": {
+                    "Id": 462324,
+                    "Name": "DeviceRequest",
+                    "AltName": null,
+                    "Type": "DeviceRequest",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "authoredOn": {
+                            "Id": 462334,
+                            "Name": "authoredOn",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The date on which a request was made, or the day of the order that contains it.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 10209
+                        },
+                        "basedOn": {
+                            "Id": 462397,
+                            "Name": "basedOn",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the parent order that contains a request.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "codeCodeableConcept": {
+                            "Id": 462521,
+                            "Name": "codeCodeableConcept",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>Standard API for SNOMED code of a procedure.</p>\n<p>This element also sends CPT, CBV, THL, Kuntaliitto codes. If a value is not found, it will send the procedure ID as the code.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "encounter": {
+                            "Id": 462620,
+                            "Name": "encounter",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the encounter where a device was ordered.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "identifier": {
+                            "Id": 462366,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "Identifies the request.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 361
+                        },
+                        "intent": {
+                            "Id": 462331,
+                            "Name": "intent",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The intent for this request. Can be one of the following:</p>\n<ul>\n<li>order</li>\n<li>proposal</li>\n<li>plan</li>\n</ul>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 10206
+                        },
+                        "occurrencePeriod": {
+                            "Id": 462651,
+                            "Name": "occurrencePeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "The period during which an order is active.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "end": {
+                                    "Id": 462654,
+                                    "Name": "end",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The end of the requested period of device use.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 372
+                                },
+                                "start": {
+                                    "Id": 462653,
+                                    "Name": "start",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The start of the requested period of device use.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 371
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 369
+                        },
+                        "orderStatus": {
+                            "Id": 462364,
+                            "Name": "extension",
+                            "AltName": "orderStatus",
+                            "Type": "Extension",
+                            "Description": "<p>Includes an order's status, specific to Netherlands environments. Statuses include:</p>\n<ul>\n<li>Ordered (Order geplaatst)</li>\n<li>Requested (Aangevraagd)</li>\n<li>Pending (In afwachting van uitvoering)</li>\n<li>In progress (In uitvoering)</li>\n<li>On hold (Opgeschort)</li>\n<li>Cancelled (Geannuleerd)</li>\n<li>Noshow (Niet nagekomen)</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 348
+                        },
+                        "priority": {
+                            "Id": 462332,
+                            "Name": "priority",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The priority of a request. Can be one of the following:</p>\n<ul>\n<li>routine</li>\n<li>urgent</li>\n<li>asap</li>\n<li>stat</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 10207
+                        },
+                        "requester": {
+                            "Id": 462723,
+                            "Name": "requester",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The provider responsible for making the request. ",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "status": {
+                            "Id": 462330,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The status of a request. Can be one of the following:</p>\n<ul>\n<li>active</li>\n<li>completed</li>\n<li>draft</li>\n<li>cancelled</li>\n<li>entered-in-error</li>\n<li>unknown</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 10205
+                        },
+                        "subject": {
+                            "Id": 462589,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Patient identifier.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 10199
+                }
+            },
+            "Order": 10000,
+            "TypeId": 10198
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

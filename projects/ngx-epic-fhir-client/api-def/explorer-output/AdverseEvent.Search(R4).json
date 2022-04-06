@@ -1,0 +1,389 @@
+{
+    "Id": 982,
+    "Description": "<p>The AdverseEvent resource returns data about an event that caused unintended physical injury resulting from or contributed to by medical care, a research study, or other healthcare setting factors. These events might require additional monitoring, treatment, or hospitalization, or might result in the death of a patient.</p><p>A user or staff member accessing this FHIR resource must have security to vew adverse events for research studies.</p><p>This resource requires additional setup if the organization has custom category list values for adverse event grades or research study attribution.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/R4/AdverseEvent?seriousness={seriousness}&subject={subject}&study={study}&_id={_id}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/R4/AdverseEvent?subject=eea8Msv-9WjX-ffbBcv-4rw3&amp;study=eAO.XWJpIicOp3xl5CLneUQ3&amp;seriousness=serious</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"1\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/R4/AdverseEvent?subject=eea8Msv-9WjX-ffbBcv-4rw3&amp;amp;study=eAO.XWJpIicOp3xl5CLneUQ3&amp;amp;seriousness=serious\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/R4/AdverseEvent/eBrj0mrZZ9-WmgLrAXW.ZQmF3xBGWbDn1vkbtSszAQnY3\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/R4/AdverseEvent/eBrj0mrZZ9-WmgLrAXW.ZQmF3xBGWbDn1vkbtSszAQnY3\" /&gt;</p><p>&lt;resource&gt;</p><p>&lt;AdverseEvent&gt;</p><p>&lt;id value=\"eBrj0mrZZ9-WmgLrAXW.ZQmF3xBGWbDn1vkbtSszAQnY3\" /&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-expected\"&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.72.1.7.7.10.768076.7056\" /&gt;</p><p>&lt;code value=\"0\" /&gt;</p><p>&lt;display value=\"No\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"0\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-severity-history\"&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-severity-history-line\"&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-severity\"&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"https://www.hl7.org/fhir/valueset-adverse-event-severity.html\" /&gt;</p><p>&lt;code value=\"mild\" /&gt;</p><p>&lt;display value=\"Mild\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.10.768076.7010\" /&gt;</p><p>&lt;code value=\"1\" /&gt;</p><p>&lt;display value=\"Mild\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Mild\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-severity-start-date\"&gt;</p><p>&lt;valueDate value=\"2019-11-01\" /&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-severity-history-line\"&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-severity\"&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"https://www.hl7.org/fhir/valueset-adverse-event-severity.html\" /&gt;</p><p>&lt;code value=\"severe\" /&gt;</p><p>&lt;display value=\"Severe\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.10.768076.7010\" /&gt;</p><p>&lt;code value=\"3\" /&gt;</p><p>&lt;display value=\"Severe\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Severe\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/adverse-event-severity-start-date\"&gt;</p><p>&lt;valueDate value=\"2019-11-08\" /&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/extension&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.2.768076\" /&gt;</p><p>&lt;value value=\"161246\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;actuality value=\"actual\" /&gt;</p><p>&lt;event&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"https://www.meddra.org/\" /&gt;</p><p>&lt;code value=\"10016256\" /&gt;</p><p>&lt;display value=\"Fatigue\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.2.696871\" /&gt;</p><p>&lt;code value=\"888001016\" /&gt;</p><p>&lt;display value=\"Fatigue\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Fatigue\" /&gt;</p><p>&lt;/event&gt;</p><p>&lt;subject&gt;</p><p>&lt;reference value=\"Patient/eea8Msv-9WjX-ffbBcv-4rw3\" /&gt;</p><p>&lt;display value=\"Research, Ellie\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;date value=\"2019-11-01\" /&gt;</p><p>&lt;recordedDate value=\"2019-11-08T15:05:40Z\" /&gt;</p><p>&lt;seriousness&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"https://www.hl7.org/fhir/valueset-adverse-event-seriousness.html\" /&gt;</p><p>&lt;code value=\"Serious\" /&gt;</p><p>&lt;display value=\"Serious\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Serious\" /&gt;</p><p>&lt;/seriousness&gt;</p><p>&lt;severity&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"https://www.hl7.org/fhir/valueset-adverse-event-severity.html\" /&gt;</p><p>&lt;code value=\"severe\" /&gt;</p><p>&lt;display value=\"Severe\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.10.768076.7010\" /&gt;</p><p>&lt;code value=\"3\" /&gt;</p><p>&lt;display value=\"Severe\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Severe\" /&gt;</p><p>&lt;/severity&gt;</p><p>&lt;outcome&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"https://www.hl7.org/fhir/valueset-adverse-event-outcome.html\" /&gt;</p><p>&lt;code value=\"ongoing\" /&gt;</p><p>&lt;display value=\"Ongoing\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Ongoing\" /&gt;</p><p>&lt;/outcome&gt;</p><p>&lt;recorder&gt;</p><p>&lt;reference value=\"Practitioner/e7gJ3G0n9-Dhv8jsHuiI9pw3\" /&gt;</p><p>&lt;display value=\"Steven Van Manen\" /&gt;</p><p>&lt;/recorder&gt;</p><p>&lt;suspectEntity&gt;</p><p>&lt;instance&gt;</p><p>&lt;reference value=\"ResearchStudy/eAO.XWJpIicOp3xl5CLneUQ3\" /&gt;</p><p>&lt;display value=\"Breast Cancer Stage II-BRAC0142\" /&gt;</p><p>&lt;/instance&gt;</p><p>&lt;causality&gt;</p><p>&lt;assessment&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"https://www.hl7.org/fhir/valueset-adverse-event-causality-assess.html\" /&gt;</p><p>&lt;code value=\"Probably-Likely\" /&gt;</p><p>&lt;display value=\"Probably/Likely\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.10.768076.7021\" /&gt;</p><p>&lt;code value=\"4\" /&gt;</p><p>&lt;display value=\"Probable\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Probably/Likely\" /&gt;</p><p>&lt;/assessment&gt;</p><p>&lt;/causality&gt;</p><p>&lt;/suspectEntity&gt;</p><p>&lt;study&gt;</p><p>&lt;reference value=\"ResearchStudy/eAO.XWJpIicOp3xl5CLneUQ3\" /&gt;</p><p>&lt;display value=\"Breast Cancer Stage II-BRAC0142\" /&gt;</p><p>&lt;/study&gt;</p><p>&lt;/AdverseEvent&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 164197,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "seriousness": {
+                    "Id": 164198,
+                    "Name": "seriousness",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>Seriousness of the event. Possible values are:</p>\n<ul>\n<li>Serious</li>\n<li>Non-Serious</li>\n</ul>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5696
+                },
+                "study": {
+                    "Id": 164199,
+                    "Name": "study",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "A ResearchStudy FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5697
+                },
+                "subject": {
+                    "Id": 164200,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "A Patient FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5698
+                }
+            },
+            "Order": 0,
+            "TypeId": 5695
+        },
+        "ResponseRootType": {
+            "Id": 164201,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 164202,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 164269,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 164280,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "ResourceContainer",
+                                    "Description": null,
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "AdverseEvent": {
+                                            "Id": 164281,
+                                            "Name": "AdverseEvent",
+                                            "AltName": null,
+                                            "Type": "AdverseEvent",
+                                            "Description": "A single instance of a FHIR AdverseEvent resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "actuality": {
+                                                    "Id": 164285,
+                                                    "Name": "actuality",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The nature of the adverse event, either real or potential.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5686
+                                                },
+                                                "adverse-event-expected": {
+                                                    "Id": 375296,
+                                                    "Name": "extension",
+                                                    "AltName": "adverse-event-expected",
+                                                    "Type": "Extension",
+                                                    "Description": "Whether this adverse event is expected.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 348
+                                                },
+                                                "adverse-event-resolved-date": {
+                                                    "Id": 164317,
+                                                    "Name": "extension",
+                                                    "AltName": "adverse-event-resolved-date",
+                                                    "Type": "Extension",
+                                                    "Description": "The date the adverse event was documented as ended.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 348
+                                                },
+                                                "adverse-event-severity-history": {
+                                                    "Id": 375295,
+                                                    "Name": "extension",
+                                                    "AltName": "adverse-event-severity-history",
+                                                    "Type": "Extension",
+                                                    "Description": "A record of the historic severities for a particular adverse event.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "adverse-event-severity-history-line": {
+                                                            "Id": 375297,
+                                                            "Name": "extension",
+                                                            "AltName": "adverse-event-severity-history-line",
+                                                            "Type": "Extension",
+                                                            "Description": "A specific instance in the severity history for a particular adverse event.",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {
+                                                                "adverse-event-severity": {
+                                                                    "Id": 375298,
+                                                                    "Name": "extension",
+                                                                    "AltName": "adverse-event-severity",
+                                                                    "Type": "Extension",
+                                                                    "Description": "The grade of an adverse event at a point in time.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": true,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 348
+                                                                },
+                                                                "adverse-event-severity-start-date": {
+                                                                    "Id": 375299,
+                                                                    "Name": "extension",
+                                                                    "AltName": "adverse-event-severity-start-date",
+                                                                    "Type": "Extension",
+                                                                    "Description": "The date the adverse event was documented as started.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": true,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 348
+                                                                }
+                                                            },
+                                                            "Order": 10006,
+                                                            "TypeId": 348
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 348
+                                                },
+                                                "date": {
+                                                    "Id": 164286,
+                                                    "Name": "date",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "When the event occurred.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5687
+                                                },
+                                                "event": {
+                                                    "Id": 164362,
+                                                    "Name": "event",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "Type of the event itself in relation to the subject.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "identifier": {
+                                                    "Id": 164319,
+                                                    "Name": "identifier",
+                                                    "AltName": null,
+                                                    "Type": "Identifier",
+                                                    "Description": "Business identifier for the event.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 361
+                                                },
+                                                "outcome": {
+                                                    "Id": 164522,
+                                                    "Name": "outcome",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The outcome of the adverse event. Currently providing only \"resolved\" and \"ongoing.\"",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "recordedDate": {
+                                                    "Id": 164288,
+                                                    "Name": "recordedDate",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "When the event was recorded from the audit trail. This is when the event was first recorded.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5689
+                                                },
+                                                "recorder": {
+                                                    "Id": 164534,
+                                                    "Name": "recorder",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The recorder of the adverse event. This is the user who first recorded the adverse event.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 373
+                                                },
+                                                "seriousness": {
+                                                    "Id": 164498,
+                                                    "Name": "seriousness",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The seriousness of the event. This is populated with \"Serious\" or \"Non-Serious.\"",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "severity": {
+                                                    "Id": 164510,
+                                                    "Name": "severity",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The severity of the adverse event itself, in direct relation to the subject.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "study": {
+                                                    "Id": 164753,
+                                                    "Name": "study",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The research study related to this adverse event.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 373
+                                                },
+                                                "subject": {
+                                                    "Id": 164374,
+                                                    "Name": "subject",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Subject impacted by the event, such as the patient.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 373
+                                                },
+                                                "suspectEntity": {
+                                                    "Id": 164596,
+                                                    "Name": "suspectEntity",
+                                                    "AltName": null,
+                                                    "Type": "SuspectEntity",
+                                                    "Description": "The suspected agent causing the adverse event.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "causality": {
+                                                            "Id": 164631,
+                                                            "Name": "causality",
+                                                            "AltName": null,
+                                                            "Type": "Causality",
+                                                            "Description": "Information about the possible cause of the event.",
+                                                            "Optional": "True",
+                                                            "IsArray": true,
+                                                            "Children": {
+                                                                "assessment": {
+                                                                    "Id": 164636,
+                                                                    "Name": "assessment",
+                                                                    "AltName": null,
+                                                                    "Type": "CodeableConcept",
+                                                                    "Description": "Assessment of whether the entity caused the event.",
+                                                                    "Optional": "False",
+                                                                    "IsArray": false,
+                                                                    "Children": {},
+                                                                    "Order": 10007,
+                                                                    "TypeId": 366
+                                                                }
+                                                            },
+                                                            "Order": 10006,
+                                                            "TypeId": 5692
+                                                        },
+                                                        "instance": {
+                                                            "Id": 164600,
+                                                            "Name": "instance",
+                                                            "AltName": null,
+                                                            "Type": "Reference",
+                                                            "Description": "Refers to the specific entity that caused the adverse event.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 373
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 5690
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 5682
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 360
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 416
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 405
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5699
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

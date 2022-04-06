@@ -1,0 +1,580 @@
+{
+    "Id": 1072,
+    "Description": "<p>This web service retrieves a specific ExplanationOfBenefit resource, which represents claims data received and processed by health plans, including services rendered to a patient and the cost information associated with those services.</p>",
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/R4/ExplanationOfBenefit/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/R4/ExplanationOfBenefit/eC.DU320cMuWRMabHyBbCJhgLf2EeEzqEzClB-nnjZb03</p>",
+    "SampleResponse": "<p>&lt;ExplanationOfBenefit xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;id value=\"e4lqLhdV2I1VHh-G0OwYsWqUZVNNhApB-uF0Ltpzgsgk3\" /&gt;</p><p>&lt;extension url=\"https://open.epic.com/fhir/extensions/TaxID\"&gt;</p><p>&lt;valueIdentifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/v2-0203\" /&gt;</p><p>&lt;code value=\"TAX\" /&gt;</p><p>&lt;display value=\"Tax ID number\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.4.4\" /&gt;</p><p>&lt;value value=\"535353536\" /&gt;</p><p>&lt;/valueIdentifier&gt;</p><p>&lt;/extension&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS\" /&gt;</p><p>&lt;code value=\"cn\" /&gt;</p><p>&lt;display value=\"Claim Number\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.2.677677\" /&gt;</p><p>&lt;value value=\"1000003765\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;status value=\"active\" /&gt;</p><p>&lt;type&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/claim-type\" /&gt;</p><p>&lt;code value=\"professional\" /&gt;</p><p>&lt;display value=\"Professional\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;use value=\"claim\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;reference value=\"Patient/eDfAD2JQzIh.HxyJNMVp3xQ3\" /&gt;</p><p>&lt;display value=\"Fhir, Member\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;billablePeriod&gt;</p><p>&lt;start value=\"2019-09-11\" /&gt;</p><p>&lt;end value=\"2019-09-11\" /&gt;</p><p>&lt;/billablePeriod&gt;</p><p>&lt;created value=\"2020-06-30T20:44:36Z\" /&gt;</p><p>&lt;insurer&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.3.698077.6350\" /&gt;</p><p>&lt;value value=\"7443\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;display value=\"MC Payer\" /&gt;</p><p>&lt;/insurer&gt;</p><p>&lt;provider&gt;</p><p>&lt;type value=\"Organization\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/sid/us-npi\" /&gt;</p><p>&lt;value value=\"1000016976\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;display value=\"Lakeside Billing Provider\" /&gt;</p><p>&lt;/provider&gt;</p><p>&lt;payee&gt;</p><p>&lt;type&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.72.1.7.7.10.677677.18931\" /&gt;</p><p>&lt;code value=\"2\" /&gt;</p><p>&lt;display value=\"Vendor\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;party&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/sid/us-npi\" /&gt;</p><p>&lt;value value=\"1000016976\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;display value=\"Lakeside Billing Provider\" /&gt;</p><p>&lt;/party&gt;</p><p>&lt;/payee&gt;</p><p>&lt;facility&gt;</p><p>&lt;display value=\"Lakeview Hospital\" /&gt;</p><p>&lt;/facility&gt;</p><p>&lt;outcome value=\"partial\" /&gt;</p><p>&lt;disposition value=\"Clean\" /&gt;</p><p>&lt;careTeam&gt;</p><p>&lt;sequence value=\"1\" /&gt;</p><p>&lt;provider&gt;</p><p>&lt;reference value=\"Practitioner/e2o6BooFJpa0RoSqrzJm7Kw3\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/sid/us-npi\" /&gt;</p><p>&lt;value value=\"1000074009\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;display value=\"Phil Medicine, MD\" /&gt;</p><p>&lt;/provider&gt;</p><p>&lt;responsible value=\"false\" /&gt;</p><p>&lt;role&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.18015\" /&gt;</p><p>&lt;code value=\"referring\" /&gt;</p><p>&lt;display value=\"Referring\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/role&gt;</p><p>&lt;/careTeam&gt;</p><p>&lt;careTeam&gt;</p><p>&lt;extension url=\"https://open.epic.com/fhir/extensions/providerTaxonomy\"&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://nucc.org\" /&gt;</p><p>&lt;code value=\"1223X2210X\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;sequence value=\"2\" /&gt;</p><p>&lt;provider&gt;</p><p>&lt;reference value=\"Practitioner/eBCc2-THFyzANcj2hnxzmiQ3\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/sid/us-npi\" /&gt;</p><p>&lt;value value=\"1000074017\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;display value=\"John Medicine, MD\" /&gt;</p><p>&lt;/provider&gt;</p><p>&lt;responsible value=\"true\" /&gt;</p><p>&lt;role&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.18015\" /&gt;</p><p>&lt;code value=\"rendering\" /&gt;</p><p>&lt;display value=\"Rendering\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/role&gt;</p><p>&lt;/careTeam&gt;</p><p>&lt;careTeam&gt;</p><p>&lt;sequence value=\"3\" /&gt;</p><p>&lt;provider&gt;</p><p>&lt;reference value=\"Practitioner/e2o6BooFJpa0RoSqrzJm7Kw3\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/sid/us-npi\" /&gt;</p><p>&lt;value value=\"1000074009\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;display value=\"Elizabeth Medicine, MD\" /&gt;</p><p>&lt;/provider&gt;</p><p>&lt;responsible value=\"false\" /&gt;</p><p>&lt;role&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.18015\" /&gt;</p><p>&lt;code value=\"supervising\" /&gt;</p><p>&lt;display value=\"Supervising\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/role&gt;</p><p>&lt;/careTeam&gt;</p><p>&lt;supportingInfo&gt;</p><p>&lt;sequence value=\"1\" /&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS\" /&gt;</p><p>&lt;code value=\"clmrecvddate\" /&gt;</p><p>&lt;display value=\"clmrecvddate\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;timingDate value=\"2020-06-30\" /&gt;</p><p>&lt;/supportingInfo&gt;</p><p>&lt;diagnosis&gt;</p><p>&lt;sequence value=\"1\" /&gt;</p><p>&lt;diagnosisCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/sid/icd-10\" /&gt;</p><p>&lt;code value=\"M23.23\" /&gt;</p><p>&lt;display value=\"Derangement of other medial meniscus due to old tear or injury\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/diagnosisCodeableConcept&gt;</p><p>&lt;/diagnosis&gt;</p><p>&lt;insurance&gt;</p><p>&lt;focal value=\"true\" /&gt;</p><p>&lt;coverage&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.9.678671.19280\" /&gt;</p><p>&lt;value value=\"1xxxxx01\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;/coverage&gt;</p><p>&lt;/insurance&gt;</p><p>&lt;item&gt;</p><p>&lt;sequence value=\"1\" /&gt;</p><p>&lt;diagnosisSequence value=\"1\" /&gt;</p><p>&lt;productOrService&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.cms.gov\" /&gt;</p><p>&lt;code value=\"S0034\" /&gt;</p><p>&lt;display value=\"Injection, Ofloxacin, 400 Mg\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/productOrService&gt;</p><p>&lt;servicedPeriod&gt;</p><p>&lt;start value=\"2019-09-11\" /&gt;</p><p>&lt;end value=\"2019-09-11\" /&gt;</p><p>&lt;/servicedPeriod&gt;</p><p>&lt;locationCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.10.698482.18050\" /&gt;</p><p>&lt;code value=\"58\" /&gt;</p><p>&lt;display value=\"Non-residential Opioid Treatment Facility\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/locationCodeableConcept&gt;</p><p>&lt;quantity&gt;</p><p>&lt;value value=\"1\" /&gt;</p><p>&lt;unit value=\"Units\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;code value=\"[arb'U]\" /&gt;</p><p>&lt;/quantity&gt;</p><p>&lt;net&gt;</p><p>&lt;value value=\"300.00\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/net&gt;</p><p>&lt;adjudication&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-group-codes/\" /&gt;</p><p>&lt;code value=\"PR\" /&gt;</p><p>&lt;display value=\"Patient Responsibility\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;reason&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-reason-codes\" /&gt;</p><p>&lt;code value=\"1\" /&gt;</p><p>&lt;display value=\"Deductible Amount\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/reason&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"67.50\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/adjudication&gt;</p><p>&lt;adjudication&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-group-codes/\" /&gt;</p><p>&lt;code value=\"CO\" /&gt;</p><p>&lt;display value=\"Contractual Obligation\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;reason&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-reason-codes\" /&gt;</p><p>&lt;code value=\"45\" /&gt;</p><p>&lt;display value=\"Chgs excd fee sch/max allowable\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/reason&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"30\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/adjudication&gt;</p><p>&lt;/item&gt;</p><p>&lt;item&gt;</p><p>&lt;sequence value=\"2\" /&gt;</p><p>&lt;productOrService&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.ama-assn.org/go/cpt\" /&gt;</p><p>&lt;code value=\"99283\" /&gt;</p><p>&lt;display value=\"Emergency Dept Visit,level Iii\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/productOrService&gt;</p><p>&lt;servicedPeriod&gt;</p><p>&lt;start value=\"2019-09-11\" /&gt;</p><p>&lt;end value=\"2019-09-11\" /&gt;</p><p>&lt;/servicedPeriod&gt;</p><p>&lt;locationCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.10.698482.18050\" /&gt;</p><p>&lt;code value=\"58\" /&gt;</p><p>&lt;display value=\"Non-residential Opioid Treatment Facility\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/locationCodeableConcept&gt;</p><p>&lt;quantity&gt;</p><p>&lt;value value=\"1\" /&gt;</p><p>&lt;unit value=\"Units\" /&gt;</p><p>&lt;system value=\"http://unitsofmeasure.org\" /&gt;</p><p>&lt;code value=\"[arb'U]\" /&gt;</p><p>&lt;/quantity&gt;</p><p>&lt;net&gt;</p><p>&lt;value value=\"300.00\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/net&gt;</p><p>&lt;adjudication&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-group-codes/\" /&gt;</p><p>&lt;code value=\"PR\" /&gt;</p><p>&lt;display value=\"Patient Responsibility\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;reason&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-reason-codes\" /&gt;</p><p>&lt;code value=\"3\" /&gt;</p><p>&lt;display value=\"Co-payment Amount\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/reason&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"35.00\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/adjudication&gt;</p><p>&lt;adjudication&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-group-codes/\" /&gt;</p><p>&lt;code value=\"CO\" /&gt;</p><p>&lt;display value=\"Contractual Obligation\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;reason&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.x12.org/codes/claim-adjustment-reason-codes\" /&gt;</p><p>&lt;code value=\"45\" /&gt;</p><p>&lt;display value=\"Chgs excd fee sch/max allowable\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/reason&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"30\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/adjudication&gt;</p><p>&lt;/item&gt;</p><p>&lt;total&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/adjudication\" /&gt;</p><p>&lt;code value=\"benefit\" /&gt;</p><p>&lt;display value=\"Benefit Amount\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"102.5\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/total&gt;</p><p>&lt;total&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/adjudication\" /&gt;</p><p>&lt;code value=\"copay\" /&gt;</p><p>&lt;display value=\"CoPay\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"35\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/total&gt;</p><p>&lt;total&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/adjudication\" /&gt;</p><p>&lt;code value=\"deductible\" /&gt;</p><p>&lt;display value=\"Deductible\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"67.5\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/total&gt;</p><p>&lt;total&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/adjudication\" /&gt;</p><p>&lt;code value=\"submitted\" /&gt;</p><p>&lt;display value=\"Submitted Amount\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;amount&gt;</p><p>&lt;value value=\"600\" /&gt;</p><p>&lt;currency value=\"USD\" /&gt;</p><p>&lt;/amount&gt;</p><p>&lt;/total&gt;</p><p>&lt;/ExplanationOfBenefit&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 219579,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 219580,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The FHIR ID for an ExplanationOfBenefit resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 6174
+                }
+            },
+            "Order": 0,
+            "TypeId": 6173
+        },
+        "ResponseRootType": {
+            "Id": 219581,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ExplanationOfBenefit": {
+                    "Id": 219582,
+                    "Name": "ExplanationOfBenefit",
+                    "AltName": null,
+                    "Type": "ExplanationOfBenefit",
+                    "Description": "An instance of the R4 ExplanationOfBenefit resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "billablePeriod": {
+                            "Id": 219710,
+                            "Name": "billablePeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "Service start/end period.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 369
+                        },
+                        "careTeam": {
+                            "Id": 220160,
+                            "Name": "careTeam",
+                            "AltName": null,
+                            "Type": "CareTeam",
+                            "Description": "The members of the team who provided the products and services.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "provider": {
+                                    "Id": 220166,
+                                    "Name": "provider",
+                                    "AltName": null,
+                                    "Type": "Reference",
+                                    "Description": "One of the providers for the claim.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 373
+                                },
+                                "role": {
+                                    "Id": 220197,
+                                    "Name": "role",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The provider function within the team.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "sequence": {
+                                    "Id": 220162,
+                                    "Name": "sequence",
+                                    "AltName": null,
+                                    "Type": "Int64",
+                                    "Description": "The sequence ID.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6193
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 6191
+                        },
+                        "created": {
+                            "Id": 219588,
+                            "Name": "created",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Date when the claim was created.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6182
+                        },
+                        "diagnosis": {
+                            "Id": 220316,
+                            "Name": "diagnosis",
+                            "AltName": null,
+                            "Type": "Diagnosis",
+                            "Description": "Each diagnosis on the claim will have an entry. Rx claims do not support diagnosis.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "diagnosisCodeableConcept": {
+                                    "Id": 220321,
+                                    "Name": "diagnosisCodeableConcept",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Code set and reference code from the diagnosis.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "packageCode": {
+                                    "Id": 220388,
+                                    "Name": "packageCode",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The diagnosis related group code set and reference code.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "sequence": {
+                                    "Id": 220318,
+                                    "Name": "sequence",
+                                    "AltName": null,
+                                    "Type": "Int64",
+                                    "Description": "The sequence ID.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6203
+                                },
+                                "type": {
+                                    "Id": 220364,
+                                    "Name": "type",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The diagnosis type.",
+                                    "Optional": "False",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 6201
+                        },
+                        "disposition": {
+                            "Id": 219590,
+                            "Name": "disposition",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Description of the status of the adjudication.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6184
+                        },
+                        "facility": {
+                            "Id": 220062,
+                            "Name": "facility",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Place of service.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "id": {
+                            "Id": 219583,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6177
+                        },
+                        "identifier": {
+                            "Id": 219624,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "The claim ID.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 361
+                        },
+                        "insurance": {
+                            "Id": 220492,
+                            "Name": "insurance",
+                            "AltName": null,
+                            "Type": "Insurance",
+                            "Description": "Member's ID from the coverage.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "coverage": {
+                                    "Id": 220498,
+                                    "Name": "coverage",
+                                    "AltName": null,
+                                    "Type": "Reference",
+                                    "Description": "Coverage reference identifier.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 373
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 6208
+                        },
+                        "insurer": {
+                            "Id": 219746,
+                            "Name": "insurer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Payer for the claim.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "item": {
+                            "Id": 220596,
+                            "Name": "item",
+                            "AltName": null,
+                            "Type": "Item",
+                            "Description": "Service lines.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "diagnosisSequence": {
+                                    "Id": 220600,
+                                    "Name": "diagnosisSequence",
+                                    "AltName": null,
+                                    "Type": "Int64",
+                                    "Description": "Diagnosis numbers.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6219
+                                },
+                                "locationCodeableConcept": {
+                                    "Id": 220673,
+                                    "Name": "locationCodeableConcept",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The place of service type.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "modifier": {
+                                    "Id": 220644,
+                                    "Name": "modifier",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Modifiers",
+                                    "Optional": "False",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "productOrService": {
+                                    "Id": 220632,
+                                    "Name": "productOrService",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "CPT/HCPCS codes or group code. NDC code for Rx claims.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "quantity": {
+                                    "Id": 220735,
+                                    "Name": "quantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Quantity",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5439
+                                },
+                                "revenue": {
+                                    "Id": 220608,
+                                    "Name": "revenue",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The revenue code.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "sequence": {
+                                    "Id": 220598,
+                                    "Name": "sequence",
+                                    "AltName": null,
+                                    "Type": "Int64",
+                                    "Description": "The sequence ID.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6217
+                                },
+                                "servicedDate": {
+                                    "Id": 220603,
+                                    "Name": "servicedDate",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The service date.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6222
+                                },
+                                "servicedPeriod": {
+                                    "Id": 220668,
+                                    "Name": "servicedPeriod",
+                                    "AltName": null,
+                                    "Type": "Period",
+                                    "Description": "The period of time over which the service is relevant.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 369
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 6215
+                        },
+                        "outcome": {
+                            "Id": 219589,
+                            "Name": "outcome",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Non-AP Claims: complete Paid AP claims: complete Claim in the status of \"new\": queued (this status is very rare) All other claims: partial",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6183
+                        },
+                        "patient": {
+                            "Id": 219679,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The patient associated with the claim. Reference to the Patient resource.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "procedure": {
+                            "Id": 220400,
+                            "Name": "procedure",
+                            "AltName": null,
+                            "Type": "Procedure",
+                            "Description": "ICD procedures.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "date": {
+                                    "Id": 220403,
+                                    "Name": "date",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Date of the procedure.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6207
+                                },
+                                "procedureCodeableConcept": {
+                                    "Id": 220418,
+                                    "Name": "procedureCodeableConcept",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "ICD procedure code set and reference code.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "sequence": {
+                                    "Id": 220402,
+                                    "Name": "sequence",
+                                    "AltName": null,
+                                    "Type": "Int64",
+                                    "Description": "The sequence ID.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6206
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 6204
+                        },
+                        "provider": {
+                            "Id": 219777,
+                            "Name": "provider",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the provider for the claim.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "status": {
+                            "Id": 219586,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Status of the claim. 'active' and 'cancelled' claims can be shown in search requests.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6180
+                        },
+                        "subType": {
+                            "Id": 219667,
+                            "Name": "subType",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The bill type.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "supportingInfo": {
+                            "Id": 220221,
+                            "Name": "supportingInfo",
+                            "AltName": null,
+                            "Type": "SupportingInfo",
+                            "Description": "The following supporting info is supported: All claims: Received date All Medical claims: Discharge disposition Occurrence span codes Admission type Admission source UB claims: Type of Bill Rx Claims: Record status code Reject Override Code Reject code Fill Number Days Supply DAW Code",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "category": {
+                                    "Id": 220229,
+                                    "Name": "category",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The classification of supporting information.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "code": {
+                                    "Id": 220241,
+                                    "Name": "code",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "The information type.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "sequence": {
+                                    "Id": 220223,
+                                    "Name": "sequence",
+                                    "AltName": null,
+                                    "Type": "Int64",
+                                    "Description": "The sequence ID.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 6197
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 6195
+                        },
+                        "type": {
+                            "Id": 219655,
+                            "Name": "type",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The claim format.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 6176
+                }
+            },
+            "Order": 10000,
+            "TypeId": 6175
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

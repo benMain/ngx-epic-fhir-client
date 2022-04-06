@@ -1,0 +1,386 @@
+{
+    "Id": 1012,
+    "Description": "<p>The FHIR Device resource describes information about durable, manufactured medical items; specifically - implantable medical devices.</p><p>Read interactions begin with a client having previously established a relationship, typically when following a reference to this resource from another resource or through querying for devices through the search interaction.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Device/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/R4/Device/eKvCE6ZNLB3c.Vjb.KBSOYg3</p>",
+    "SampleResponse": "&lt;Device xmlns=\"http://hl7.org/fhir\"&gt;\n&lt;id value=\"eKvCE6ZNLB3c.Vjb.KBSOYg3\" /&gt;\n&lt;udiCarrier&gt;\n&lt;deviceIdentifier value=\"9182479872\" /&gt;\n&lt;carrierHRF value=\"(01)9182479872(11)180522(17)200103(10)3MLN789(21)3MSN456\" /&gt;\n&lt;entryType value=\"unknown\" /&gt;\n&lt;/udiCarrier&gt;\n&lt;status value=\"active\" /&gt;\n&lt;specialization&gt;\n&lt;systemType&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.4.737780.72\" /&gt;\n&lt;code value=\"999\" /&gt;\n&lt;display value=\"Blood Pressure\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Blood Pressure\" /&gt;\n&lt;/systemType&gt;\n&lt;/specialization&gt;\n&lt;owner&gt;\n&lt;reference value=\"Organization/eOXQVrP.59HoYFv.f-d7VCQ3\" /&gt;\n&lt;display value=\"Central OR\" /&gt;\n&lt;/owner&gt;\n&lt;contact&gt;\n&lt;system value=\"phone\" /&gt;\n&lt;value value=\"555-555-5555\" /&gt;\n&lt;/contact&gt;\n&lt;location&gt;\n&lt;reference value=\"Location/e-o81wx5asBH0ET3735b1OA3\" /&gt;\n&lt;display value=\"Central OR\" /&gt;\n&lt;/location&gt;\n&lt;note&gt;\n&lt;authorReference&gt;\n&lt;reference value=\"Practitioner/eeEzbUxs-SIz-Nxsa.S8BOg3\" /&gt;\n&lt;display value=\"Doctor Smith\" /&gt;\n&lt;/authorReference&gt;&lt;text value=\"Device implanted\" /&gt;\n&lt;/note&gt;\n&lt;safety&gt;\n&lt;text value=\"generic safety info\" /&gt;\n&lt;/safety&gt;\n&lt;manufacturer value=\"3M\" /&gt;\n&lt;manufactureDate value=\"2018-05-22\" /&gt;\n&lt;expirationDate value=\"2020-01-03\" /&gt;\n&lt;lotNumber value=\"3MLN789\" /&gt;\n&lt;serialNumber value=\"3MSN456\" /&gt;\n&lt;deviceName&gt;\n&lt;name value=\"HXL 0.6 MM D 70 MM L TROCAR PT K-WIRE 282.06\" /&gt;\n&lt;type value=\"other\" /&gt;\n&lt;/deviceName&gt;\n&lt;modelNumber value=\"3MMN123\" /&gt;\n&lt;type&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.10.737780.70\" /&gt;\n&lt;code value=\"170\" /&gt;\n&lt;display value=\"Wire\" /&gt;\n&lt;/coding&gt;\n&lt;/type&gt;\n&lt;version&gt;\n&lt;type&gt;\n&lt;text value=\"GUDID Version\" /&gt;\n&lt;/type&gt;\n&lt;value value=\"2020\" /&gt;\n&lt;/version&gt;\n&lt;property&gt;\n&lt;type&gt;\n&lt;text value=\"Radioactive\" /&gt;\n&lt;/type&gt;\n&lt;valueCode&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.4.737780.410\" /&gt;\n&lt;code value=\"1\" /&gt;\n&lt;display value=\"Yes\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Yes\" /&gt;\n&lt;/valueCode&gt;\n&lt;/property&gt;\n&lt;owner&gt;\n&lt;reference value=\"Organization/eOXQVrP.59HoYFv.f-d7VCQ3\" /&gt;\n&lt;display value=\"Central OR\" /&gt;\n&lt;/owner&gt;\n&lt;contact&gt;\n&lt;system value=\"phone\" /&gt;\n&lt;value value=\"608-777-1234\" /&gt;\n&lt;/contact&gt;\n&lt;location&gt;\n&lt;reference value=\"Location/e-o81wx5asBH0ET3735b1OA3\" /&gt;\n&lt;display value=\"Central OR\" /&gt;\n&lt;/location&gt;\n&lt;note&gt;\n&lt;authorReference&gt;\n&lt;reference value=\"Practitioner/eeEzbUxs-SIz-Nxsa.S8BOg3\" /&gt;\n&lt;display value=\"Doctor Smith\" /&gt;\n&lt;/authorReference&gt;&lt;text value=\"Device implanted\" /&gt;\n&lt;/note&gt;\n&lt;safety&gt;\n&lt;text value=\"generic safety info\" /&gt;\n&lt;/safety&gt;\n&lt;patient&gt;\n&lt;reference value=\"Patient/ej4nFxzySJAysjMuv4rTBNA3\" /&gt;\n&lt;display value=\"Meiko H Lufhir Jr., MD\" /&gt;\n&lt;/patient&gt;\n&lt;/Device&gt;",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": null,
+        "ResponseRootType": {
+            "Id": 191000,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Device": {
+                    "Id": 191001,
+                    "Name": "Device",
+                    "AltName": null,
+                    "Type": "Device",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "contact": {
+                            "Id": 191311,
+                            "Name": "contact",
+                            "AltName": null,
+                            "Type": "ContactPoint",
+                            "Description": "Area code and phone number.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5131
+                        },
+                        "deviceName": {
+                            "Id": 191130,
+                            "Name": "deviceName",
+                            "AltName": null,
+                            "Type": "DeviceName",
+                            "Description": "<p>Device name and type details.</p>",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "name": {
+                                    "Id": 191132,
+                                    "Name": "name",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "<p>The name of the device.</p>",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5968
+                                },
+                                "type": {
+                                    "Id": 191133,
+                                    "Name": "type",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "<p>Always set to \"other\".</p>",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5969
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 5966
+                        },
+                        "distinctIdentifier": {
+                            "Id": 191006,
+                            "Name": "distinctIdentifier",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Distinct identification code.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5949
+                        },
+                        "expirationDate": {
+                            "Id": 191009,
+                            "Name": "expirationDate",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Device expiration date.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5952
+                        },
+                        "location": {
+                            "Id": 191323,
+                            "Name": "location",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Inventory location site.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "lotNumber": {
+                            "Id": 191010,
+                            "Name": "lotNumber",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Device lot number.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5953
+                        },
+                        "manufactureDate": {
+                            "Id": 191008,
+                            "Name": "manufactureDate",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Date of device manufacture.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5951
+                        },
+                        "manufacturer": {
+                            "Id": 191007,
+                            "Name": "manufacturer",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Device manufacturer.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5950
+                        },
+                        "modelNumber": {
+                            "Id": 191012,
+                            "Name": "modelNumber",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Device model number.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5955
+                        },
+                        "note": {
+                            "Id": 191354,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "Comments.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 379
+                        },
+                        "owner": {
+                            "Id": 191280,
+                            "Name": "owner",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The surgical log location.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "parent": {
+                            "Id": 191403,
+                            "Name": "parent",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Explant replacement ID.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "patient": {
+                            "Id": 191249,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "<p>Patient identifier.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "property": {
+                            "Id": 191213,
+                            "Name": "property",
+                            "AltName": null,
+                            "Type": "Property",
+                            "Description": "Implant type information, including:\n<ul><li>Permanence\n<li>Radioactive\n<li>Site\n<li>Laterality\n<li>Size\n<li>GUDID request status\n<li>GUDID MRI safety information\n<li>GUDID contains dry or latex rubber\n<li>GMDN Preferred term name</ul>",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5976
+                        },
+                        "safety": {
+                            "Id": 191391,
+                            "Name": "safety",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "GUDID MRI safety information.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "serialNumber": {
+                            "Id": 191011,
+                            "Name": "serialNumber",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Device serial number.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5954
+                        },
+                        "specialization": {
+                            "Id": 191148,
+                            "Name": "specialization",
+                            "AltName": null,
+                            "Type": "Specialization",
+                            "Description": "Specialization information.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "systemType": {
+                                    "Id": 191153,
+                                    "Name": "systemType",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Implant specialty.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 5970
+                        },
+                        "status": {
+                            "Id": 191005,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>One of the following values:</p>\n<ul>\n  <li>active</li>\n  <li>inactive</li>\n  <li>entered-in-error</li>\n  <li>unknown</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5948
+                        },
+                        "type": {
+                            "Id": 191136,
+                            "Name": "type",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>A SNOMED or other device code.</p>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "udiCarrier": {
+                            "Id": 191108,
+                            "Name": "udiCarrier",
+                            "AltName": null,
+                            "Type": "UdiCarrier",
+                            "Description": "<p>Device carrier identification details.</p>\n<p>Under FDA regulations, all medical devices are required to include a Unique Device Identifier (UDI) on device labels and packages, in both human-readable and barcode format. The FDA also maintains a public database of medical devices and UDI information called the <a href=\"https://accessgudid.nlm.nih.gov/\">Global Unique Device Identification Database (GUDID)</a>.</p>\n<p>A Unique Device Identifier (UDI) is a unique numeric or alphanumeric code that is comprised of two components:</p>\n<ul>\n  <li>Device Identifier (DI) (\"Static UDI\") – a mandatory, fixed portion of a UDI that identifiers the labeler and specific version or model of a device.</li>\n  <li>Production Identifiers (PI) (\"Dynamic UDI\") – a conditional, variable portion of a UDI that identifies one or more of the following:</li>\n  <ul>\n  <li>Lot or batch number within which a device was manufactured</li>\n  <li>Serial number of a specific device</li>\n  <li>Expiration date of a specific device</li>\n  <li>Production date of a specific device</li>\n  <li>Distinct identification code for a human cell, tissue, or cellular- and tissue-based product</li>\n</ul>\n</ul>\n<p>When documenting a UDI for an implant in OpTime, you will need to use an identifier that is in a valid format for the selected issuer. Here are some example UDIs you can use for testing:</p>\n<table class=\"table table-hover\">\n<tr>\n  <th>UDI Type / Issuer</th>\n  <th>Example Device ID</th>\n</tr>\n<tr>\n  <td>ICCBBA</td>\n  <td>W4184228005T0473</td>\n</tr>\n<tr>\n  <td>HIBC</td>\n  <td>MDLXMAG120200</td>\n</tr>\n<tr>\n  <td>GS1</td>\n  <td>00822409025305</td>\n</tr>\n</table>",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "carrierHRF": {
+                                    "Id": 191114,
+                                    "Name": "carrierHRF",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "<p>Device carrier's UDI human-readable barcode string.</p>",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5964
+                                },
+                                "deviceIdentifier": {
+                                    "Id": 191110,
+                                    "Name": "deviceIdentifier",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "<p>Device identifier - fixed portion of UDI.</p>",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5960
+                                },
+                                "entryType": {
+                                    "Id": 191115,
+                                    "Name": "entryType",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "<p>Always set to \"unknown\".</p>",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5965
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 5958
+                        },
+                        "version": {
+                            "Id": 191165,
+                            "Name": "version",
+                            "AltName": null,
+                            "Type": "Version",
+                            "Description": "Version information.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "value": {
+                                    "Id": 191167,
+                                    "Name": "value",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "GUDID version or model.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5975
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 5973
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 5944
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5943
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

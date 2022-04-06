@@ -1,0 +1,253 @@
+{
+    "Id": 20,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/goal.html\" data-drive-link-file-url=\"1\">FHIR Goal resource</a> defines objectives for a patient based on a current condition or recent procedure. The goal may be long term, such as targeting a specific HgbA1c level after a diabetes diagnosis, or shorter term such as changing wound dressings routinely following a procedure.    The Goal resource does not include inpatient care goals, and is designed for provider documentation rather than patient interaction.   </p>   <p>        The Goal resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Goals.    </p>              <p>    The Search interaction enables the client to query for the goals of a given patient. The client, having established    the patient in question, now wishes to retrieve the documented goals for the patient.</p><p> <div class=\"alert alert-info\"> <strong>Note:</strong> To ensure clinical safety for a patient, searches filtered with a <code>_lastUpdated</code> search parameter will return all active goals in addition to other data returned in the search. </p></div>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Goal?_id={_id}&category={category}&patient={patient}&status={status}&subject={subject}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/Goal?patient=TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"4\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Goal?patient=TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TsAFp7YTvFPY-.xQTSNH2LAB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TsAFp7YTvFPY-.xQTSNH2LAB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Goal&gt;</p><p>&lt;startDate value=\"2016-01-15T00:00:00\" /&gt;</p><p>&lt;description value=\"Weight (lb) &amp;lt; 72.6 kg\" /&gt;</p><p>&lt;status value=\"in-progress\" /&gt;</p><p>&lt;id value=\"TsAFp7YTvFPY-.xQTSNH2LAB\" /&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fhir A Szitta\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"Weight\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.4.737184.20005\" /&gt;</p><p>&lt;code value=\"3\" /&gt;</p><p>&lt;display value=\"Weight\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.96\" /&gt;</p><p>&lt;code value=\"TZ3\" /&gt;</p><p>&lt;display value=\"Weight\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;author&gt;</p><p>&lt;display value=\"Tim Szitta, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T261TVJilfMxfUGfuXuDQpQB\" /&gt;</p><p>&lt;/author&gt;</p><p>&lt;addresses&gt;</p><p>&lt;display value=\"Accident Caused By A Hypodermic Needle\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Condition/TXxz.Vy8p6WP.GswNN9p0hgB\" /&gt;</p><p>&lt;/addresses&gt;</p><p>&lt;note&gt;</p><p>&lt;text value=\"Lose weight now\" /&gt;</p><p>&lt;/note&gt;</p><p>&lt;/Goal&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/T02q1MgA4yhd83CsNr4HJfwB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/T02q1MgA4yhd83CsNr4HJfwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Goal&gt;</p><p>&lt;startDate value=\"2016-01-15T00:00:00\" /&gt;</p><p>&lt;description value=\"Blood Pressure &amp;lt; 120/80\" /&gt;</p><p>&lt;status value=\"in-progress\" /&gt;</p><p>&lt;id value=\"T02q1MgA4yhd83CsNr4HJfwB\" /&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fhir A Szitta\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"Blood Pressure\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.4.737184.20005\" /&gt;</p><p>&lt;code value=\"4\" /&gt;</p><p>&lt;display value=\"Blood Pressure\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.96\" /&gt;</p><p>&lt;code value=\"TZ4\" /&gt;</p><p>&lt;display value=\"Blood Pressure\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;author&gt;</p><p>&lt;display value=\"Tim Szitta, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T261TVJilfMxfUGfuXuDQpQB\" /&gt;</p><p>&lt;/author&gt;</p><p>&lt;/Goal&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TbTyIhidjA.4YdHp1G9xVAQB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TbTyIhidjA.4YdHp1G9xVAQB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Goal&gt;</p><p>&lt;startDate value=\"2016-01-21T00:00:00\" /&gt;</p><p>&lt;description value=\"Exercise 3x per week (30 min per time)\" /&gt;</p><p>&lt;status value=\"achieved\" /&gt;</p><p>&lt;id value=\"TbTyIhidjA.4YdHp1G9xVAQB\" /&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fhir A Szitta\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"Exercise\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.4.737184.20005\" /&gt;</p><p>&lt;code value=\"2\" /&gt;</p><p>&lt;display value=\"Exercise\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.96\" /&gt;</p><p>&lt;code value=\"TZ2\" /&gt;</p><p>&lt;display value=\"Exercise\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;author&gt;</p><p>&lt;display value=\"Tim Szitta, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T261TVJilfMxfUGfuXuDQpQB\" /&gt;</p><p>&lt;/author&gt;</p><p>&lt;/Goal&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TFbH0CKUCgWA6xXjqXq2PuAB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Goal/TFbH0CKUCgWA6xXjqXq2PuAB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Goal&gt;</p><p>&lt;startDate value=\"2016-01-21T00:00:00\" /&gt;</p><p>&lt;description value=\"Reduce calorie intake to 2000 calories per day\" /&gt;</p><p>&lt;status value=\"cancelled\" /&gt;</p><p>&lt;id value=\"TFbH0CKUCgWA6xXjqXq2PuAB\" /&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fhir A Szitta\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;category&gt;</p><p>&lt;text value=\"Diet\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"1.2.840.114350.1.13.5552.1.7.4.737184.20005\" /&gt;</p><p>&lt;code value=\"1\" /&gt;</p><p>&lt;display value=\"Diet\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.96\" /&gt;</p><p>&lt;code value=\"TZ1\" /&gt;</p><p>&lt;display value=\"Diet\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/category&gt;</p><p>&lt;author&gt;</p><p>&lt;display value=\"Tim Szitta, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T261TVJilfMxfUGfuXuDQpQB\" /&gt;</p><p>&lt;/author&gt;</p><p>&lt;/Goal&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": "<p>This does not include goals that exist as part of the Inpatient Care Plan. These goals are more for provider documentation and are not patient goals, and so they are not included within this resource.</p><p>This also does not include goals that exist as part of a Clinical Pathway (an inpatient Order Set-like concept for providers that gets documented on in a way similar to Care Plan goals). Like Inpatient Care Plan Goals, these goals are more for provider documentation and are not included within this resource.</p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 8668,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "category": {
+                    "Id": 8670,
+                    "Name": "category",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Based on  the category number by default, with Title and then Synonym as backups. Can use SNOMED if OID is specified and a mapping table has been built by the Epic community member.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 731
+                },
+                "patient": {
+                    "Id": 8671,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Associated Patient FHIR Resource ID.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must match. ",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 732
+                },
+                "status": {
+                    "Id": 8672,
+                    "Name": "status",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>The current status of the goal. The following values are supported:</p>\n<ul>\n<li>in-progress,</li>\n<li>achieved</li>\n<li>cancelled</li>\n</ul>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 733
+                },
+                "subject": {
+                    "Id": 8673,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Associated Patient FHIR Resource ID.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must match. ",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 734
+                }
+            },
+            "Order": 0,
+            "TypeId": 729
+        },
+        "ResponseRootType": {
+            "Id": 8674,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 8675,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 8682,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single entry in the resource bundle.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 8687,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Goal": {
+                                            "Id": 8688,
+                                            "Name": "Goal",
+                                            "AltName": null,
+                                            "Type": "Goal",
+                                            "Description": "A single Goal resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "addresses": {
+                                                    "Id": 8726,
+                                                    "Name": "addresses",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Reference to a Problems resource that this goal addresses.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "author": {
+                                                    "Id": 8723,
+                                                    "Name": "author",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Reference to the Patient or Provider that created the goal.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "category": {
+                                                    "Id": 8715,
+                                                    "Name": "category",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "Based on  the category number by default, with Title and then Synonym as backups. Can use SNOMED if OID is specified and a mapping table has been built by the Epic community member.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "description": {
+                                                    "Id": 8690,
+                                                    "Name": "description",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "What the goal entails. SNOMED code or other text describing the goal.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 726
+                                                },
+                                                "id": {
+                                                    "Id": 8692,
+                                                    "Name": "id",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The Goal FHIR ID.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 728
+                                                },
+                                                "startDate": {
+                                                    "Id": 8689,
+                                                    "Name": "startDate",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "When pursuit of the goal begins.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 725
+                                                },
+                                                "status": {
+                                                    "Id": 8691,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>The current status of the goal. The following values are supported:</p>\n<ul>\n<li>in-progress,</li>\n<li>achieved</li>\n<li>cancelled</li>\n</ul>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 727
+                                                },
+                                                "subject": {
+                                                    "Id": 8712,
+                                                    "Name": "subject",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Who the goal is intended for. Patient FHIR Resource ID.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 724
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 742
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 740
+                        },
+                        "total": {
+                            "Id": 8677,
+                            "Name": "total",
+                            "AltName": null,
+                            "Type": "Int32",
+                            "Description": null,
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 738
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 736
+                }
+            },
+            "Order": 10000,
+            "TypeId": 735
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

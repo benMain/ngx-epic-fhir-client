@@ -1,0 +1,484 @@
+{
+    "Id": 30,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/patient.html\" data-drive-link-file-url=\"1\">FHIR Patient resource</a> defines demographics, care providers, and other administrative    information about a person receiving care at a health organization. The Patient    resource can be thought of as the starting point for many different client application    workflows; often, a workflow will begin with a patient query and selection, and    the server ID will be used to drive additional queries for diagnostic and care-related    information.   </p>    <p>       The Patient resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Patient Name, DOB, Race, Ethnicity, Preferred Language, and Care Team.     </p>     <p>    The search interaction enables the client to query for patients based on a specified set of demographics information.    The Patient Search endpoint allows clients to establish an identifier for a patient without previously receiving unique    identification from the server for the patient. </p>   <div class=\"alert alert-warning\">    <strong>Note: </strong>Epic&#39;s patient search implementation only returns patients with    strong demographics matches. Most query parameters will return no results unless used in concert with more specific    demographic information. </div>   <div class=\"alert alert-warning\">    <strong>Note: </strong>Epic&#39;s support of the Patient resource only allows retrieving the most up-to-date demographics info. Previous demographic information cannot be queried for.   </div>   <div class=\"alert alert-warning\">    <strong>Note: </strong>Epic&#39;s patient search implementation offers health systems flexibility to define which demographic property combinations are used when searching for patients.&nbsp; The allowed search parameter combinations available in the sandbox may differ from those allowed by health systems.   </div>   <h4 id=\"patient-standard-extensions\">    <a name=\"user-content-standard-extensions\" href=\"#standard-extensions\" class=\"headeranchor-link\" aria-hidden=\"true\" data-drive-link-file-url=\"1\"><span class=\"headeranchor\"></span></a>    Supported Patient Extensions   </h4>   <p>    In addition to the  Standard FHIR Patient resource, Epic supports the following patient-level extensions:   </p>     <p><strong><a href=\"http://hl7.org/fhir/extension-us-core-race.html\" data-drive-link-file-url=\"1\">US Core Race</a></strong><br>Coded value of the Patient&#39;s documented race using the <a href=\"http://hl7.org/fhir/v3/Race/cs.html\" data-drive-link-file-url=\"1\">HL7 Version 3 Race Code System.</a> <br> <pre>  <code class=\"hljs json\">  {\"url\": \"http://hl7.org/fhir/StructureDefinition/us-core-race\", \"valueCodeableConcept\": {\"text\": \"Asian\", \"coding\": [{\"system\": \"2.16.840.1.113883.5.104\", \"code\": \"2028-9\", \"display\": \"Asian\"}] }}</code></pre> </p> <br> <p><strong><a href=\"http://hl7.org/fhir/extension-us-core-ethnicity.html\" data-drive-link-file-url=\"1\">US Core Ethnicity</a></strong> <br> Coded value of the Patient&#39;s documented ethnicity using the <a href=\"https://www.hl7.org/fhir/v3/Ethnicity/cs.html\" data-drive-link-file-url=\"1\">HL7 Version 3 Ethnicity Code System.</a>  <br>  <pre> <code class=\"hljs json\">  {\"url\": \"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\", \"valueCodeableConcept\": {\"text\": \"Not Hispanic or Latino\", \"coding\": [{\"system\": \"2.16.840.1.113883.5.50\", \"code\": \"2186-5\", \"display\": \"Not Hispanic or Latino\"}] }}</code></pre></p>  <br>  <p><strong><a href=\"http://argonautwiki.hl7.org/index.php?title=Draft_Birth_Sex_Extension\" data-drive-link-file-url=\"1\">US Core Birth Sex</a></strong> <br> Coded value of the Patient&#39;s documented birth sex using the <a href=\"https://www.hl7.org/fhir/cm-administrative-gender-v3.html\" data-drive-link-file-url=\"1\">HL7 Version 3 Administrative Gender Code System</a>, as required by ONC regulation. <strong>Note:</strong> if no birth sex is documented, a value will not be returned.  <br>  <pre> <code class=\"hljs json\">  {\"url\": \"http://hl7.org/fhir/StructureDefinition/us-core-birth-sex\", \"valueCodeableConcept\": { \"text\": \"Male\", \"coding\": [{\"system\": \"http://hl7.org/fhir/v3/AdministrativeGender\", \"code\": \"M\", \"display\": \"Male\"}] }}</code></pre> </p><br>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Patient?_id={_id}&identifier={identifier}&family={family}&given={given}&birthdate={birthdate}&address={address}&gender={gender}&telecom={telecom}",
+    "SampleRequest": "<p>http://hostname/instance/api/FHIR/DSTU2/Patient?Family=Doe&amp;Given=John</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"17\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient?Family=Doe&amp;amp;Given=John\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TB2fiHITxwOAD8ZYflxSqWbko892TkWkXFaCTS-1nKBQB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TB2fiHITxwOAD8ZYflxSqWbko892TkWkXFaCTS-1nKBQB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-12-31T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TB2fiHITxwOAD8ZYflxSqWbko892TkWkXFaCTS-1nKBQB\" /&gt;</p><p>&lt;careProvider&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/careProvider&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"FHIR\" /&gt;</p><p>&lt;prefix value=\"MS.\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"104800\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;address&gt;</p><p>&lt;use value=\"home\" /&gt;</p><p>&lt;line value=\"101 Main St\" /&gt;</p><p>&lt;line value=\"Apt 320\" /&gt;</p><p>&lt;city value=\"VERONA\" /&gt;</p><p>&lt;state value=\"WI\" /&gt;</p><p>&lt;postalCode value=\"53593\" /&gt;</p><p>&lt;country value=\"USA\" /&gt;</p><p>&lt;/address&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"phone\" /&gt;</p><p>&lt;value value=\"608-777-7777\" /&gt;</p><p>&lt;use value=\"home\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"phone\" /&gt;</p><p>&lt;value value=\"608-888-8888\" /&gt;</p><p>&lt;use value=\"work\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"phone\" /&gt;</p><p>&lt;value value=\"608-444-4444\" /&gt;</p><p>&lt;use value=\"mobile\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"email\" /&gt;</p><p>&lt;value value=\"fhirDoe@email.com\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;maritalStatus&gt;</p><p>&lt;text value=\"Married\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/vs/marital-status\" /&gt;</p><p>&lt;code value=\"M\" /&gt;</p><p>&lt;display value=\"Married\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/maritalStatus&gt;</p><p>&lt;communication&gt;</p><p>&lt;preferred value=\"true\" /&gt;</p><p>&lt;language&gt;</p><p>&lt;text value=\"English\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.6.99\" /&gt;</p><p>&lt;code value=\"en\" /&gt;</p><p>&lt;display value=\"English\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/language&gt;</p><p>&lt;/communication&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"White\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"2106-3\" /&gt;</p><p>&lt;display value=\"White\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Te6i4i91kgVIfTthLY63dU2ssXNHwXk097.6wCp29ryYB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Te6i4i91kgVIfTthLY63dU2ssXNHwXk097.6wCp29ryYB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-12-31T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"Te6i4i91kgVIfTthLY63dU2ssXNHwXk097.6wCp29ryYB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"C\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"104803\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TOBqFFKh8.TSTgOHfozJMTPWvphHOos55Vi-1lfQKvEMB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TOBqFFKh8.TSTgOHfozJMTPWvphHOos55Vi-1lfQKvEMB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-12-31T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TOBqFFKh8.TSTgOHfozJMTPWvphHOos55Vi-1lfQKvEMB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"B\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"104802\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TVvHM06czXsYBOZYtJiz9BsSuvzmIbZGbIRzim-CwknYB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TVvHM06czXsYBOZYtJiz9BsSuvzmIbZGbIRzim-CwknYB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-12-31T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TVvHM06czXsYBOZYtJiz9BsSuvzmIbZGbIRzim-CwknYB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"A\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"104801\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/ToueZw1.F0ZmssWl-YvEOkzXHFyPqpsv.7zUXEqQjQ2QB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/ToueZw1.F0ZmssWl-YvEOkzXHFyPqpsv.7zUXEqQjQ2QB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-13T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"ToueZw1.F0ZmssWl-YvEOkzXHFyPqpsv.7zUXEqQjQ2QB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"Observation\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"104893\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T0hY1cLFnO.TSydQJmt.mneK9ATxa9uysPCZFPmn2KygB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T0hY1cLFnO.TSydQJmt.mneK9ATxa9uysPCZFPmn2KygB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-13T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"T0hY1cLFnO.TSydQJmt.mneK9ATxa9uysPCZFPmn2KygB\" /&gt;</p><p>&lt;careProvider&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/careProvider&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"Condition\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"104897\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;address&gt;</p><p>&lt;use value=\"home\" /&gt;</p><p>&lt;line value=\"1979 Milky Way\" /&gt;</p><p>&lt;city value=\"VERONA\" /&gt;</p><p>&lt;state value=\"WI\" /&gt;</p><p>&lt;postalCode value=\"53593\" /&gt;</p><p>&lt;country value=\"USA\" /&gt;</p><p>&lt;/address&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"phone\" /&gt;</p><p>&lt;value value=\"608-555-5555\" /&gt;</p><p>&lt;use value=\"home\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"phone\" /&gt;</p><p>&lt;value value=\"608-222-2222\" /&gt;</p><p>&lt;use value=\"work\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"email\" /&gt;</p><p>&lt;value value=\"condition@fhir.com\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;maritalStatus&gt;</p><p>&lt;text value=\"Single\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/vs/marital-status\" /&gt;</p><p>&lt;code value=\"S\" /&gt;</p><p>&lt;display value=\"Never Married\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/maritalStatus&gt;</p><p>&lt;communication&gt;</p><p>&lt;preferred value=\"true\" /&gt;</p><p>&lt;language&gt;</p><p>&lt;text value=\"English\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.6.99\" /&gt;</p><p>&lt;code value=\"en\" /&gt;</p><p>&lt;display value=\"English\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/language&gt;</p><p>&lt;/communication&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Other Race\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"2131-1\" /&gt;</p><p>&lt;display value=\"Other Race\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/To.tzuYi7iqTWlgCJE3ESXNZdsySqanPeMiImsJ5kCQwB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/To.tzuYi7iqTWlgCJE3ESXNZdsySqanPeMiImsJ5kCQwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-19T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"To.tzuYi7iqTWlgCJE3ESXNZdsySqanPeMiImsJ5kCQwB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"DD\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"105012\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TaBMXyh9psHdly7olirysOC1vFrFEWt9Peot0Vjyt9wQB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TaBMXyh9psHdly7olirysOC1vFrFEWt9Peot0Vjyt9wQB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-19T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TaBMXyh9psHdly7olirysOC1vFrFEWt9Peot0Vjyt9wQB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"D\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"105011\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5552.1.7.5.737384.225\" /&gt;</p><p>&lt;value value=\"54654\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;maritalStatus&gt;</p><p>&lt;text value=\"Married\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/vs/marital-status\" /&gt;</p><p>&lt;code value=\"M\" /&gt;</p><p>&lt;display value=\"Married\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/maritalStatus&gt;</p><p>&lt;communication&gt;</p><p>&lt;preferred value=\"true\" /&gt;</p><p>&lt;language&gt;</p><p>&lt;text value=\"Dutch\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.6.99\" /&gt;</p><p>&lt;code value=\"nl\" /&gt;</p><p>&lt;display value=\"Dutch\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/language&gt;</p><p>&lt;/communication&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tgv7cZXHhDotXlKpEZLbT1A11ZuVyfk-D5zPphjQr5IMB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tgv7cZXHhDotXlKpEZLbT1A11ZuVyfk-D5zPphjQr5IMB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-24T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"Tgv7cZXHhDotXlKpEZLbT1A11ZuVyfk-D5zPphjQr5IMB\" /&gt;</p><p>&lt;careProvider&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/careProvider&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"E\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"105228\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TWwDy4mdtNEaxOoQNLzfatY6C01B5cXM0opoEhrprDq8B\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TWwDy4mdtNEaxOoQNLzfatY6C01B5cXM0opoEhrprDq8B\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-24T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TWwDy4mdtNEaxOoQNLzfatY6C01B5cXM0opoEhrprDq8B\" /&gt;</p><p>&lt;careProvider&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/careProvider&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"F\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"105229\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T46lhChTnLnBf-ZBR7qN4gtw.XYXt7u1tzla4ZyD9t7cB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T46lhChTnLnBf-ZBR7qN4gtw.XYXt7u1tzla4ZyD9t7cB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-24T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"T46lhChTnLnBf-ZBR7qN4gtw.XYXt7u1tzla4ZyD9t7cB\" /&gt;</p><p>&lt;careProvider&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/careProvider&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"G\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"105230\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TVtd7x5wMBMpqt6hanM6NlqEXrPIRlc6yZUrGmXddKX8B\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TVtd7x5wMBMpqt6hanM6NlqEXrPIRlc6yZUrGmXddKX8B\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-01-25T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TVtd7x5wMBMpqt6hanM6NlqEXrPIRlc6yZUrGmXddKX8B\" /&gt;</p><p>&lt;careProvider&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TiOmkdUgh7pJl0-mpSeeFtQB\" /&gt;</p><p>&lt;/careProvider&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"H\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"105399\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;address&gt;</p><p>&lt;use value=\"home\" /&gt;</p><p>&lt;line value=\"1979 Milky Way\" /&gt;</p><p>&lt;line value=\"Apt 310\" /&gt;</p><p>&lt;city value=\"VERONA\" /&gt;</p><p>&lt;state value=\"WI\" /&gt;</p><p>&lt;postalCode value=\"53593\" /&gt;</p><p>&lt;country value=\"USA\" /&gt;</p><p>&lt;/address&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"phone\" /&gt;</p><p>&lt;value value=\"608-555-5555\" /&gt;</p><p>&lt;use value=\"home\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"phone\" /&gt;</p><p>&lt;value value=\"608-444-4444\" /&gt;</p><p>&lt;use value=\"work\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;maritalStatus&gt;</p><p>&lt;text value=\"Single\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/vs/marital-status\" /&gt;</p><p>&lt;code value=\"S\" /&gt;</p><p>&lt;display value=\"Never Married\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/maritalStatus&gt;</p><p>&lt;communication&gt;</p><p>&lt;preferred value=\"true\" /&gt;</p><p>&lt;language&gt;</p><p>&lt;text value=\"English\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.6.99\" /&gt;</p><p>&lt;code value=\"en\" /&gt;</p><p>&lt;display value=\"English\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/language&gt;</p><p>&lt;/communication&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"White\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"2106-3\" /&gt;</p><p>&lt;display value=\"White\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-02-02T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TG7cJWa-If.KeTo74UIBQhhbTdO7s5GnyjkLCzU7kx54B\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"Device\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"106127\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;telecom&gt;</p><p>&lt;system value=\"email\" /&gt;</p><p>&lt;value value=\"devicefhir@email.com\" /&gt;</p><p>&lt;/telecom&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9X1pLrPrD6802KBILrnAFln5jV7TXVKw3-p5XCqQPkMB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/T9X1pLrPrD6802KBILrnAFln5jV7TXVKw3-p5XCqQPkMB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-02-09T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"T9X1pLrPrD6802KBILrnAFln5jV7TXVKw3-p5XCqQPkMB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"Immunization\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"107173\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TK0ALKsNCLTt1zsJOsvcOxUmYN0SxaZiehN52lnU8FgMB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TK0ALKsNCLTt1zsJOsvcOxUmYN0SxaZiehN52lnU8FgMB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-02-11T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TK0ALKsNCLTt1zsJOsvcOxUmYN0SxaZiehN52lnU8FgMB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"Never Assessed\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"107243\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TA5E13.E32DEDmMHKT.MbqX-Nc9W6hFsM5.TCbUfJvF0B\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TA5E13.E32DEDmMHKT.MbqX-Nc9W6hFsM5.TCbUfJvF0B\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-02-11T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TA5E13.E32DEDmMHKT.MbqX-Nc9W6hFsM5.TCbUfJvF0B\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"Unknown\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"107244\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TE8W3rK2.OY-eAQIFbovGOw3YxmqXp-GmS6WnZ0Q.ZwEB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TE8W3rK2.OY-eAQIFbovGOw3YxmqXp-GmS6WnZ0Q.ZwEB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;Patient&gt;</p><p>&lt;birthDate value=\"1991-02-11T00:00:00\" /&gt;</p><p>&lt;active value=\"true\" /&gt;</p><p>&lt;gender value=\"female\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;id value=\"TE8W3rK2.OY-eAQIFbovGOw3YxmqXp-GmS6WnZ0Q.ZwEB\" /&gt;</p><p>&lt;name&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;family value=\"Doe\" /&gt;</p><p>&lt;given value=\"John\" /&gt;</p><p>&lt;given value=\"Smoker\" /&gt;</p><p>&lt;/name&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.1\" /&gt;</p><p>&lt;value value=\"107245\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-race\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.104\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;extension&gt;</p><p>&lt;url value=\"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\" /&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;text value=\"Unknown\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.5.50\" /&gt;</p><p>&lt;code value=\"UNK\" /&gt;</p><p>&lt;display value=\"Unknown\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/extension&gt;</p><p>&lt;/Patient&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": "<p>FHIR Patient resources can be retrieved via a Read or Search interaction and can be consumed as either XML or JSON. Searches most often utilize the Identity Duplicate Checking infrastructure. A released IDC record will allow this web service to perform searches. A search may return as many as 100 potential matches. </p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 10464,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "_id": {
+                    "Id": 10465,
+                    "Name": "_id",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Patient's FHIR ID.",
+                    "Optional": "If provided, all other input parameters will be ignored.\n<p>One of the following input combinations must be provided at minimum:</p>\n<ul>\n<li>_id (aka FHIR ID)</li>\n<li>identifier in the form {IDType}|{ID}, which includes SSN</li>\n<li>Given name, family name, and birthdate</li>\n<li>Given name, family name, gender, and communication (phone number/email)</li>\n</ul>",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 880
+                },
+                "address": {
+                    "Id": 10470,
+                    "Name": "address",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Addresses for the patient.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 885
+                },
+                "birthdate": {
+                    "Id": 10469,
+                    "Name": "birthdate",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The patient's date of birth in the format YYYY-MM-DD.",
+                    "Optional": "<p>One of the following input combinations must be provided at minimum:</p>\n<ul>\n<li>_id (aka FHIR ID)</li>\n<li>identifier in the form {IDType}|{ID}, which includes SSN</li>\n<li>Given name, family name, and birthdate</li>\n<li>Given name, family name, gender, and communication (phone number/email)</li>\n</ul>",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 884
+                },
+                "family": {
+                    "Id": 10467,
+                    "Name": "family",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The patient's family (last) name. ",
+                    "Optional": "<p>One of the following input combinations must be provided at minimum:</p>\n<ul>\n<li>_id (aka FHIR ID)</li>\n<li>identifier in the form {IDType}|{ID}, which includes SSN</li>\n<li>Given name, family name, and birthdate</li>\n<li>Given name, family name, gender, and communication (phone number/email)</li>\n</ul>",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 882
+                },
+                "gender": {
+                    "Id": 10471,
+                    "Name": "gender",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The patient's legal sex.",
+                    "Optional": "<p>One of the following input combinations must be provided at minimum:</p>\n<ul>\n<li>_id (aka FHIR ID)</li>\n<li>identifier in the form {IDType}|{ID}, which includes SSN</li>\n<li>Given name, family name, and birthdate</li>\n<li>Given name, family name, gender, and communication (phone number/email)</li>\n</ul>",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 886
+                },
+                "given": {
+                    "Id": 10468,
+                    "Name": "given",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The patient's given name. May include first and middle names.",
+                    "Optional": "<p>One of the following input combinations must be provided at minimum:</p>\n<ul>\n<li>_id (aka FHIR ID)</li>\n<li>identifier in the form {IDType}|{ID}, which includes SSN</li>\n<li>Given name, family name, and birthdate</li>\n<li>Given name, family name, gender, and communication (phone number/email)</li>\n</ul>",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 883
+                },
+                "identifier": {
+                    "Id": 10466,
+                    "Name": "identifier",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Identifiers and assigning authorities associated with a patient. These are of the format &lt;OID&gt;|&lt;value&gt;.",
+                    "Optional": "<p>One of the following input combinations must be provided at minimum:</p>\n<ul>\n<li>_id (aka FHIR ID)</li>\n<li>identifier in the form {IDType}|{ID}, which includes SSN</li>\n<li>Given name, family name, and birthdate</li>\n<li>Given name, family name, gender, and communication (phone number/email)</li>\n</ul>",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 881
+                },
+                "telecom": {
+                    "Id": 10472,
+                    "Name": "telecom",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Telephone numbers and email addresses for the patient, along with their use (i.e. home, work, etc.)  ",
+                    "Optional": "<p>One of the following input combinations must be provided at minimum:</p>\n<ul>\n<li>_id (aka FHIR ID)</li>\n<li>identifier in the form {IDType}|{ID}, which includes SSN</li>\n<li>Given name, family name, and birthdate</li>\n<li>Given name, family name, gender, and communication (phone number/email)</li>\n</ul>",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 887
+                }
+            },
+            "Order": 0,
+            "TypeId": 879
+        },
+        "ResponseRootType": {
+            "Id": 10473,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 10474,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 10477,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single entry in the resource bundle.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 10482,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Patient": {
+                                            "Id": 10483,
+                                            "Name": "Patient",
+                                            "AltName": null,
+                                            "Type": "Patient",
+                                            "Description": "A single Patient FHIR resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "active": {
+                                                    "Id": 10485,
+                                                    "Name": "active",
+                                                    "AltName": null,
+                                                    "Type": "Boolean",
+                                                    "Description": "Whether the patient record is active.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 854
+                                                },
+                                                "address": {
+                                                    "Id": 10539,
+                                                    "Name": "address",
+                                                    "AltName": null,
+                                                    "Type": "Address",
+                                                    "Description": "Addresses for the patient.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 867
+                                                },
+                                                "birthDate": {
+                                                    "Id": 10484,
+                                                    "Name": "birthDate",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The patient's date of birth in the format YYYY-MM-DD.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 853
+                                                },
+                                                "careProvider": {
+                                                    "Id": 10491,
+                                                    "Name": "careProvider",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "PCP of type general for the patient. Reference to a Practitioner resource.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "communication": {
+                                                    "Id": 10565,
+                                                    "Name": "communication",
+                                                    "AltName": null,
+                                                    "Type": "Communication",
+                                                    "Description": "A list of languages used to communicate with the patient, along with an indicator of which is preferred.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "language": {
+                                                            "Id": 10567,
+                                                            "Name": "language",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "The patient's general language, onsite care language, and spoken language.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 133
+                                                        },
+                                                        "preferred": {
+                                                            "Id": 10566,
+                                                            "Name": "preferred",
+                                                            "AltName": null,
+                                                            "Type": "Boolean",
+                                                            "Description": "Whether the language is the patient's preferred language.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 876
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 875
+                                                },
+                                                "deceasedBoolean": {
+                                                    "Id": 10487,
+                                                    "Name": "deceasedBoolean",
+                                                    "AltName": null,
+                                                    "Type": "Boolean",
+                                                    "Description": "Whether the patient is deceased.",
+                                                    "Optional": "deceasedDateTime is returned whenever available. If not available, deceasedBoolean will be returned.",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 856
+                                                },
+                                                "deceasedDateTime": {
+                                                    "Id": 10488,
+                                                    "Name": "deceasedDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The date and time at which the patient was deceased.",
+                                                    "Optional": "deceasedDateTime is returned whenever available. If not available, deceasedBoolean will be returned.",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 857
+                                                },
+                                                "gender": {
+                                                    "Id": 10486,
+                                                    "Name": "gender",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The patient's legal sex.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 855
+                                                },
+                                                "id": {
+                                                    "Id": 10490,
+                                                    "Name": "id",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The Patient's FHIR ID.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 859
+                                                },
+                                                "identifier": {
+                                                    "Id": 10505,
+                                                    "Name": "identifier",
+                                                    "AltName": null,
+                                                    "Type": "Identifier",
+                                                    "Description": "Identifiers and assigning authorities associated with a patient. These are of the format &lt;OID&gt;|&lt;value&gt;.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 129
+                                                },
+                                                "maritalStatus": {
+                                                    "Id": 10557,
+                                                    "Name": "maritalStatus",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The patient’s marital status.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                },
+                                                "name": {
+                                                    "Id": 10494,
+                                                    "Name": "name",
+                                                    "AltName": null,
+                                                    "Type": "HumanName",
+                                                    "Description": "<p>The patient's name. </p>\n<ul>\n<li>Starting in the May 2020 version of Epic, this element includes both the patient's \"official\" name, which is the patient's legal name, and the patient's \"usual\" name, which is the patient's preferred name.\n<ul><li>\nIf the patient does not have a preferred name defined in your system, the \"usual\" name also holds the patient's legal name.</li>\n<li>In a patient-facing context, this web service always shows the patient's preferred name, unless a user has the security point 'Only Show Legal Name'.</li></ul></li>\n<li>In February 2020 and earlier, this element returns only the patient's legal name with a use code of \"usual\".</li>\n</ul>",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "family": {
+                                                            "Id": 10497,
+                                                            "Name": "family",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The patient's family (last) name. ",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 863
+                                                        },
+                                                        "given": {
+                                                            "Id": 10498,
+                                                            "Name": "given",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The patient's given name. May include first and middle names.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 864
+                                                        },
+                                                        "prefix": {
+                                                            "Id": 10499,
+                                                            "Name": "prefix",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The patient's name prefix. ",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 865
+                                                        },
+                                                        "suffix": {
+                                                            "Id": 10500,
+                                                            "Name": "suffix",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The patient's name suffix.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 866
+                                                        },
+                                                        "text": {
+                                                            "Id": 10496,
+                                                            "Name": "text",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The patient's full name as a string.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 862
+                                                        },
+                                                        "use": {
+                                                            "Id": 10495,
+                                                            "Name": "use",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "The purpose of the name. May be \"legal\" or \"usual\". See the name parameter for full details on use.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 861
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 860
+                                                },
+                                                "telecom": {
+                                                    "Id": 10550,
+                                                    "Name": "telecom",
+                                                    "AltName": null,
+                                                    "Type": "ContactPoint",
+                                                    "Description": "Telephone numbers and email addresses for the patient, along with their use (i.e. home, work, etc.)  ",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "system": {
+                                                            "Id": 10551,
+                                                            "Name": "system",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "<p>The type of telecom. Potential values are:</p>\n<ul>\n<li>email</li>\n<li>phone</li>\n</ul>",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 606
+                                                        },
+                                                        "use": {
+                                                            "Id": 10553,
+                                                            "Name": "use",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "<p>If the telecom entry is a phone number, possible values are:</p>\n<ul>\n<li>home</li>\n<li>mobile</li>\n<li>work</li>\n</ul>",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 608
+                                                        },
+                                                        "value": {
+                                                            "Id": 10552,
+                                                            "Name": "value",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "<p>Value of the telecom method. May be an email address or phone number.</p>",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 607
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 605
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 852
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 894
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 892
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 889
+                }
+            },
+            "Order": 10000,
+            "TypeId": 888
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

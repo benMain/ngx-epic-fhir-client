@@ -1,0 +1,254 @@
+{
+    "Id": 945,
+    "Description": "<p>The AllergyIntolerance resource defines clinical information about a patient's allergic response to a substance. It defines the substance that elicited the response, as well as when the reaction occurred, the severity, and the type of reaction noted.</p> \n\n<p>The AllergyIntolerance resource accommodates creating allergies by adding them to the \"holding tank\" that drives the EpicCare Reconcile Outside Data Activity. Once a clinician reconciles the allergy, the unconfirmed AllergyIntolerance in the \"holding tank\" will no longer appear in AllergyIntolerance.Search results. A new AllergyIntolerance resource associated with the reconciled allergy will be available in the normal AllergyIntolerance.Search API</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "POST",
+    "UrlTemplate": "api/FHIR/R4/AllergyIntolerance",
+    "SampleRequest": "<p>&lt;AllergyIntolerance xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;clinicalStatus&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical\" /&gt;</p><p>&lt;code value=\"active\" /&gt;</p><p>&lt;version value=\"4.0.0\" /&gt;</p><p>&lt;display value=\"Active\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/clinicalStatus&gt;</p><p>&lt;verificationStatus value=\"confirmed\" /&gt;</p><p>&lt;type value=\"allergy\" /&gt;</p><p>&lt;category value=\"medication\" /&gt;</p><p>&lt;category value=\"food\" /&gt;</p><p>&lt;category value=\"environment\" /&gt;</p><p>&lt;criticality value=\"high\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.88\" /&gt;</p><p>&lt;code value=\"18235\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"PEANUT OIL\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;patient&gt;</p><p>&lt;reference value=\"e06xbT0QqabCKCMIqZo98DA3\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;onsetDateTime value=\"2009-05-04T16:44:39Z\" /&gt;</p><p>&lt;note&gt;</p><p>&lt;text value=\"lksjfwklfej\" /&gt;</p><p>&lt;/note&gt;</p><p>&lt;note&gt;</p><p>&lt;text value=\"Test comments&amp;#xD;&amp;#xA;Comments from other org&amp;#xD;&amp;#xA;Another note - let's see what happens.&amp;#xD;&amp;#xA;Test comments&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;Test comments&amp;#xD;&amp;#xA;Comments from other org&amp;#xD;&amp;#xA;Another note - let's see what happens.&amp;#xD;&amp;#xA;Test comments&amp;#xD;&amp;#xA;4Test comments&amp;#xD;&amp;#xA;Comments from other org&amp;#xD;&amp;#xA;Another note - let's see what happens.&amp;#xD;&amp;#xA;Test comments&amp;#xD;&amp;#xA;4Test comments&amp;#xD;&amp;#xA;Comments from other org&amp;#xD;&amp;#xA;Another note - let's see what happens.&amp;#xD;&amp;#xA;Test comments&amp;#xD;&amp;#xA;4Test comments&amp;#xD;&amp;#xA;Comments from other org&amp;#xD;&amp;#xA;Another note - let's see what happens.&amp;#xD;&amp;#xA;Test comments&amp;#xD;&amp;#xA;4Test comments&amp;#xD;&amp;#xA;Comments fr\" /&gt;</p><p>&lt;/note&gt;</p><p>&lt;reaction&gt;</p><p>&lt;manifestation&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.96\" /&gt;</p><p>&lt;code value=\"126485001\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Hives\" /&gt;</p><p>&lt;/manifestation&gt;</p><p>&lt;description value=\"Hives\" /&gt;</p><p>&lt;/reaction&gt;</p><p>&lt;/AllergyIntolerance&gt;</p>",
+    "SampleResponse": "<p>N/A</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 112221,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "AllergyIntolerance": {
+                    "Id": 112222,
+                    "Name": "AllergyIntolerance",
+                    "AltName": null,
+                    "Type": "AllergyIntolerance",
+                    "Description": "A single AllergyIntolerance resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "clinicalStatus": {
+                            "Id": 112295,
+                            "Name": "clinicalStatus",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>The current status of the allergy. Possible values include:</p>\n<ul>\n<li>active</li>\n<li>resolved</li>\n<li>inactive</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "coding": {
+                                    "Id": 112299,
+                                    "Name": "coding",
+                                    "AltName": null,
+                                    "Type": "Coding",
+                                    "Description": "Coding value.",
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {
+                                        "code": {
+                                            "Id": 112303,
+                                            "Name": "code",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "Possible values include:</p>\n<ul>\n<li>active</li>\n<li>resolved</li>\n<li>inactive</li>\n</ul>",
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 4,
+                                            "TypeId": 353
+                                        },
+                                        "system": {
+                                            "Id": 112301,
+                                            "Name": "system",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "Expected to be http://hl7.org/fhir/ValueSet/allergyintolerance-clinical.",
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 4,
+                                            "TypeId": 351
+                                        },
+                                        "version": {
+                                            "Id": 112302,
+                                            "Name": "version",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "Expected to be 4.0.0",
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 4,
+                                            "TypeId": 352
+                                        }
+                                    },
+                                    "Order": 3,
+                                    "TypeId": 349
+                                }
+                            },
+                            "Order": 2,
+                            "TypeId": 366
+                        },
+                        "code": {
+                            "Id": 112319,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "The allergen name and codes.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 366
+                        },
+                        "criticality": {
+                            "Id": 112228,
+                            "Name": "criticality",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Refers to the risk of clinical harm of a reaction to the substance. Possible values are:</p>\n<ul>\n<li>unable-to-assess</li>\n<li>high</li>\n<li>low</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 5392
+                        },
+                        "note": {
+                            "Id": 112487,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "Any comments associated with the allergy.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 379
+                        },
+                        "onsetDateTime": {
+                            "Id": 112229,
+                            "Name": "onsetDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The date the allergy was identified.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 5393
+                        },
+                        "onsetPeriod": {
+                            "Id": 112401,
+                            "Name": "onsetPeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "The date range when the allergy was identified.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {
+                                "end": {
+                                    "Id": 112404,
+                                    "Name": "end",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The date the allergy was resolved.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 372
+                                },
+                                "start": {
+                                    "Id": 112403,
+                                    "Name": "start",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The date the allergy was identified.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 371
+                                }
+                            },
+                            "Order": 2,
+                            "TypeId": 369
+                        },
+                        "patient": {
+                            "Id": 112331,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to a patient resource for whom the allergy is relevant.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 373
+                        },
+                        "reaction": {
+                            "Id": 112524,
+                            "Name": "reaction",
+                            "AltName": null,
+                            "Type": "Reaction",
+                            "Description": "List of known reactions the patient had to the substance.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "description": {
+                                    "Id": 112526,
+                                    "Name": "description",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "The name of the reaction.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 5415
+                                },
+                                "manifestation": {
+                                    "Id": 112543,
+                                    "Name": "manifestation",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "A single reaction the patient had to the substance.",
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 366
+                                }
+                            },
+                            "Order": 2,
+                            "TypeId": 5413
+                        },
+                        "type": {
+                            "Id": 112226,
+                            "Name": "type",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>Possible values include:</p>\n<ul>\n<li>allergy</li>\n<li>intolerance</li>\n</ul>",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 5390
+                        }
+                    },
+                    "Order": 1,
+                    "TypeId": 5386
+                }
+            },
+            "Order": 0,
+            "TypeId": 5385
+        },
+        "ResponseRootType": null
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

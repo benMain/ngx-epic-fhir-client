@@ -1,0 +1,473 @@
+{
+    "Id": 25,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/DSTU2/medicationorder.html\" data-drive-link-file-url=\"1\">FHIR MedicationOrder resource</a> defines detailed information about a medication    that was ordered for a patient. This includes prescriptions or OTC drugs ordered in an ambulatory clinic. It is not used for diet orders    or durable medical equipment. It also contains information about how the medication should be taken by or given to the patient.   </p>      <p>      The MedicationOrder resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Medications.    </p>       <p>    The Read interaction enables the look up of a MedicationOrder resource by a constant server    ID. Clients can store only the server ID, and with a    single request, retrieve the most up-to-date information about the MedicationOrder. Read interactions    typically begin with a client having previously established a relationship, often    through querying for patients through the Search interaction.   </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/MedicationOrder/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/MedicationOrder/TX5g0lx9amu2mtMEVeZX0FwB</p>",
+    "SampleResponse": "<p>&lt;MedicationPrescription xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;dateWritten value=\"2016-01-12T00:00:00\" /&gt;</p><p>&lt;status value=\"active\" /&gt;</p><p>&lt;id value=\"TX5g0lx9amu2mtMEVeZX0FwB\" /&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5552.1.7.2.798268\" /&gt;</p><p>&lt;value value=\"2431362\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;identifier&gt;</p><p>&lt;use value=\"usual\" /&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5552.1.7.3.798268.801\" /&gt;</p><p>&lt;value value=\"2431362:1499081636\" /&gt;</p><p>&lt;/identifier&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fhir A Doe\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;prescriber&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T261TVJilfMxfUGfuXuDQpQB\" /&gt;</p><p>&lt;/prescriber&gt;</p><p>&lt;medicationReference&gt;</p><p>&lt;display value=\"lisinopril (PRINIVIL, ZESTRIL) 10 MG tablet\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Medication/TEsK30cd14IXmSbsc2iHM5gB\" /&gt;</p><p>&lt;/medicationReference&gt;</p><p>&lt;dosageInstruction&gt;</p><p>&lt;text value=\"Take 1 tablet by mouth daily.\" /&gt;</p><p>&lt;asNeededBoolean value=\"false\" /&gt;</p><p>&lt;route&gt;</p><p>&lt;text value=\"Oral\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5552.1.7.4.698288.330\" /&gt;</p><p>&lt;code value=\"15\" /&gt;</p><p>&lt;display value=\"Oral\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/route&gt;</p><p>&lt;method&gt;</p><p>&lt;text value=\"Take\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5552.1.7.4.798268.8600\" /&gt;</p><p>&lt;code value=\"11\" /&gt;</p><p>&lt;display value=\"Take\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/method&gt;</p><p>&lt;Timing&gt;</p><p>&lt;repeat&gt;</p><p>&lt;frequency value=\"1\" /&gt;</p><p>&lt;period value=\"1\" /&gt;</p><p>&lt;periodUnits value=\"d\" /&gt;</p><p>&lt;bounds&gt;</p><p>&lt;start value=\"2016-01-12T00:00:00\" /&gt;</p><p>&lt;/bounds&gt;</p><p>&lt;/repeat&gt;</p><p>&lt;/Timing&gt;</p><p>&lt;doseQuantity&gt;</p><p>&lt;value value=\"10\" /&gt;</p><p>&lt;code value=\"mg\" /&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.6.8\" /&gt;</p><p>&lt;/doseQuantity&gt;</p><p>&lt;/dosageInstruction&gt;</p><p>&lt;dispenseRequest&gt;</p><p>&lt;numberOfRepeatsAllowed value=\"4\" /&gt;</p><p>&lt;expectedSupplyDuration&gt;</p><p>&lt;value value=\"30\" /&gt;</p><p>&lt;unit value=\"days\" /&gt;</p><p>&lt;code value=\"d\" /&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.6.8\" /&gt;</p><p>&lt;/expectedSupplyDuration&gt;</p><p>&lt;validityPeriod&gt;</p><p>&lt;start value=\"2016-01-12T00:00:00\" /&gt;</p><p>&lt;/validityPeriod&gt;</p><p>&lt;quantity&gt;</p><p>&lt;value value=\"30\" /&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.6.8\" /&gt;</p><p>&lt;/quantity&gt;</p><p>&lt;/dispenseRequest&gt;</p><p>&lt;substitution&gt;</p><p>&lt;type&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:2.16.840.1.113883.1.11.16621\" /&gt;</p><p>&lt;code value=\"N\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/type&gt;</p><p>&lt;/substitution&gt;</p><p>&lt;/MedicationPrescription&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 9077,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 9078,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "FHIR ID of the MedicationOrder resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 778
+                }
+            },
+            "Order": 0,
+            "TypeId": 777
+        },
+        "ResponseRootType": {
+            "Id": 9079,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "MedicationOrder": {
+                    "Id": 9095,
+                    "Name": "MedicationOrder",
+                    "AltName": null,
+                    "Type": "MedicationOrder",
+                    "Description": "An instance of the DSTU2 MedicationOrder resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "dateWritten": {
+                            "Id": 9096,
+                            "Name": "dateWritten",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The date (and perhaps time) when the prescription was written.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 781
+                        },
+                        "dispenseRequest": {
+                            "Id": 9288,
+                            "Name": "dispenseRequest",
+                            "AltName": null,
+                            "Type": "Dispense",
+                            "Description": "Indicates details about the requested medication.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {
+                                "expectedSupplyDuration": {
+                                    "Id": 9290,
+                                    "Name": "expectedSupplyDuration",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last. In some situations, this attribute may be used instead of quantity to identify the amount supplied by how long it is expected to last, rather than the physical quantity issued, e.g. 90 days supply of medication (based on an ordered dosage) When possible, it is always better to specify quantity, as this tends to be more precise. expectedSupplyDuration will always be an estimate that can be influenced by external factors.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "numberOfRepeatsAllowed": {
+                                    "Id": 9289,
+                                    "Name": "numberOfRepeatsAllowed",
+                                    "AltName": null,
+                                    "Type": "Int64",
+                                    "Description": "An integer indicating the number of repeats of the Dispense. UsageNotes: For example, the number of times the prescribed quantity is to be supplied including the initial standard fill.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 820
+                                },
+                                "quantity": {
+                                    "Id": 9301,
+                                    "Name": "quantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "The amount that is to be dispensed for one fill.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "validityPeriod": {
+                                    "Id": 9296,
+                                    "Name": "validityPeriod",
+                                    "AltName": null,
+                                    "Type": "Period",
+                                    "Description": "This indicates the validity period of a prescription (stale dating the Prescription) It reflects the prescriber perspective for the validity of the prescription. Dispenses must not be made against the prescription outside of this period. The lower-bound of the Dispensing Window signifies the earliest date that the prescription can be filled for the first time. If an upper-bound is not specified then the Prescription is open-ended or will default to a stale-date based on regulations. Rationale: Indicates when the Prescription becomes valid, and when it ceases to be a dispensable Prescription.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 659
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 819
+                        },
+                        "dosageInstruction": {
+                            "Id": 9132,
+                            "Name": "dosageInstruction",
+                            "AltName": null,
+                            "Type": "DosageInstruction",
+                            "Description": "Indicates how the medication is to be used by the patient.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "asNeededBoolean": {
+                                    "Id": 9134,
+                                    "Name": "asNeededBoolean",
+                                    "AltName": null,
+                                    "Type": "Boolean",
+                                    "Description": "If set to true, indicates that the medication is only taken when needed within the specified schedule rather than at every scheduled dose.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 788
+                                },
+                                "doseQuantity": {
+                                    "Id": 9252,
+                                    "Name": "doseQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "The amount of therapeutic or other substance given at one administration event.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "code": {
+                                            "Id": 9256,
+                                            "Name": "code",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "A computer processable form of the units in some unit representation system.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 201
+                                        },
+                                        "comparator": {
+                                            "Id": 9254,
+                                            "Name": "comparator",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues. E.g. if the comparator is \"<\" , then the real value is < stated value.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 199
+                                        },
+                                        "system": {
+                                            "Id": 9257,
+                                            "Name": "system",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "The identification of the system that provides the coded form of the unit.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 202
+                                        },
+                                        "unit": {
+                                            "Id": 9255,
+                                            "Name": "unit",
+                                            "AltName": null,
+                                            "Type": "String",
+                                            "Description": "A human-readable form of the units.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 200
+                                        },
+                                        "value": {
+                                            "Id": 9253,
+                                            "Name": "value",
+                                            "AltName": null,
+                                            "Type": "Decimal",
+                                            "Description": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
+                                            "Optional": "True",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 198
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 197
+                                },
+                                "doseRange": {
+                                    "Id": 9258,
+                                    "Name": "doseRange",
+                                    "AltName": null,
+                                    "Type": "Range",
+                                    "Description": "The amount of therapeutic or other substance given at one administration event, specified as a range.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "high": {
+                                            "Id": 9265,
+                                            "Name": "high",
+                                            "AltName": null,
+                                            "Type": "Quantity",
+                                            "Description": "The high limit. The boundary is inclusive.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 197
+                                        },
+                                        "low": {
+                                            "Id": 9259,
+                                            "Name": "low",
+                                            "AltName": null,
+                                            "Type": "Quantity",
+                                            "Description": "The low limit. The boundary is inclusive.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {},
+                                            "Order": 10004,
+                                            "TypeId": 197
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 205
+                                },
+                                "method": {
+                                    "Id": 9159,
+                                    "Name": "method",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections. Examples: Slow Push; Deep IV.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 133
+                                },
+                                "route": {
+                                    "Id": 9143,
+                                    "Name": "route",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "A code specifying the route or physiological path of administration of a therapeutic agent into or onto a patient.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 133
+                                },
+                                "text": {
+                                    "Id": 9133,
+                                    "Name": "text",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "Free text dosage instructions can be used for cases where the instructions are too complex to code. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 787
+                                },
+                                "timing": {
+                                    "Id": 9193,
+                                    "Name": "timing",
+                                    "AltName": null,
+                                    "Type": "Timing",
+                                    "Description": "The timing schedule for giving the medication to the patient. The Schedule data type allows many different expressions, for example. \"Every 8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\"; \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "repeat": {
+                                            "Id": 9197,
+                                            "Name": "repeat",
+                                            "AltName": null,
+                                            "Type": "Repeat",
+                                            "Description": "A set of rules that describe when the event should occur.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "frequency": {
+                                                    "Id": 9203,
+                                                    "Name": "frequency",
+                                                    "AltName": null,
+                                                    "Type": "Int32",
+                                                    "Description": "The number of times to repeat the action within the specified period / period range (i.e. both period and periodMax provided).",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 798
+                                                },
+                                                "period": {
+                                                    "Id": 9205,
+                                                    "Name": "period",
+                                                    "AltName": null,
+                                                    "Type": "Decimal",
+                                                    "Description": "Indicates the duration of time over which repetitions are to occur. E.g. to express \"3 times per day\", 3 would be the frequency and \"1 day\" would be the period.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 800
+                                                },
+                                                "periodUnits": {
+                                                    "Id": 9207,
+                                                    "Name": "periodUnits",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The units of time for the period in UCUM units.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 802
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 792
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 789
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 786
+                        },
+                        "identifier": {
+                            "Id": 9101,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "External identifier - one that would be used by another non-FHIR system.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 129
+                        },
+                        "medicationReference": {
+                            "Id": 9129,
+                            "Name": "medicationReference",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the Medication resource being ordered.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "note": {
+                            "Id": 9098,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Extra information about the prescription that could not be conveyed by the other attributes.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 783
+                        },
+                        "patient": {
+                            "Id": 9120,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the Patient resource to whom the medication will be given.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "prescriber": {
+                            "Id": 9123,
+                            "Name": "prescriber",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to the healthcare professional responsible for authorizing the prescription.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "status": {
+                            "Id": 9097,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "A code specifying the state of the prescribing event. Describes the lifecycle of the prescription. For admitted patients all outpatient medications will return a status of 'on-hold'. During discharge these outpatient medications may revert back to 'active' or be discontinued based on clinical outcomes of the inpatient stay.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 782
+                        },
+                        "substitution": {
+                            "Id": 9318,
+                            "Name": "substitution",
+                            "AltName": null,
+                            "Type": "Substitution",
+                            "Description": "Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen, and in others it does not matter. This block explains the prescriber's intent. If nothing is specified substitution may be done.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {
+                                "type": {
+                                    "Id": 9319,
+                                    "Name": "type",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "A code signifying whether a different drug should be dispensed from what was prescribed.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 133
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 821
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 780
+                }
+            },
+            "Order": 10000,
+            "TypeId": 779
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

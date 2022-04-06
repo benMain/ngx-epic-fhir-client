@@ -1,0 +1,43 @@
+{
+    "Id": 10171,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/BulkRequest/{BulkRequestID}/{outputID}",
+    "SampleRequest": "https://hostname/instance/api/FHIR/BulkRequest/00000000001755C1C7DB51C0082DA988/e1rS.x2sBAZmy8Mn8WyKk7Q3",
+    "SampleResponse": "{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"eppu5-mCs4aXfc5tk4rD5mBYbSdFnfo3-ejVwsZKgOlk3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"eQDEQmVPdohHGIpWaApJjO-waXaKP7CdGxzjErpVoRHQ3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"e0zOzaQHTzvI10K.593VLwwbeHZ2PeRhaN-U1l9ID1BY3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"e0zOzaQHTzvI10K.593VLw8p9PyLeu91r8bc5QqOGHpI3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"e0zOzaQHTzvI10K.593VLwzSr-BGALBgosvFPq8CfkQU3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"e0zOzaQHTzvI10K.593VLwyC2aB6MsCD3tlSmAimUQ5g3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"e0zOzaQHTzvI10K.593VLw.QX4tLXhbnNiMKOUbpUbgk3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"e0zOzaQHTzvI10K.593VLw7napwHF5NGS7cAdKqbTnPY3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"efcdbTLLKNO6lvmBhMFQ.HQniBKF4ded7Yv-.dUwWaWk3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees, Beese”\n    }\n}\n{\n    \"resourceType\": \"ImagingStudy\",\n    \"id\": \"eXGjS9OON2z2b0E79jz-9Tc3Y8ids3Z5JrP9QJpmP2Ls3\",\n    \"status\": \"available\",\n    \"subject\": {\n        \"reference\": \"Patient/eJ3eyRAcJAipK43HdmMeOnQ3\",\n        \"display\": \"Knees,Beese\"\n    }\n}\n",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 414366,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {},
+            "Order": 0,
+            "TypeId": 8842
+        },
+        "ResponseRootType": {
+            "Id": 414367,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {},
+            "Order": 10000,
+            "TypeId": 8843
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

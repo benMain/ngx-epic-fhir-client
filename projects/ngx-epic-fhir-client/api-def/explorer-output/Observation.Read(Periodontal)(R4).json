@@ -1,0 +1,239 @@
+{
+    "Id": 10070,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Observation/{ID}",
+    "SampleRequest": "/api/FHIR/R4/Observation/ e6fALeOD7ffdnkI-BibQjvi.XAIz1Yz8AAoqPeeEJpiSrPa32OUUT8ea7W6yvmrlecv341jOJaSsCNaxFyGkJMw3",
+    "SampleResponse": "&lt;Observation xmlns=\"http://hl7.org/fhir\"&gt;\n&lt;id value=\"e6fALeOD7ffdnkI-BibQjvi.XAIz1Yz8AAoqPeeEJpiSrPa32OUUT8ea7W6yvmrlecv341jOJaSsCNaxFyGkJMw3\" /&gt;\n&lt;status value=\"final\" /&gt;\n&lt;category&gt;\n&lt;coding&gt;\n&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-category\" /&gt;\n&lt;code value=\"periodontal\" /&gt;\n&lt;display value=\"Periodontal\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Periodontal\" /&gt;\n&lt;/category&gt;\n&lt;code&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:2.16.840.1.113883.6.96\" /&gt;\n&lt;code value=\"307536006\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Examination of periodontium (procedure)\" /&gt;\n&lt;/code&gt;\n&lt;subject&gt;\n&lt;reference value=\"Patient/e6DDE5.4tu-jjWXY8CtuVKw3/\"&gt;\n&lt;display value=\"Lacroix, Diego \" /&gt;\n&lt;/subject&gt;\n&lt;focus&gt;\n&lt;reference value=\"BodyStructure/ec.bWXnOuxgyRAN8CLHCBxWlQPYNAfGid39k5uR9FFnY3\" /&gt;\n&lt;type value=\"BodyStructure\" /&gt;\n&lt;/focus&gt;\n&lt;encounter&gt;\n&lt;reference value=\"Encounter/ejsLjQ9QeqL3FtFg09AuzXnouJzKaY8k1vzQkzZKyww43\" /&gt;\n&lt;type value=\"Encounter\" /&gt;\n&lt;/encounter&gt;\n&lt;effectiveDateTime value=\"2021-01-05\" /&gt;\n&lt;performer&gt;\n&lt;reference value=\"Practitioner/eNzt.GkOzCBShLeRDkLPGfw3\" /&gt;\n&lt;type value=\"Practitioner\" /&gt;\n&lt;display value=\"Gordon Lofgren, DDS\" /&gt;\n&lt;/performer&gt;\n&lt;bodySite&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.3.866976.94010\" /&gt;\n&lt;code value=\"1\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Tooth (Universal): 1\" /&gt;\n&lt;/bodySite&gt;\n&lt;component&gt;\n&lt;code&gt;\n&lt;coding&gt;\n&lt;display value=\"Probing Depth - Facial Distal\" /&gt;\n&lt;/coding&gt;\n&lt;/code&gt;\n&lt;valueQuantity&gt;\n&lt;value value=\"2\" /&gt;\n&lt;unit value=\"mm\" /&gt;\n&lt;/valueQuantity&gt;\n&lt;interpretation&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:2.16.840.1.113883.5.83\" /&gt;\n&lt;code value=\"N\" /&gt;\n&lt;display value=\"Normal\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Normal\" /&gt;\n&lt;/interpretation&gt;\n&lt;referenceRange&gt;\n&lt;high&gt;\n&lt;value value=\"3\" /&gt;\n&lt;unit value=\"mm\" /&gt;\n&lt;/high&gt;\n&lt;/referenceRange&gt;\n&lt;component&gt;\n&lt;code&gt;\n&lt;coding&gt;\n&lt;display value=\"Clinical Attachment Level - Lingual Distal\" /&gt;\n&lt;/coding&gt;\n&lt;/code&gt;\n&lt;valueQuantity&gt;\n&lt;value value=\"2\" /&gt;\n&lt;unit value=\"mm\" /&gt;\n&lt;/valueQuantity&gt;\n&lt;/component&gt;\n&lt;/Observation&gt;",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 301822,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 301823,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Observation FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5629
+                }
+            },
+            "Order": 0,
+            "TypeId": 5628
+        },
+        "ResponseRootType": {
+            "Id": 301824,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 301825,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "An instance of the R4 Observation resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "bodySite": {
+                            "Id": 302323,
+                            "Name": "bodySite",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Displays the status for a patient's goal.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "category": {
+                            "Id": 301962,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Displays the status for a patient's goal.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "code": {
+                            "Id": 301974,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Displays the status for a patient's goal.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "component": {
+                            "Id": 302535,
+                            "Name": "component",
+                            "AltName": null,
+                            "Type": "Component",
+                            "Description": "Component information.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "code": {
+                                    "Id": 302544,
+                                    "Name": "code",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Displays the status for a patient's goal.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "interpretation": {
+                                    "Id": 302648,
+                                    "Name": "interpretation",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "Displays the status for a patient's goal.",
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "referenceRange": {
+                                    "Id": 302660,
+                                    "Name": "referenceRange",
+                                    "AltName": null,
+                                    "Type": "ReferenceRange",
+                                    "Description": null,
+                                    "Optional": "True",
+                                    "IsArray": true,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5618
+                                },
+                                "valueQuantity": {
+                                    "Id": 302556,
+                                    "Name": "valueQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Quantity value.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5439
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 5621
+                        },
+                        "effectiveDateTime": {
+                            "Id": 301830,
+                            "Name": "effectiveDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": null,
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5583
+                        },
+                        "encounter": {
+                            "Id": 302048,
+                            "Name": "encounter",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "A FHIR reference.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "focus": {
+                            "Id": 302017,
+                            "Name": "focus",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "A FHIR reference.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "performer": {
+                            "Id": 302151,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "A FHIR reference.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "status": {
+                            "Id": 301829,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5582
+                        },
+                        "subject": {
+                            "Id": 301986,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "A FHIR reference.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 5578
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5630
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

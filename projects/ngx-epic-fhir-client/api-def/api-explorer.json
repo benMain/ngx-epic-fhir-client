@@ -1,0 +1,6326 @@
+[
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 981,
+        "Name": "AdverseEvent.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 982,
+        "Name": "AdverseEvent.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 945,
+        "Name": "AllergyIntolerance.Create (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 463,
+        "Name": "AllergyIntolerance.Create (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 1,
+        "Name": "AllergyIntolerance.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 946,
+        "Name": "AllergyIntolerance.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 464,
+        "Name": "AllergyIntolerance.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 2,
+        "Name": "AllergyIntolerance.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 947,
+        "Name": "AllergyIntolerance.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 465,
+        "Name": "AllergyIntolerance.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Patient Workflow Scheduling"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 839,
+        "Name": "Appointment $book (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Patient Workflow Scheduling"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 840,
+        "Name": "Appointment $find (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Patient Workflow Scheduling"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 466,
+        "Name": "Appointment.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Patient Workflow Scheduling"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2021",
+        "Id": 10189,
+        "Name": "Appointment.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1044,
+        "Name": "Binary.Read (Clinical Notes) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "CDA;Document;pic;picture;pics;pictures",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 841,
+        "Name": "Binary.Read (Clinical Notes, Practitioner Photo) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10231,
+        "Name": "Binary.Read (Correspondences) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10233,
+        "Name": "Binary.Read (Correspondences) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10183,
+        "Name": "Binary.Read (External CCDA Document) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "CDA; Document",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 3,
+        "Name": "Binary.Read (Generated CCDA) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10138,
+        "Name": "Binary.Read (Handoff) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10137,
+        "Name": "Binary.Read (HIS) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10139,
+        "Name": "Binary.Read (Labs) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10136,
+        "Name": "Binary.Read (OASIS) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "pic;picture;pics;pictures",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 983,
+        "Name": "Binary.Read (Practitioner Photo) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10230,
+        "Name": "Binary.Read (Radiology Results) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10232,
+        "Name": "Binary.Read (Radiology Results) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10068,
+        "Name": "BodyStructure.Read (Tooth) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10069,
+        "Name": "BodyStructure.Search (Tooth) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Bulk FHIR"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10172,
+        "Name": "Bulk Data Delete Request",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Bulk FHIR"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10171,
+        "Name": "Bulk Data File Request",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Bulk FHIR"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10169,
+        "Name": "Bulk Data Kick-off",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Bulk FHIR"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10170,
+        "Name": "Bulk Data Status Request",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10016,
+        "Name": "CarePlan.Read (Dental) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1066,
+        "Name": "CarePlan.Read (Encounter-Level) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Assessment Plan of Treatment",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 4,
+        "Name": "CarePlan.Read (Encounter-Level, Longitudinal) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10101,
+        "Name": "CarePlan.Read (Inpatient Pathway) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10043,
+        "Name": "CarePlan.Read (Inpatient) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1064,
+        "Name": "CarePlan.Read (Longitudinal) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10073,
+        "Name": "CarePlan.Read (Oncology) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10045,
+        "Name": "CarePlan.Read (Outpatient) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10022,
+        "Name": "CarePlan.Read (Questionnaires Due) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10017,
+        "Name": "CarePlan.Search (Dental) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1067,
+        "Name": "CarePlan.Search (Encounter-Level) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Assessment Plan of Treatment",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 5,
+        "Name": "CarePlan.Search (Encounter-Level, Longitudinal) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10102,
+        "Name": "CarePlan.Search (Inpatient Pathway) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10044,
+        "Name": "CarePlan.Search (Inpatient) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1065,
+        "Name": "CarePlan.Search (Longitudinal) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10074,
+        "Name": "CarePlan.Search (Oncology) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10046,
+        "Name": "CarePlan.Search (Outpatient) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10028,
+        "Name": "CarePlan.Search (Questionnaires Due) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10154,
+        "Name": "CareTeam.Read (Episode) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1068,
+        "Name": "CareTeam.Read (Longitudinal) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10155,
+        "Name": "CareTeam.Search (Episode) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1069,
+        "Name": "CareTeam.Search (Longitudinal) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1058,
+        "Name": "CDS Hooks Condition.Create (Encounter Diagnosis) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "Health Concerns;Problems;Problem List",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1059,
+        "Name": "CDS Hooks Condition.Create (Encounter Diagnosis, Problems) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "Problems;Problem List;Condition;Diangosis",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1057,
+        "Name": "CDS Hooks Condition.Create (Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1060,
+        "Name": "CDS Hooks MedicationRequest.Create (Unsigned Order) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1061,
+        "Name": "CDS Hooks MedicationRequest.Create (Unsigned Order) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10160,
+        "Name": "CDS Hooks MedicationRequest.Delete (Unsigned Order) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10161,
+        "Name": "CDS Hooks MedicationRequest.Delete (Unsigned Order) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications",
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10031,
+        "Name": "CDS Hooks MedicationRequest.Read (Unsigned Order) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1063,
+        "Name": "CDS Hooks ProcedureRequest.Create (Unsigned Order) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10163,
+        "Name": "CDS Hooks ProcedureRequest.Delete (Unsigned Order) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1062,
+        "Name": "CDS Hooks ServiceRequest.Create (Unsigned Order) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10162,
+        "Name": "CDS Hooks ServiceRequest.Delete (Unsigned Order) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "CDS Hooks"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10032,
+        "Name": "CDS Hooks ServiceRequest.Read (Unsigned Order) (R4)\n",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10090,
+        "Name": "Communication.Create (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10088,
+        "Name": "Communication.Read (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10089,
+        "Name": "Communication.Search (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Problems;Problem List",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 949,
+        "Name": "Condition.Create (Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Health Concerns;Problems;Problem List",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 467,
+        "Name": "Condition.Create (Problems) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10047,
+        "Name": "Condition.Read (Care Plan Problem) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10066,
+        "Name": "Condition.Read (Dental Finding) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 950,
+        "Name": "Condition.Read (Encounter Diagnosis) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Health Concerns;Problems;Problem List",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 468,
+        "Name": "Condition.Read (Encounter Diagnosis, Problems) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1074,
+        "Name": "Condition.Read (Genomics) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Health Concerns",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 984,
+        "Name": "Condition.Read (Health Concern) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10140,
+        "Name": "Condition.Read (Infection) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Health Concerns;Problems;Problem List",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 6,
+        "Name": "Condition.Read (Problems) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Problems;Problem List",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 951,
+        "Name": "Condition.Read (Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10187,
+        "Name": "Condition.Read (Reason for Visit) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10048,
+        "Name": "Condition.Search (Care Plan Problem) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10067,
+        "Name": "Condition.Search (Dental Finding) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 952,
+        "Name": "Condition.Search (Encounter Diagnosis) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Health Concerns;Problems;Problem List",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 469,
+        "Name": "Condition.Search (Encounter Diagnosis, Problems) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1075,
+        "Name": "Condition.Search (Genomics) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Health Concerns",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 985,
+        "Name": "Condition.Search (Health Concern) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10141,
+        "Name": "Condition.Search (Infection) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Health Concerns;Problems;Problem List",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 7,
+        "Name": "Condition.Search (Problems) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Problems;Problem List",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 953,
+        "Name": "Condition.Search (Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10208,
+        "Name": "Condition.Search (Reason for Visit) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10258,
+        "Name": "Consent.Read (Code Status) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10255,
+        "Name": "Consent.Read (Code Status) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 986,
+        "Name": "Consent.Read (Document) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10260,
+        "Name": "Consent.Read (Document) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10259,
+        "Name": "Consent.Search (Code Status) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10256,
+        "Name": "Consent.Search (Code Status) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 987,
+        "Name": "Consent.Search (Document) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10261,
+        "Name": "Consent.Search (Document) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1076,
+        "Name": "Coverage.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1077,
+        "Name": "Coverage.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1078,
+        "Name": "Coverage.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 1079,
+        "Name": "Coverage.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Patient Workflow Scheduling"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 10061,
+        "Name": "COVID SMART Scheduling Links",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "Unique Device Identifier(s);Patient's implantable device(s)",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 8,
+        "Name": "Device.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10254,
+        "Name": "Device.Read (External Devices) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "Unique Device Identifier(s);Patient's implantable device(s)",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2019",
+        "Id": 892,
+        "Name": "Device.Read (Implants and External Devices) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "Unique Device Identifier(s);Patient's implantable device(s)",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2020",
+        "Id": 1012,
+        "Name": "Device.Read (Implants) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "Unique Device Identifier(s);Patient's implantable device(s)",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 9,
+        "Name": "Device.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "Unique Device Identifier(s);Patient's implantable device(s)",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2019",
+        "Id": 893,
+        "Name": "Device.Search (Implants and External Devices) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "Unique Device Identifier(s);Patient's implantable device(s)",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2020",
+        "Id": 1013,
+        "Name": "Device.Search (Implants) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10237,
+        "Name": "DeviceRequest.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10236,
+        "Name": "DeviceRequest.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10243,
+        "Name": "DeviceRequest.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10240,
+        "Name": "DeviceRequest.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10265,
+        "Name": "DeviceUseStatement.Read (External Devices) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10245,
+        "Name": "DeviceUseStatement.Read (Implants and External Devices) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10247,
+        "Name": "DeviceUseStatement.Read (Implants) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10266,
+        "Name": "DeviceUseStatement.Search (External Devices) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10246,
+        "Name": "DeviceUseStatement.Search (Implants and External Devices) (STU3) ",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Devices"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10248,
+        "Name": "DeviceUseStatement.Search (Implants) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Laboratory;Tests;Values;Results",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 10,
+        "Name": "DiagnosticReport.Read (Results) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Laboratory;Tests;Values;Results",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 988,
+        "Name": "DiagnosticReport.Read (Results) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Laboratory;Tests;Values;Results",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 842,
+        "Name": "DiagnosticReport.Read (Results) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Laboratory;Tests;Values;Results",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 11,
+        "Name": "DiagnosticReport.Search (Results) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Laboratory;Tests;Values;Results",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 989,
+        "Name": "DiagnosticReport.Search (Results) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Laboratory;Tests;Values;Results",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 843,
+        "Name": "DiagnosticReport.Search (Results) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1046,
+        "Name": "DocumentReference.Create (Clinical Notes) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 845,
+        "Name": "DocumentReference.Create (Clinical Notes) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1047,
+        "Name": "DocumentReference.Read (Clinical Notes) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "Consultation note;Discharge summary note;History & physical;Procedure note;Progress note",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 844,
+        "Name": "DocumentReference.Read (Clinical Notes) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10239,
+        "Name": "DocumentReference.Read (Correspondences) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10241,
+        "Name": "DocumentReference.Read (Correspondences) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10134,
+        "Name": "DocumentReference.Read (External CCDA Document) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 12,
+        "Name": "DocumentReference.Read (Generated CCDA) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10130,
+        "Name": "DocumentReference.Read (Handoff) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10128,
+        "Name": "DocumentReference.Read (HIS) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10132,
+        "Name": "DocumentReference.Read (Labs) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10126,
+        "Name": "DocumentReference.Read (OASIS) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10234,
+        "Name": "DocumentReference.Read (Radiology Results) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10238,
+        "Name": "DocumentReference.Read (Radiology Results) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1048,
+        "Name": "DocumentReference.Search (Clinical Notes) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "Consultation note;Discharge summary note;History & physical;Procedure note;Progress note",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 865,
+        "Name": "DocumentReference.Search (Clinical Notes) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10244,
+        "Name": "DocumentReference.Search (Correspondences) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10242,
+        "Name": "DocumentReference.Search (Correspondences) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10135,
+        "Name": "DocumentReference.Search (External CCDA Document) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 13,
+        "Name": "DocumentReference.Search (Generated CCDA) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10131,
+        "Name": "DocumentReference.Search (Handoff) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10129,
+        "Name": "DocumentReference.Search (HIS) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10133,
+        "Name": "DocumentReference.Search (Labs) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10127,
+        "Name": "DocumentReference.Search (OASIS) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10235,
+        "Name": "DocumentReference.Search (Radiology Results) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10253,
+        "Name": "DocumentReference.Search (Radiology Results) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Workflow Patient Management"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 908,
+        "Name": "Encounter.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Workflow Patient Management"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 471,
+        "Name": "Encounter.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Workflow Patient Management"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 909,
+        "Name": "Encounter.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Workflow Patient Management"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 472,
+        "Name": "Encounter.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Exchange"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 910,
+        "Name": "Endpoint.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Exchange"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 866,
+        "Name": "Endpoint.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10156,
+        "Name": "EpisodeOfCare.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10157,
+        "Name": "EpisodeOfCare.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Billing Workflow"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2020",
+        "Id": 1072,
+        "Name": "ExplanationOfBenefit.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Billing Workflow"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2020",
+        "Id": 1073,
+        "Name": "ExplanationOfBenefit.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10158,
+        "Name": "FamilyMemberHistory.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 337,
+        "Name": "FamilyMemberHistory.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10159,
+        "Name": "FamilyMemberHistory.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10197,
+        "Name": "Flag.Read (Health Concern) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10205,
+        "Name": "Flag.Read (Health Concern) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10201,
+        "Name": "Flag.Read (Infection) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10203,
+        "Name": "Flag.Read (Infection) (STU3) ",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10196,
+        "Name": "Flag.Read (Isolation) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10165,
+        "Name": "Flag.Read (Patient FYI) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10167,
+        "Name": "Flag.Read (Patient FYI) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10198,
+        "Name": "Flag.Search (Health Concern) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10206,
+        "Name": "Flag.Search (Health Concern) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10202,
+        "Name": "Flag.Search (Infection) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10204,
+        "Name": "Flag.Search (Infection) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10195,
+        "Name": "Flag.Search (Isolation) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10166,
+        "Name": "Flag.Search (Patient FYI) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Billing Accounts"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10168,
+        "Name": "Flag.Search (Patient FYI) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Goals;Patient goals",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2019",
+        "Id": 878,
+        "Name": "Goal.Create (Patient) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10052,
+        "Name": "Goal.Read (Care Plan) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10099,
+        "Name": "Goal.Read (Pathway Step) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Goals;Patient goals",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 19,
+        "Name": "Goal.Read (Patient) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Goals;Patient goals",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 959,
+        "Name": "Goal.Read (Patient) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Goals;Patient goals",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 877,
+        "Name": "Goal.Read (Patient) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10053,
+        "Name": "Goal.Search (Care Plan) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10100,
+        "Name": "Goal.Search (Pathway Step) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Goals;Patient goals",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 20,
+        "Name": "Goal.Search (Patient) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Goals;Patient goals",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 960,
+        "Name": "Goal.Search (Patient) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "Goals;Patient goals",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 924,
+        "Name": "Goal.Search (Patient) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Immunizations; vaccinations; vaccines",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 21,
+        "Name": "Immunization.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1070,
+        "Name": "Immunization.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 926,
+        "Name": "Immunization.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Immunizations",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 22,
+        "Name": "Immunization.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1071,
+        "Name": "Immunization.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 927,
+        "Name": "Immunization.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10249,
+        "Name": "ImmunizationRecommendation.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10251,
+        "Name": "ImmunizationRecommendation.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10250,
+        "Name": "ImmunizationRecommendation.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10252,
+        "Name": "ImmunizationRecommendation.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": false,
+        "HasRequest": false,
+        "Categories": [
+            "Security"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Epic Public",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 488,
+        "Name": "Introspect",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10146,
+        "Name": "List.Read (Allergies) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10150,
+        "Name": "List.Read (Family History) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10148,
+        "Name": "List.Read (Hospital Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10152,
+        "Name": "List.Read (Immunizations) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10105,
+        "Name": "List.Read (Medications) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 879,
+        "Name": "List.Read (Patient List) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10026,
+        "Name": "List.Read (Patients With Questionnaires Due) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10144,
+        "Name": "List.Read (Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10147,
+        "Name": "List.Search (Allergies) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10151,
+        "Name": "List.Search (Family History) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10149,
+        "Name": "List.Search (Hospital Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10153,
+        "Name": "List.Search (Immunizations) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10104,
+        "Name": "List.Search (Medications) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2019",
+        "Id": 880,
+        "Name": "List.Search (Patient List) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Infrastructure Documents & Lists"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10027,
+        "Name": "List.Search (Patients With Questionnaires Due) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10145,
+        "Name": "List.Search (Problems) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Entities"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 928,
+        "Name": "Location.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Entities"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 823,
+        "Name": "Location.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Identification Entities"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10084,
+        "Name": "Location.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 23,
+        "Name": "Medication.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 995,
+        "Name": "Medication.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 489,
+        "Name": "Medication.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 692,
+        "Name": "Medication.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10079,
+        "Name": "Medication.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10212,
+        "Name": "MedicationDispense.Read (Verified Orders) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10213,
+        "Name": "MedicationDispense.Read (Verified Orders) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10217,
+        "Name": "MedicationDispense.Search (Verified Orders) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10214,
+        "Name": "MedicationDispense.Search (Verified Orders) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications",
+            "Orders"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 25,
+        "Name": "MedicationOrder.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications",
+            "Orders"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 26,
+        "Name": "MedicationOrder.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 996,
+        "Name": "MedicationRequest.Read (Orders) (R4)\n",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 490,
+        "Name": "MedicationRequest.Read (Orders) (STU3)\n",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 997,
+        "Name": "MedicationRequest.Search (Orders) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 491,
+        "Name": "MedicationRequest.Search (Orders) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 338,
+        "Name": "MedicationStatement.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 492,
+        "Name": "MedicationStatement.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 339,
+        "Name": "MedicationStatement.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Medications"
+        ],
+        "Keywords": "Medications;Medication allergies",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 493,
+        "Name": "MedicationStatement.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10224,
+        "Name": "NutritionOrder.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10228,
+        "Name": "NutritionOrder.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10227,
+        "Name": "NutritionOrder.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10229,
+        "Name": "NutritionOrder.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Labs"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10188,
+        "Name": "Observation.$lastn (Labs) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10223,
+        "Name": "Observation.$lastn (Social History) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 962,
+        "Name": "Observation.Create (LDA-W) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 897,
+        "Name": "Observation.Create (LDA-W) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 963,
+        "Name": "Observation.Create (Vitals) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 496,
+        "Name": "Observation.Create (Vitals) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10122,
+        "Name": "Observation.Read (Activities of Daily Living) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10124,
+        "Name": "Observation.Read (Activities of Daily Living) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 964,
+        "Name": "Observation.Read (Core Characteristics) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 853,
+        "Name": "Observation.Read (Core Characteristics) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics",
+            "Labs"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 27,
+        "Name": "Observation.Read (Labs) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics",
+            "Labs"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 998,
+        "Name": "Observation.Read (Labs) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics",
+            "Labs"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 494,
+        "Name": "Observation.Read (Labs) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 965,
+        "Name": "Observation.Read (LDA-W) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 898,
+        "Name": "Observation.Read (LDA-W) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 966,
+        "Name": "Observation.Read (Obstetric Details) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 881,
+        "Name": "Observation.Read (Obstetric Details) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10070,
+        "Name": "Observation.Read (Periodontal) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10120,
+        "Name": "Observation.Read (SmartData Elements) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Smoking; Social; Social history;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 447,
+        "Name": "Observation.Read (Social History) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Smoking; Social; Social history;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 967,
+        "Name": "Observation.Read (Social History) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Smoking; Social; Social history; tobacco",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 855,
+        "Name": "Observation.Read (Social History) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 449,
+        "Name": "Observation.Read (Vitals) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 968,
+        "Name": "Observation.Read (Vitals) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 497,
+        "Name": "Observation.Read (Vitals) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10123,
+        "Name": "Observation.Search (Activities of Daily Living) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10125,
+        "Name": "Observation.Search (Activities of Daily Living) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 969,
+        "Name": "Observation.Search (Core Characteristics) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 854,
+        "Name": "Observation.Search (Core Characteristics) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics",
+            "Labs"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 28,
+        "Name": "Observation.Search (Labs) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics",
+            "Labs"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 999,
+        "Name": "Observation.Search (Labs) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics",
+            "Labs"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 495,
+        "Name": "Observation.Search (Labs) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 970,
+        "Name": "Observation.Search (LDA-W) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 899,
+        "Name": "Observation.Search (LDA-W) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 971,
+        "Name": "Observation.Search (Obstetric Details) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 882,
+        "Name": "Observation.Search (Obstetric Details) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10071,
+        "Name": "Observation.Search (Periodontal) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10121,
+        "Name": "Observation.Search (SmartData Elements) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Smoking; Social; Social history;tobacco",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 448,
+        "Name": "Observation.Search (Social History) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Smoking; Social; Social history;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 972,
+        "Name": "Observation.Search (Social History) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Smoking; Social; Social history;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 856,
+        "Name": "Observation.Search (Social History) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 450,
+        "Name": "Observation.Search (Vitals) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 973,
+        "Name": "Observation.Search (Vitals) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "BMI percentile per age and sex for youth 2-20;Weights for age per length and sex;Occipital-frontal circumference for children < 3 years old;Vital Signs;Diastolic blood pressure;Systolic blood pressure;Body height;Body weight;Heart rate;Respiratory rate;Body temperature;Pulse oximetry;Inhaled oxygen concentration;Diagnostic Reports;Imaging;Laboratory;Pathology;Flowsheets",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 498,
+        "Name": "Observation.Search (Vitals) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 974,
+        "Name": "Observation.Update (LDA-W) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Diagnostics"
+        ],
+        "Keywords": "Flowsheets",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2019",
+        "Id": 900,
+        "Name": "Observation.Update (LDA-W) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Groups"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 929,
+        "Name": "Organization.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Groups"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 857,
+        "Name": "Organization.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Identification Groups"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10083,
+        "Name": "Organization.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals",
+            "Workflow Patient Management"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 930,
+        "Name": "Patient.Create (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals",
+            "Workflow Patient Management"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 824,
+        "Name": "Patient.Create (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "Care Team Members;Patient Demographics;First name;Last name;Middle name;initial;Suffix;Birth sex;Date of birth;Race;Ethnicity;Preferred language;Address;Phone number;Previous name",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 29,
+        "Name": "Patient.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "Care Team Members;Patient Demographics;First name;Last name;Middle name;initial;Suffix;Birth sex;Date of birth;Race;Ethnicity;Preferred language;Address;Phone number;Previous name",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 931,
+        "Name": "Patient.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "Care Team Members;Patient Demographics;First name;Last name;Middle name;initial;Suffix;Birth sex;Date of birth;Race;Ethnicity;Preferred language;Address;Phone number;Previous name",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 825,
+        "Name": "Patient.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "Care Team Members;Patient Demographics;First name;Last name;Middle name;initial;Suffix;Birth sex;Date of birth;Race;Ethnicity;Preferred language;Address;Phone number;Previous name",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 30,
+        "Name": "Patient.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "Care Team Members;Patient Demographics;First name;Last name;Middle name;initial;Suffix;Birth sex;Date of birth;Race;Ethnicity;Preferred language;Address;Phone number;Previous name",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 932,
+        "Name": "Patient.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "Care Team Members;Patient Demographics;First name;Last name;Middle name;initial;Suffix;Birth sex;Date of birth;Race;Ethnicity;Preferred language;Address;Phone number;Previous name",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 883,
+        "Name": "Patient.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2015",
+        "Id": 31,
+        "Name": "Practitioner.Read (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 935,
+        "Name": "Practitioner.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 499,
+        "Name": "Practitioner.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 826,
+        "Name": "Practitioner.Search (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 936,
+        "Name": "Practitioner.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 858,
+        "Name": "Practitioner.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 937,
+        "Name": "PractitionerRole.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2018",
+        "Id": 859,
+        "Name": "PractitionerRole.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 938,
+        "Name": "PractitionerRole.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2018",
+        "Id": 885,
+        "Name": "PractitionerRole.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Procedures",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 33,
+        "Name": "Procedure.Read (Orders) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 975,
+        "Name": "Procedure.Read (Orders) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 939,
+        "Name": "Procedure.Read (Orders, Surgeries) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 10041,
+        "Name": "Procedure.Read (Surgeries) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10029,
+        "Name": "Procedure.Read (Surgical History) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "Procedures",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2017",
+        "Id": 34,
+        "Name": "Procedure.Search (Orders) (DSTU2)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 976,
+        "Name": "Procedure.Search (Orders) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2019",
+        "Id": 940,
+        "Name": "Procedure.Search (Orders, Surgeries) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2020",
+        "Id": 10042,
+        "Name": "Procedure.Search (Surgeries) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10030,
+        "Name": "Procedure.Search (Surgical History) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2019",
+        "Id": 886,
+        "Name": "ProcedureRequest.Read (Orders) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2019",
+        "Id": 887,
+        "Name": "ProcedureRequest.Search (Orders) (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Utility"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10180,
+        "Name": "Provenance.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Patient Access"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10025,
+        "Name": "Questionnaire.Read (Patient-Entered Questionnaires) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Patient Access"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10081,
+        "Name": "Questionnaire.Search (Patient-Entered Questionnaires) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Patient Access"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10023,
+        "Name": "QuestionnaireResponse.Create (Patient-Entered Questionnaires) (R4)\n",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Patient Access"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10226,
+        "Name": "QuestionnaireResponse.Read (Code Status) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Patient Access"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10024,
+        "Name": "QuestionnaireResponse.Read (Patient-Entered Questionnaires) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Patient Access"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10082,
+        "Name": "QuestionnaireResponse.Search (Patient-Entered Questionnaires) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Identification Individuals"
+        ],
+        "Keywords": "",
+        "API_TypeName": "USCDI v1",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "November 2019",
+        "Id": 977,
+        "Name": "RelatedPerson.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10020,
+        "Name": "RequestGroup.Read (Dental Visit) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10077,
+        "Name": "RequestGroup.Read (Oncology Plan Day) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10080,
+        "Name": "RequestGroup.Search (Dental Visit) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10078,
+        "Name": "RequestGroup.Search (Oncology Plan Day) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 1002,
+        "Name": "ResearchStudy.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2020",
+        "Id": 1003,
+        "Name": "ResearchStudy.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10142,
+        "Name": "ResearchSubject.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10143,
+        "Name": "ResearchSubject.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Patient Workflow Scheduling"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 500,
+        "Name": "Schedule.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10091,
+        "Name": "ServiceRequest.Read (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10018,
+        "Name": "ServiceRequest.Read (Dental Procedure) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1053,
+        "Name": "ServiceRequest.Read (Orders) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2021",
+        "Id": 10164,
+        "Name": "ServiceRequest.Read (Referral) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10092,
+        "Name": "ServiceRequest.Search (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision",
+            "Clinical Specialty"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10019,
+        "Name": "ServiceRequest.Search (Dental Procedure) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "August 2020",
+        "Id": 1054,
+        "Name": "ServiceRequest.Search (Orders) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Patient Workflow Scheduling"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "Epic 2018",
+        "Id": 862,
+        "Name": "Slot.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Labs"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10014,
+        "Name": "Specimen.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Labs"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10207,
+        "Name": "Specimen.Read (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Labs"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "February 2021",
+        "Id": 10015,
+        "Name": "Specimen.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": true,
+        "Categories": [
+            "Labs"
+        ],
+        "Keywords": "",
+        "API_TypeName": "",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [],
+        "CertificationVersions": "",
+        "Id": 10210,
+        "Name": "Specimen.Search (STU3)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10075,
+        "Name": "Substance.Read (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical General"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10076,
+        "Name": "Substance.Search (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10085,
+        "Name": "Task.Read (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10086,
+        "Name": "Task.Search (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Clinical Care Provision"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": false,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2021",
+        "Id": 10087,
+        "Name": "Task.Update (Community Resource) (R4)",
+        "Selected": false
+    },
+    {
+        "IsFhir": true,
+        "HasRequest": false,
+        "Categories": [
+            "Conformance Terminology"
+        ],
+        "Keywords": "",
+        "API_TypeName": "Industry-Standard",
+        "InPatientAndOtherContext": true,
+        "CertificationProducts": [
+            "EpicCare Ambulatory Base",
+            "EpicCare Inpatient Base"
+        ],
+        "CertificationVersions": "May 2020",
+        "Id": 1038,
+        "Name": "ValueSet.$expand (R4)",
+        "Selected": false
+    }
+]

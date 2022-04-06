@@ -1,0 +1,290 @@
+{
+    "Id": 2,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/allergyintolerance.html\" data-drive-link-file-url=\"1\">FHIR AllergyIntolerance resource</a> defines clinical information about a patient&#39;s allergic response to a substance.    The AllergyIntolerance resource defines the substance that elicited the response, as well as when the reaction occured, the severity, and the type of reaction noted.  The AllergyIntolerance resource can also accommodate search by ID and by patient, allowing it to return a list of allergies. If a patient has no active allergies, an AllergyIntolerance resource will be returned indicating whether the patient&#39;s allergies have never been reviewed (are not on file), or if they have been reviewed and it has been determined that they have no known allergies. </p>   <p>    The AllergyIntolerance resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Mediation Allergies.  </p>                              <p>    The search interaction enables the client to query for all allergies associated with    a given patient&#39;s medical history. The client, having established the patient in question,    now wishes to retrieve the list of that patient&#39;s allergies.  </p>   <div class=\"alert alert-info\">    <strong>Note:</strong> To ensure clinical safety for a patient, searches filtered with a <code>onset</code> search parameter will return all active allergies in addition to other data returned in the search.   </div>   ",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/AllergyIntolerance?_id={_id}&patient={patient}&subject={subject}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance?_id=&amp;amp;patient=Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"3\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance?_id=&amp;amp;patient=Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance/T8akyavrsha11onGpAcKERQB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance/T8akyavrsha11onGpAcKERQB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;AllergyIntolerance&gt;</p><p>&lt;recordedDate value=\"2016-02-16T12:11:18\" /&gt;</p><p>&lt;status value=\"confirmed\" /&gt;</p><p>&lt;criticality value=\"CRITL\" /&gt;</p><p>&lt;onset value=\"2015-10-16T00:00:00\" /&gt;</p><p>&lt;id value=\"T8akyavrsha11onGpAcKERQB\" /&gt;</p><p>&lt;recorder&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TrTk7Zaw96VJM5sIX95IYHAB\" /&gt;</p><p>&lt;/recorder&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;substance&gt;</p><p>&lt;text value=\"PENICILLINS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.nlm.nih.gov/research/umls/rxnorm/\" /&gt;</p><p>&lt;code value=\"7980\" /&gt;</p><p>&lt;display value=\"PENICILLINS\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ndfrt\" /&gt;</p><p>&lt;code value=\"N0000005840\" /&gt;</p><p>&lt;display value=\"PENICILLINS\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/substance&gt;</p><p>&lt;reaction&gt;</p><p>&lt;certainty value=\"confirmed\" /&gt;</p><p>&lt;onset value=\"2015-10-16T00:00:00\" /&gt;</p><p>&lt;manifestation&gt;</p><p>&lt;text value=\"Weal\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"247472004\" /&gt;</p><p>&lt;display value=\"Weal\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/manifestation&gt;</p><p>&lt;manifestation&gt;</p><p>&lt;text value=\"Swelling\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"65124004\" /&gt;</p><p>&lt;display value=\"Swelling\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/manifestation&gt;</p><p>&lt;note&gt;</p><p>&lt;text value=\"Patient reported hives and swelling in their throat when administered penicillin in a previous ED visit\" /&gt;</p><p>&lt;/note&gt;</p><p>&lt;/reaction&gt;</p><p>&lt;note&gt;</p><p>&lt;text value=\"Patient reported hives and swelling in their throat when administered penicillin in a previous ED visit\" /&gt;</p><p>&lt;/note&gt;</p><p>&lt;/AllergyIntolerance&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance/TJ5dAeG4I9i-JrSbaGgURXwB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance/TJ5dAeG4I9i-JrSbaGgURXwB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;AllergyIntolerance&gt;</p><p>&lt;recordedDate value=\"2016-02-16T12:12:46\" /&gt;</p><p>&lt;status value=\"confirmed\" /&gt;</p><p>&lt;criticality value=\"CRITL\" /&gt;</p><p>&lt;onset value=\"2016-02-16T00:00:00\" /&gt;</p><p>&lt;id value=\"TJ5dAeG4I9i-JrSbaGgURXwB\" /&gt;</p><p>&lt;recorder&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TrTk7Zaw96VJM5sIX95IYHAB\" /&gt;</p><p>&lt;/recorder&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;substance&gt;</p><p>&lt;text value=\"SALICYLATES\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.nlm.nih.gov/research/umls/rxnorm/\" /&gt;</p><p>&lt;code value=\"9522\" /&gt;</p><p>&lt;display value=\"SALICYLATES\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/ndfrt\" /&gt;</p><p>&lt;code value=\"N0000005042\" /&gt;</p><p>&lt;display value=\"SALICYLATES\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/substance&gt;</p><p>&lt;reaction&gt;</p><p>&lt;certainty value=\"confirmed\" /&gt;</p><p>&lt;onset value=\"2016-02-16T00:00:00\" /&gt;</p><p>&lt;manifestation&gt;</p><p>&lt;text value=\"Itching (SNOMED-CT: 279333002)\" /&gt;</p><p>&lt;/manifestation&gt;</p><p>&lt;manifestation&gt;</p><p>&lt;text value=\"Rash (SNOMED-CT: 271807003)\" /&gt;</p><p>&lt;/manifestation&gt;</p><p>&lt;/reaction&gt;</p><p>&lt;/AllergyIntolerance&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance/T5WGI1HfetaUJHW2o5zDKsAB\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/AllergyIntolerance/T5WGI1HfetaUJHW2o5zDKsAB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;resource&gt;</p><p>&lt;AllergyIntolerance&gt;</p><p>&lt;recordedDate value=\"2016-02-16T12:17:23\" /&gt;</p><p>&lt;status value=\"confirmed\" /&gt;</p><p>&lt;criticality value=\"CRITH\" /&gt;</p><p>&lt;onset value=\"2016-02-16T00:00:00\" /&gt;</p><p>&lt;id value=\"T5WGI1HfetaUJHW2o5zDKsAB\" /&gt;</p><p>&lt;recorder&gt;</p><p>&lt;display value=\"Helen Claire Wilson, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/TrTk7Zaw96VJM5sIX95IYHAB\" /&gt;</p><p>&lt;/recorder&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;substance&gt;</p><p>&lt;text value=\"PEANUT-CONTAINING DRUG PRODUCTS\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://www.nlm.nih.gov/research/umls/rxnorm/\" /&gt;</p><p>&lt;code value=\"1540357\" /&gt;</p><p>&lt;display value=\"PEANUT-CONTAINING DRUG PRODUCTS\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/substance&gt;</p><p>&lt;reaction&gt;</p><p>&lt;certainty value=\"confirmed\" /&gt;</p><p>&lt;onset value=\"2016-02-16T00:00:00\" /&gt;</p><p>&lt;manifestation&gt;</p><p>&lt;text value=\"Anaphylaxis (SNOMED-CT: 39579001)\" /&gt;</p><p>&lt;/manifestation&gt;</p><p>&lt;/reaction&gt;</p><p>&lt;/AllergyIntolerance&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;resource&gt;</p><p>&lt;OperationOutcome&gt;</p><p>&lt;issue&gt;</p><p>&lt;severity value=\"warning\" /&gt;</p><p>&lt;details value=\"This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system.\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"informational\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/issue-type\" /&gt;</p><p>&lt;code value=\"informational\" /&gt;</p><p>&lt;display value=\"informational\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;/issue&gt;</p><p>&lt;/OperationOutcome&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"outcome\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": "<p>FHIR AllergyIntolerance Resources can be returned in either XML or JSON format through either Read or Search interactions. Read interactions refer to the lookup of a single AllergyIntolerance resource by its external FHIR ID. Search interactions can return multiple resources according to the parameters used, which for now will be limited to AllergyIntolerance IDs and/or a Patient ID.</p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 6885,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "patient": {
+                    "Id": 6887,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 503
+                },
+                "subject": {
+                    "Id": 6888,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 504
+                }
+            },
+            "Order": 0,
+            "TypeId": 501
+        },
+        "ResponseRootType": {
+            "Id": 6889,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 6890,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 6896,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single entry in the resource bundle.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 6901,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "AllergyIntolerance": {
+                                            "Id": 6902,
+                                            "Name": "AllergyIntolerance",
+                                            "AltName": null,
+                                            "Type": "AllergyIntolerance",
+                                            "Description": "A single AllergyIntolerance resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "category": {
+                                                    "Id": 6907,
+                                                    "Name": "category",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Refers to food, medication, or environmental allergies.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 221
+                                                },
+                                                "criticality": {
+                                                    "Id": 6905,
+                                                    "Name": "criticality",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Refers to the risk of clinical harm of a reaction to the substance.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 219
+                                                },
+                                                "note": {
+                                                    "Id": 6983,
+                                                    "Name": "note",
+                                                    "AltName": null,
+                                                    "Type": "Annotation",
+                                                    "Description": "Any comments entered by the recorder.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 230
+                                                },
+                                                "patient": {
+                                                    "Id": 6933,
+                                                    "Name": "patient",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Reference to a patient resource for whom the allergy is relevant.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "reaction": {
+                                                    "Id": 6947,
+                                                    "Name": "reaction",
+                                                    "AltName": null,
+                                                    "Type": "Event",
+                                                    "Description": "List of known reactions the patient had to the substance.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "certainty": {
+                                                            "Id": 6948,
+                                                            "Name": "certainty",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Will always be \"confirmed\". All allergies documented within Epic are known allergies and are confirmed.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 226
+                                                        },
+                                                        "manifestation": {
+                                                            "Id": 6960,
+                                                            "Name": "manifestation",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "A single reaction the patient had to the substance.",
+                                                            "Optional": "False",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 133
+                                                        },
+                                                        "onset": {
+                                                            "Id": 6950,
+                                                            "Name": "onset",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Date allergy was first noticed.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 228
+                                                        },
+                                                        "substance": {
+                                                            "Id": 6952,
+                                                            "Name": "substance",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "The substance that the patient has the specified reactions to.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 133
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 225
+                                                },
+                                                "recordedDate": {
+                                                    "Id": 6903,
+                                                    "Name": "recordedDate",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The date the allergy was added to the patient.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 217
+                                                },
+                                                "recorder": {
+                                                    "Id": 6930,
+                                                    "Name": "recorder",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "Reference to the person to last modify the allergy.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "status": {
+                                                    "Id": 6904,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Confirmation status of the resource. The only options we will send for this field will be \"confirmed\" for active allergies or \"resolved\" for expired allergies. Otherwise, we will send nothing.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 218
+                                                },
+                                                "substance": {
+                                                    "Id": 6939,
+                                                    "Name": "substance",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The substance the patient had the specified reactions to.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 216
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 511
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 509
+                        },
+                        "total": {
+                            "Id": 6892,
+                            "Name": "total",
+                            "AltName": null,
+                            "Type": "Int32",
+                            "Description": "Total number of resources that matched the search criteria.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 508
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 506
+                }
+            },
+            "Order": 10000,
+            "TypeId": 505
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

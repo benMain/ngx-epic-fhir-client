@@ -1,0 +1,214 @@
+{
+    "Id": 974,
+    "Description": "<p>The FHIR Observation resource defines measurements and assertions about a patient, including LDA-W (lines, drains, airways, and wound) data. Observation.Update allows the client to modify existing LDA-W data in the database, including LDA properties and LDA assessments.</p><p>This resource uses an E-Tag and an If-Match HTTP header.</p><p>If the update is successful, HTTP status code 200 will be returned. If the update is not successful, an operational outcome will be returned.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "PUT",
+    "UrlTemplate": "api/FHIR/R4/Observation/{ID}",
+    "SampleRequest": "<p>https://hostname/instance-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/R4/Observation/ePgszz-JpoXhhBHDW-tMoBw3</p><p>&lt;Observation&gt;</p><p>&lt;id value=\"ePgszz-JpoXhhBHDW-tMoBw3\" /&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-category\" /&gt;</p><p>&lt;code value=\"LDA\" /&gt;</p><p>&lt;display value=\"Line, Drains, and Airways\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Line, Drains, and Airways\" /&gt;</p><p>&lt;/category&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"4578\" /&gt;</p><p>&lt;display value=\"FLOQA Line LDA\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"FLOQA Line LDA\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;reference value=\"Patient/eZO66HeGXB6VCJemL-ciSKA3\" /&gt;</p><p>&lt;display value=\"Meiko Lufhir\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;encounter&gt;</p><p>&lt;reference value=\"Encounter/e.R4dWbUDqF01.Z6BEIfEkZecZklxAhL82tS5wzzlD0o3\" /&gt;</p><p>&lt;/encounter&gt;</p><p>&lt;effectivePeriod&gt;</p><p>&lt;start value=\"2019-09-04T21:42:00Z\" /&gt;</p><p>&lt;/effectivePeriod&gt;</p><p>&lt;component&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"700\" /&gt;</p><p>&lt;display value=\"Placement Date\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Placement Date\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueDateTime value=\"2019-09-04\" /&gt;</p><p>&lt;/component&gt;</p><p>&lt;component&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"701\" /&gt;</p><p>&lt;display value=\"Placement Time\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Placement Time\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueTime value=\"16:42:00\" /&gt;</p><p>&lt;/component&gt;</p><p>&lt;component&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"4570\" /&gt;</p><p>&lt;display value=\"FLOQA Region Property Row\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"FLOQA Region Property Row\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.4.696784.98010\" /&gt;</p><p>&lt;code value=\"Arm\" /&gt;</p><p>&lt;display value=\"Arm\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Arm\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/component&gt;</p><p>&lt;component&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"4571\" /&gt;</p><p>&lt;display value=\"FLOQA Anterior/Posterior Property Row\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"FLOQA Anterior/Posterior Property Row\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.4.696784.98013\" /&gt;</p><p>&lt;code value=\"Ant\" /&gt;</p><p>&lt;display value=\"Anterior\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Anterior\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/component&gt;</p><p>&lt;component&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"4572\" /&gt;</p><p>&lt;display value=\"FLOQA Left/Right Property Row\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"FLOQA Left/Right Property Row\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.4.696784.98011\" /&gt;</p><p>&lt;code value=\"R\" /&gt;</p><p>&lt;display value=\"Right\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Right\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/component&gt;</p><p>&lt;/Observation&gt;</p>",
+    "SampleResponse": "<p>HTTP/1.1 200 OK</p><p>Cache-Control: no-cache,no-store</p><p>Pragma: no-cache</p><p>Content-Type: application/xml; charset=utf-8</p><p>Expires: -1</p><p>Server: Microsoft-IIS/8.5</p><p>ServerMetrics: {\"BlockReads\":0,\"BlockWrites\":21,\"BlocksAllocated\":3,\"DBTime\":160,\"ECFNetworkTime\":1,\"ECFRequestCount\":0,\"ECFRequestTime\":161,\"GREF\":14106,\"JournalEntries\":111,\"LocksFailed\":0,\"LocksGranted\":35,\"MCommands\":198854,\"MemoryDifference\":0,\"WorkflowEventBlockReads\":0,\"WorkflowEventDBTime\":160,\"WorkflowEventECFNetworkTime\":0,\"WorkflowEventECFRequestCount\":0,\"WorkflowEventGREF\":14106}</p><p>X-AspNet-Version: 4.0.30319</p><p>X-Powered-By: ASP.NET</p><p>Date: Thu, 05 Sep 2019 21:57:41 GMT</p><p>Content-Length: 0</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 156961,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 156963,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "An instance of the R4 Observation resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 157100,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>The category is always \"LDA\".</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 366
+                        },
+                        "code": {
+                            "Id": 157112,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>LOINC code, CADSR code, or encoded flowsheet ID. Either this element or category must be provided, but not both.</p>\n<p>This element can't be modified by Observation.Update.</p>\n<p>The code element value varies depending upon what is passed (for example, a flowsheet ID vs. a LOINC code). If using a flowsheet ID, the system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 366
+                        },
+                        "component": {
+                            "Id": 157673,
+                            "Name": "component",
+                            "AltName": null,
+                            "Type": "Component",
+                            "Description": "Component information.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "code": {
+                                    "Id": 157682,
+                                    "Name": "code",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "<p>LOINC code, CADSR code, or encoded flowsheet ID. Either this element or category must be provided, but not both.</p>\n<p>The code element value varies depending upon what is passed (for example, a flowsheet ID vs. a LOINC code). If using a flowsheet ID, the system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization.</p>",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 366
+                                },
+                                "valueQuantity": {
+                                    "Id": 157694,
+                                    "Name": "valueQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Value of the property row.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 5439
+                                }
+                            },
+                            "Order": 2,
+                            "TypeId": 5621
+                        },
+                        "effectiveDateTime": {
+                            "Id": 369811,
+                            "Name": "effectiveDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The prioritized instant.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 5532
+                        },
+                        "effectivePeriod": {
+                            "Id": 157217,
+                            "Name": "effectivePeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "Start instant and/or end instant of the LDA.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 369
+                        },
+                        "encounter": {
+                            "Id": 157186,
+                            "Name": "encounter",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "<p>Reference to an encounter resource.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 373
+                        },
+                        "note": {
+                            "Id": 157424,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "The comment.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 379
+                        },
+                        "sequelTo": {
+                            "Id": 157005,
+                            "Name": "extension",
+                            "AltName": "sequelTo",
+                            "Type": "Extension",
+                            "Description": "<a href=\"http://hl7.org/fhir/extension-observation-sequelto.html\">sequelTo extension</a> that specifies the parent LDA FHIR ID.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 348
+                        },
+                        "subject": {
+                            "Id": 157124,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "<p>Reference to a patient resource.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 373
+                        },
+                        "valueQuantity": {
+                            "Id": 157320,
+                            "Name": "valueQuantity",
+                            "AltName": null,
+                            "Type": "Quantity",
+                            "Description": "Value of the assessment. For image rows, a comma-delimited list of external DCS IDs is required.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 5439
+                        },
+                        "valueString": {
+                            "Id": 369814,
+                            "Name": "valueString",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "LDA display name.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 5535
+                        }
+                    },
+                    "Order": 1,
+                    "TypeId": 5578
+                }
+            },
+            "Order": 0,
+            "TypeId": 5641
+        },
+        "ResponseRootType": {
+            "Id": 157864,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {},
+            "Order": 10000,
+            "TypeId": 5643
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

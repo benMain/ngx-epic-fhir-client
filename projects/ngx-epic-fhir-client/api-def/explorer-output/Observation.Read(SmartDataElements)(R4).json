@@ -1,0 +1,263 @@
+{
+    "Id": 10120,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/Observation/{ID}",
+    "SampleRequest": "/api/FHIR/R4/Observation/eBBGgszv54EfAOrdWJqYDgbqMbaIyAua1WztUUZpc720A31rLzxozrJYKb9cFnbur-NbpRG6U8IlGmAEUpRZi5k7UpVT9imMQsLB.NDBYxpY3",
+    "SampleResponse": "{\n&nbsp;&nbsp;&nbsp;&nbsp;\"resourceType\":&nbsp;\"Observation\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"id\":&nbsp;\"eBBGgszv54EfAOrdWJqYDgbqMbaIyAua1WztUUZpc720A31rLzxozrJYKb9cFnbur-NbpRG6U8IlGmAEUpRZi5k7UpVT9imMQsLB.NDBYxpY3\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"status\":&nbsp;\"unknown\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"category\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"coding\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"system\":&nbsp;\"http://open.epic.com/FHIR/StructureDefinition/observation-category\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;\"smartdata\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"SmartData\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"text\":&nbsp;\"SmartData\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"coding\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"system\":&nbsp;\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.727688\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;\"A32881\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"STRING\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"text\":&nbsp;\"STRING\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"subject\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"reference\":&nbsp;\"Patient/eVe.LNtp0U.2HjbCdUxvA5g3\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"Murakami,&nbsp;Hanai\"\n&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;\"focus\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"reference\":&nbsp;\"Encounter/eSFXQ9FKvuZndGegQibaWniVhd0H4y.4AMYETyo5A6gc3\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"MURAKAMI,&nbsp;HANA\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;\"issued\":&nbsp;\"2021-04-16T20:56:23Z\",\n&nbsp;&nbsp;&nbsp;&nbsp;\"performer\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"reference\":&nbsp;\"Practitioner/eIOnxJsdFcfgJ4iy716I3MA3\",\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"display\":&nbsp;\"USER,&nbsp;EPIC\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;],\n&nbsp;&nbsp;&nbsp;&nbsp;\"component\":&nbsp;[\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"code\":&nbsp;{\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"text\":&nbsp;\"Line&nbsp;1\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\"valueString\":&nbsp;\"Hana\"\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\n&nbsp;&nbsp;&nbsp;&nbsp;]\n}",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 376859,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 376860,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Observation FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5629
+                }
+            },
+            "Order": 0,
+            "TypeId": 5628
+        },
+        "ResponseRootType": {
+            "Id": 376861,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 376862,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "An instance of the R4 Observation resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 376999,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Always \"smartdata\"",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "code": {
+                            "Id": 377011,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>Information about the SmartData element including the element reference and display string. If a SNOMED mapping for the SmartData element exists, that mapping appears here as well.\n<p>The code element value varies depending on what SmartData element is passed. The system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization. ",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "component": {
+                            "Id": 377572,
+                            "Name": "component",
+                            "AltName": null,
+                            "Type": "Component",
+                            "Description": "Additional information. The number of components returned equals the number of lines in the SmartData element.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "code": {
+                                    "Id": 377581,
+                                    "Name": "code",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "<p>Information about the SmartData element including the element reference and display string. If a SNOMED mapping for the SmartData element exists, that mapping will appears here as well.\n<p>The code element value varies depending on what SmartData element is passed. The system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization.\n",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "valueBoolean": {
+                                    "Id": 377575,
+                                    "Name": "valueBoolean",
+                                    "AltName": null,
+                                    "Type": "Boolean",
+                                    "Description": "This element is populated if the data type is Boolean.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5624
+                                },
+                                "valueCodeableConcept": {
+                                    "Id": 377601,
+                                    "Name": "valueCodeableConcept",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "This element is populated if the data type is database or elementID.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 366
+                                },
+                                "valueDateTime": {
+                                    "Id": 377578,
+                                    "Name": "valueDateTime",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "This element is populated if the data type is date or instant.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5627
+                                },
+                                "valueQuantity": {
+                                    "Id": 377593,
+                                    "Name": "valueQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "This element is populated if the data type is numeric.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5439
+                                },
+                                "valueString": {
+                                    "Id": 377574,
+                                    "Name": "valueString",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "This element is populated if the data type is string, category, or time with unit.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5623
+                                },
+                                "valueTime": {
+                                    "Id": 377577,
+                                    "Name": "valueTime",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": "This element is populated if the data type is time.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 5626
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 5621
+                        },
+                        "focus": {
+                            "Id": 377054,
+                            "Name": "focus",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The FHIR ID for the context record that the SmartData element is attached to.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "hasMember": {
+                            "Id": 377510,
+                            "Name": "hasMember",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Returns nested references to other Observation (SmartData Elements) resources.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "issued": {
+                            "Id": 376869,
+                            "Name": "issued",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "The date and time the observation was documented. This is always the current time.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 5585
+                        },
+                        "note": {
+                            "Id": 377323,
+                            "Name": "note",
+                            "AltName": null,
+                            "Type": "Annotation",
+                            "Description": "This element is returned starting in the November 2021 version of Epic.\n\nThe comments for the SmartData element.\n\nIf the component and comment are saved to separate SmartData elements, the comment is returned as a separate observation and not as a note on the component’s observation.\n",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 379
+                        },
+                        "performer": {
+                            "Id": 377188,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Who filed the observation.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        },
+                        "subject": {
+                            "Id": 377023,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The FHIR ID for the patient the observation is about.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 5578
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5630
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

@@ -1,0 +1,191 @@
+{
+    "Id": 33,
+    "Description": "<p>    The <a href=\"http://hl7.org/fhir/procedure.html\" data-drive-link-file-url=\"1\">FHIR Procedure resource</a> defines an activity performed on or with a patient as part of the provision of care. It corresponds with surgeries and procedures performed, including endoscopies and biopsies, as well as less invasive actions like counseling and physiotherapy.    This resource is designed for a high-level summary around the occurrence of a procedure, and not for specific procedure log documentation. The below documentation describes surgical, dental, and diagnostic procedures performed at a particular organization, but does not include historical documentation of procedures on a patient.   </p>   <p>    The Procedure resource corresponds to the following <a href=\"https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf\" data-drive-link-file-url=\"1\">Common Clinical Data Set</a> (CCDS) Elements: Procedures.   </p>       <p>    The read interaction enables the lookup of a Procedure resource by a constant server ID. The read interaction allows clients to store only the server ID, and with a single request, retrieve the most up-to-date information about a procedure. Read interactions typically begin with a client having previously established a relationship, often through querying for Procedures through the search interaction.   </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/Procedure/{ID}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/Procedure/Tam-Bgf-I1ezzHyQSPI9Xuy0S3u4A64a3ntxGIXjTfOgB</p>",
+    "SampleResponse": "<p>&lt;Procedure xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;status value=\"completed\" /&gt;</p><p>&lt;notPerformed value=\"false\" /&gt;</p><p>&lt;id value=\"Tam-Bgf-I1ezzHyQSPI9Xuy0S3u4A64a3ntxGIXjTfOgB\" /&gt;</p><p>&lt;subject&gt;</p><p>&lt;display value=\"Fhir A Doe\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/TGwyi7uWQngTh8wlsxLyWPi6.8wgRuUnMqMfRuwJhsFkB\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"LAB CBC\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"2.16.840.1.113883.6.14\" /&gt;</p><p>&lt;code value=\"LAB1003\" /&gt;</p><p>&lt;display value=\"LAB CBC\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;performer&gt;</p><p>&lt;actor&gt;</p><p>&lt;display value=\"John Doe, MD\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Practitioner/T261TVJilfMxfUGfuXuDQpQB\" /&gt;</p><p>&lt;/actor&gt;</p><p>&lt;/performer&gt;</p><p>&lt;performedPeriod&gt;</p><p>&lt;start value=\"2016-01-22T21:54:00\" /&gt;</p><p>&lt;end value=\"2016-01-22T21:54:00\" /&gt;</p><p>&lt;/performedPeriod&gt;</p><p>&lt;/Procedure&gt;</p>",
+    "Remarks": "<p>The various procedure types have different unique identifiers that will be used for generating a FHIR Resource REST ID.</p><ul><li>Procedure Orders - Based on \"ORD\" and ORD .1 and EAP .1</li><li>Dental Procedures - Based on \"RES\" and RES .1 </li><li>Surgeries - Based on \"ORL\" and ORL .1 and Panel # and ORP .1</li></ul><p>The data is otherwise stored in a similar format between all procedure types. Exceptions are noted within the read response grid below. </p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 10801,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 10802,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Procedure FHIR ID.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 907
+                }
+            },
+            "Order": 0,
+            "TypeId": 906
+        },
+        "ResponseRootType": {
+            "Id": 10803,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Procedure": {
+                    "Id": 10804,
+                    "Name": "Procedure",
+                    "AltName": null,
+                    "Type": "Procedure",
+                    "Description": null,
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "code": {
+                            "Id": 10839,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>External codes associated with the procedure.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "identifier": {
+                            "Id": 10809,
+                            "Name": "identifier",
+                            "AltName": null,
+                            "Type": "Identifier",
+                            "Description": "System-specific ID for the procedure order record.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 129
+                        },
+                        "performedDateTime": {
+                            "Id": 10807,
+                            "Name": "performedDateTime",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "When the procedure was performed.",
+                            "Optional": "This or performedPeriod will be populated.",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 912
+                        },
+                        "performedPeriod": {
+                            "Id": 10886,
+                            "Name": "performedPeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "Period of time over which the procedure was performed.",
+                            "Optional": "This or performedDateTime will be populated.",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 141
+                        },
+                        "performer": {
+                            "Id": 10874,
+                            "Name": "performer",
+                            "AltName": null,
+                            "Type": "performer",
+                            "Description": "Who performed the Procedure.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "actor": {
+                                    "Id": 10875,
+                                    "Name": "actor",
+                                    "AltName": null,
+                                    "Type": "Reference",
+                                    "Description": "Reference to the Practitioner that performed the procedure.",
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 10003,
+                                    "TypeId": 144
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 914
+                        },
+                        "reasonCodeableConcept": {
+                            "Id": 10863,
+                            "Name": "reasonCodeableConcept",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "External codes for diagnosis records associated with the procedure.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 133
+                        },
+                        "reasonReference": {
+                            "Id": 10871,
+                            "Name": "reasonReference",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to Condition resources associated with the Procedure.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        },
+                        "status": {
+                            "Id": 10805,
+                            "Name": "status",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The status of the Procedure. </p>\n<table class=\"table table-hover\">\n<tr>\n<th>API Value</th>\n<th><a href=\"http://hl7.org/fhir/DSTU2/valueset-procedure-status.html\">FHIR Event Status</a></th>\n</tr>\n<tr>\n<td>cancelled</td>\n<td>aborted</td>\n</tr>\n<tr>\n<td>completed</td>\n<td>completed</td>\n</tr>\n</table>\n<p>*Note: Omitted FHIR event status equivalent values are not returned by this search.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 910
+                        },
+                        "subject": {
+                            "Id": 10828,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The Patient FHIR ID for whom this Procedure resource is relevant.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 144
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 909
+                }
+            },
+            "Order": 10000,
+            "TypeId": 908
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

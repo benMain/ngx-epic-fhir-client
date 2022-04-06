@@ -1,0 +1,130 @@
+{
+    "Id": 10068,
+    "Description": null,
+    "Namespace": "",
+    "WsdlFile": "",
+    "HttpMethod": "GET",
+    "UrlTemplate": "/api/FHIR/R4/BodyStructure/{ID}",
+    "SampleRequest": "/api/FHIR/R4/BodyStructure/eU1gdcwFZyKjNGyBZhKh989YxW3fhmjvviCKYH.RTCBw3",
+    "SampleResponse": "&lt;BodyStructure xmlns=\"http://hl7.org/fhir\"&gt;\n&lt;id value=\"eU1gdcwFZyKjNGyBZhKh989YxW3fhmjvviCKYH.RTCBw3\" /&gt;\n&lt;extension url=\"http://open.epic.com/FHIR/StructureDefinition/extension/dental-tooth-eruption-status\"&gt;\n&lt;valueCodeableConcept&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:1.2.840.114350.1.72.1.7.7.10.826983.17460\" /&gt;\n&lt;code value=\"1\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Erupted\" /&gt;\n&lt;/valueCodeableConcept&gt;\n&lt;/extension&gt;\n&lt;active value=\"true\" /&gt;\n&lt;morphology&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:2.16.840.1.113883.6.96\" /&gt;\n&lt;code value=\"302214001\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Entire tooth (body structure)\" /&gt;\n&lt;/morphology&gt;\n&lt;location&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:2.16.840.1.113883.6.96\" /&gt;\n&lt;code value=\"245566003\" /&gt;\n&lt;display value=\"Entire permanent maxillary right third molar tooth (body structure)\" /&gt;\n&lt;/coding&gt;\n&lt;coding&gt;\n&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.3.866976.94010\" /&gt;\n&lt;code value=\"1\" /&gt;\n&lt;/coding&gt;\n&lt;text value=\"Tooth (Universal): 1\" /&gt;\n&lt;/location&gt;\n&lt;description value=\"Tooth (Universal): 1\" /&gt;\n&lt;patient&gt;\n&lt;reference value=\"Patient/erOOucv8EeF9xNKxjL..kSQ3\" /&gt;\n&lt;type value=\"Patient\" /&gt;\n&lt;display value=\"Johnson, Gail”/&gt;\n&lt;/patient&gt;\n&lt;/BodyStructure&gt;",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 300794,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "ID": {
+                    "Id": 300795,
+                    "Name": "ID",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "BodyStructure identifier.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 6742
+                }
+            },
+            "Order": 0,
+            "TypeId": 6741
+        },
+        "ResponseRootType": {
+            "Id": 300796,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "BodyStructure": {
+                    "Id": 300797,
+                    "Name": "BodyStructure",
+                    "AltName": null,
+                    "Type": "BodyStructure",
+                    "Description": "An instance of the R4 BodyStructure resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "active": {
+                            "Id": 300801,
+                            "Name": "active",
+                            "AltName": null,
+                            "Type": "Boolean",
+                            "Description": "True if the tooth is actively in a patient’s dentition. False if it has been removed.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 6748
+                        },
+                        "dental-tooth-eruption-status": {
+                            "Id": 300832,
+                            "Name": "extension",
+                            "AltName": "dental-tooth-eruption-status",
+                            "Type": "Extension",
+                            "Description": "Tooth eruption status, including erupted, unerupted, partially erupted, and missing.",
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 348
+                        },
+                        "location": {
+                            "Id": 300877,
+                            "Name": "location",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Returns the SNOMED mapping and Epic ID for the tooth.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "morphology": {
+                            "Id": 300865,
+                            "Name": "morphology",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "Returns SNOMED code 302214001 or “Tooth” if SNOMED codes are not available.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 366
+                        },
+                        "patient": {
+                            "Id": 300912,
+                            "Name": "patient",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "The patient whose tooth this is.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 373
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 6744
+                }
+            },
+            "Order": 10000,
+            "TypeId": 6743
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

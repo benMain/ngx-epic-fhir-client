@@ -1,0 +1,241 @@
+{
+    "Id": 897,
+    "Description": "<p>The FHIR Observation resource defines measurements and assertions about a patient, including LDA-W (lines, drains, airways, and wound) data.</p><p>This web service cannot write to closed encounters. Ensure that your app doesn't need to write to closed encounters before you begin development.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "POST",
+    "UrlTemplate": "api/FHIR/STU3/Observation",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/STU3/Observation/</p><p>&lt;Observation&gt;</p><p>&lt;category&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://open.epic.com/FHIR/STU3/StructureDefinition/observation-category\" /&gt;</p><p>&lt;code value=\"LDA\" /&gt;</p><p>&lt;display value=\"Line, Drains, and Airways\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Line, Drains, and Airways\" /&gt;</p><p>&lt;/category&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"42674\" /&gt;</p><p>&lt;display value=\"HZL Wound LDA\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"HZL Wound LDA\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;subject&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/STU3/Patient/ew9Okvb9gsZXjzlK7YzqP1w3\" /&gt;</p><p>&lt;display value=\"Haruka Lufhir\" /&gt;</p><p>&lt;/subject&gt;</p><p>&lt;context&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/STU3/Encounter/e5wRUdV7oHoL8VOeT.CdLnVfN7YsByGgW1GzM51mMDEw3\" /&gt;</p><p>&lt;/context&gt;</p><p>&lt;effectivePeriod&gt;</p><p>&lt;start value=\"2018-11-01T18:10:00Z\" /&gt;</p><p>&lt;/effectivePeriod&gt;</p><p>&lt;component&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"4572\" /&gt;</p><p>&lt;display value=\"FLOQA Left/Right Property Row\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"FLOQA Left/Right Property Row\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueCodeableConcept&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.4.696784.98011\" /&gt;</p><p>&lt;code value=\"R\" /&gt;</p><p>&lt;display value=\"Right\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"Right\" /&gt;</p><p>&lt;/valueCodeableConcept&gt;</p><p>&lt;/component&gt;</p><p>&lt;component&gt;</p><p>&lt;code&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.861.1.7.2.707679\" /&gt;</p><p>&lt;code value=\"4577\" /&gt;</p><p>&lt;display value=\"FLOQA String Property Row\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;text value=\"FLOQA String Property Row\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;valueString value=\"Haruka's wound\" /&gt;</p><p>&lt;/component&gt;</p><p>&lt;/Observation&gt;</p>",
+    "SampleResponse": "<p>HTTP/1.1 201 Created</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 85504,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 85505,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "A single Observation FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "category": {
+                            "Id": 85607,
+                            "Name": "category",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "\"LDA\" to create LDA or LDA assessment.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 31
+                        },
+                        "code": {
+                            "Id": 85619,
+                            "Name": "code",
+                            "AltName": null,
+                            "Type": "CodeableConcept",
+                            "Description": "<p>LOINC code, CADSR code, or encoded flowsheet ID. Either this element or category must be provided, but not both.</p>\n<p>This element can't be modified by Observation.Update.</p>\n<p>The code element value varies depending upon what is passed (for example, a flowsheet ID vs. a LOINC code). If using a flowsheet ID, the system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 31
+                        },
+                        "comment": {
+                            "Id": 85516,
+                            "Name": "comment",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "Comment for the assessment.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 4627
+                        },
+                        "component": {
+                            "Id": 86024,
+                            "Name": "component",
+                            "AltName": null,
+                            "Type": "Component",
+                            "Description": null,
+                            "Optional": "True",
+                            "IsArray": true,
+                            "Children": {
+                                "code": {
+                                    "Id": 86031,
+                                    "Name": "code",
+                                    "AltName": null,
+                                    "Type": "CodeableConcept",
+                                    "Description": "<p>LOINC code, CADSR code, or encoded flowsheet ID. Either this element or category must be provided, but not both.</p>\n<p>This element can't be modified by Observation.Update.</p>\n<p>The code element value varies depending upon what is passed (for example, a flowsheet ID vs. a LOINC code). If using a flowsheet ID, the system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization.</p>",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 31
+                                },
+                                "valueQuantity": {
+                                    "Id": 86043,
+                                    "Name": "valueQuantity",
+                                    "AltName": null,
+                                    "Type": "Quantity",
+                                    "Description": "Value of the property row.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 270
+                                }
+                            },
+                            "Order": 2,
+                            "TypeId": 4642
+                        },
+                        "context": {
+                            "Id": 85661,
+                            "Name": "context",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to an Encounter resource.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 38
+                        },
+                        "effectivePeriod": {
+                            "Id": 85691,
+                            "Name": "effectivePeriod",
+                            "AltName": null,
+                            "Type": "Period",
+                            "Description": "Start instant and/or end instant of the LDA.",
+                            "Optional": "True",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 34
+                        },
+                        "related": {
+                            "Id": 85989,
+                            "Name": "related",
+                            "AltName": null,
+                            "Type": "Related",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "target": {
+                                    "Id": 85994,
+                                    "Name": "target",
+                                    "AltName": null,
+                                    "Type": "Reference",
+                                    "Description": "<p>The parent LDA observation FHIR ID.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 38
+                                },
+                                "type": {
+                                    "Id": 85991,
+                                    "Name": "type",
+                                    "AltName": null,
+                                    "Type": "String",
+                                    "Description": null,
+                                    "Optional": "True",
+                                    "IsArray": false,
+                                    "Children": {},
+                                    "Order": 3,
+                                    "TypeId": 4641
+                                }
+                            },
+                            "Order": 2,
+                            "TypeId": 4639
+                        },
+                        "subject": {
+                            "Id": 85631,
+                            "Name": "subject",
+                            "AltName": null,
+                            "Type": "Reference",
+                            "Description": "Reference to a patient resource.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 38
+                        },
+                        "valueQuantity": {
+                            "Id": 85726,
+                            "Name": "valueQuantity",
+                            "AltName": null,
+                            "Type": "Quantity",
+                            "Description": "Value of the assessment. For image rows, a comma-delimited list of external document IDs is required.\n\nvalueString, valueCodeableConcept, valueTime, and valueDateTime are also accepted.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 2,
+                            "TypeId": 270
+                        }
+                    },
+                    "Order": 1,
+                    "TypeId": 4616
+                }
+            },
+            "Order": 0,
+            "TypeId": 4655
+        },
+        "ResponseRootType": {
+            "Id": 86224,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Observation": {
+                    "Id": 86225,
+                    "Name": "Observation",
+                    "AltName": null,
+                    "Type": "Observation",
+                    "Description": "A single Observation FHIR resource.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "id": {
+                            "Id": 86226,
+                            "Name": "id",
+                            "AltName": null,
+                            "Type": "String",
+                            "Description": "<p>The FHIR ID of the newly created observation resource.</p>\n<p>Optionally, the client can set the return preference header to \"representation\", and the server will return the entire resource in a format similar to Observation.Read.</p>",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 4617
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 4616
+                }
+            },
+            "Order": 10000,
+            "TypeId": 4656
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

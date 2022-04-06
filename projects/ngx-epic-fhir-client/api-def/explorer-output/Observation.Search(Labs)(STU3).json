@@ -1,0 +1,470 @@
+{
+    "Id": 495,
+    "Description": "<p>The Observation (Labs) resource returns component level data for lab results. Observation is not normally used on its own to access lab results, because it is limited to reading microbiology sensitivities (method level, isolate level, and sensitivity level) and textual (narrative and impression) Observations. Instead, a system queries the DiagnosticReport resource to identify all lab procedures performed for a patient. The DiagnosticReport results will contain pointers to one or more Observation resources that contain the component results. If you are familiar with HL7v2, DiagnosticReport is analogous to an OBR segment, where Observation is like an OBX segment.</p>\n<p>For example, consider a CBC (Complete Blood Count) test. The overall CBC test would be represented as a DiagnosticReport resource. The component results (white blood cell count, red blood cell count, hemoglobin, platelet count, etc.) would each be returned in independent Observation resources.</p>\n<p>Most systems expect to receive a LOINC code identifying each component. An Observation resource will be returned for a component result even if a LOINC code is not found, however the Observation.code property will be empty.</p>\n<p>Some labs, such as pathology or cytology, often file a PDF, or a link to a PDF or other document as the result. We do not currently support returning PDF content or other reference pointer content via FHIR, however the test will be discoverable via a DiagnosticReport search.</p>\n<p>For microbiology labs, the DiagnosticReport resource represents the culture. It includes references to Observation for each isolate. The isolates may then either reference an Observation for each method, or, if there is no method provided by the lab system, then the isolate will reference Observations for each sensitivity result. If methods are provided by the lab, then the method Observations will reference the sensitivity results.</p>\n<p>The two potential structures are outlined below.</p>\n<p>Microbiology results without methods:</p>\n<ol>\n<li>Culture (DiagnosticReport)\n<ol>\n<li>Isolate A (Observation)\n<ol>\n<li>Sensitivity results for antibiotic W (Observation)</li>\n<li>Sensitivity results for antibiotic X (Observation)</li>\n</ol>\n</li>\n<li>Isolate B (Observation)\n<ol>\n<li>Sensitivity results for antibiotic W (Observation)</li>\n<li>Sensitivity results for antibiotic X (Observation)</li>\n</ol>\n</li>\n</ol>\n</li>\n</ol>\n<p>Microbiology results with methods:</p>\n<ol>\n<li>Culture (DiagnosticReport)\n<ol>\n<li>Isolate A (Observation)\n<ol>\n<li>Method 1 (Observation)<br /> Sensitivity results for antibiotic W (Observation)<br /> b. Sensitivity results for antibiotic X (Observation)</li>\n<li>Method 2 (Observation)<br /> Sensitivity results for antibiotic W (Observation)<br /> b. Sensitivity results for antibiotic X (Observation)</li>\n</ol>\n</li>\n<li>Isolate B (Observation)\n<ol>\n<li>Method 1 (Observation)<br /> Sensitivity results for antibiotic W (Observation)<br /> b. Sensitivity results for antibiotic X (Observation)</li>\n<li>Method 2 (Observation)<br /> Sensitivity results for antibiotic W (Observation)<br /> b. Sensitivity results for antibiotic X (Observation)</li>\n</ol>\n</li>\n</ol>\n</li>\n</ol>\n<p>The category element is populated with SNOMED codes. In November 2021 and later, these codes are based on a mapping from component records to external SNOMED codes. From August 2021 to May 2021, this applies only to Netherlands environments and these codes are based on the value in the Order Type item in Epic. &nbsp;The following SNOMED codes are supported, and must be mapped in the External Mapping Utility:</p>\n<ul>\n<li>252275004-Hematology (Hematologie)</li>\n<li>275711006-Chemistry (Klinische chemie)</li>\n<li>68793005-Serology (Serologie/ immunologie)</li>\n<li>395124008-Virology (Virologie)</li>\n<li>314076009-Toxicology (Toxicologie)</li>\n<li>19851009-Microbiology (Microbiologie)</li>\n<li>405825005-Molecular genetics (Moleculaire genetica)</li>\n</ul>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/STU3/Observation?patient={patient}&subject={subject}&category={category}&_id={_id}&code={code}&date={date}",
+    "SampleRequest": "https://hostname/instance/api/FHIR/STU3/Observation?patient=e3E2Rkizy.WmzItzk1PbZAQ3&amp;category=laboratory&amp;_count=1",
+    "SampleResponse": "{\n    \"resourceType\": \"Bundle\",\n    \"type\": \"searchset\",\n    \"total\": 1,\n    \"link\": [\n        {\n            \"relation\": \"next\",\n            \"url\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/Observation?patient=e3E2Rkizy.WmzItzk1PbZAQ3&amp;category=laboratory&amp;_count=1&amp;sessionID=08-57AED5E4149711ECBEA4D2068206269D\"\n        }\n    ],\n    \"entry\": [\n        {\n            \"link\": [\n                {\n                    \"relation\": \"self\",\n                    \"url\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/Observation/eAMXBdyxr2HSrK7BSIJoPna14R45Ho9Cwgyy5qfxFTqJraA5OWLQFNaXFUhKX.yTF3\"\n                }\n            ],\n            \"fullUrl\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/Observation/eAMXBdyxr2HSrK7BSIJoPna14R45Ho9Cwgyy5qfxFTqJraA5OWLQFNaXFUhKX.yTF3\",\n            \"resource\": {\n                \"resourceType\": \"Observation\",\n                \"id\": \"eAMXBdyxr2HSrK7BSIJoPna14R45Ho9Cwgyy5qfxFTqJraA5OWLQFNaXFUhKX.yTF3\",\n                \"basedOn\": [\n                    {\n                        \"reference\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/ProcedureRequest/e88uk8v7SSbyNXOiSR9-moxFQZin7nVZSFmyIN-HJDho3\"\n                    }\n                ],\n                \"status\": \"final\",\n                \"category\": [\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"http://snomed.info/sct\",\n                                \"code\": \"252275004\",\n                                \"display\": \"Hematology test (procedure)\"\n                            }\n                        ],\n                        \"text\": \"Hematology test (procedure)\"\n                    },\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"http://hl7.org/fhir/observation-category\",\n                                \"code\": \"laboratory\",\n                                \"display\": \"Laboratory\"\n                            }\n                        ],\n                        \"text\": \"Laboratory\"\n                    },\n                    {\n                        \"coding\": [\n                            {\n                                \"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.10.798268.30\",\n                                \"code\": \"Lab\",\n                                \"display\": \"Lab\"\n                            }\n                        ],\n                        \"text\": \"Lab\"\n                    }\n                ],\n                \"code\": {\n                    \"coding\": [\n                        {\n                            \"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.5.737384.188\",\n                            \"code\": \"68\"\n                        },\n                        {\n                            \"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.5.737384.431\",\n                            \"code\": \"AF-GLUKOOSI\"\n                        },\n                        {\n                            \"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.5.737384.430\",\n                            \"code\": \"1459\"\n                        },\n                        {\n                            \"system\": \"urn:oid:1.2.840.114350.1.13.5325.1.7.2.768282\",\n                            \"code\": \"68\",\n                            \"display\": \"GLUCOSE\"\n                        }\n                    ],\n                    \"text\": \"GLUCOSE\"\n                },\n                \"subject\": {\n                    \"reference\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/Patient/e3E2Rkizy.WmzItzk1PbZAQ3\",\n                    \"display\": \"Marshall, Fhir One\"\n                },\n                \"context\": {\n                    \"reference\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/Encounter/eorXVhQrtx.V6AYpjcoaYBMEpqd5Y8s7Eq8Mr4Ltn.2U3\"\n                },\n                \"effectiveDateTime\": \"2021-09-02T18:41:00Z\",\n                \"issued\": \"2021-09-02T19:10:25Z\",\n                \"performer\": [\n                    {\n                        \"reference\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/Practitioner/ecw01Sml5VFYLaE2Mp3-hgQ3\",\n                        \"display\": \"Lab Admin Tpr\"\n                    }\n                ],\n                \"valueQuantity\": {\n                    \"value\": 95,\n                    \"unit\": \"mmol/L\",\n                    \"system\": \"http://unitsofmeasure.org\",\n                    \"code\": \"mmol/L\"\n                },\n                \"specimen\": {\n                    \"reference\": \"https://vs-icx18-25/Interconnect-FHIR-Current-Stage1-Primary-Unsecured/api/FHIR/STU3/Specimen/eiWBs9u0Cb1fNJ5IgL3cxqgWFghRXa9VQggFtlJ3i2303\"\n                },\n                \"referenceRange\": [\n                    {\n                        \"low\": {\n                            \"value\": 80,\n                            \"unit\": \"mmol/L\",\n                            \"system\": \"http://unitsofmeasure.org\",\n                            \"code\": \"mmol/L\"\n                        },\n                        \"high\": {\n                            \"value\": 110,\n                            \"unit\": \"mmol/L\",\n                            \"system\": \"http://unitsofmeasure.org\",\n                            \"code\": \"mmol/L\"\n                        },\n                        \"text\": \"80 - 110 mmol/L\"\n                    }\n                ]\n            },\n            \"search\": {\n                \"mode\": \"match\"\n            }\n        }\n    ]\n}\n",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 40433,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "category": {
+                    "Id": 40434,
+                    "Name": "category",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Use \"laboratory\" to search for lab observations. ",
+                    "Optional": "Either this or code must be provided, but not both.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4648
+                },
+                "code": {
+                    "Id": 40435,
+                    "Name": "code",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The LOINC code of the Observation.",
+                    "Optional": "Either this or category must be provided, but not both.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4649
+                },
+                "date": {
+                    "Id": 40436,
+                    "Name": "date",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Date when the specimen was obtained.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4650
+                },
+                "patient": {
+                    "Id": 40438,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4652
+                },
+                "subject": {
+                    "Id": 40439,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The reference to a patient resource.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4653
+                }
+            },
+            "Order": 0,
+            "TypeId": 4647
+        },
+        "ResponseRootType": {
+            "Id": 40440,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 40441,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 40505,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single entry in the resource bundle.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 40516,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "ResourceContainer",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Observation": {
+                                            "Id": 40517,
+                                            "Name": "Observation",
+                                            "AltName": null,
+                                            "Type": "Observation",
+                                            "Description": "A single Observation FHIR resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "basedOn": {
+                                                    "Id": 40588,
+                                                    "Name": "basedOn",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The procedure or service this observation is associated with.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 38
+                                                },
+                                                "category": {
+                                                    "Id": 40618,
+                                                    "Name": "category",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "<p>The Observation type. Always \"laboratory\".</p>\n<p>For organizations in the Netherlands only, includes a category entry for the result type, using the <a href=\"https://zibs.nl/wiki/LaboratoryTestResult-v4.6(2020EN)#ResultTypeCodelist\">ResultTypeCodelist</a>. Starting in February 2022 and in November 2021 with a special update, Netherlands-specific SNOMED code 49581000146104-Laboratory Test Finding (Finding) is also returned.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 31
+                                                },
+                                                "code": {
+                                                    "Id": 40630,
+                                                    "Name": "code",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "<p>Code of the Observation.</p>\n<table class=\"table table-hover\">\n<tr>\n<th>Observation Grouper</th>\n<th>Code Description</th>\n</tr>\n<tr>\n<td>Component</td>\n<td>The component name</td>\n</tr>\n<tr>\n<td>Method</td>\n<td>The procedure code</td>\n</tr>\n<tr>\n<td>Isolate</td>\n<td>The isolate LOINC code</td>\n</tr>\n<tr>\n<td>Narrative or Impression</td>\n<td>Set to \"Narrative\" or \"Impression\"</td>\n</tr>\n<tr>\n<td>Addendum</td>\n<td>Set to \"Addendum\" or \"Unsigned Addendum\"</td>\n</tr>\n<tr>\n<td>Sensitivity</td>\n<td>The antibiotic code</td>\n</tr>\n</table>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 31
+                                                },
+                                                "comment": {
+                                                    "Id": 40528,
+                                                    "Name": "comment",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Comments about the result.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4627
+                                                },
+                                                "context": {
+                                                    "Id": 40672,
+                                                    "Name": "context",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The Encounter FHIR ID linked to the order.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 38
+                                                },
+                                                "dataAbsentReason": {
+                                                    "Id": 40828,
+                                                    "Name": "dataAbsentReason",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The reason why normally expected content of the data element is missing. Set to “unknown” for lab result components with no values. \nThis element is available starting in the February 2022 version of Epic.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 31
+                                                },
+                                                "effectiveDateTime": {
+                                                    "Id": 40522,
+                                                    "Name": "effectiveDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>The prioritized instant. This is the instant the results were last updated.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4621
+                                                },
+                                                "id": {
+                                                    "Id": 40518,
+                                                    "Name": "id",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The Observation FHIR ID.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4617
+                                                },
+                                                "interpretation": {
+                                                    "Id": 40840,
+                                                    "Name": "interpretation",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The level of abnormality. If the value isn't mapped we will just send the text value in the Codeable concept. Relevant for sensitivities. ",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 31
+                                                },
+                                                "issued": {
+                                                    "Id": 40523,
+                                                    "Name": "issued",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The observation instant.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4622
+                                                },
+                                                "method": {
+                                                    "Id": 40864,
+                                                    "Name": "method",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "SNOMED code mapped to procedure in Epic.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 31
+                                                },
+                                                "performer": {
+                                                    "Id": 40707,
+                                                    "Name": "performer",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "A reference to the resulting agency's director's Practitioner resource.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 38
+                                                },
+                                                "referenceRange": {
+                                                    "Id": 40936,
+                                                    "Name": "referenceRange",
+                                                    "AltName": null,
+                                                    "Type": "ReferenceRange",
+                                                    "Description": "The reference range for the result, if applicable.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "high": {
+                                                            "Id": 40949,
+                                                            "Name": "high",
+                                                            "AltName": null,
+                                                            "Type": "Quantity",
+                                                            "Description": "The high value of the reference range.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 270
+                                                        },
+                                                        "low": {
+                                                            "Id": 40941,
+                                                            "Name": "low",
+                                                            "AltName": null,
+                                                            "Type": "Quantity",
+                                                            "Description": "The low value of the reference range.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 270
+                                                        },
+                                                        "text": {
+                                                            "Id": 40938,
+                                                            "Name": "text",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Display version of reference range.",
+                                                            "Optional": "True",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 4638
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 4636
+                                                },
+                                                "related": {
+                                                    "Id": 41000,
+                                                    "Name": "related",
+                                                    "AltName": null,
+                                                    "Type": "Related",
+                                                    "Description": "Resource related to this observation.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4639
+                                                },
+                                                "specimen": {
+                                                    "Id": 40876,
+                                                    "Name": "specimen",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "A reference to the Specimen resource. Available starting in November 2021 version of Epic.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 38
+                                                },
+                                                "status": {
+                                                    "Id": 40521,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>The status of the lab order. </p>\n<p>For organizations in the Netherlands, this element can also include a <code>TestResultStatus</code> extension that indicates the test result status.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4620
+                                                },
+                                                "subject": {
+                                                    "Id": 40642,
+                                                    "Name": "subject",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The Patient FHIR ID linked to the order.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 38
+                                                },
+                                                "valueCodeableConcept": {
+                                                    "Id": 40745,
+                                                    "Name": "valueCodeableConcept",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "This element is populated only if a SNOMED code is associated with the component.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 31
+                                                },
+                                                "valueQuantity": {
+                                                    "Id": 40737,
+                                                    "Name": "valueQuantity",
+                                                    "AltName": null,
+                                                    "Type": "Quantity",
+                                                    "Description": "The result value if the result is numeric and represents a quantity. ",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 270
+                                                },
+                                                "valueRange": {
+                                                    "Id": 40757,
+                                                    "Name": "valueRange",
+                                                    "AltName": null,
+                                                    "Type": "Range",
+                                                    "Description": "This element is populated only if the result is structured numeric and the operator is \"-\".",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 268
+                                                },
+                                                "valueRatio": {
+                                                    "Id": 40776,
+                                                    "Name": "valueRatio",
+                                                    "AltName": null,
+                                                    "Type": "Ratio",
+                                                    "Description": "This element is populated only if the result is structured numeric and the operator is \":\".",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4542
+                                                },
+                                                "valueString": {
+                                                    "Id": 40524,
+                                                    "Name": "valueString",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "The result value if the result is a string. ",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4623
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 4616
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 25
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 458
+                        },
+                        "total": {
+                            "Id": 40446,
+                            "Name": "total",
+                            "AltName": null,
+                            "Type": "Int64",
+                            "Description": "Total resources that match the search criteria.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 453
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 448
+                }
+            },
+            "Order": 10000,
+            "TypeId": 4654
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

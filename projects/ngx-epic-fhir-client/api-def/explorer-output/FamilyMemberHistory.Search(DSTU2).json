@@ -1,0 +1,242 @@
+{
+    "Id": 337,
+    "Description": "<p>Returns the medical and surgical history of a patient's relatives using RESTful URLs. For now, we only support Search by FHIR Patient ID, which will return all FamilyMemberHistory resources associated with a single patient.</p><p>A user or staff member accessing this FHIR resource must have security to access the patient's history.</p><p>A MyChart user accessing this FHIR resource must be authorized to view family medical history in MyChart.</p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/DSTU2/FamilyMemberHistory?patient={patient}&subject={subject}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/DSTU2/FamilyMemberHistory?patient=Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p><p>&lt;type value=\"searchset\" /&gt;</p><p>&lt;total value=\"3\" /&gt;</p><p>&lt;link&gt;</p><p>&lt;relation value=\"self\" /&gt;</p><p>&lt;url value=\"https://hostname/instance/api/FHIR/DSTU2/FamilyMemberHistory?patient=Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/link&gt;</p><p>&lt;entry&gt;</p><p>&lt;resource&gt;</p><p>&lt;FamilyMemberHistory&gt;</p><p>&lt;date value=\"2016-03-04T00:00:00\" /&gt;</p><p>&lt;name value=\"Robertson,Deborah\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;relationship&gt;</p><p>&lt;text value=\"Mother\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/familial-relationship\" /&gt;</p><p>&lt;code value=\"MTH\" /&gt;</p><p>&lt;display value=\"Mother\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/relationship&gt;</p><p>&lt;condition&gt;</p><p>&lt;onsetString value=\"53\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Breast cancer\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;/condition&gt;</p><p>&lt;/FamilyMemberHistory&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;resource&gt;</p><p>&lt;FamilyMemberHistory&gt;</p><p>&lt;date value=\"2016-03-04T00:00:00\" /&gt;</p><p>&lt;name value=\"Robertson,Jack\" /&gt;</p><p>&lt;deceasedBoolean value=\"false\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;relationship&gt;</p><p>&lt;text value=\"Father\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/familial-relationship\" /&gt;</p><p>&lt;code value=\"FTH\" /&gt;</p><p>&lt;display value=\"Father\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/relationship&gt;</p><p>&lt;condition&gt;</p><p>&lt;onsetString value=\"55\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Heart attack\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;/condition&gt;</p><p>&lt;/FamilyMemberHistory&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;resource&gt;</p><p>&lt;FamilyMemberHistory&gt;</p><p>&lt;date value=\"2016-03-04T00:00:00\" /&gt;</p><p>&lt;name value=\"Casilla,Hailey\" /&gt;</p><p>&lt;deceasedBoolean value=\"true\" /&gt;</p><p>&lt;patient&gt;</p><p>&lt;display value=\"Fiona Hailey Ingrid Robertson\" /&gt;</p><p>&lt;reference value=\"https://hostname/instance/api/FHIR/DSTU2/Patient/Tb19ikuzxOh6YglUN28cuQ-d.3AjOduTYFVxlRM82bqEB\" /&gt;</p><p>&lt;/patient&gt;</p><p>&lt;relationship&gt;</p><p>&lt;text value=\"Maternal Grandmother\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/familial-relationship\" /&gt;</p><p>&lt;code value=\"MGRMTH\" /&gt;</p><p>&lt;display value=\"Maternal Grandmother\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/relationship&gt;</p><p>&lt;condition&gt;</p><p>&lt;onsetString value=\"62\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Breast cancer\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;/condition&gt;</p><p>&lt;condition&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Pulmonary hypertension\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://snomed.info/sct\" /&gt;</p><p>&lt;code value=\"70995007\" /&gt;</p><p>&lt;display value=\"Pulmonary hypertension\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;/condition&gt;</p><p>&lt;condition&gt;</p><p>&lt;onsetString value=\"82\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"Stroke\" /&gt;</p><p>&lt;/code&gt;</p><p>&lt;/condition&gt;</p><p>&lt;/FamilyMemberHistory&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"match\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;entry&gt;</p><p>&lt;resource&gt;</p><p>&lt;OperationOutcome&gt;</p><p>&lt;issue&gt;</p><p>&lt;severity value=\"warning\" /&gt;</p><p>&lt;details value=\"This response includes information available to the authorized user at the time of the request. It may not contain the entire record available in the system.\" /&gt;</p><p>&lt;code&gt;</p><p>&lt;text value=\"informational\" /&gt;</p><p>&lt;coding&gt;</p><p>&lt;system value=\"http://hl7.org/fhir/issue-type\" /&gt;</p><p>&lt;code value=\"informational\" /&gt;</p><p>&lt;display value=\"informational\" /&gt;</p><p>&lt;/coding&gt;</p><p>&lt;/code&gt;</p><p>&lt;/issue&gt;</p><p>&lt;/OperationOutcome&gt;</p><p>&lt;/resource&gt;</p><p>&lt;search&gt;</p><p>&lt;mode value=\"outcome\" /&gt;</p><p>&lt;/search&gt;</p><p>&lt;/entry&gt;</p><p>&lt;/Bundle&gt;</p>",
+    "Remarks": "<p>FHIR FamilyMemberHistory resources can be retrieved through a Search interaction with a Patient ID, and can be consumed as either XML or JSON.</p>",
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 19222,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "patient": {
+                    "Id": 19223,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Patient resource with the associated FamilyMemberHistory.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4357
+                },
+                "subject": {
+                    "Id": 19224,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The Patient resource with the associated FamilyMemberHistory.",
+                    "Optional": "Either patient or subject must be provided. If both are provided, they must reference the same patient.",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 4358
+                }
+            },
+            "Order": 0,
+            "TypeId": 4356
+        },
+        "ResponseRootType": {
+            "Id": 19225,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 19226,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 19232,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": "A single entry in the resource bundle.",
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 19237,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "Resource",
+                                    "Description": "A single resource returned as part of this bundle.",
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "FamilyMemberHistory": {
+                                            "Id": 19238,
+                                            "Name": "FamilyMemberHistory",
+                                            "AltName": null,
+                                            "Type": "FamilyMemberHistory",
+                                            "Description": "A single FamilyMemberHistory resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "ageString": {
+                                                    "Id": 19242,
+                                                    "Name": "ageString",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Either the relative’s death age or their approximate current age.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4370
+                                                },
+                                                "condition": {
+                                                    "Id": 19276,
+                                                    "Name": "condition",
+                                                    "AltName": null,
+                                                    "Type": "Condition",
+                                                    "Description": "Information about the family member's condition.",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "code": {
+                                                            "Id": 19278,
+                                                            "Name": "code",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "A codeable concept. ",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 133
+                                                        },
+                                                        "onsetString": {
+                                                            "Id": 19277,
+                                                            "Name": "onsetString",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "Age of onset.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 4375
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 4374
+                                                },
+                                                "date": {
+                                                    "Id": 19239,
+                                                    "Name": "date",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Date the FamilyMemberHistory resource was recorded or updated.  ",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4367
+                                                },
+                                                "deceasedBoolean": {
+                                                    "Id": 19241,
+                                                    "Name": "deceasedBoolean",
+                                                    "AltName": null,
+                                                    "Type": "Boolean",
+                                                    "Description": "Whether or not relative is deceased.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4369
+                                                },
+                                                "name": {
+                                                    "Id": 19240,
+                                                    "Name": "name",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "Name of the relative.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 4368
+                                                },
+                                                "patient": {
+                                                    "Id": 19265,
+                                                    "Name": "patient",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "The Patient resource with the associated FamilyMemberHistory",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 144
+                                                },
+                                                "relationship": {
+                                                    "Id": 19268,
+                                                    "Name": "relationship",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "The type of relationship between the patient and their relative.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 133
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 4366
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 4365
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 4363
+                        },
+                        "total": {
+                            "Id": 19228,
+                            "Name": "total",
+                            "AltName": null,
+                            "Type": "Int32",
+                            "Description": "Total number of resources that matched the search criteria.",
+                            "Optional": "False",
+                            "IsArray": false,
+                            "Children": {},
+                            "Order": 10002,
+                            "TypeId": 4362
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 4360
+                }
+            },
+            "Order": 10000,
+            "TypeId": 4359
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}

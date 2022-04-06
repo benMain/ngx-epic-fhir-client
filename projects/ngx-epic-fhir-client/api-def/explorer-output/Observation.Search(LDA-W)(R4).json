@@ -1,0 +1,471 @@
+{
+    "Id": 970,
+    "Description": "<p>The FHIR Observation resource defines measurements and assertions about a patient, including LDA-W (lines, drains, airways, and wound) data. There are two types of LDA-W data:</p>\n<ul>\n<li>LDA properties are documented only once. For example, a nurse might insert&nbsp;a line and document properties such as the insertion time, the body site, and the method of insertion. This data is searchable using the FHIR Observation resource and can be filed into Epic.</li>\n<li>LDA assessments are performed over time. For example, a nurse might inspect an inserted line regularly to make sure the site is clean or assess a wound to see if a new dressing should be applied. This data can be filed into Epic and, starting in the February 2022 version of Epic, is searchable using the R4 version of the FHIR Observation resource.</li>\n</ul>\n<p>This resource returns only data for patients with active LDAs and wounds. When an LDA-W is completed or otherwise removed from the patient's chart, it will no longer be returned by this API. </p>",
+    "Namespace": "N/A",
+    "WsdlFile": "N/A",
+    "HttpMethod": "GET",
+    "UrlTemplate": "api/FHIR/R4/Observation?category={category}&code={code}&date={date}&issued={issued}&patient={patient}&subject={subject}&_count={_count}&_id={_id}",
+    "SampleRequest": "<p>https://hostname/instance/api/FHIR/R4/Observation?patient=eBFGq5CRApF1O-fv-r-9.G1kkDtJCFhZQm1YRU1ZAuuE3&amp;category=lda</p>",
+    "SampleResponse": "<p>&lt;Bundle xmlns=\"http://hl7.org/fhir\"&gt;</p>\n<p>&lt;type value=\"searchset\" /&gt;</p>\n<p>&lt;total value=\"2\" /&gt;</p>\n<p>&lt;link&gt;</p>\n<p>&lt;relation value=\"self\" /&gt;</p>\n<p>&lt;url value=\"https://hostname/instance/api/FHIR/R4/Observation?patient=eBFGq5CRApF1O-fv-r-9.G1kkDtJCFhZQm1YRU1ZAuuE3&amp;amp;category=lda\" /&gt;</p>\n<p>&lt;/link&gt;</p>\n<p>&lt;entry&gt;</p>\n<p>&lt;link&gt;</p>\n<p>&lt;relation value=\"self\" /&gt;</p>\n<p>&lt;url value=\"https://hostname/instance/api/FHIR/R4/Observation/eFPRBpmtzuDY7Twf3aBdgtg3\" /&gt;</p>\n<p>&lt;/link&gt;</p>\n<p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/R4/Observation/eFPRBpmtzuDY7Twf3aBdgtg3\" /&gt;</p>\n<p>&lt;resource&gt;</p>\n<p>&lt;Observation&gt;</p>\n<p>&lt;id value=\"eFPRBpmtzuDY7Twf3aBdgtg3\" /&gt;</p>\n<p>&lt;status value=\"final\" /&gt;</p>\n<p>&lt;category&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-category\" /&gt;</p>\n<p>&lt;code value=\"LDA\" /&gt;</p>\n<p>&lt;display value=\"Line, Drains, and Airways\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Line, Drains, and Airways\" /&gt;</p>\n<p>&lt;/category&gt;</p>\n<p>&lt;category&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-category\" /&gt;</p>\n<p>&lt;code value=\"LDA-property\" /&gt;</p>\n<p>&lt;display value=\"Lines, Drains, and Airways Properties\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Lines, Drains, and Airways Properties\" /&gt;</p>\n<p>&lt;/category&gt;</p>\n<p>&lt;code&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p>\n<p>&lt;code value=\"110631\" /&gt;</p>\n<p>&lt;display value=\"Peripheral IV\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id\" /&gt;</p>\n<p>&lt;code value=\"t6BvZ-T6vRrYAb8E3wEwf4Q0\" /&gt;</p>\n<p>&lt;display value=\"Peripheral IV\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Peripheral IV\" /&gt;</p>\n<p>&lt;/code&gt;</p>\n<p>&lt;subject&gt;</p>\n<p>&lt;reference value=\"Patient/eBFGq5CRApF1O-fv-r-9.G1kkDtJCFhZQm1YRU1ZAuuE3\" /&gt;</p>\n<p>&lt;display value=\"Smith, John\" /&gt;</p>\n<p>&lt;/subject&gt;</p>\n<p>&lt;encounter&gt;</p>\n<p>&lt;reference value=\"Encounter/eymC2HHWDr3EXnMapj-LyHFgF.zx2pxKAengd7SoBaRE3\" /&gt;</p>\n<p>&lt;display value=\"Office Visit\" /&gt;</p>\n<p>&lt;/encounter&gt;</p>\n<p>&lt;effectivePeriod&gt;</p>\n<p>&lt;start value=\"2022-01-17T18:30:00Z\" /&gt;</p>\n<p>&lt;/effectivePeriod&gt;</p>\n<p>&lt;valueString value=\"Peripheral IV 01/17/22 Right Hand\" /&gt;</p>\n<p>&lt;component&gt;</p>\n<p>&lt;code&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p>\n<p>&lt;code value=\"700\" /&gt;</p>\n<p>&lt;display value=\"Placement Date\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id\" /&gt;</p>\n<p>&lt;code value=\"tfWy7Iki1auoDvR7iLy6-Hg0\" /&gt;</p>\n<p>&lt;display value=\"Placement Date\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Placement Date\" /&gt;</p>\n<p>&lt;/code&gt;</p>\n<p>&lt;valueDateTime value=\"2022-01-17\" /&gt;</p>\n<p>&lt;/component&gt;</p>\n<p>&lt;component&gt;</p>\n<p>&lt;code&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p>\n<p>&lt;code value=\"701\" /&gt;</p>\n<p>&lt;display value=\"Placement Time\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id\" /&gt;</p>\n<p>&lt;code value=\"tYt55O2NKZoq4zimxxUMZ6g0\" /&gt;</p>\n<p>&lt;display value=\"Placement Time\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Placement Time\" /&gt;</p>\n<p>&lt;/code&gt;</p>\n<p>&lt;valueTime value=\"12:30:00\" /&gt;</p>\n<p>&lt;/component&gt;</p>\n<p>&lt;component&gt;</p>\n<p>&lt;code&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p>\n<p>&lt;code value=\"304820\" /&gt;</p>\n<p>&lt;display value=\"Location\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id\" /&gt;</p>\n<p>&lt;code value=\"tdl3LyfOiLi3TKexqRYe3yA0\" /&gt;</p>\n<p>&lt;display value=\"Location\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Location\" /&gt;</p>\n<p>&lt;/code&gt;</p>\n<p>&lt;valueCodeableConcept&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;code value=\"Hand\" /&gt;</p>\n<p>&lt;display value=\"Hand\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Hand\" /&gt;</p>\n<p>&lt;/valueCodeableConcept&gt;</p>\n<p>&lt;/component&gt;</p>\n<p>&lt;component&gt;</p>\n<p>&lt;code&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p>\n<p>&lt;code value=\"304830\" /&gt;</p>\n<p>&lt;display value=\"Orientation\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id\" /&gt;</p>\n<p>&lt;code value=\"tjyrYFGargmdg1i-oo7qoyw0\" /&gt;</p>\n<p>&lt;display value=\"Orientation\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Orientation\" /&gt;</p>\n<p>&lt;/code&gt;</p>\n<p>&lt;valueCodeableConcept&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;code value=\"Right\" /&gt;</p>\n<p>&lt;display value=\"Right\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Right\" /&gt;</p>\n<p>&lt;/valueCodeableConcept&gt;</p>\n<p>&lt;/component&gt;</p>\n<p>&lt;component&gt;</p>\n<p>&lt;code&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p>\n<p>&lt;code value=\"1120100473\" /&gt;</p>\n<p>&lt;display value=\"Unsuccessful Attempt Locations\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id\" /&gt;</p>\n<p>&lt;code value=\"tPj3wPdrR6Io3OcVoTfqmjg0\" /&gt;</p>\n<p>&lt;display value=\"Unsuccessful Attempt Locations\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Unsuccessful Attempt Locations\" /&gt;</p>\n<p>&lt;/code&gt;</p>\n<p>&lt;valueCodeableConcept&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;code value=\"Left wrist;Right wrist\" /&gt;</p>\n<p>&lt;display value=\"Left wrist;Right wrist\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Left wrist;Right wrist\" /&gt;</p>\n<p>&lt;/valueCodeableConcept&gt;</p>\n<p>&lt;interpretation&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.7.708368.1150\" /&gt;</p>\n<p>&lt;code value=\"SIG\" /&gt;</p>\n<p>&lt;display value=\"Significant\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;/interpretation&gt;</p>\n<p>&lt;/component&gt;</p>\n<p>&lt;/Observation&gt;</p>\n<p>&lt;/resource&gt;</p>\n<p>&lt;search&gt;</p>\n<p>&lt;mode value=\"match\" /&gt;</p>\n<p>&lt;/search&gt;</p>\n<p>&lt;/entry&gt;</p>\n<p>&lt;entry&gt;</p>\n<p>&lt;link&gt;</p>\n<p>&lt;relation value=\"self\" /&gt;</p>\n<p>&lt;url value=\"https://hostname/instance/api/FHIR/R4/Observation/ehkjaNxykIByHIGRfK.dE67Wy8U5t9uYfVbCGnje260i7MQONTfGBM9nShk5Rf0z.g.Bau7vlKK4h704ls5sNHP2HmyLqalARyCORLLS1Zsc3\" /&gt;</p>\n<p>&lt;/link&gt;</p>\n<p>&lt;fullUrl value=\"https://hostname/instance/api/FHIR/R4/Observation/ehkjaNxykIByHIGRfK.dE67Wy8U5t9uYfVbCGnje260i7MQONTfGBM9nShk5Rf0z.g.Bau7vlKK4h704ls5sNHP2HmyLqalARyCORLLS1Zsc3\" /&gt;</p>\n<p>&lt;resource&gt;</p>\n<p>&lt;Observation&gt;</p>\n<p>&lt;id value=\"ehkjaNxykIByHIGRfK.dE67Wy8U5t9uYfVbCGnje260i7MQONTfGBM9nShk5Rf0z.g.Bau7vlKK4h704ls5sNHP2HmyLqalARyCORLLS1Zsc3\" /&gt;</p>\n<p>&lt;extension url=\"http://hl7.org/fhir/StructureDefinition/observation-sequelTo\"&gt;</p>\n<p>&lt;valueReference&gt;</p>\n<p>&lt;reference value=\"Observation/eFPRBpmtzuDY7Twf3aBdgtg3\" /&gt;</p>\n<p>&lt;display value=\"Peripheral IV 01/17/22 Right Hand\" /&gt;</p>\n<p>&lt;/valueReference&gt;</p>\n<p>&lt;/extension&gt;</p>\n<p>&lt;status value=\"final\" /&gt;</p>\n<p>&lt;category&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-category\" /&gt;</p>\n<p>&lt;code value=\"LDA\" /&gt;</p>\n<p>&lt;display value=\"Line, Drains, and Airways\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Line, Drains, and Airways\" /&gt;</p>\n<p>&lt;/category&gt;</p>\n<p>&lt;category&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-category\" /&gt;</p>\n<p>&lt;code value=\"LDA-assessment\" /&gt;</p>\n<p>&lt;display value=\"Lines, Drains, and Airways Assessment\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Lines, Drains, and Airways Assessment\" /&gt;</p>\n<p>&lt;/category&gt;</p>\n<p>&lt;code&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"urn:oid:1.2.840.114350.1.13.5325.1.7.2.707679\" /&gt;</p>\n<p>&lt;code value=\"29550304840\" /&gt;</p>\n<p>&lt;display value=\"Site Assessment\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://open.epic.com/FHIR/StructureDefinition/observation-flowsheet-id\" /&gt;</p>\n<p>&lt;code value=\"tCdGNZ80BNoU0xFUxE7pFrQ0\" /&gt;</p>\n<p>&lt;display value=\"Site Assessment\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Site Assessment\" /&gt;</p>\n<p>&lt;/code&gt;</p>\n<p>&lt;subject&gt;</p>\n<p>&lt;reference value=\"Patient/eBFGq5CRApF1O-fv-r-9.G1kkDtJCFhZQm1YRU1ZAuuE3\" /&gt;</p>\n<p>&lt;display value=\"Smith, John\" /&gt;</p>\n<p>&lt;/subject&gt;</p>\n<p>&lt;encounter&gt;</p>\n<p>&lt;reference value=\"Encounter/eymC2HHWDr3EXnMapj-LyHFgF.zx2pxKAengd7SoBaRE3\" /&gt;</p>\n<p>&lt;display value=\"Office Visit\" /&gt;</p>\n<p>&lt;/encounter&gt;</p>\n<p>&lt;effectiveDateTime value=\"2022-01-17T21:24:00Z\" /&gt;</p>\n<p>&lt;issued value=\"2022-01-17T21:26:36Z\" /&gt;</p>\n<p>&lt;performer&gt;</p>\n<p>&lt;reference value=\"Practitioner/eRhB5No2Z8P6jEmZfgaqHvg3\" /&gt;</p>\n<p>&lt;display value=\"Becky Lipsitz, MD\" /&gt;</p>\n<p>&lt;/performer&gt;</p>\n<p>&lt;performer&gt;</p>\n<p>&lt;extension url=\"http://hl7.org/fhir/StructureDefinition/event-performerFunction\"&gt;</p>\n<p>&lt;valueCodeableConcept&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\" /&gt;</p>\n<p>&lt;code value=\"VRF\" /&gt;</p>\n<p>&lt;display value=\"verifier\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;/valueCodeableConcept&gt;</p>\n<p>&lt;/extension&gt;</p>\n<p>&lt;reference value=\"Practitioner/e4PZNte6MtBGVltgJ30CD7A3\" /&gt;</p>\n<p>&lt;display value=\"Mary Hale, RN\" /&gt;</p>\n<p>&lt;/performer&gt;</p>\n<p>&lt;performer&gt;</p>\n<p>&lt;extension url=\"http://hl7.org/fhir/StructureDefinition/event-performerFunction\"&gt;</p>\n<p>&lt;valueCodeableConcept&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/v3-ParticipationType\" /&gt;</p>\n<p>&lt;code value=\"ENT\" /&gt;</p>\n<p>&lt;display value=\"data entry person\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;/valueCodeableConcept&gt;</p>\n<p>&lt;/extension&gt;</p>\n<p>&lt;reference value=\"Practitioner/eB8EFBuK79tGFEZphFXeprg3\" /&gt;</p>\n<p>&lt;display value=\"Henry Bratcher, MD\" /&gt;</p>\n<p>&lt;/performer&gt;</p>\n<p>&lt;valueCodeableConcept&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;code value=\"Red;Tender\" /&gt;</p>\n<p>&lt;display value=\"Red;Tender\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;text value=\"Red;Tender\" /&gt;</p>\n<p>&lt;/valueCodeableConcept&gt;</p>\n<p>&lt;interpretation&gt;</p>\n<p>&lt;coding&gt;</p>\n<p>&lt;system value=\"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation\" /&gt;</p>\n<p>&lt;code value=\"A\" /&gt;</p>\n<p>&lt;display value=\"Abnormal\" /&gt;</p>\n<p>&lt;/coding&gt;</p>\n<p>&lt;/interpretation&gt;</p>\n<p>&lt;/Observation&gt;</p>\n<p>&lt;/resource&gt;</p>\n<p>&lt;search&gt;</p>\n<p>&lt;mode value=\"match\" /&gt;</p>\n<p>&lt;/search&gt;</p>\n<p>&lt;/entry&gt;</p>\n<p>&lt;/Bundle&gt;</p>",
+    "Remarks": null,
+    "Errors": [],
+    "ChangeLog": null,
+    "ImportSections": {},
+    "Parameters": {
+        "RequestRootType": {
+            "Id": 145173,
+            "Name": "Request",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "category": {
+                    "Id": 145175,
+                    "Name": "category",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>In November 2021 and earlier versions, use &ldquo;LDA&rdquo; to search for LDA properties on a patient.</p>\n<p>Starting in February 2022, use &ldquo;LDA&rdquo; to search for LDA properties and LDA assessments on a patient. Use &ldquo;LDA-property&rdquo; to only search for LDA properties; use &ldquo;LDA-assessment&rdquo; to only search for LDA assessments.</p>\n<p>Either this element or code must be provided, but not both.</p>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5633
+                },
+                "code": {
+                    "Id": 145176,
+                    "Name": "code",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "<p>LOINC code, CADSR code, or encoded flowsheet ID. Either this element or category must be provided, but not both. Note that the code element returns search results only for LDA properties.</p>\n<p>The code element value varies depending upon what is passed (for example, a flowsheet ID vs. a LOINC code). If using a flowsheet ID, the system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization. In the App Orchard sandbox, use urn:oid:1.2.840.114350.1.13.0.1.7.2.707679.</p>",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5634
+                },
+                "date": {
+                    "Id": 145177,
+                    "Name": "date",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "The date range for when the observation was taken. Search parameter supported starting in February 2022.",
+                    "Optional": "True",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5635
+                },
+                "patient": {
+                    "Id": 145180,
+                    "Name": "patient",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Reference to a patient resource the observation is about. Either this element or subject must be provided. If both are provided, they must match.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5638
+                },
+                "subject": {
+                    "Id": 145181,
+                    "Name": "subject",
+                    "AltName": null,
+                    "Type": "String",
+                    "Description": "Reference to a patient resource the observation is about. Either this element or subject must be provided. If both are provided, they must match.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {},
+                    "Order": 1,
+                    "TypeId": 5639
+                }
+            },
+            "Order": 0,
+            "TypeId": 5631
+        },
+        "ResponseRootType": {
+            "Id": 145182,
+            "Name": "Response",
+            "AltName": null,
+            "Type": null,
+            "Description": null,
+            "Optional": null,
+            "IsArray": false,
+            "Children": {
+                "Bundle": {
+                    "Id": 145183,
+                    "Name": "Bundle",
+                    "AltName": null,
+                    "Type": "Bundle",
+                    "Description": "Resource bundle. For more information, refer to the <a href=\"https://www.hl7.org/fhir/bundle.html\">FHIR specification</a>.",
+                    "Optional": "False",
+                    "IsArray": false,
+                    "Children": {
+                        "entry": {
+                            "Id": 145250,
+                            "Name": "entry",
+                            "AltName": null,
+                            "Type": "Entry",
+                            "Description": null,
+                            "Optional": "False",
+                            "IsArray": true,
+                            "Children": {
+                                "resource": {
+                                    "Id": 145261,
+                                    "Name": "resource",
+                                    "AltName": null,
+                                    "Type": "ResourceContainer",
+                                    "Description": null,
+                                    "Optional": "False",
+                                    "IsArray": false,
+                                    "Children": {
+                                        "Observation": {
+                                            "Id": 145262,
+                                            "Name": "Observation",
+                                            "AltName": null,
+                                            "Type": "Observation",
+                                            "Description": "An instance of the R4 Observation resource.",
+                                            "Optional": "False",
+                                            "IsArray": false,
+                                            "Children": {
+                                                "category": {
+                                                    "Id": 145398,
+                                                    "Name": "category",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "<p>The category is always \"LDA\".</p>\n<p>Starting in February 2022, this element also always returns a second category which clarifies the type of LDA data returned in the response:</p>\n<ul>\n<li>The category &ldquo;LDA-property&rdquo; is used for LDA properties, which are documented only once. For example, a nurse might insert a line and document properties such as the insertion time, the body site, and the method of insertion.</li>\n<li>The category &ldquo;LDA-assessment&rdquo; is used for LDA assessments, which are performed over time. For example, a nurse might inspect an inserted line regularly to make sure the site is clean or assess a wound to see if a new dressing should be applied.</li>\n</ul>\n<p>This element can't be modified by Observation.Update.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "code": {
+                                                    "Id": 145410,
+                                                    "Name": "code",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "<p>LOINC code, CADSR code, or encoded flowsheet ID. Either this element or category must be provided, but not both.</p>\n<p>This element can't be modified by Observation.Update.</p>\n<p>The code element value varies depending upon what is passed (for example, a flowsheet ID vs. a LOINC code). If using a flowsheet ID, the system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "component": {
+                                                    "Id": 145971,
+                                                    "Name": "component",
+                                                    "AltName": null,
+                                                    "Type": "Component",
+                                                    "Description": "Component information.",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "code": {
+                                                            "Id": 145980,
+                                                            "Name": "code",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "<p>LOINC code, CADSR code, or encoded flowsheet ID. Either this element or category must be provided, but not both.</p>\n<p>This element can't be modified by Observation.Update.</p>\n<p>The code element value varies depending upon what is passed (for example, a flowsheet ID vs. a LOINC code). If using a flowsheet ID, the system value is different between Epic organizations, and it is also different between production and non-production environments for the same organization.</p>",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 366
+                                                        },
+                                                        "interpretation": {
+                                                            "Id": 146084,
+                                                            "Name": "interpretation",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "<p>Available starting in the February 2022 version of Epic.</p>\n<p>Possible values&nbsp;include:</p>\n<ul>\n<li>&ldquo;Abnormal&rdquo; for observation values outside the reference range or expected norm</li>\n<li>&ldquo;Significant&rdquo; for observation values that a clinician has manually flagged for extra attention</li>\n</ul>",
+                                                            "Optional": "True",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 366
+                                                        },
+                                                        "valueCodeableConcept": {
+                                                            "Id": 146000,
+                                                            "Name": "valueCodeableConcept",
+                                                            "AltName": null,
+                                                            "Type": "CodeableConcept",
+                                                            "Description": "This element is populated if the data type is category or custom list. Only one of the value* elements is required.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 366
+                                                        },
+                                                        "valueDateTime": {
+                                                            "Id": 145977,
+                                                            "Name": "valueDateTime",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "This element is populated if the data type is category or custom list. Only one of the value* elements is required.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5627
+                                                        },
+                                                        "valueQuantity": {
+                                                            "Id": 145992,
+                                                            "Name": "valueQuantity",
+                                                            "AltName": null,
+                                                            "Type": "Quantity",
+                                                            "Description": "This element is populated if a value has units or the data type is numeric or a percentile. Only one of the value* elements is required.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5439
+                                                        },
+                                                        "valueString": {
+                                                            "Id": 145973,
+                                                            "Name": "valueString",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "This element is populated if a value doesn't have units or the data type is string. Only one of the value* elements is required.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5623
+                                                        },
+                                                        "valueTime": {
+                                                            "Id": 145976,
+                                                            "Name": "valueTime",
+                                                            "AltName": null,
+                                                            "Type": "String",
+                                                            "Description": "This element is populated if the data type is time. Only one of the value* elements is required.",
+                                                            "Optional": "False",
+                                                            "IsArray": false,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 5626
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 5621
+                                                },
+                                                "effectiveDateTime": {
+                                                    "Id": 145267,
+                                                    "Name": "effectiveDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>Available starting in the February 2022 version of Epic for LDA assessments. This is a required element for LDA assessment observations.</p>\n<p>The date and time the observation was taken.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5583
+                                                },
+                                                "effectivePeriod": {
+                                                    "Id": 145515,
+                                                    "Name": "effectivePeriod",
+                                                    "AltName": null,
+                                                    "Type": "Period",
+                                                    "Description": "Start instant and/or end instant of the LDA. This element is only returned with LDA properties.",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 369
+                                                },
+                                                "encounter": {
+                                                    "Id": 145484,
+                                                    "Name": "encounter",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "<p>Reference to an encounter resource.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 373
+                                                },
+                                                "interpretation": {
+                                                    "Id": 145710,
+                                                    "Name": "interpretation",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "<p>Available starting in the February 2022 version of Epic.</p>\n<p>Possible values include:</p>\n<ul>\n<li>&ldquo;Abnormal&rdquo; for observation values outside the reference range or expected norm</li>\n<li>&ldquo;Significant&rdquo; for observation values that clinician has manually flagged for extra attention</li>\n</ul>",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "issued": {
+                                                    "Id": 145269,
+                                                    "Name": "issued",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>Available starting in the February 2022 version of Epic for LDA assessments. This is a required element for LDA assessment observations.</p>\n<p>The date and time the observation was documented. This is always the current time.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5585
+                                                },
+                                                "note": {
+                                                    "Id": 145722,
+                                                    "Name": "note",
+                                                    "AltName": null,
+                                                    "Type": "Annotation",
+                                                    "Description": "<p>Available starting in the February 2022 version of Epic for LDA assessments.</p>\n<p>The comment associated with the LDA assessment observation value, if applicable.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 379
+                                                },
+                                                "performer": {
+                                                    "Id": 145587,
+                                                    "Name": "performer",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "<p>Available starting in the February 2022 version of Epic for LDA assessments. This is a required element for LDA assessment observations.</p>\n<p>The practitioner who filed the LDA assessment observation.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {
+                                                        "event-performerFunction": {
+                                                            "Id": 145592,
+                                                            "Name": "extension",
+                                                            "AltName": "event-performerFunction",
+                                                            "Type": "Extension",
+                                                            "Description": "<p>Available starting in the February 2022 version of Epic for LDA assessments.</p>\n<p>Additional practitioners associated with the LDA assessment observation value, if applicable.</p>\n<p>Possible values include:</p>\n<ul>\n<li>&ldquo;data entry person&rdquo; for practitioners who transcribed the observation into the system</li>\n<li>&ldquo;verifier&rdquo; for practitioners who cosigned the observation</li>\n</ul>",
+                                                            "Optional": "True",
+                                                            "IsArray": true,
+                                                            "Children": {},
+                                                            "Order": 10006,
+                                                            "TypeId": 348
+                                                        }
+                                                    },
+                                                    "Order": 10005,
+                                                    "TypeId": 373
+                                                },
+                                                "status": {
+                                                    "Id": 145266,
+                                                    "Name": "status",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>The status of the observation.</p>\n<p>The status is always &ldquo;final&rdquo; for LDA properties.</p>\n<p>Starting in February 2022, possible values for LDA assessments include:</p>\n<ul>\n<li>&ldquo;final&rdquo; if the data is filed at time of retrieval</li>\n<li>&ldquo;preliminary&rdquo; if the data has not yet been filed at the time of retrieval</li>\n<li>&ldquo;amended&rdquo; if the data has been modified at time of retrieval</li>\n<li>&ldquo;entered-in-error&rdquo; if the data had once existed, but has since been withdrawn at time of retrieval</li>\n</ul>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5582
+                                                },
+                                                "subject": {
+                                                    "Id": 145422,
+                                                    "Name": "subject",
+                                                    "AltName": null,
+                                                    "Type": "Reference",
+                                                    "Description": "<p>Reference to a patient resource.</p>\n<p>This element can't be modified by Observation.Update.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 373
+                                                },
+                                                "supportingInfo": {
+                                                    "Id": 562772,
+                                                    "Name": "extension",
+                                                    "AltName": "supportingInfo",
+                                                    "Type": "Extension",
+                                                    "Description": "<p>Available starting in the February 2022 version of Epic for LDA assessments.</p>\n<p>If an LDA assessment is linked to a note written by a clinician, this is a reference to the DocumentReference resource.</p>",
+                                                    "Optional": "True",
+                                                    "IsArray": true,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 348
+                                                },
+                                                "valueCodeableConcept": {
+                                                    "Id": 145626,
+                                                    "Name": "valueCodeableConcept",
+                                                    "AltName": null,
+                                                    "Type": "CodeableConcept",
+                                                    "Description": "In LDA assessments, this element is populated if the data type is category or custom list. Only one of the value* elements is required.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 366
+                                                },
+                                                "valueDateTime": {
+                                                    "Id": 145274,
+                                                    "Name": "valueDateTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "In LDA assessments, this element is populated if the data type is date. Only one of the value* elements is required.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5590
+                                                },
+                                                "valueQuantity": {
+                                                    "Id": 145618,
+                                                    "Name": "valueQuantity",
+                                                    "AltName": null,
+                                                    "Type": "Quantity",
+                                                    "Description": "In LDA assessments, this element is populated if a value has units or the data type is numeric or a percentile. Only one of the value* elements is required.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5439
+                                                },
+                                                "valueString": {
+                                                    "Id": 145270,
+                                                    "Name": "valueString",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "<p>In LDA properties, this is a required element which returns the LDA display name.</p>\n<p>In LDA assessments, this element is populated if a value doesn't have units or if the data type is string. For image rows, a comma-delimited list of external DCS IDs is required. Only one of the value* elements is required.</p>",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5586
+                                                },
+                                                "valueTime": {
+                                                    "Id": 145273,
+                                                    "Name": "valueTime",
+                                                    "AltName": null,
+                                                    "Type": "String",
+                                                    "Description": "In LDA assessments, this element is populated if the data type is time. Only one of the value* elements is required.",
+                                                    "Optional": "False",
+                                                    "IsArray": false,
+                                                    "Children": {},
+                                                    "Order": 10005,
+                                                    "TypeId": 5589
+                                                }
+                                            },
+                                            "Order": 10004,
+                                            "TypeId": 5578
+                                        }
+                                    },
+                                    "Order": 10003,
+                                    "TypeId": 360
+                                }
+                            },
+                            "Order": 10002,
+                            "TypeId": 416
+                        }
+                    },
+                    "Order": 10001,
+                    "TypeId": 405
+                }
+            },
+            "Order": 10000,
+            "TypeId": 5640
+        }
+    },
+    "Banners": [],
+    "Success": true,
+    "Message": null
+}
