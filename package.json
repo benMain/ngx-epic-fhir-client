@@ -135,8 +135,7 @@
         "@semantic-release/npm",
         {
           "npmPublish": true,
-          "pkgRoot": "dist/ngx-epic-fhir-client",
-          "tarballDir": false
+          "pkgRoot": "dist/ngx-epic-fhir-client"
         }
       ],
       [
