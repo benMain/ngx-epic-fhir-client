@@ -10,7 +10,7 @@ describe('OAuthService', () => {
     let httpService: HttpClient;
     let storageService: LocalStorageService;
     let configuration: Configuration;
-    const epicClientId = "440434-22023092";
+    const epicClientId = '440434-22023092';
 
     beforeEach(async () => {
         httpService = {
@@ -22,13 +22,13 @@ describe('OAuthService', () => {
             get: () => null,
             set: () => null,
             delete: () => null,
-        }
+        };
         configuration = {
             epicClientId,
-            redirectUri: "http://localhost:4200",
+            redirectUri: 'http://localhost:4200',
             embeddedApp: true,
-            issUrl: "https://epicproxy.et1058.epichosted.com/FHIRProxy/api/FHIR/DSTU2",
-            launchCode: "12345",
+            issUrl: 'https://epicproxy.et1058.epichosted.com/FHIRProxy/api/FHIR/DSTU2',
+            launchCode: '12345',
         } as any;
 
         await TestBed.configureTestingModule({
