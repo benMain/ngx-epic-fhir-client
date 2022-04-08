@@ -53,9 +53,10 @@ export class AppComponent implements OnInit {
     private readonly oauthService: OAuthService,
     private readonly appointmentService: AppointmentService,
     private readonly practitionerService: PractitionerService
-  ) {}
+  ) { }
   async ngOnInit() {
     const patientId = this.oauthService.oAuthToken.patient ?? '';
+    console.log(JSON.stringify(this.oauthService.oAuthToken));
     this.patient = await firstValueFrom(
       this.patientService.patientReadSTU3(patientId)
     );
@@ -76,7 +77,8 @@ export class AppComponent implements OnInit {
       physicianRef?.actor?.reference.lastIndexOf('/') + 1
     );
     console.log(practitionerId);
-    // console.log(JSON.stringify(this.patient));
+    // const practitioner = await firstValueFrom(this.practitionerService.practitionerReadSTU3(practitionerId));
+    // console.log(JSON.stringify(practitioner));
     this.voluntaryAlignmentForm.patchValue({
       firstName: this.patient.name
         ?.find((x) => x.use === 'official')
