@@ -3,8 +3,6 @@
   "description": "Angular Client For Epic Fhir Servers with Strong Types",
   "author": "Benjamin Main",
   "license": "MIT",
-  "main": "dist/ngx-epic-fhir-client/fesm2020/ngx-epic-fhir-client.mjs",
-  "types": "dist/ngx-epic-fhir-client/public-api.d.ts",
   "keywords": [
     "ng",
     "angular",
@@ -18,9 +16,6 @@
   "bugs": {
     "url": "https://github.com/benMain/ngx-epic-fhir-client/issues"
   },
-  "files": [
-    "dist/ngx-epic-fhir-client"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/benMain/ngx-epic-fhir-client.git"
@@ -140,7 +135,8 @@
         "@semantic-release/npm",
         {
           "npmPublish": true,
-          "tarballDir": "dist/ngx-epic-fhir-client"
+          "pkgRoot": "dist/ngx-epic-fhir-client",
+          "tarballDir": false
         }
       ],
       [

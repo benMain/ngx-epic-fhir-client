@@ -1,10 +1,35 @@
 {
   "name": "ngx-epic-fhir-client",
+  "description": "Angular Client For Epic Fhir Servers with Strong Types",
+  "author": "Benjamin Main",
+  "license": "MIT",
+  "keywords": [
+    "ng",
+    "angular",
+    "epic",
+    "fhir",
+    "client",
+    "smart",
+    "smart-on-fhir"
+  ],
+  "homepage": "https://github.com/benMain/ngx-epic-fhir-client",
+  "bugs": {
+    "url": "https://github.com/benMain/ngx-epic-fhir-client/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benMain/ngx-epic-fhir-client.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
   "peerDependencies": {
     "@angular/common": "^13.0.0",
     "@angular/core": "^13.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
-  }
+  },
+  "version": "1.0.0"
 }
