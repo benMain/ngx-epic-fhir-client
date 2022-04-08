@@ -140,7 +140,7 @@
         "@semantic-release/npm",
         {
           "npmPublish": true,
-          "tarballDir": "dist"
+          "tarballDir": "dist/ngx-epic-fhir-client"
         }
       ],
       [
@@ -157,7 +157,7 @@
       [
         "@semantic-release/github",
         {
-          "assets": "dist/*.tgz"
+          "assets": "dist/ngx-epic-fhir-client/*.tgz"
         }
       ]
     ]
