@@ -11,17 +11,14 @@
  */
 import { Reference } from './reference';
 
-/**
- * Treatment order information.
- */
-export interface RequestGroupR4Action { 
-    /**
-     * Treatment order display name.
-     */
-    description: string;
-    resource: Reference;
-    /**
-     * Treatment order category title.
-     */
-    title: string;
+export interface RequestGroupR4Action {
+  /**
+   * Treatment order display name.
+   */
+  description?: string;
+  resource?: Reference;
+  /**
+   * Treatment order category title.
+   */
+  title?: string;
 }

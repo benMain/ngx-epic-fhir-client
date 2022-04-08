@@ -14,9 +14,9 @@ import { BundleEntryConditionR4 } from './bundleEntryConditionR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleConditionR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryConditionR4>;
+export interface BundleConditionR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryConditionR4>;
 }

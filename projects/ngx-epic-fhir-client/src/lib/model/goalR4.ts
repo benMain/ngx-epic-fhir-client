@@ -16,24 +16,24 @@ import { Reference } from './reference';
 /**
  * A single Goal resource.
  */
-export interface GoalR4 { 
-    achievementStatus: CodeableConcept;
-    addresses: Reference;
-    category: CodeableConcept;
-    description?: CodeableConcept;
-    expressedBy: Reference;
-    /**
-     * The Goal FHIR ID.
-     */
-    id?: string;
-    /**
-     * <p>Status of the goal. Previously \"class\" in STU3. Possible values are:</p> <ul> <li>active</li> <li>complete</li> <li>cancelled</li> </ul>
-     */
-    lifecycleStatus?: string;
-    note: Annotation;
-    /**
-     * When goal pursuit begins.
-     */
-    startDate: string;
-    subject: Reference;
+export interface GoalR4 {
+  achievementStatus: CodeableConcept;
+  addresses: Array<Reference>;
+  category: Array<CodeableConcept>;
+  description?: CodeableConcept;
+  expressedBy: Reference;
+  /**
+   * The Goal FHIR ID.
+   */
+  id?: string;
+  /**
+   * <p>Status of the goal. Previously \"class\" in STU3. Possible values are:</p> <ul> <li>active</li> <li>complete</li> <li>cancelled</li> </ul>
+   */
+  lifecycleStatus?: string;
+  note: Array<Annotation>;
+  /**
+   * When goal pursuit begins.
+   */
+  startDate: string;
+  subject: Reference;
 }

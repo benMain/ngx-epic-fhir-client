@@ -14,6 +14,6 @@ import { Reference } from './reference';
 /**
  * An instance of the STU3 Schedule resource.
  */
-export interface ScheduleSTU3 { 
-    actor?: Reference;
+export interface ScheduleSTU3 {
+  actor?: Array<Reference>;
 }

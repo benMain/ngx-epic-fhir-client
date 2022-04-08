@@ -13,21 +13,21 @@
 /**
  * A Response Type
  */
-export interface DeviceSTU3Udi { 
-    /**
-     * <p>Human-readable barcode string.</p>
-     */
-    carrierHRF: string;
-    /**
-     * <p>Device identifier.</p>
-     */
-    deviceIdentifier: string;
-    /**
-     * <p>This element is always set to a value of \"unknown.\"</p>
-     */
-    entryType: string;
-    /**
-     * <p>Device name.</p>
-     */
-    name: string;
+export interface DeviceSTU3Udi {
+  /**
+   * <p>Human-readable barcode string.</p>
+   */
+  carrierHRF: string;
+  /**
+   * <p>Device identifier.</p>
+   */
+  deviceIdentifier: string;
+  /**
+   * <p>This element is always set to a value of \"unknown.\"</p>
+   */
+  entryType: string;
+  /**
+   * <p>Device name.</p>
+   */
+  name: string;
 }

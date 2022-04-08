@@ -12,14 +12,11 @@
 import { CodeableConcept } from './codeableConcept';
 import { Reference } from './reference';
 
-/**
- * <p>An ingredient in the medication.</p>
- */
-export interface MedicationSTU3Ingredient { 
-    /**
-     * <p>For medications that have a total volume or are IMS mixtures, this is the quantity of an ingredient present compared to the overall quantity of the mixture.</p>
-     */
-    amount: any;
-    itemCodeableConcept?: CodeableConcept;
-    itemReference?: Reference;
+export interface MedicationSTU3Ingredient {
+  /**
+   * <p>For medications that have a total volume or are IMS mixtures, this is the quantity of an ingredient present compared to the overall quantity of the mixture.</p>
+   */
+  amount?: any;
+  itemCodeableConcept?: CodeableConcept;
+  itemReference?: Reference;
 }

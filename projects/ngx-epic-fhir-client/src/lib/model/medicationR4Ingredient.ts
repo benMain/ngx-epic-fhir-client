@@ -12,14 +12,11 @@
 import { CodeableConcept } from './codeableConcept';
 import { Reference } from './reference';
 
-/**
- * An ingredient in the medication.
- */
-export interface MedicationR4Ingredient { 
-    itemCodeableConcept: CodeableConcept;
-    itemReference: Reference;
-    /**
-     * <p>The quantity of an ingredient present if it is a single-ingredient medication.</p>
-     */
-    strength: any;
+export interface MedicationR4Ingredient {
+  itemCodeableConcept?: CodeableConcept;
+  itemReference?: Reference;
+  /**
+   * <p>The quantity of an ingredient present if it is a single-ingredient medication.</p>
+   */
+  strength?: any;
 }

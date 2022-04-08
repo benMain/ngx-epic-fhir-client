@@ -16,24 +16,27 @@ import { ResearchStudyR4Arm } from './researchStudyR4Arm';
 /**
  * A Response Type
  */
-export interface ResearchStudyR4 { 
-    arm: ResearchStudyR4Arm;
-    /**
-     * <p>Available starting in the August 2021 Epic version. <p>What this study is doing. 
-     */
-    description: string;
-    /**
-     * The ResearchStudy FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    principalInvestigator: Reference;
-    /**
-     * The current state of the study.
-     */
-    status?: string;
-    /**
-     * The name of the study.
-     */
-    title: string;
+export interface ResearchStudyR4 {
+  /**
+   * <p>Available starting in the August 2021 Epic version. <p>A group or subgroup of a research study.
+   */
+  arm: Array<ResearchStudyR4Arm>;
+  /**
+   * <p>Available starting in the August 2021 Epic version. <p>What this study is doing.
+   */
+  description: string;
+  /**
+   * The ResearchStudy FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  principalInvestigator: Reference;
+  /**
+   * The current state of the study.
+   */
+  status?: string;
+  /**
+   * The name of the study.
+   */
+  title: string;
 }

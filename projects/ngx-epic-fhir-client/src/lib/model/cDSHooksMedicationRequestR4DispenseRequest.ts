@@ -15,19 +15,19 @@ import { Reference } from './reference';
 /**
  * Parameter group containing information about the dispense.
  */
-export interface CDSHooksMedicationRequestR4DispenseRequest { 
-    /**
-     * Number of days supply is expected to last.
-     */
-    expectedSupplyDuration?: any;
-    /**
-     * Value for number of refills allowed for this medication.
-     */
-    numberOfRepeatsAllowed: any;
-    performer?: Reference;
-    /**
-     * Dispense quantity for the medication.
-     */
-    quantity?: any;
-    validityPeriod?: Period;
+export interface CDSHooksMedicationRequestR4DispenseRequest {
+  /**
+   * Number of days supply is expected to last.
+   */
+  expectedSupplyDuration?: any;
+  /**
+   * Value for number of refills allowed for this medication.
+   */
+  numberOfRepeatsAllowed: any;
+  performer?: Reference;
+  /**
+   * Dispense quantity for the medication.
+   */
+  quantity?: any;
+  validityPeriod?: Period;
 }

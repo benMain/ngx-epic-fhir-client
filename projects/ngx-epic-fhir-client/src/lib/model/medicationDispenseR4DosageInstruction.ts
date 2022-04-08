@@ -10,23 +10,23 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { MedicationDispenseR4DosageInstructionDoseAndRate } from './medicationDispenseR4DosageInstructionDoseAndRate';
-import { MedicationDispenseR4DosageInstructionTiming } from './medicationDispenseR4DosageInstructionTiming';
+import { MedicationDispenseR4DoseAndRate } from './medicationDispenseR4DoseAndRate';
+import { MedicationDispenseR4Timing } from './medicationDispenseR4Timing';
 
-/**
- * Dosage instruction details.
- */
-export interface MedicationDispenseR4DosageInstruction { 
-    additionalInstruction?: CodeableConcept;
-    /**
-     * Whether the frequency is PRN.
-     */
-    asNeededBoolean: boolean;
-    doseAndRate?: MedicationDispenseR4DosageInstructionDoseAndRate;
-    route?: CodeableConcept;
-    /**
-     * The medication instructions.
-     */
-    text?: string;
-    timing?: MedicationDispenseR4DosageInstructionTiming;
+export interface MedicationDispenseR4DosageInstruction {
+  additionalInstruction?: Array<CodeableConcept>;
+  /**
+   * Whether the frequency is PRN.
+   */
+  asNeededBoolean?: boolean;
+  /**
+   * Information about the ranges and quantities of doses and rates.
+   */
+  doseAndRate?: Array<MedicationDispenseR4DoseAndRate>;
+  route?: CodeableConcept;
+  /**
+   * The medication instructions.
+   */
+  text?: string;
+  timing?: MedicationDispenseR4Timing;
 }

@@ -14,6 +14,6 @@ import { CommunicationR4 } from './communicationR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryCommunicationR4 { 
-    resource?: CommunicationR4;
+export interface BundleEntryCommunicationR4 {
+  resource?: CommunicationR4;
 }

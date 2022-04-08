@@ -18,24 +18,27 @@ import { Reference } from './reference';
 /**
  * An instance of the DSTU2 MedicationOrder resource.
  */
-export interface MedicationOrderDSTU2 { 
-    /**
-     * The date (and perhaps time) when the prescription was written.
-     */
-    dateWritten: string;
-    dispenseRequest?: MedicationOrderDSTU2DispenseRequest;
-    dosageInstruction?: MedicationOrderDSTU2DosageInstruction;
-    identifier?: Identifier;
-    medicationReference?: Reference;
-    /**
-     * Extra information about the prescription that could not be conveyed by the other attributes.
-     */
-    note?: string;
-    patient?: Reference;
-    prescriber?: Reference;
-    /**
-     * A code specifying the state of the prescribing event. Describes the lifecycle of the prescription. For admitted patients all outpatient medications will return a status of 'on-hold'. During discharge these outpatient medications may revert back to 'active' or be discontinued based on clinical outcomes of the inpatient stay.
-     */
-    status?: string;
-    substitution?: MedicationOrderDSTU2Substitution;
+export interface MedicationOrderDSTU2 {
+  /**
+   * The date (and perhaps time) when the prescription was written.
+   */
+  dateWritten: string;
+  dispenseRequest?: MedicationOrderDSTU2DispenseRequest;
+  /**
+   * Indicates how the medication is to be used by the patient.
+   */
+  dosageInstruction?: Array<MedicationOrderDSTU2DosageInstruction>;
+  identifier?: Array<Identifier>;
+  medicationReference?: Reference;
+  /**
+   * Extra information about the prescription that could not be conveyed by the other attributes.
+   */
+  note?: string;
+  patient?: Reference;
+  prescriber?: Reference;
+  /**
+   * A code specifying the state of the prescribing event. Describes the lifecycle of the prescription. For admitted patients all outpatient medications will return a status of 'on-hold'. During discharge these outpatient medications may revert back to 'active' or be discontinued based on clinical outcomes of the inpatient stay.
+   */
+  status?: string;
+  substitution?: MedicationOrderDSTU2Substitution;
 }

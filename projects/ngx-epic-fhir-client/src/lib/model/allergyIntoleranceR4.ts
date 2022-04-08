@@ -18,29 +18,32 @@ import { Reference } from './reference';
 /**
  * A single AllergyIntollerance resource.
  */
-export interface AllergyIntoleranceR4 { 
-    /**
-     * <p>The category of the allergy.</p> <p>The following default values are supported, but additional values may be configured by each Epic organization:</p> <ul> <li>food <li>medication <li>environment <li>biologic </ul> <p>Starting in the May 2021 version of Epic, multiple category values can be returned in this element.</p>
-     */
-    category?: string;
-    clinicalStatus?: CodeableConcept;
-    code: CodeableConcept;
-    /**
-     * Refers to the risk of clinical harm of a reaction to the substance.
-     */
-    criticality: string;
-    /**
-     * The AllergyIntolerance FHIR ID.
-     */
-    id?: string;
-    note: Annotation;
-    onsetPeriod: Period;
-    patient: Reference;
-    reaction?: AllergyIntoleranceR4Reaction;
-    /**
-     * The date the allergy was recorded in Epic. Called \"assertedDate\" in STU3.
-     */
-    recordedDate?: string;
-    recorder: Reference;
-    verificationStatus?: CodeableConcept;
+export interface AllergyIntoleranceR4 {
+  /**
+   * <p>The category of the allergy.</p> <p>The following default values are supported, but additional values may be configured by each Epic organization:</p> <ul> <li>food <li>medication <li>environment <li>biologic </ul> <p>Starting in the May 2021 version of Epic, multiple category values can be returned in this element.</p>
+   */
+  category?: string;
+  clinicalStatus?: CodeableConcept;
+  code: CodeableConcept;
+  /**
+   * Refers to the risk of clinical harm of a reaction to the substance.
+   */
+  criticality: string;
+  /**
+   * The AllergyIntolerance FHIR ID.
+   */
+  id?: string;
+  note: Array<Annotation>;
+  onsetPeriod: Period;
+  patient: Reference;
+  /**
+   * A Response Type
+   */
+  reaction?: Array<AllergyIntoleranceR4Reaction>;
+  /**
+   * The date the allergy was recorded in Epic. Called \"assertedDate\" in STU3.
+   */
+  recordedDate?: string;
+  recorder: Reference;
+  verificationStatus?: CodeableConcept;
 }

@@ -14,9 +14,9 @@ import { BundleEntryAppointmentSTU3 } from './bundleEntryAppointmentSTU3';
 /**
  * Contains a collection of resources.
  */
-export interface BundleAppointmentSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryAppointmentSTU3>;
+export interface BundleAppointmentSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryAppointmentSTU3>;
 }

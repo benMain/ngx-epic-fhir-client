@@ -10,38 +10,35 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { MedicationStatementSTU3DosageTiming } from './medicationStatementSTU3DosageTiming';
+import { MedicationStatementSTU3Timing } from './medicationStatementSTU3Timing';
 
-/**
- * The value and unit of the dosage.
- */
-export interface MedicationStatementSTU3Dosage { 
-    additionalInstruction: CodeableConcept;
-    /**
-     * True if taken as needed (PRN). False otherwise.
-     */
-    asNeededBoolean: boolean;
-    /**
-     * Amount of medication per dose. The amount of therapeutic or other substance given at one administration event.
-     */
-    doseQuantity?: any;
-    method?: CodeableConcept;
-    /**
-     * <p>The patient instructions for the prescription.</p> <p>Starting in February 2022 and in November 2021 by special update, the patient-reported sig is returned as well.</p>
-     */
-    patientInstruction?: string;
-    /**
-     * <p>Amount of medication per unit of time. Used when the rate is a discrete value.</p> <p>Available starting in February 2022 and in November 2021 by special update.</p>
-     */
-    rateQuantity: any;
-    /**
-     * <p>Amount of medication per unit of time. Used when the rate is a range.</p> <p>Available starting in February 2022 and in November 2021 by special update.</p>
-     */
-    rateRange: any;
-    route?: CodeableConcept;
-    /**
-     * The patient instructions for the prescription.
-     */
-    text?: string;
-    timing?: MedicationStatementSTU3DosageTiming;
+export interface MedicationStatementSTU3Dosage {
+  additionalInstruction?: Array<CodeableConcept>;
+  /**
+   * True if taken as needed (PRN). False otherwise.
+   */
+  asNeededBoolean?: boolean;
+  /**
+   * Amount of medication per dose. The amount of therapeutic or other substance given at one administration event.
+   */
+  doseQuantity?: any;
+  method?: CodeableConcept;
+  /**
+   * <p>The patient instructions for the prescription.</p> <p>Starting in February 2022 and in November 2021 by special update, the patient-reported sig is returned as well.</p>
+   */
+  patientInstruction?: string;
+  /**
+   * <p>Amount of medication per unit of time. Used when the rate is a discrete value.</p> <p>Available starting in February 2022 and in November 2021 by special update.</p>
+   */
+  rateQuantity?: any;
+  /**
+   * <p>Amount of medication per unit of time. Used when the rate is a range.</p> <p>Available starting in February 2022 and in November 2021 by special update.</p>
+   */
+  rateRange?: any;
+  route?: CodeableConcept;
+  /**
+   * The patient instructions for the prescription.
+   */
+  text?: string;
+  timing?: MedicationStatementSTU3Timing;
 }

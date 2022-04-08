@@ -16,25 +16,28 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 List FHIR resource.
  */
-export interface ListR4 { 
-    code?: CodeableConcept;
-    emptyReason: CodeableConcept;
-    entry?: ListR4Entry;
-    /**
-     * The encoded list ID.
-     */
-    id?: string;
-    /**
-     * The processing mode that applies to this list. Always \"working\".
-     */
-    mode?: string;
-    /**
-     * Status of the problem list. Always \"current\" because each list represents only the patient’s current problems.  
-     */
-    status?: string;
-    subject?: Reference;
-    /**
-     * The title representing this entity. Always “Problem List”.
-     */
-    title?: string;
+export interface ListR4 {
+  code?: CodeableConcept;
+  emptyReason: CodeableConcept;
+  /**
+   * Each entry is a BackboneElement with the \"item\" property populated with a reference to the Condition resource and the \"display\" property populated with the problem name.
+   */
+  entry?: Array<ListR4Entry>;
+  /**
+   * The encoded list ID.
+   */
+  id?: string;
+  /**
+   * The processing mode that applies to this list. Always \"working\".
+   */
+  mode?: string;
+  /**
+   * Status of the problem list. Always \"current\" because each list represents only the patient’s current problems.
+   */
+  status?: string;
+  subject?: Reference;
+  /**
+   * The title representing this entity. Always “Problem List”.
+   */
+  title?: string;
 }

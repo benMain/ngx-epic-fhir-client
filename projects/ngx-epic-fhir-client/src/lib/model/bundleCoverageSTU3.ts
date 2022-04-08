@@ -14,9 +14,9 @@ import { BundleEntryCoverageSTU3 } from './bundleEntryCoverageSTU3';
 /**
  * Contains a collection of resources.
  */
-export interface BundleCoverageSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryCoverageSTU3>;
+export interface BundleCoverageSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryCoverageSTU3>;
 }

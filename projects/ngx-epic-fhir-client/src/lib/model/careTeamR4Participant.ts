@@ -13,11 +13,8 @@ import { CodeableConcept } from './codeableConcept';
 import { Period } from './period';
 import { Reference } from './reference';
 
-/**
- * <p>A participant in the care team. <p>In scenarios where a provider on the care team has multiple specialties, this service returns one participant element for each unique combination of provider and specialty. For example, if a provider is listed on the care team twice, once with a specialty of \"Radiology\" and once with a specialty of \"Behavioral Health\", there will be two participant elements returned by this resource. They will have the same member reference but will have different roles.
- */
-export interface CareTeamR4Participant { 
-    member?: Reference;
-    period?: Period;
-    role?: CodeableConcept;
+export interface CareTeamR4Participant {
+  member?: Reference;
+  period?: Period;
+  role?: Array<CodeableConcept>;
 }

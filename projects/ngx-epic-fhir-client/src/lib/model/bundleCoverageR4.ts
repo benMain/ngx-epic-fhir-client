@@ -14,9 +14,9 @@ import { BundleEntryCoverageR4 } from './bundleEntryCoverageR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleCoverageR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryCoverageR4>;
+export interface BundleCoverageR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryCoverageR4>;
 }

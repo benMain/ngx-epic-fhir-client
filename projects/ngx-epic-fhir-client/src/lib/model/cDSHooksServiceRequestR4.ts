@@ -17,36 +17,36 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 ServiceRequest resource.
  */
-export interface CDSHooksServiceRequestR4 { 
-    /**
-     * If set to true, indicates that the order is only performed when needed within the specified schedule.
-     */
-    asNeededBoolean: boolean;
-    code: CodeableConcept;
-    encounter: Reference;
-    /**
-     * FHIR ServiceRequest ID.
-     */
-    id?: string;
-    /**
-     * <p>The intent code. Epic supported values include:</p> <ul> <li>order</li> </ul>
-     */
-    intent?: string;
-    extension: Extension;
-    note: Annotation;
-    /**
-     * This event element is populated for auto-released orders.
-     */
-    occurrenceTiming: any;
-    /**
-     * The priority. The value returned here depends on custom mapping configuration completed by the Epic organization. 
-     */
-    priority: string;
-    reasonCode: CodeableConcept;
-    requester: Reference;
-    /**
-     * <p>The status of the request. Supported values include:</p> <ul> <li>draft</li> </ul>
-     */
-    status?: string;
-    subject?: Reference;
+export interface CDSHooksServiceRequestR4 {
+  /**
+   * If set to true, indicates that the order is only performed when needed within the specified schedule.
+   */
+  asNeededBoolean: boolean;
+  code: CodeableConcept;
+  encounter: Reference;
+  /**
+   * FHIR ServiceRequest ID.
+   */
+  id?: string;
+  /**
+   * <p>The intent code. Epic supported values include:</p> <ul> <li>order</li> </ul>
+   */
+  intent?: string;
+  extension: Array<Extension>;
+  note: Array<Annotation>;
+  /**
+   * This event element is populated for auto-released orders.
+   */
+  occurrenceTiming: any;
+  /**
+   * The priority. The value returned here depends on custom mapping configuration completed by the Epic organization.
+   */
+  priority: string;
+  reasonCode: Array<CodeableConcept>;
+  requester: Reference;
+  /**
+   * <p>The status of the request. Supported values include:</p> <ul> <li>draft</li> </ul>
+   */
+  status?: string;
+  subject?: Reference;
 }

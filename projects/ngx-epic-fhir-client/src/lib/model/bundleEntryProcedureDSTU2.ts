@@ -14,6 +14,6 @@ import { ProcedureDSTU2 } from './procedureDSTU2';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryProcedureDSTU2 { 
-    resource?: ProcedureDSTU2;
+export interface BundleEntryProcedureDSTU2 {
+  resource?: ProcedureDSTU2;
 }

@@ -13,17 +13,17 @@
 /**
  * A Response Type
  */
-export interface BinarySTU3 { 
-    /**
-     * The note or document content as a base64-encoded value.
-     */
-    content?: string;
-    /**
-     * This is always \"application/pdf\" for radiology result data.
-     */
-    contentType?: string;
-    /**
-     * The Binary FHIR ID.
-     */
-    id?: string;
+export interface BinarySTU3 {
+  /**
+   * The note or document content as a base64-encoded value.
+   */
+  content?: string;
+  /**
+   * This is always \"application/pdf\" for radiology result data.
+   */
+  contentType?: string;
+  /**
+   * The Binary FHIR ID.
+   */
+  id?: string;
 }

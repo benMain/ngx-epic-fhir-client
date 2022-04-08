@@ -14,6 +14,6 @@ import { DocumentReferenceDSTU2 } from './documentReferenceDSTU2';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryDocumentReferenceDSTU2 { 
-    resource?: DocumentReferenceDSTU2;
+export interface BundleEntryDocumentReferenceDSTU2 {
+  resource?: DocumentReferenceDSTU2;
 }

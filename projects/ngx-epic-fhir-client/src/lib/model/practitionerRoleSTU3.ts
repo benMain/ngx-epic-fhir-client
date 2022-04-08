@@ -16,18 +16,18 @@ import { Reference } from './reference';
 /**
  * An instance of the STU3 PractitionerRole resource.
  */
-export interface PractitionerRoleSTU3 { 
-    /**
-     * Whether the unique address is active.
-     */
-    active: boolean;
-    code: CodeableConcept;
-    location: Reference;
-    meta: PractitionerRoleSTU3Meta;
-    practitioner: Reference;
-    specialty: CodeableConcept;
-    /**
-     * Contact information specific to the unique address.
-     */
-    telecom: any;
+export interface PractitionerRoleSTU3 {
+  /**
+   * Whether the unique address is active.
+   */
+  active: boolean;
+  code: Array<CodeableConcept>;
+  location: Array<Reference>;
+  meta: PractitionerRoleSTU3Meta;
+  practitioner: Reference;
+  specialty: Array<CodeableConcept>;
+  /**
+   * Contact information specific to the unique address.
+   */
+  telecom: Array<any>;
 }

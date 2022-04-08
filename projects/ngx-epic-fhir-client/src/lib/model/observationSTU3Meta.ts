@@ -13,9 +13,9 @@
 /**
  * The document metadata.
  */
-export interface ObservationSTU3Meta { 
-    /**
-     * Available in Netherlands environments only. This element shows that this API conforms to the profile connected to one of the following canonical urls: • http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure • http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight • http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight
-     */
-    profile: string;
+export interface ObservationSTU3Meta {
+  /**
+   * Available in Netherlands environments only. This element shows that this API conforms to the profile connected to one of the following canonical urls: • http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure • http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight • http://nictiz.nl/fhir/StructureDefinition/zib-BodyHeight
+   */
+  profile: string;
 }

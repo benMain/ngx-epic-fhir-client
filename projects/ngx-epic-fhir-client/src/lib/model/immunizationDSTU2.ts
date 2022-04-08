@@ -19,44 +19,44 @@ import { Reference } from './reference';
 /**
  * A single Immunization FHIR resource.
  */
-export interface ImmunizationDSTU2 { 
-    /**
-     * Vaccination administration date.
-     */
-    date: string;
-    doseQuantity: ImmunizationDSTU2DoseQuantity;
-    /**
-     * Vaccine expiration date.
-     */
-    expirationDate: string;
-    explanation: ImmunizationDSTU2Explanation;
-    /**
-     * Immunization FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    /**
-     * Vaccine lot number.
-     */
-    lotNumber: string;
-    manufacturer: Reference;
-    note: Annotation;
-    patient?: Reference;
-    performer: Reference;
-    /**
-     * Indicates a self-reported record.
-     */
-    reported: boolean;
-    requester: Reference;
-    route: CodeableConcept;
-    site: CodeableConcept;
-    /**
-     * <p>Status of the Immunization. Possible values are:</p> <ul> <li>completed</li> <li>entered-in-error</li> <li>in-progress</li> <li>on-hold</li> </ul>
-     */
-    status?: string;
-    vaccineCode?: CodeableConcept;
-    /**
-     * Flag for whether the immunization was given.
-     */
-    wasNotGiven?: boolean;
+export interface ImmunizationDSTU2 {
+  /**
+   * Vaccination administration date.
+   */
+  date: string;
+  doseQuantity: ImmunizationDSTU2DoseQuantity;
+  /**
+   * Vaccine expiration date.
+   */
+  expirationDate: string;
+  explanation: ImmunizationDSTU2Explanation;
+  /**
+   * Immunization FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  /**
+   * Vaccine lot number.
+   */
+  lotNumber: string;
+  manufacturer: Reference;
+  note: Array<Annotation>;
+  patient?: Reference;
+  performer: Reference;
+  /**
+   * Indicates a self-reported record.
+   */
+  reported: boolean;
+  requester: Reference;
+  route: CodeableConcept;
+  site: CodeableConcept;
+  /**
+   * <p>Status of the Immunization. Possible values are:</p> <ul> <li>completed</li> <li>entered-in-error</li> <li>in-progress</li> <li>on-hold</li> </ul>
+   */
+  status?: string;
+  vaccineCode?: CodeableConcept;
+  /**
+   * Flag for whether the immunization was given.
+   */
+  wasNotGiven?: boolean;
 }

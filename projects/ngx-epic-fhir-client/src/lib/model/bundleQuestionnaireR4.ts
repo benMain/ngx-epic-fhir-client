@@ -14,9 +14,9 @@ import { BundleEntryQuestionnaireR4 } from './bundleEntryQuestionnaireR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleQuestionnaireR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryQuestionnaireR4>;
+export interface BundleQuestionnaireR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryQuestionnaireR4>;
 }

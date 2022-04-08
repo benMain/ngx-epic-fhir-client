@@ -18,38 +18,38 @@ import { Reference } from './reference';
 /**
  * An instance of the STU3 Location resource.
  */
-export interface LocationSTU3 { 
-    address: Address;
-    /**
-     * A list of alternative names that the location is known as or was known as in the past.
-     */
-    alias: string;
-    /**
-     * Additional details about the location that can be shown to further identify the location.
-     */
-    description: string;
-    extension: Extension;
-    /**
-     * The Location FHIR ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    /**
-     * Epic supports only an instance value in this element. Instance is a specific, findable location.
-     */
-    mode: string;
-    /**
-     * The name of the location.
-     */
-    name: string;
-    partOf: Reference;
-    /**
-     * The active status of a location (active, inactive, etc.).
-     */
-    status: string;
-    /**
-     * The contact details of the location.
-     */
-    telecom: any;
-    type: CodeableConcept;
+export interface LocationSTU3 {
+  address: Address;
+  /**
+   * A list of alternative names that the location is known as or was known as in the past.
+   */
+  alias: string;
+  /**
+   * Additional details about the location that can be shown to further identify the location.
+   */
+  description: string;
+  extension: Array<Extension>;
+  /**
+   * The Location FHIR ID.
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  /**
+   * Epic supports only an instance value in this element. Instance is a specific, findable location.
+   */
+  mode: string;
+  /**
+   * The name of the location.
+   */
+  name: string;
+  partOf: Reference;
+  /**
+   * The active status of a location (active, inactive, etc.).
+   */
+  status: string;
+  /**
+   * The contact details of the location.
+   */
+  telecom: Array<any>;
+  type: CodeableConcept;
 }

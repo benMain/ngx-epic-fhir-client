@@ -14,9 +14,9 @@ import { BundleEntryAdverseEventR4 } from './bundleEntryAdverseEventR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleAdverseEventR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryAdverseEventR4>;
+export interface BundleAdverseEventR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryAdverseEventR4>;
 }

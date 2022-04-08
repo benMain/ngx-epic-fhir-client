@@ -14,6 +14,6 @@ import { GoalDSTU2 } from './goalDSTU2';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryGoalDSTU2 { 
-    resource?: GoalDSTU2;
+export interface BundleEntryGoalDSTU2 {
+  resource?: GoalDSTU2;
 }

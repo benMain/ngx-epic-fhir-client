@@ -14,6 +14,6 @@ import { SubstanceR4 } from './substanceR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntrySubstanceR4 { 
-    resource?: SubstanceR4;
+export interface BundleEntrySubstanceR4 {
+  resource?: SubstanceR4;
 }

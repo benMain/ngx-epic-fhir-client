@@ -10,20 +10,17 @@
  * Do not edit the class manually.
  */
 
-/**
- * Array of codes in the ValueSet.
- */
-export interface ValueSetR4ExpansionContains { 
-    /**
-     * Code value.
-     */
-    code?: string;
-    /**
-     * User display value associated with the code.
-     */
-    display: string;
-    /**
-     * System value for the code.
-     */
-    system: string;
+export interface ValueSetR4ExpansionContains {
+  /**
+   * Code value.
+   */
+  code?: string;
+  /**
+   * User display value associated with the code.
+   */
+  display?: string;
+  /**
+   * System value for the code.
+   */
+  system?: string;
 }

@@ -14,6 +14,6 @@ import { SpecimenR4 } from './specimenR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntrySpecimenR4 { 
-    resource?: SpecimenR4;
+export interface BundleEntrySpecimenR4 {
+  resource?: SpecimenR4;
 }

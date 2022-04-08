@@ -12,10 +12,7 @@
 import { Period } from './period';
 import { Reference } from './reference';
 
-/**
- * Can return a department, location, hospital room, or bed. Department and location are determined dynamically depending on a variety of factors. 
- */
-export interface EncounterR4Location { 
-    location?: Reference;
-    period: Period;
+export interface EncounterR4Location {
+  location?: Reference;
+  period?: Period;
 }

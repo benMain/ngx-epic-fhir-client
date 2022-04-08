@@ -18,29 +18,29 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface DeviceRequestR4 { 
-    /**
-     * The date on which a request was made, or the day of the order that contains it.
-     */
-    authoredOn: string;
-    basedOn: Reference;
-    codeCodeableConcept?: CodeableConcept;
-    encounter: Reference;
-    identifier: Identifier;
-    /**
-     * <p>The intent for this request. Can be one of the following:</p> <ul> <li>order</li> <li>proposal</li> <li>plan</li> </ul>
-     */
-    intent?: string;
-    occurrencePeriod: Period;
-    extension: Extension;
-    /**
-     * <p>The priority of a request. Can be one of the following:</p> <ul> <li>routine</li> <li>urgent</li> <li>asap</li> <li>stat</li> </ul>
-     */
-    priority: string;
-    requester: Reference;
-    /**
-     * <p>The status of a request. Can be one of the following:</p> <ul> <li>active</li> <li>completed</li> <li>draft</li> <li>cancelled</li> <li>entered-in-error</li> <li>unknown</li> </ul>
-     */
-    status: string;
-    subject?: Reference;
+export interface DeviceRequestR4 {
+  /**
+   * The date on which a request was made, or the day of the order that contains it.
+   */
+  authoredOn: string;
+  basedOn: Array<Reference>;
+  codeCodeableConcept?: CodeableConcept;
+  encounter: Reference;
+  identifier: Array<Identifier>;
+  /**
+   * <p>The intent for this request. Can be one of the following:</p> <ul> <li>order</li> <li>proposal</li> <li>plan</li> </ul>
+   */
+  intent?: string;
+  occurrencePeriod: Period;
+  extension: Array<Extension>;
+  /**
+   * <p>The priority of a request. Can be one of the following:</p> <ul> <li>routine</li> <li>urgent</li> <li>asap</li> <li>stat</li> </ul>
+   */
+  priority: string;
+  requester: Reference;
+  /**
+   * <p>The status of a request. Can be one of the following:</p> <ul> <li>active</li> <li>completed</li> <li>draft</li> <li>cancelled</li> <li>entered-in-error</li> <li>unknown</li> </ul>
+   */
+  status: string;
+  subject?: Reference;
 }

@@ -14,9 +14,9 @@ import { BundleEntryMedicationRequestR4 } from './bundleEntryMedicationRequestR4
 /**
  * Contains a collection of resources.
  */
-export interface BundleMedicationRequestR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryMedicationRequestR4>;
+export interface BundleMedicationRequestR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryMedicationRequestR4>;
 }

@@ -12,29 +12,26 @@
 import { CodeableConcept } from './codeableConcept';
 import { Period } from './period';
 
-/**
- * Service lines.
- */
-export interface ExplanationOfBenefitR4Item { 
-    /**
-     * Diagnosis numbers.
-     */
-    diagnosisSequence: any;
-    locationCodeableConcept?: CodeableConcept;
-    modifier?: CodeableConcept;
-    productOrService?: CodeableConcept;
-    /**
-     * Quantity
-     */
-    quantity?: any;
-    revenue?: CodeableConcept;
-    /**
-     * The sequence ID.
-     */
-    sequence: any;
-    /**
-     * The service date.
-     */
-    servicedDate?: string;
-    servicedPeriod?: Period;
+export interface ExplanationOfBenefitR4Item {
+  /**
+   * Diagnosis numbers.
+   */
+  diagnosisSequence?: any;
+  locationCodeableConcept?: CodeableConcept;
+  modifier?: Array<CodeableConcept>;
+  productOrService?: CodeableConcept;
+  /**
+   * Quantity
+   */
+  quantity?: any;
+  revenue?: CodeableConcept;
+  /**
+   * The sequence ID.
+   */
+  sequence?: any;
+  /**
+   * The service date.
+   */
+  servicedDate?: string;
+  servicedPeriod?: Period;
 }

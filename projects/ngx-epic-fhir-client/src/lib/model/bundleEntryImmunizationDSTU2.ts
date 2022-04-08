@@ -14,6 +14,6 @@ import { ImmunizationDSTU2 } from './immunizationDSTU2';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryImmunizationDSTU2 { 
-    resource?: ImmunizationDSTU2;
+export interface BundleEntryImmunizationDSTU2 {
+  resource?: ImmunizationDSTU2;
 }

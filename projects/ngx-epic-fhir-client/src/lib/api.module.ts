@@ -1,14 +1,18 @@
-import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core';
-import { Configuration } from './configuration';
+import {
+  NgModule,
+  ModuleWithProviders,
+  SkipSelf,
+  Optional,
+  APP_INITIALIZER,
+} from '@angular/core';
+import { Configuration, ConfigurationParameters } from './configuration';
 import { HttpClient } from '@angular/common/http';
-
 
 import { AdverseEventService } from './api/adverseEvent.service';
 import { AllergyIntoleranceService } from './api/allergyIntolerance.service';
 import { AppointmentService } from './api/appointment.service';
 import { BinaryService } from './api/binary.service';
 import { BodyStructureService } from './api/bodyStructure.service';
-import { BulkDataStatusRequestService } from './api/bulkDataStatusRequest.service';
 import { CarePlanService } from './api/carePlan.service';
 import { CareTeamService } from './api/careTeam.service';
 import { CommunicationService } from './api/communication.service';
@@ -155,189 +159,228 @@ import { UpdateLDAWR4Service } from './api/updateLDAWR4.service';
 import { UpdateLDAWSTU3Service } from './api/updateLDAWSTU3.service';
 import { ValueSetService } from './api/valueSet.service';
 import { OAuthService } from './api/oauth.service';
-import { RUN_AUTH_FLOW } from './variables';
-import { OAuthCompletionService } from './api/oauthCompletion.service';
+import { appInitializerFactory } from './app-initializer';
+import { LocalStorageService } from './api';
 
 @NgModule({
-    imports: [],
-    declarations: [],
-    exports: [],
-    providers: [
-        OAuthService,
-        {
-            provide: RUN_AUTH_FLOW,
-            useFactory: async (service: OAuthService) => await service.checkRunAuthWorkflow(),
-            deps: [OAuthService],
-        },
-        OAuthCompletionService,
-        AdverseEventService,
-        AllergyIntoleranceService,
-        AppointmentService,
-        BinaryService,
-        BodyStructureService,
-        BulkDataStatusRequestService,
-        CarePlanService,
-        CareTeamService,
-        CommunicationService,
-        ConditionService,
-        ConsentService,
-        CoverageService,
-        CreateClinicalNotesSTU3Service,
-        CreateCommunityResourceR4Service,
-        CreatePatientEnteredQuestionnairesR4Service,
-        CreatePatientSTU3Service,
-        CreateProblemsR4Service,
-        CreateProblemsSTU3Service,
-        CreateR4Service,
-        CreateSTU3Service,
-        CreateVitalsR4Service,
-        CreateVitalsSTU3Service,
-        DeviceService,
-        DeviceRequestService,
-        DeviceUseStatementService,
-        DiagnosticReportService,
-        DocumentReferenceService,
-        EncounterService,
-        EndpointService,
-        EpisodeOfCareService,
-        ExpandR4Service,
-        ExplanationOfBenefitService,
-        FamilyMemberHistoryService,
-        FlagService,
-        GoalService,
-        ImmunizationService,
-        ImmunizationRecommendationService,
-        LastnSocialHistorySTU3Service,
-        ListService,
-        LocationService,
-        MedicationService,
-        MedicationDispenseService,
-        MedicationOrderService,
-        MedicationRequestService,
-        MedicationStatementService,
-        NutritionOrderService,
-        ObservationService,
-        OrganizationService,
-        PatientService,
-        PractitionerService,
-        PractitionerRoleService,
-        ProcedureService,
-        ProcedureRequestService,
-        ProvenanceService,
-        QuestionnaireService,
-        QuestionnaireResponseService,
-        ReadCommunityResourceR4Service,
-        ReadDSTU2Service,
-        ReadDocumentR4Service,
-        ReadDocumentSTU3Service,
-        ReadEncounterDiagnosisProblemsSTU3Service,
-        ReadEncounterLevelLongitudinalDSTU2Service,
-        ReadEpisodeR4Service,
-        ReadGeneratedCCDADSTU2Service,
-        ReadImplantsR4Service,
-        ReadImplantsandExternalDevicesSTU3Service,
-        ReadOncologyPlanDayR4Service,
-        ReadOrdersDSTU2Service,
-        ReadOrdersR4Service,
-        ReadOrdersSTU3Service,
-        ReadOrdersSurgeriesSTU3Service,
-        ReadPatientDSTU2Service,
-        ReadPatientEnteredQuestionnairesR4Service,
-        ReadPatientFYIR4Service,
-        ReadPatientFYISTU3Service,
-        ReadPatientR4Service,
-        ReadPatientSTU3Service,
-        ReadPatientsWithQuestionnairesDueSTU3Service,
-        ReadProblemsDSTU2Service,
-        ReadProblemsR4Service,
-        ReadQuestionnairesDueR4Service,
-        ReadR4Service,
-        ReadRadiologyResultsR4Service,
-        ReadRadiologyResultsSTU3Service,
-        ReadReasonforVisitR4Service,
-        ReadReferralR4Service,
-        ReadResultsDSTU2Service,
-        ReadResultsR4Service,
-        ReadResultsSTU3Service,
-        ReadSTU3Service,
-        ReadSurgicalHistoryR4Service,
-        ReadToothR4Service,
-        ReadVerifiedOrdersR4Service,
-        ReadVerifiedOrdersSTU3Service,
-        ReadVitalsDSTU2Service,
-        ReadVitalsR4Service,
-        ReadVitalsSTU3Service,
-        RelatedPersonService,
-        RequestGroupService,
-        ResearchStudyService,
-        ResearchSubjectService,
-        ScheduleService,
-        SearchCodeStatusR4Service,
-        SearchCommunityResourceR4Service,
-        SearchDSTU2Service,
-        SearchDocumentSTU3Service,
-        SearchEncounterDiagnosisProblemsSTU3Service,
-        SearchEncounterLevelLongitudinalDSTU2Service,
-        SearchGeneratedCCDADSTU2Service,
-        SearchImplantsR4Service,
-        SearchImplantsandExternalDevicesSTU3Service,
-        SearchInfectionSTU3Service,
-        SearchIsolationR4Service,
-        SearchLongitudinalR4Service,
-        SearchMedicationsR4Service,
-        SearchOncologyPlanDayR4Service,
-        SearchOrdersDSTU2Service,
-        SearchOrdersR4Service,
-        SearchOrdersSTU3Service,
-        SearchOrdersSurgeriesSTU3Service,
-        SearchPatientDSTU2Service,
-        SearchPatientEnteredQuestionnairesR4Service,
-        SearchPatientR4Service,
-        SearchPatientSTU3Service,
-        SearchPatientsWithQuestionnairesDueSTU3Service,
-        SearchProblemsDSTU2Service,
-        SearchQuestionnairesDueR4Service,
-        SearchR4Service,
-        SearchRadiologyResultsR4Service,
-        SearchRadiologyResultsSTU3Service,
-        SearchReasonforVisitR4Service,
-        SearchResultsDSTU2Service,
-        SearchResultsR4Service,
-        SearchResultsSTU3Service,
-        SearchSTU3Service,
-        SearchSurgicalHistoryR4Service,
-        SearchToothR4Service,
-        SearchVerifiedOrdersR4Service,
-        SearchVerifiedOrdersSTU3Service,
-        SearchVitalsDSTU2Service,
-        SearchVitalsR4Service,
-        SearchVitalsSTU3Service,
-        ServiceRequestService,
-        SlotService,
-        SpecimenService,
-        SubstanceService,
-        TaskService,
-        UpdateCommunityResourceR4Service,
-        UpdateLDAWR4Service,
-        UpdateLDAWSTU3Service,
-        ValueSetService]
+  imports: [],
+  declarations: [],
+  exports: [],
+  providers: [
+    OAuthService,
+    LocalStorageService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: appInitializerFactory,
+      deps: [OAuthService],
+      multi: true,
+    },
+    AdverseEventService,
+    AllergyIntoleranceService,
+    AppointmentService,
+    BinaryService,
+    BodyStructureService,
+    CarePlanService,
+    CareTeamService,
+    CommunicationService,
+    ConditionService,
+    ConsentService,
+    CoverageService,
+    CreateClinicalNotesSTU3Service,
+    CreateCommunityResourceR4Service,
+    CreatePatientEnteredQuestionnairesR4Service,
+    CreatePatientSTU3Service,
+    CreateProblemsR4Service,
+    CreateProblemsSTU3Service,
+    CreateR4Service,
+    CreateSTU3Service,
+    CreateVitalsR4Service,
+    CreateVitalsSTU3Service,
+    DeviceService,
+    DeviceRequestService,
+    DeviceUseStatementService,
+    DiagnosticReportService,
+    DocumentReferenceService,
+    EncounterService,
+    EndpointService,
+    EpisodeOfCareService,
+    ExpandR4Service,
+    ExplanationOfBenefitService,
+    FamilyMemberHistoryService,
+    FlagService,
+    GoalService,
+    ImmunizationService,
+    ImmunizationRecommendationService,
+    LastnSocialHistorySTU3Service,
+    ListService,
+    LocationService,
+    MedicationService,
+    MedicationDispenseService,
+    MedicationOrderService,
+    MedicationRequestService,
+    MedicationStatementService,
+    NutritionOrderService,
+    ObservationService,
+    OrganizationService,
+    PatientService,
+    PractitionerService,
+    PractitionerRoleService,
+    ProcedureService,
+    ProcedureRequestService,
+    ProvenanceService,
+    QuestionnaireService,
+    QuestionnaireResponseService,
+    ReadCommunityResourceR4Service,
+    ReadDSTU2Service,
+    ReadDocumentR4Service,
+    ReadDocumentSTU3Service,
+    ReadEncounterDiagnosisProblemsSTU3Service,
+    ReadEncounterLevelLongitudinalDSTU2Service,
+    ReadEpisodeR4Service,
+    ReadGeneratedCCDADSTU2Service,
+    ReadImplantsR4Service,
+    ReadImplantsandExternalDevicesSTU3Service,
+    ReadOncologyPlanDayR4Service,
+    ReadOrdersDSTU2Service,
+    ReadOrdersR4Service,
+    ReadOrdersSTU3Service,
+    ReadOrdersSurgeriesSTU3Service,
+    ReadPatientDSTU2Service,
+    ReadPatientEnteredQuestionnairesR4Service,
+    ReadPatientFYIR4Service,
+    ReadPatientFYISTU3Service,
+    ReadPatientR4Service,
+    ReadPatientSTU3Service,
+    ReadPatientsWithQuestionnairesDueSTU3Service,
+    ReadProblemsDSTU2Service,
+    ReadProblemsR4Service,
+    ReadQuestionnairesDueR4Service,
+    ReadR4Service,
+    ReadRadiologyResultsR4Service,
+    ReadRadiologyResultsSTU3Service,
+    ReadReasonforVisitR4Service,
+    ReadReferralR4Service,
+    ReadResultsDSTU2Service,
+    ReadResultsR4Service,
+    ReadResultsSTU3Service,
+    ReadSTU3Service,
+    ReadSurgicalHistoryR4Service,
+    ReadToothR4Service,
+    ReadVerifiedOrdersR4Service,
+    ReadVerifiedOrdersSTU3Service,
+    ReadVitalsDSTU2Service,
+    ReadVitalsR4Service,
+    ReadVitalsSTU3Service,
+    RelatedPersonService,
+    RequestGroupService,
+    ResearchStudyService,
+    ResearchSubjectService,
+    ScheduleService,
+    SearchCodeStatusR4Service,
+    SearchCommunityResourceR4Service,
+    SearchDSTU2Service,
+    SearchDocumentSTU3Service,
+    SearchEncounterDiagnosisProblemsSTU3Service,
+    SearchEncounterLevelLongitudinalDSTU2Service,
+    SearchGeneratedCCDADSTU2Service,
+    SearchImplantsR4Service,
+    SearchImplantsandExternalDevicesSTU3Service,
+    SearchInfectionSTU3Service,
+    SearchIsolationR4Service,
+    SearchLongitudinalR4Service,
+    SearchMedicationsR4Service,
+    SearchOncologyPlanDayR4Service,
+    SearchOrdersDSTU2Service,
+    SearchOrdersR4Service,
+    SearchOrdersSTU3Service,
+    SearchOrdersSurgeriesSTU3Service,
+    SearchPatientDSTU2Service,
+    SearchPatientEnteredQuestionnairesR4Service,
+    SearchPatientR4Service,
+    SearchPatientSTU3Service,
+    SearchPatientsWithQuestionnairesDueSTU3Service,
+    SearchProblemsDSTU2Service,
+    SearchQuestionnairesDueR4Service,
+    SearchR4Service,
+    SearchRadiologyResultsR4Service,
+    SearchRadiologyResultsSTU3Service,
+    SearchReasonforVisitR4Service,
+    SearchResultsDSTU2Service,
+    SearchResultsR4Service,
+    SearchResultsSTU3Service,
+    SearchSTU3Service,
+    SearchSurgicalHistoryR4Service,
+    SearchToothR4Service,
+    SearchVerifiedOrdersR4Service,
+    SearchVerifiedOrdersSTU3Service,
+    SearchVitalsDSTU2Service,
+    SearchVitalsR4Service,
+    SearchVitalsSTU3Service,
+    ServiceRequestService,
+    SlotService,
+    SpecimenService,
+    SubstanceService,
+    TaskService,
+    UpdateCommunityResourceR4Service,
+    UpdateLDAWR4Service,
+    UpdateLDAWSTU3Service,
+    ValueSetService,
+  ],
 })
-export class ApiModule {
-    public static forRoot(configurationFactory: () => Configuration): ModuleWithProviders<ApiModule> {
-        return {
-            ngModule: ApiModule,
-            providers: [{ provide: Configuration, useFactory: configurationFactory }]
-        };
-    }
+export class EpicOnFhirModule {
+  public static forRoot(
+    configurationFactory: () => Configuration
+  ): ModuleWithProviders<EpicOnFhirModule> {
+    return {
+      ngModule: EpicOnFhirModule,
+      providers: [{ provide: Configuration, useFactory: configurationFactory }],
+    };
+  }
 
-    constructor(@Optional() @SkipSelf() parentModule: ApiModule,
-        @Optional() http: HttpClient) {
-        if (parentModule) {
-            throw new Error('ApiModule is already loaded. Import in your base AppModule only.');
-        }
-        if (!http) {
-            throw new Error('You need to import the HttpClientModule in your AppModule! \n' +
-                'See also https://github.com/angular/angular/issues/20575');
-        }
+  constructor(
+    @Optional() @SkipSelf() parentModule: EpicOnFhirModule,
+    @Optional() http: HttpClient
+  ) {
+    if (parentModule) {
+      throw new Error(
+        'ApiModule is already loaded. Import in your base AppModule only.'
+      );
     }
+    if (!http) {
+      throw new Error(
+        'You need to import the HttpClientModule in your AppModule! \n' +
+          'See also https://github.com/angular/angular/issues/20575'
+      );
+    }
+  }
+}
+/**
+ * A default forRoot function that takes arguments and reads most of the oauth parameters off window.location.search.
+ *
+ * @param epicClientId The Epic OAuth Client Id
+ * @param isAppEmbedded Is the App running in an embedded capacity
+ * @param issUrl If running in Standalone mode you must provide the issuerurl entrypoint
+ * @param redirectUri Provide a custom redirect otherwise defaults to window.location.origin
+ * @returns
+ */
+
+export function forRootInitializer(
+  epicClientId: string,
+  isAppEmbedded: boolean,
+  issUrl?: string,
+  redirectUri?: string
+) {
+  return () => {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params: ConfigurationParameters = {
+      issUrl: issUrl ?? urlSearchParams.get('iss') ?? undefined,
+      launchCode: urlSearchParams.get('launch') ?? undefined,
+      epicClientId: epicClientId,
+      redirectUri: redirectUri ?? window.location.origin,
+      authCode: urlSearchParams.get('code') ?? undefined,
+      authCodeState: urlSearchParams.get('state') ?? undefined,
+      embeddedApp: isAppEmbedded, // Embedded Or StandAlone
+    };
+    return new Configuration(params);
+  };
 }

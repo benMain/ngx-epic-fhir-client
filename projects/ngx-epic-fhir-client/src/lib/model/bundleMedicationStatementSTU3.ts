@@ -14,9 +14,9 @@ import { BundleEntryMedicationStatementSTU3 } from './bundleEntryMedicationState
 /**
  * Contains a collection of resources.
  */
-export interface BundleMedicationStatementSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryMedicationStatementSTU3>;
+export interface BundleMedicationStatementSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryMedicationStatementSTU3>;
 }

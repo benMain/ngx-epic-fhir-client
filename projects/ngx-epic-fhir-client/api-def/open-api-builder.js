@@ -38,6 +38,7 @@ files.forEach(x => {
 })
 
 function mapResponseToType(objectDef) {
+    const isArray = objectDef?.IsArray ?? false;
     let type = 'string';
     switch (objectDef.Type) {
         case "String":
@@ -53,9 +54,16 @@ function mapResponseToType(objectDef) {
         case "Address":
         case "Annotation":
         case "Period":
-            return {
-                "$ref": `#/components/schemas/${objectDef.Type}`
-            };
+            return isArray ?
+                {
+                    items: {
+                        "$ref": `#/components/schemas/${objectDef.Type}`
+                    },
+                    type: "array"
+                } :
+                {
+                    "$ref": `#/components/schemas/${objectDef.Type}`
+                };
         default:
             type = 'object'
     }
@@ -83,6 +91,28 @@ function mapResponseToType(objectDef) {
         }
         if (response.required.length === 0) {
             delete response.required;
+        }
+        if (isArray) {
+            response.type = "array";
+            let somerequired = undefined;
+            if ( !!somerequired && somerequired.length > 0) {
+                 somerequired = [...response.required];
+            }
+            response.items = {
+                type: 'object',
+                properties: { ...response.properties },
+                required: somerequired,
+            }
+            delete response.properties;
+            delete response.required;
+        }
+    } else {
+        if (isArray) {
+            const clone = { ...response };
+            response.type = 'array';
+            response.items = {
+                type: clone.type,
+            }
         }
     }
     return response;

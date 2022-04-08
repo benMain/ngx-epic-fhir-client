@@ -18,22 +18,25 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface CareTeamR4 { 
-    extension?: Extension;
-    category?: CodeableConcept;
-    /**
-     * CareTeam FHIR ID
-     */
-    id?: string;
-    /**
-     * The name of the care team.
-     */
-    name?: string;
-    participant?: CareTeamR4Participant;
-    period?: Period;
-    /**
-     * The status of the episode for which the care team is defined.
-     */
-    status?: string;
-    subject?: Reference;
+export interface CareTeamR4 {
+  extension?: Array<Extension>;
+  category?: Array<CodeableConcept>;
+  /**
+   * CareTeam FHIR ID
+   */
+  id?: string;
+  /**
+   * The name of the care team.
+   */
+  name?: string;
+  /**
+   * <p>A participant in the care team. <p>In scenarios where a provider on the care team has multiple specialties, this service returns one participant element for each unique combination of provider and specialty. For example, if a provider is listed on the care team twice, once with a specialty of \"Radiology\" and once with a specialty of \"Behavioral Health\", there will be two participant elements returned by this resource. They will have the same member reference but will have different roles.
+   */
+  participant?: Array<CareTeamR4Participant>;
+  period?: Period;
+  /**
+   * The status of the episode for which the care team is defined.
+   */
+  status?: string;
+  subject?: Reference;
 }

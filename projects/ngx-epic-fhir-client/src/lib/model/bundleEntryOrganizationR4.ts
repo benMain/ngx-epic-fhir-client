@@ -14,6 +14,6 @@ import { OrganizationR4 } from './organizationR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryOrganizationR4 { 
-    resource?: OrganizationR4;
+export interface BundleEntryOrganizationR4 {
+  resource?: OrganizationR4;
 }

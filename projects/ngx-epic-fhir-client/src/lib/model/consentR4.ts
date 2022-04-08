@@ -19,20 +19,23 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 Consent resource.
  */
-export interface ConsentR4 { 
-    category?: CodeableConcept;
-    extension?: Extension;
-    /**
-     * Date and time that the consent document was created.
-     */
-    dateTime?: string;
-    identifier?: Identifier;
-    patient?: Reference;
-    policy?: ConsentR4Policy;
-    provision?: ConsentR4Provision;
-    scope?: CodeableConcept;
-    /**
-     * <p>The state of the consent. This value follows the specification of the FHIR ConsentState value set. The following values have default out-of-the-box support in Epic. Additional statuses can be mapped by Epic organizations if desired.</p>  <ul> <li>draft</li> <ul> <li>Corresponds to Epic value 11-Not Received</li> </ul> <li>active</li> <ul> <li>Corresponds to Epic values 10-Received and 20-Accepted</li> </ul> <li>rejected</li> <ul> <li>Corresponds to Epic value 1-Unknown</li> </ul> <li>entered-in-error</li> <ul> <li>Corresponds to Epic value 35-Error</li> </ul> <li>inactive</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> <li>proposed</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> </ul>  <p>The Consent resource returns data for those consent documents that have a document status that corresponds to one of the values above or an additional value that was mapped by the Epic organization. In the August 2021 version of Epic and earlier, Consent documents with no status specified in Epic cannot be retrieved by this web service. Starting in the November 2021 version of Epic, Consent documents with a status not mapped in Epic, or no status specified in Epic, return unknown.</p>
-     */
-    status?: string;
+export interface ConsentR4 {
+  category?: Array<CodeableConcept>;
+  extension?: Array<Extension>;
+  /**
+   * Date and time that the consent document was created.
+   */
+  dateTime?: string;
+  identifier?: Array<Identifier>;
+  patient?: Reference;
+  /**
+   * The policy of the consent document.
+   */
+  policy?: Array<ConsentR4Policy>;
+  provision?: ConsentR4Provision;
+  scope?: CodeableConcept;
+  /**
+   * <p>The state of the consent. This value follows the specification of the FHIR ConsentState value set. The following values have default out-of-the-box support in Epic. Additional statuses can be mapped by Epic organizations if desired.</p>  <ul> <li>draft</li> <ul> <li>Corresponds to Epic value 11-Not Received</li> </ul> <li>active</li> <ul> <li>Corresponds to Epic values 10-Received and 20-Accepted</li> </ul> <li>rejected</li> <ul> <li>Corresponds to Epic value 1-Unknown</li> </ul> <li>entered-in-error</li> <ul> <li>Corresponds to Epic value 35-Error</li> </ul> <li>inactive</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> <li>proposed</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> </ul>  <p>The Consent resource returns data for those consent documents that have a document status that corresponds to one of the values above or an additional value that was mapped by the Epic organization. In the August 2021 version of Epic and earlier, Consent documents with no status specified in Epic cannot be retrieved by this web service. Starting in the November 2021 version of Epic, Consent documents with a status not mapped in Epic, or no status specified in Epic, return unknown.</p>
+   */
+  status?: string;
 }

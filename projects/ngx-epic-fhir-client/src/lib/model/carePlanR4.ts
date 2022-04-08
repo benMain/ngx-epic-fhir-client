@@ -16,16 +16,19 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 CarePlan resource.
  */
-export interface CarePlanR4 { 
-    activity: CarePlanR4Activity;
-    category: CodeableConcept;
-    /**
-     * Always \"order.\"
-     */
-    intent?: string;
-    /**
-     * Always \"active.\"
-     */
-    status?: string;
-    subject?: Reference;
+export interface CarePlanR4 {
+  /**
+   * Actions to occur as part of the care plan.
+   */
+  activity: Array<CarePlanR4Activity>;
+  category: Array<CodeableConcept>;
+  /**
+   * Always \"order.\"
+   */
+  intent?: string;
+  /**
+   * Always \"active.\"
+   */
+  status?: string;
+  subject?: Reference;
 }

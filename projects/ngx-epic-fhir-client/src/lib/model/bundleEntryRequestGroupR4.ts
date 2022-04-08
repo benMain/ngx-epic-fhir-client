@@ -14,6 +14,6 @@ import { RequestGroupR4 } from './requestGroupR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryRequestGroupR4 { 
-    resource?: RequestGroupR4;
+export interface BundleEntryRequestGroupR4 {
+  resource?: RequestGroupR4;
 }

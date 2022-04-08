@@ -17,24 +17,30 @@ import { MedicationDispenseR4Performer } from './medicationDispenseR4Performer';
 import { Reference } from './reference';
 
 /**
- * A single instance of a MedicationDispense resource. 
+ * A single instance of a MedicationDispense resource.
  */
-export interface MedicationDispenseR4 { 
-    extension: Extension;
-    authorizingPrescription?: Reference;
-    category?: CodeableConcept;
-    context?: Reference;
-    dosageInstruction?: MedicationDispenseR4DosageInstruction;
-    /**
-     * The MedicationDispense FHIR ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    medicationReference?: Reference;
-    performer?: MedicationDispenseR4Performer;
-    /**
-     * <p>The status of the medication dispense. Can be either:</p> <ul> <li>Completed</li> <li>Entered-in-error</li> </ul> 
-     */
-    status?: string;
-    subject?: Reference;
+export interface MedicationDispenseR4 {
+  extension: Array<Extension>;
+  authorizingPrescription?: Array<Reference>;
+  category?: CodeableConcept;
+  context?: Reference;
+  /**
+   * Dosage instruction details.
+   */
+  dosageInstruction?: Array<MedicationDispenseR4DosageInstruction>;
+  /**
+   * The MedicationDispense FHIR ID.
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  medicationReference?: Reference;
+  /**
+   * The organization where the medication was verified.
+   */
+  performer?: Array<MedicationDispenseR4Performer>;
+  /**
+   * <p>The status of the medication dispense. Can be either:</p> <ul> <li>Completed</li> <li>Entered-in-error</li> </ul>
+   */
+  status?: string;
+  subject?: Reference;
 }

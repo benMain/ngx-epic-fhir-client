@@ -10,17 +10,17 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { ImmunizationRecommendationR4RecommendationDateCriterion } from './immunizationRecommendationR4RecommendationDateCriterion';
+import { ImmunizationRecommendationR4DateCriterion } from './immunizationRecommendationR4DateCriterion';
 
-/**
- * The immunization recommendation.
- */
-export interface ImmunizationRecommendationSTU3Recommendation { 
-    /**
-     * The date when the immunization recommendation was created.
-     */
-    date?: string;
-    dateCriterion: ImmunizationRecommendationR4RecommendationDateCriterion;
-    forecastStatus?: CodeableConcept;
-    vaccineCode: CodeableConcept;
+export interface ImmunizationRecommendationSTU3Recommendation {
+  /**
+   * The date when the immunization recommendation was created.
+   */
+  date?: string;
+  /**
+   * The date when the recommended immunization is considered due or overdue.
+   */
+  dateCriterion?: Array<ImmunizationRecommendationR4DateCriterion>;
+  forecastStatus?: CodeableConcept;
+  vaccineCode?: CodeableConcept;
 }

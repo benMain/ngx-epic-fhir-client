@@ -20,40 +20,43 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 MedicationRequest FHIR resource.
  */
-export interface MedicationRequestR4 { 
-    /**
-     * The date the prescription was written.
-     */
-    authoredOn: string;
-    basedOn: Reference;
-    category: CodeableConcept;
-    dispenseRequest: MedicationRequestR4DispenseRequest;
-    dosageInstruction: MedicationRequestR4DosageInstruction;
-    encounter: Reference;
-    groupIdentifier: Identifier;
-    /**
-     * A medicationRequest FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    /**
-     * Returns “plan” for patient-reported and historical medications. Returns “order” for other medications.
-     */
-    intent?: string;
-    medicationReference?: Reference;
-    note: Annotation;
-    priorPrescription: Reference;
-    recorder: Reference;
-    /**
-     * A Response Type
-     */
-    reportedBoolean: boolean;
-    requester?: Reference;
-    /**
-     * The status of the medication request.
-     */
-    status: string;
-    subject?: Reference;
-    substitution: MedicationRequestR4Substitution;
-    supportingInformation: Reference;
+export interface MedicationRequestR4 {
+  /**
+   * The date the prescription was written.
+   */
+  authoredOn: string;
+  basedOn: Array<Reference>;
+  category: Array<CodeableConcept>;
+  dispenseRequest: MedicationRequestR4DispenseRequest;
+  /**
+   * Dosage instruction details.
+   */
+  dosageInstruction: Array<MedicationRequestR4DosageInstruction>;
+  encounter: Reference;
+  groupIdentifier: Identifier;
+  /**
+   * A medicationRequest FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  /**
+   * Returns “plan” for patient-reported and historical medications. Returns “order” for other medications.
+   */
+  intent?: string;
+  medicationReference?: Reference;
+  note: Array<Annotation>;
+  priorPrescription: Reference;
+  recorder: Reference;
+  /**
+   * A Response Type
+   */
+  reportedBoolean: boolean;
+  requester?: Reference;
+  /**
+   * The status of the medication request.
+   */
+  status: string;
+  subject?: Reference;
+  substitution: MedicationRequestR4Substitution;
+  supportingInformation: Array<Reference>;
 }

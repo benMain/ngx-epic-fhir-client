@@ -1,0 +1,57 @@
+{
+    "root": true,
+    "overrides": [
+        {
+            "files": [
+                "*.ts"
+            ],
+            "parserOptions": {
+                "project": [
+                    "tsconfig.json"
+                ],
+                "createDefaultProgram": true
+            },
+            "extends": [
+                "plugin:@angular-eslint/ng-cli-compat",
+                "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+                "plugin:@angular-eslint/template/process-inline-templates"
+            ],
+            "rules": {
+                "@typescript-eslint/member-ordering": "off",
+                "@typescript-eslint/naming-convention": "off",
+                "@typescript-eslint/consistent-type-assertions": "off",
+                "@typescript-eslint/no-namespace": "off",
+                "prefer-const": "off",
+                "object-shorthand": "off",
+                "eqeqeq": "off",
+                "arrow-parens": [
+                    "off",
+                    "always"
+                ],
+                "max-len": "off",
+                "dot-notation": "off",
+                "import/order": "off",
+                "no-empty-function": "off",
+                "no-shadow": "error",
+                "no-underscore-dangle": "off",
+                "no-unused-expressions": "error",
+                "no-use-before-define": "off",
+                "one-var": [
+                    "off",
+                    "never"
+                ],
+                "prefer-arrow/prefer-arrow-functions": "off",
+                "quotes": "off"
+            }
+        },
+        {
+            "files": [
+                "*.html"
+            ],
+            "extends": [
+                "plugin:@angular-eslint/template/recommended"
+            ],
+            "rules": {}
+        }
+    ]
+}

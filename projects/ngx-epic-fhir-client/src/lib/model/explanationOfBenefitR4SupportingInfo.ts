@@ -11,14 +11,11 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * The following supporting info is supported: All claims: Received date All Medical claims: Discharge disposition Occurrence span codes Admission type Admission source UB claims: Type of Bill Rx Claims: Record status code Reject Override Code Reject code Fill Number Days Supply DAW Code
- */
-export interface ExplanationOfBenefitR4SupportingInfo { 
-    category?: CodeableConcept;
-    code?: CodeableConcept;
-    /**
-     * The sequence ID.
-     */
-    sequence: any;
+export interface ExplanationOfBenefitR4SupportingInfo {
+  category?: CodeableConcept;
+  code?: CodeableConcept;
+  /**
+   * The sequence ID.
+   */
+  sequence?: any;
 }

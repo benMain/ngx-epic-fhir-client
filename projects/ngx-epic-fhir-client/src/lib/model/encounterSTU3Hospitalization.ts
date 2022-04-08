@@ -15,10 +15,10 @@ import { Reference } from './reference';
 /**
  * Details about the admission to a healthcare service.
  */
-export interface EncounterSTU3Hospitalization { 
-    admitSource?: CodeableConcept;
-    destination: Reference;
-    dischargeDisposition: CodeableConcept;
-    origin: Reference;
-    reAdmission: CodeableConcept;
+export interface EncounterSTU3Hospitalization {
+  admitSource?: CodeableConcept;
+  destination: Reference;
+  dischargeDisposition: CodeableConcept;
+  origin: Reference;
+  reAdmission: CodeableConcept;
 }

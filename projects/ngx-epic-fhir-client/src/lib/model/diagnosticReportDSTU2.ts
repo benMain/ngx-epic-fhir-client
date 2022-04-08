@@ -16,23 +16,23 @@ import { Reference } from './reference';
 /**
  * An instance of the DSTU2 DiagnosticReport resource.
  */
-export interface DiagnosticReportDSTU2 { 
-    category?: CodeableConcept;
-    code?: CodeableConcept;
-    /**
-     * Clinically relevant time/time period for report.
-     */
-    effectiveDateTime: string;
-    identifier?: Identifier;
-    /**
-     * DateTime this version was released.
-     */
-    issued: string;
-    performer?: Reference;
-    result?: Reference;
-    /**
-     * The status of the report. You can find the list of values here: <a href=\"http://hl7.org/fhir/diagnostic-report-status\">http://hl7.org/fhir/diagnostic-report-status</a>.
-     */
-    status?: string;
-    subject?: Reference;
+export interface DiagnosticReportDSTU2 {
+  category?: CodeableConcept;
+  code?: CodeableConcept;
+  /**
+   * Clinically relevant time/time period for report.
+   */
+  effectiveDateTime: string;
+  identifier?: Array<Identifier>;
+  /**
+   * DateTime this version was released.
+   */
+  issued: string;
+  performer?: Reference;
+  result?: Array<Reference>;
+  /**
+   * The status of the report. You can find the list of values here: <a href=\"http://hl7.org/fhir/diagnostic-report-status\">http://hl7.org/fhir/diagnostic-report-status</a>.
+   */
+  status?: string;
+  subject?: Reference;
 }

@@ -18,27 +18,30 @@ import { Reference } from './reference';
 /**
  * An instance of the DSTU2 DocumentReference resource.
  */
-export interface DocumentReferenceDSTU2 { 
-    _class?: CodeableConcept;
-    content?: DocumentReferenceDSTU2Content;
-    context?: DocumentReferenceDSTU2Context;
-    /**
-     * Document creation time.  This element is not populated in February 2019 and later versions of Epic. In February 2019 and later, use the Indexed element instead.
-     */
-    created?: string;
-    /**
-     * The DocumentReference FHIR ID.
-     */
-    id?: string;
-    /**
-     * When this document reference was created.
-     */
-    indexed?: string;
-    masterIdentifier?: Identifier;
-    /**
-     * Current, superseded, or entered-in-error.
-     */
-    status?: string;
-    subject?: Reference;
-    type?: CodeableConcept;
+export interface DocumentReferenceDSTU2 {
+  _class?: CodeableConcept;
+  /**
+   * The document referenced.
+   */
+  content?: Array<DocumentReferenceDSTU2Content>;
+  context?: DocumentReferenceDSTU2Context;
+  /**
+   * Document creation time.  This element is not populated in February 2019 and later versions of Epic. In February 2019 and later, use the Indexed element instead.
+   */
+  created?: string;
+  /**
+   * The DocumentReference FHIR ID.
+   */
+  id?: string;
+  /**
+   * When this document reference was created.
+   */
+  indexed?: string;
+  masterIdentifier?: Identifier;
+  /**
+   * Current, superseded, or entered-in-error.
+   */
+  status?: string;
+  subject?: Reference;
+  type?: CodeableConcept;
 }

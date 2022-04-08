@@ -15,31 +15,31 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface DeviceDSTU2 { 
-    /**
-     * <p>Date and time of expiry of this device (if applicable)</p>
-     */
-    expiry: string;
-    /**
-     * <p>Lot number of manufacture</p>
-     */
-    lotNumber: string;
-    /**
-     * <p>Name of device manufacturer</p>
-     */
-    manufacturer: string;
-    /**
-     * <p>Model id assigned by the manufacturer</p>
-     */
-    model: string;
-    patient?: Reference;
-    /**
-     * <p>We’ll send a status of entered-in-error for soft-deleted records.  All other records will have a status of available.</p>
-     */
-    status: string;
-    type?: CodeableConcept;
-    /**
-     * <p>FDA mandated Composite Unique Device Identifier</p>
-     */
-    udi: string;
+export interface DeviceDSTU2 {
+  /**
+   * <p>Date and time of expiry of this device (if applicable)</p>
+   */
+  expiry: string;
+  /**
+   * <p>Lot number of manufacture</p>
+   */
+  lotNumber: string;
+  /**
+   * <p>Name of device manufacturer</p>
+   */
+  manufacturer: string;
+  /**
+   * <p>Model id assigned by the manufacturer</p>
+   */
+  model: string;
+  patient?: Reference;
+  /**
+   * <p>We’ll send a status of entered-in-error for soft-deleted records.  All other records will have a status of available.</p>
+   */
+  status: string;
+  type?: CodeableConcept;
+  /**
+   * <p>FDA mandated Composite Unique Device Identifier</p>
+   */
+  udi: string;
 }

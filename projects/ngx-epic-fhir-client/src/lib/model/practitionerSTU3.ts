@@ -18,26 +18,32 @@ import { PractitionerSTU3Meta } from './practitionerSTU3Meta';
 /**
  * An instance of the STU3 Practitioner resource.
  */
-export interface PractitionerSTU3 { 
-    /**
-     * Whether the practitioner's record is in active use.
-     */
-    active: boolean;
-    communication: CodeableConcept;
-    /**
-     * The gender of the practitioner.
-     */
-    gender: string;
-    identifier: Identifier;
-    meta: PractitionerSTU3Meta;
-    /**
-     * The name of the practitioner, including all prefixes and suffixes available.
-     */
-    name: any;
-    photo: PractitionerR4Photo;
-    /**
-     * The practitioner's qualifications.
-     */
-    qualification: any;
-    telecom: PractitionerR4Telecom;
+export interface PractitionerSTU3 {
+  /**
+   * Whether the practitioner's record is in active use.
+   */
+  active: boolean;
+  communication: Array<CodeableConcept>;
+  /**
+   * The gender of the practitioner.
+   */
+  gender: string;
+  identifier: Array<Identifier>;
+  meta: PractitionerSTU3Meta;
+  /**
+   * The name of the practitioner, including all prefixes and suffixes available.
+   */
+  name: Array<any>;
+  /**
+   * Contains parameters related to the practitioner photo.
+   */
+  photo: Array<PractitionerR4Photo>;
+  /**
+   * The practitioner's qualifications.
+   */
+  qualification: Array<any>;
+  /**
+   * Returned only for Epic user-based practitioners. Not returned in a MyChart context.
+   */
+  telecom: Array<PractitionerR4Telecom>;
 }

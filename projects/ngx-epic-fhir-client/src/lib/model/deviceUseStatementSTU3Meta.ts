@@ -13,9 +13,9 @@
 /**
  * The document metadata.*
  */
-export interface DeviceUseStatementSTU3Meta { 
-    /**
-     * *Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice
-     */
-    profile: string;
+export interface DeviceUseStatementSTU3Meta {
+  /**
+   * *Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice
+   */
+  profile: string;
 }

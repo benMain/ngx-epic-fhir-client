@@ -11,9 +11,6 @@
  */
 import { Identifier } from './identifier';
 
-/**
- * The associated encounter.
- */
-export interface DocumentReferenceDSTU2ContextRelated { 
-    identifier?: Identifier;
+export interface DocumentReferenceDSTU2ContextRelated {
+  identifier?: Identifier;
 }

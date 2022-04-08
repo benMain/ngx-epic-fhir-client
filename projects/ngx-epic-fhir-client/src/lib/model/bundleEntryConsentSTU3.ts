@@ -14,6 +14,6 @@ import { ConsentSTU3 } from './consentSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryConsentSTU3 { 
-    resource?: ConsentSTU3;
+export interface BundleEntryConsentSTU3 {
+  resource?: ConsentSTU3;
 }

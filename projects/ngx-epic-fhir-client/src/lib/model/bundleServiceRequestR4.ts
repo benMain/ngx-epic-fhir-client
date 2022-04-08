@@ -14,9 +14,9 @@ import { BundleEntryServiceRequestR4 } from './bundleEntryServiceRequestR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleServiceRequestR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryServiceRequestR4>;
+export interface BundleServiceRequestR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryServiceRequestR4>;
 }

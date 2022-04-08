@@ -19,24 +19,27 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 Consent resource.
  */
-export interface ConsentSTU3 { 
-    category?: CodeableConcept;
-    extension: Extension;
-    consentingParty: Reference;
-    /**
-     * Date and time that the consent document was created.
-     */
-    dateTime?: string;
-    /**
-     * The Consent FHIR ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    meta: ConsentSTU3Meta;
-    patient?: Reference;
-    policy?: ConsentSTU3Policy;
-    /**
-     * <p>The state of the consent. This value follows the specification of the FHIR ConsentState value set. The following values have default out-of-the-box support in Epic. Additional statuses can be mapped by Epic organizations if desired.</p> <ul> <li>draft</li> <ul> <li>Corresponds to Epic value 11-Not Received</li> </ul> <li>active</li> <ul> <li>Corresponds to Epic values 10-Received and 20-Accepted</li> </ul> <li>rejected</li> <ul> <li>Corresponds to Epic value 1-Unknown</li> </ul> <li>entered-in-error</li> <ul> <li>Corresponds to Epic value 35-Error</li> </ul> <li>inactive</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> <li>proposed</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> </ul>
-     */
-    status?: string;
+export interface ConsentSTU3 {
+  category?: Array<CodeableConcept>;
+  extension: Array<Extension>;
+  consentingParty: Array<Reference>;
+  /**
+   * Date and time that the consent document was created.
+   */
+  dateTime?: string;
+  /**
+   * The Consent FHIR ID.
+   */
+  id?: string;
+  identifier?: Identifier;
+  meta: ConsentSTU3Meta;
+  patient?: Reference;
+  /**
+   * The policy of the consent document.
+   */
+  policy?: Array<ConsentSTU3Policy>;
+  /**
+   * <p>The state of the consent. This value follows the specification of the FHIR ConsentState value set. The following values have default out-of-the-box support in Epic. Additional statuses can be mapped by Epic organizations if desired.</p> <ul> <li>draft</li> <ul> <li>Corresponds to Epic value 11-Not Received</li> </ul> <li>active</li> <ul> <li>Corresponds to Epic values 10-Received and 20-Accepted</li> </ul> <li>rejected</li> <ul> <li>Corresponds to Epic value 1-Unknown</li> </ul> <li>entered-in-error</li> <ul> <li>Corresponds to Epic value 35-Error</li> </ul> <li>inactive</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> <li>proposed</li> <ul> <li>Does not correspond to any Epic value by default</li> </ul> </ul>
+   */
+  status?: string;
 }

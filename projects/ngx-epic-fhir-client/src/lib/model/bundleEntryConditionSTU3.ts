@@ -14,6 +14,6 @@ import { ConditionSTU3 } from './conditionSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryConditionSTU3 { 
-    resource?: ConditionSTU3;
+export interface BundleEntryConditionSTU3 {
+  resource?: ConditionSTU3;
 }

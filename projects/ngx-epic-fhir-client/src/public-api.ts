@@ -1,7 +1,7 @@
 /*
  * Public API Surface of ngx-epic-fhir-client
  */
-
-export * from './lib/ngx-epic-fhir-client.service';
-export * from './lib/ngx-epic-fhir-client.component';
-export * from './lib/ngx-epic-fhir-client.module';
+export * from './lib/api.module';
+export * from './lib/configuration';
+export * from './lib/model';
+export * from './lib/api';

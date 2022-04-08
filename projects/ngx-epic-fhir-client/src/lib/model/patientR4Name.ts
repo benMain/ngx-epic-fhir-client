@@ -9,33 +9,11 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { Extension } from './extension';
 
 /**
- * <p>The patient's name.</p> <ul> <li>Starting in the May 2020 version of Epic, this element includes both the patient's \"official\" name, which is the patient's legal name, and the patient's \"usual\" name, which is the patient's preferred name. <ul><li>If the patient does not have a preferred name defined in your system, the \"usual\" name also holds the patient's legal name.</li> <li>In a patient-facing context, this web service always shows the patient's preferred name, unless a user has security point 'Only Show Legal Name'.</li></ul></li> <li>In February 2020 and earlier, this element returns only the patient's legal name with a use code of \"usual\".</li> </ul>
+ * <p>The contact’s preferred name. The system determines this from the contact’s linked patient record if available.</p> <p>For organizations in the Netherlands, this element represents an <a href=\"https://simplifier.net/NictizSTU3-Zib2017/nl-core-humanname\">nl-core-humanname</a> value.</p>
  */
-export interface PatientR4Name { 
-    /**
-     * The patient's family (last) name.
-     */
-    family?: string;
-    /**
-     * The patient's given name. May include first and middle names.
-     */
-    given?: string;
-    /**
-     * The patient's name prefix.
-     */
-    prefix: string;
-    /**
-     * The patient's name suffix. Acquired as a title due to academic, legal, employment or nobility status, etc.
-     */
-    suffix: string;
-    /**
-     * The patient's full name as a string.
-     */
-    text?: string;
-    /**
-     * The purpose of the name. May be \"legal\" or \"usual\". See the name parameter for full details on use.
-     */
-    use?: string;
+export interface PatientR4Name {
+  extension?: Array<Extension>;
 }

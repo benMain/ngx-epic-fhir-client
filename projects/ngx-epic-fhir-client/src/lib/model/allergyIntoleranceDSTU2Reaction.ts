@@ -11,18 +11,15 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * List of known reactions the patient had to the substance.
- */
-export interface AllergyIntoleranceDSTU2Reaction { 
-    /**
-     * Will always be \"confirmed\". All allergies documented within Epic are known allergies and are confirmed.
-     */
-    certainty: string;
-    manifestation?: CodeableConcept;
-    /**
-     * Date allergy was first noticed.
-     */
-    onset: string;
-    substance: CodeableConcept;
+export interface AllergyIntoleranceDSTU2Reaction {
+  /**
+   * Will always be \"confirmed\". All allergies documented within Epic are known allergies and are confirmed.
+   */
+  certainty?: string;
+  manifestation?: Array<CodeableConcept>;
+  /**
+   * Date allergy was first noticed.
+   */
+  onset?: string;
+  substance?: CodeableConcept;
 }

@@ -14,6 +14,6 @@ import { GoalR4 } from './goalR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryGoalR4 { 
-    resource?: GoalR4;
+export interface BundleEntryGoalR4 {
+  resource?: GoalR4;
 }

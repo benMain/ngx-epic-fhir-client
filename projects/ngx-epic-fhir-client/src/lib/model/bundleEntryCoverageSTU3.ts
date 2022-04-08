@@ -14,6 +14,6 @@ import { CoverageSTU3 } from './coverageSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryCoverageSTU3 { 
-    resource?: CoverageSTU3;
+export interface BundleEntryCoverageSTU3 {
+  resource?: CoverageSTU3;
 }

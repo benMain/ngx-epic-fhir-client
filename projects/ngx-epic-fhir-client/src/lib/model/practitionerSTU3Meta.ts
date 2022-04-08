@@ -13,9 +13,9 @@
 /**
  * The document metadata.
  */
-export interface PractitionerSTU3Meta { 
-    /**
-     * Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner
-     */
-    profile: string;
+export interface PractitionerSTU3Meta {
+  /**
+   * Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner
+   */
+  profile: string;
 }

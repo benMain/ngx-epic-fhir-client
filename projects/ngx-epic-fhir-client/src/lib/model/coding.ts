@@ -13,7 +13,7 @@
 /**
  * A reference to a code defined by a terminology system.
  */
-export interface Coding { 
-    system?: string;
-    code?: string;
+export interface Coding {
+  system?: string;
+  code?: string;
 }

@@ -10,12 +10,9 @@
  * Do not edit the class manually.
  */
 
-/**
- * Version information.
- */
-export interface DeviceR4Version { 
-    /**
-     * GUDID version or model.
-     */
-    value?: string;
+export interface DeviceR4Version {
+  /**
+   * GUDID version or model.
+   */
+  value?: string;
 }

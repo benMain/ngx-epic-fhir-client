@@ -14,6 +14,6 @@ import { CodeableConcept } from './codeableConcept';
 /**
  * An instance of the R4 Substance resource.
  */
-export interface SubstanceR4 { 
-    code?: CodeableConcept;
+export interface SubstanceR4 {
+  code?: CodeableConcept;
 }

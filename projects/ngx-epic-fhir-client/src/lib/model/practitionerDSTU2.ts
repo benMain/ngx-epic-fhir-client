@@ -16,16 +16,19 @@ import { PractitionerDSTU2PractitionerRole } from './practitionerDSTU2Practition
 /**
  * A single Practitioner FHIR resource.
  */
-export interface PractitionerDSTU2 { 
-    communication: CodeableConcept;
-    /**
-     * The sex of the provider.
-     */
-    gender: string;
-    identifier: Identifier;
-    /**
-     * The name of the provider, including all prefixes and suffixes available.
-     */
-    name: any;
-    practitionerRole: PractitionerDSTU2PractitionerRole;
+export interface PractitionerDSTU2 {
+  communication: Array<CodeableConcept>;
+  /**
+   * The sex of the provider.
+   */
+  gender: string;
+  identifier: Array<Identifier>;
+  /**
+   * The name of the provider, including all prefixes and suffixes available.
+   */
+  name: any;
+  /**
+   * The practitioner's role at the organization.
+   */
+  practitionerRole: Array<PractitionerDSTU2PractitionerRole>;
 }

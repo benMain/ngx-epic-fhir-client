@@ -10,20 +10,17 @@
  * Do not edit the class manually.
  */
 
-/**
- * Telephone numbers and email addresses for the patient, along with their use (i.e. home, work, etc.)
- */
-export interface PatientR4Telecom { 
-    /**
-     * <p>The type of telecom. Potential values are:</p> <ul> <li>email</li> <li>phone</li> </ul>
-     */
-    system?: string;
-    /**
-     * <p>If the telecom entry is a phone number, possible values are:</p> <ul> <li>home</li> <li>mobile</li> <li>work</li> </ul>
-     */
-    use: string;
-    /**
-     * Value of the telecom method. May be an email address or phone number.
-     */
-    value?: string;
+export interface PatientR4Telecom {
+  /**
+   * <p>The type of telecom. Potential values are:</p> <ul> <li>email</li> <li>phone</li> </ul>
+   */
+  system?: string;
+  /**
+   * <p>If the telecom entry is a phone number, possible values are:</p> <ul> <li>home</li> <li>mobile</li> <li>work</li> </ul>
+   */
+  use?: string;
+  /**
+   * Value of the telecom method. May be an email address or phone number.
+   */
+  value?: string;
 }

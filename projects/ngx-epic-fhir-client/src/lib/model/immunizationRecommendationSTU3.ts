@@ -17,9 +17,12 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface ImmunizationRecommendationSTU3 { 
-    meta: ImmunizationRecommendationSTU3Meta;
-    extension: Extension;
-    patient?: Reference;
-    recommendation?: ImmunizationRecommendationSTU3Recommendation;
+export interface ImmunizationRecommendationSTU3 {
+  meta: ImmunizationRecommendationSTU3Meta;
+  extension: Array<Extension>;
+  patient?: Reference;
+  /**
+   * The immunization recommendation.
+   */
+  recommendation?: Array<ImmunizationRecommendationSTU3Recommendation>;
 }

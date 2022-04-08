@@ -12,10 +12,7 @@
 import { CodeableConcept } from './codeableConcept';
 import { Reference } from './reference';
 
-/**
- * Reference to a Practitioner that participated in the Immunization and the role they played in the interaction. 
- */
-export interface ImmunizationSTU3Practitioner { 
-    actor: Reference;
-    role: CodeableConcept;
+export interface ImmunizationSTU3Practitioner {
+  actor?: Reference;
+  role?: CodeableConcept;
 }

@@ -11,10 +11,7 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * The practitioner's role at the organization.
- */
-export interface PractitionerDSTU2PractitionerRole { 
-    role: CodeableConcept;
-    specialty: CodeableConcept;
+export interface PractitionerDSTU2PractitionerRole {
+  role?: CodeableConcept;
+  specialty?: Array<CodeableConcept>;
 }

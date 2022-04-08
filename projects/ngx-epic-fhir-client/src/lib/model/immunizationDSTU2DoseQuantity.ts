@@ -13,13 +13,13 @@
 /**
  * Information about the amount of vaccine administered.
  */
-export interface ImmunizationDSTU2DoseQuantity { 
-    /**
-     * Unit of amount of vaccine administered.
-     */
-    unit: string;
-    /**
-     * Amount of vaccine administered.
-     */
-    value: any;
+export interface ImmunizationDSTU2DoseQuantity {
+  /**
+   * Unit of amount of vaccine administered.
+   */
+  unit: string;
+  /**
+   * Amount of vaccine administered.
+   */
+  value: any;
 }

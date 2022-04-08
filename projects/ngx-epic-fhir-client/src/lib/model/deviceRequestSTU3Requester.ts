@@ -12,8 +12,8 @@
 import { Reference } from './reference';
 
 /**
- * The provider responsible for making the request. 
+ * The provider responsible for making the request.
  */
-export interface DeviceRequestSTU3Requester { 
-    agent?: Reference;
+export interface DeviceRequestSTU3Requester {
+  agent?: Reference;
 }

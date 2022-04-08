@@ -11,9 +11,9 @@
  */
 import { Meta } from './meta';
 
-export interface Resource { 
-    id?: string;
-    meta?: Meta;
-    implicitRules?: string;
-    language?: string;
+export interface Resource {
+  id?: string;
+  meta?: Meta;
+  implicitRules?: string;
+  language?: string;
 }

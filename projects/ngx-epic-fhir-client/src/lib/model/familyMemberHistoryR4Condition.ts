@@ -12,14 +12,11 @@
 import { Annotation } from './annotation';
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * Condition that the related person had
- */
-export interface FamilyMemberHistoryR4Condition { 
-    code?: CodeableConcept;
-    note: Annotation;
-    /**
-     * How old the family member was at the time of condition onset
-     */
-    onsetAge: any;
+export interface FamilyMemberHistoryR4Condition {
+  code?: CodeableConcept;
+  note?: Array<Annotation>;
+  /**
+   * How old the family member was at the time of condition onset
+   */
+  onsetAge?: any;
 }

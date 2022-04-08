@@ -14,6 +14,6 @@ import { FlagR4 } from './flagR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryFlagR4 { 
-    resource?: FlagR4;
+export interface BundleEntryFlagR4 {
+  resource?: FlagR4;
 }

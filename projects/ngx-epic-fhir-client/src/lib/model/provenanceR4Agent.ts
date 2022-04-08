@@ -12,11 +12,8 @@
 import { CodeableConcept } from './codeableConcept';
 import { Reference } from './reference';
 
-/**
- * Actors involved, such as the author and transmitter.
- */
-export interface ProvenanceR4Agent { 
-    onBehalfOf: Reference;
-    type: CodeableConcept;
-    who?: Reference;
+export interface ProvenanceR4Agent {
+  onBehalfOf?: Reference;
+  type?: CodeableConcept;
+  who?: Reference;
 }

@@ -14,6 +14,6 @@ import { AllergyIntoleranceSTU3 } from './allergyIntoleranceSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryAllergyIntoleranceSTU3 { 
-    resource?: AllergyIntoleranceSTU3;
+export interface BundleEntryAllergyIntoleranceSTU3 {
+  resource?: AllergyIntoleranceSTU3;
 }

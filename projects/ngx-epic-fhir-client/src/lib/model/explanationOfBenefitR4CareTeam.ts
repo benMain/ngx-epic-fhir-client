@@ -12,14 +12,11 @@
 import { CodeableConcept } from './codeableConcept';
 import { Reference } from './reference';
 
-/**
- * The members of the team who provided the products and services.
- */
-export interface ExplanationOfBenefitR4CareTeam { 
-    provider?: Reference;
-    role?: CodeableConcept;
-    /**
-     * The sequence ID.
-     */
-    sequence: any;
+export interface ExplanationOfBenefitR4CareTeam {
+  provider?: Reference;
+  role?: CodeableConcept;
+  /**
+   * The sequence ID.
+   */
+  sequence?: any;
 }

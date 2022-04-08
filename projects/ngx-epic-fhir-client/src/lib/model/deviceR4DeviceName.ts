@@ -10,16 +10,13 @@
  * Do not edit the class manually.
  */
 
-/**
- * <p>Device name and type details.</p>
- */
-export interface DeviceR4DeviceName { 
-    /**
-     * <p>The name of the device.</p>
-     */
-    name?: string;
-    /**
-     * <p>Always set to \"other\".</p>
-     */
-    type?: string;
+export interface DeviceR4DeviceName {
+  /**
+   * <p>The name of the device.</p>
+   */
+  name?: string;
+  /**
+   * <p>Always set to \"other\".</p>
+   */
+  type?: string;
 }

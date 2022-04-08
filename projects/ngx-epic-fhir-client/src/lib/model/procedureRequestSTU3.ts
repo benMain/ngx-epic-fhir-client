@@ -19,50 +19,46 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface ProcedureRequestSTU3 { 
-    /**
-     * In Netherlands environments, this extension maps an order’s status to OrderStatusCodelijst, if possible
-     */
-    status: any;
-    /**
-     * If set to true, indicates that the order is only performed when needed within the specified schedule.
-     */
-    asNeededBoolean: boolean;
-    /**
-     * The order instant. This is the date and time when the status is not draft or unknown.
-     */
-    authoredOn?: string;
-    basedOn?: Reference;
-    code?: CodeableConcept;
-    context?: Reference;
-    /**
-     * This is set to true if the status is draft, cancelled, or unknown.
-     */
-    doNotPerform: boolean;
-    /**
-     * FHIR ProcedureRequest ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    /**
-     * The intent code. The full list of potential values can be found <a href'\"http://hl7.org/fhir/stu3/valueset-request-intent.html\">here</a>.
-     */
-    intent?: string;
-    meta: ProcedureRequestSTU3Meta;
-    note?: Annotation;
-    /**
-     * This event element is populated for auto-released orders.
-     */
-    occurrenceTiming?: any;
-    /**
-     * The priority. The full list of potential values can be found <a href=\"http://hl7.org/fhir/stu3/valueset-request-priority.html\">here</a>.
-     */
-    priority?: string;
-    reasonCode?: CodeableConcept;
-    requester?: ProcedureRequestSTU3Requester;
-    /**
-     * The status code. The full list of potential values can be found <a href=\"http://hl7.org/fhir/stu3/valueset-request-status.html\">here</a>.
-     */
-    status?: string;
-    subject?: Reference;
+export interface ProcedureRequestSTU3 {
+  /**
+   * If set to true, indicates that the order is only performed when needed within the specified schedule.
+   */
+  asNeededBoolean: boolean;
+  /**
+   * The order instant. This is the date and time when the status is not draft or unknown.
+   */
+  authoredOn?: string;
+  basedOn?: Array<Reference>;
+  code?: CodeableConcept;
+  context?: Reference;
+  /**
+   * This is set to true if the status is draft, cancelled, or unknown.
+   */
+  doNotPerform: boolean;
+  /**
+   * FHIR ProcedureRequest ID.
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  /**
+   * The intent code. The full list of potential values can be found <a href'\"http://hl7.org/fhir/stu3/valueset-request-intent.html\">here</a>.
+   */
+  intent?: string;
+  meta: ProcedureRequestSTU3Meta;
+  note?: Array<Annotation>;
+  /**
+   * This event element is populated for auto-released orders.
+   */
+  occurrenceTiming?: any;
+  /**
+   * The priority. The full list of potential values can be found <a href=\"http://hl7.org/fhir/stu3/valueset-request-priority.html\">here</a>.
+   */
+  priority?: string;
+  reasonCode?: Array<CodeableConcept>;
+  requester?: ProcedureRequestSTU3Requester;
+  /**
+   * The status code. The full list of potential values can be found <a href=\"http://hl7.org/fhir/stu3/valueset-request-status.html\">here</a>.
+   */
+  status?: string;
+  subject?: Reference;
 }

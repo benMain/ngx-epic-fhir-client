@@ -9,13 +9,10 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { CarePlanR4ActivityDetail } from './carePlanR4ActivityDetail';
+import { CarePlanR4Detail } from './carePlanR4Detail';
 import { Reference } from './reference';
 
-/**
- * Actions to occur as part of the care plan.
- */
-export interface CarePlanR4Activity { 
-    detail: CarePlanR4ActivityDetail;
-    reference: Reference;
+export interface CarePlanR4Activity {
+  detail?: CarePlanR4Detail;
+  reference?: Reference;
 }

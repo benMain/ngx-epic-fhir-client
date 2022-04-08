@@ -10,16 +10,13 @@
  * Do not edit the class manually.
  */
 
-/**
- * <p>Available starting in the August 2021 Epic version. <p>A group or subgroup of a research study. 
- */
-export interface ResearchStudyR4Arm { 
-    /**
-     * Short explanation of the study path.
-     */
-    description: string;
-    /**
-     * Label for the study arm.
-     */
-    name?: string;
+export interface ResearchStudyR4Arm {
+  /**
+   * Short explanation of the study path.
+   */
+  description?: string;
+  /**
+   * Label for the study arm.
+   */
+  name?: string;
 }

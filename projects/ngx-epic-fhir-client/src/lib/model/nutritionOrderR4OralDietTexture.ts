@@ -11,9 +11,6 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * Texture information
- */
-export interface NutritionOrderR4OralDietTexture { 
-    modifier: CodeableConcept;
+export interface NutritionOrderR4OralDietTexture {
+  modifier?: CodeableConcept;
 }

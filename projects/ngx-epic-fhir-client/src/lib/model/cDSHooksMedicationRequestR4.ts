@@ -17,25 +17,25 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 MedicationRequest FHIR resource.
  */
-export interface CDSHooksMedicationRequestR4 { 
-    category?: CodeableConcept;
-    dispenseRequest?: CDSHooksMedicationRequestR4DispenseRequest;
-    encounter?: Reference;
-    identifier?: Identifier;
-    /**
-     * Returns “plan” for historical medications. Returns “order” for other medications.
-     */
-    intent?: string;
-    medicationReference?: Reference;
-    priorPrescription?: Reference;
-    /**
-     * Determines whether the order is historical.
-     */
-    reportedBoolean: boolean;
-    requester?: Reference;
-    /**
-     * Always set to \"draft\".
-     */
-    status?: string;
-    subject?: Reference;
+export interface CDSHooksMedicationRequestR4 {
+  category?: Array<CodeableConcept>;
+  dispenseRequest?: CDSHooksMedicationRequestR4DispenseRequest;
+  encounter?: Reference;
+  identifier?: Array<Identifier>;
+  /**
+   * Returns “plan” for historical medications. Returns “order” for other medications.
+   */
+  intent?: string;
+  medicationReference?: Reference;
+  priorPrescription?: Reference;
+  /**
+   * Determines whether the order is historical.
+   */
+  reportedBoolean: boolean;
+  requester?: Reference;
+  /**
+   * Always set to \"draft\".
+   */
+  status?: string;
+  subject?: Reference;
 }

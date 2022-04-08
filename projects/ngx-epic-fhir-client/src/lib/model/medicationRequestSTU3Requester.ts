@@ -14,7 +14,7 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface MedicationRequestSTU3Requester { 
-    agent?: Reference;
-    onBehalfOf?: Reference;
+export interface MedicationRequestSTU3Requester {
+  agent?: Reference;
+  onBehalfOf?: Reference;
 }

@@ -13,11 +13,8 @@ import { CodeableConcept } from './codeableConcept';
 import { Period } from './period';
 import { Reference } from './reference';
 
-/**
- * List of participants involved in the encounter.
- */
-export interface EncounterSTU3Participant { 
-    individual?: Reference;
-    period: Period;
-    type?: CodeableConcept;
+export interface EncounterSTU3Participant {
+  individual?: Reference;
+  period?: Period;
+  type?: Array<CodeableConcept>;
 }

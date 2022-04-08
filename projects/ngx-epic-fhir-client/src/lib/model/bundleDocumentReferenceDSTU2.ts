@@ -14,9 +14,9 @@ import { BundleEntryDocumentReferenceDSTU2 } from './bundleEntryDocumentReferenc
 /**
  * Contains a collection of resources.
  */
-export interface BundleDocumentReferenceDSTU2 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryDocumentReferenceDSTU2>;
+export interface BundleDocumentReferenceDSTU2 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryDocumentReferenceDSTU2>;
 }

@@ -14,6 +14,6 @@ import { DocumentReferenceSTU3 } from './documentReferenceSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryDocumentReferenceSTU3 { 
-    resource?: DocumentReferenceSTU3;
+export interface BundleEntryDocumentReferenceSTU3 {
+  resource?: DocumentReferenceSTU3;
 }

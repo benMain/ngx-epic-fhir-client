@@ -18,20 +18,23 @@ import { Reference } from './reference';
 /**
  * An instance of the DSTU2 MedicationStatement resource.
  */
-export interface MedicationStatementDSTU2 { 
-    dosage?: MedicationStatementDSTU2Dosage;
-    /**
-     * The effective date and time when the patient started taking the medication.
-     */
-    effectiveDateTime: string;
-    effectivePeriod?: Period;
-    identifier?: Identifier;
-    informationSource?: Reference;
-    medicationCodeableConcept?: CodeableConcept;
-    medicationReference?: Reference;
-    patient?: Reference;
-    /**
-     * The order status of the medication.
-     */
-    status?: string;
+export interface MedicationStatementDSTU2 {
+  /**
+   * The value and unit of the dosage.
+   */
+  dosage?: Array<MedicationStatementDSTU2Dosage>;
+  /**
+   * The effective date and time when the patient started taking the medication.
+   */
+  effectiveDateTime: string;
+  effectivePeriod?: Period;
+  identifier?: Array<Identifier>;
+  informationSource?: Reference;
+  medicationCodeableConcept?: CodeableConcept;
+  medicationReference?: Reference;
+  patient?: Reference;
+  /**
+   * The order status of the medication.
+   */
+  status?: string;
 }

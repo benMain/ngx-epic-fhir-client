@@ -13,9 +13,9 @@
 /**
  * A Response Type
  */
-export interface MedicationRequestSTU3Substitution { 
-    /**
-     * <p>If the Dispense as Written item is set to 1, we return this as No.</p> <p>If Dispense as Written does not equal 1, we don't return a substitution element.</p>
-     */
-    allowed: boolean;
+export interface MedicationRequestSTU3Substitution {
+  /**
+   * <p>If the Dispense as Written item is set to 1, we return this as No.</p> <p>If Dispense as Written does not equal 1, we don't return a substitution element.</p>
+   */
+  allowed: boolean;
 }

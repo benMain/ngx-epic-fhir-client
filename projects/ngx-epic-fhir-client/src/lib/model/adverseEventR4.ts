@@ -17,34 +17,37 @@ import { Reference } from './reference';
 /**
  * A single instance of a FHIR AdverseEvent resource.
  */
-export interface AdverseEventR4 { 
-    /**
-     * The nature of the adverse event, either real or potential.
-     */
-    actuality?: string;
-    extension: Extension;
-    category?: CodeableConcept;
-    /**
-     * When the event occurred.
-     */
-    date?: string;
-    encounter?: Reference;
-    event?: CodeableConcept;
-    /**
-     * The Adverse Event FHIR ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    location?: Reference;
-    outcome?: CodeableConcept;
-    /**
-     * When the event was recorded from the audit trail. This is when the event was first recorded.
-     */
-    recordedDate?: string;
-    recorder?: Reference;
-    seriousness?: CodeableConcept;
-    severity?: CodeableConcept;
-    study?: Reference;
-    subject?: Reference;
-    suspectEntity?: any;
+export interface AdverseEventR4 {
+  /**
+   * The nature of the adverse event, either real or potential.
+   */
+  actuality?: string;
+  extension: Array<Extension>;
+  category?: Array<CodeableConcept>;
+  /**
+   * When the event occurred.
+   */
+  date?: string;
+  encounter?: Reference;
+  event?: CodeableConcept;
+  /**
+   * The Adverse Event FHIR ID.
+   */
+  id?: string;
+  identifier?: Identifier;
+  location?: Reference;
+  outcome?: CodeableConcept;
+  /**
+   * When the event was recorded from the audit trail. This is when the event was first recorded.
+   */
+  recordedDate?: string;
+  recorder?: Reference;
+  seriousness?: CodeableConcept;
+  severity?: CodeableConcept;
+  study?: Array<Reference>;
+  subject?: Reference;
+  /**
+   * The suspected agent causing the adverse event.
+   */
+  suspectEntity?: Array<any>;
 }

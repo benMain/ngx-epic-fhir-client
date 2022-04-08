@@ -14,26 +14,26 @@ import { CodeableConcept } from './codeableConcept';
 /**
  * A Response Type
  */
-export interface EndpointSTU3 { 
-    /**
-     * <p>The provider address. This is a direct address, not a general address.</p>
-     */
-    address?: string;
-    /**
-     * <p>This is always \"direct-project\".</p>
-     */
-    connectionType?: any;
-    /**
-     * <p>A name by which you can identify this endpoint.</p>
-     */
-    name: string;
-    /**
-     * <p>This element returns \"text/xml\", \"text/plain\", and \"application/pdf\".</p>
-     */
-    payloadMimeType: string;
-    payloadType?: CodeableConcept;
-    /**
-     * <p>This is always \"active\".</p>
-     */
-    status: string;
+export interface EndpointSTU3 {
+  /**
+   * <p>The provider address. This is a direct address, not a general address.</p>
+   */
+  address?: string;
+  /**
+   * <p>This is always \"direct-project\".</p>
+   */
+  connectionType?: any;
+  /**
+   * <p>A name by which you can identify this endpoint.</p>
+   */
+  name: string;
+  /**
+   * <p>This element returns \"text/xml\", \"text/plain\", and \"application/pdf\".</p>
+   */
+  payloadMimeType: string;
+  payloadType?: Array<CodeableConcept>;
+  /**
+   * <p>This is always \"active\".</p>
+   */
+  status: string;
 }

@@ -11,17 +11,14 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * Coverage classification details.
- */
-export interface CoverageR4Class { 
-    /**
-     * Human-readable description of the type and value.
-     */
-    name: string;
-    type?: CodeableConcept;
-    /**
-     * Value associated with this class.
-     */
-    value?: string;
+export interface CoverageR4Class {
+  /**
+   * Human-readable description of the type and value.
+   */
+  name?: string;
+  type?: CodeableConcept;
+  /**
+   * Value associated with this class.
+   */
+  value?: string;
 }

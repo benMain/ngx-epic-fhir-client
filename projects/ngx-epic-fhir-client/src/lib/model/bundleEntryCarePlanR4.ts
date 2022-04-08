@@ -14,6 +14,6 @@ import { CarePlanR4 } from './carePlanR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryCarePlanR4 { 
-    resource?: CarePlanR4;
+export interface BundleEntryCarePlanR4 {
+  resource?: CarePlanR4;
 }

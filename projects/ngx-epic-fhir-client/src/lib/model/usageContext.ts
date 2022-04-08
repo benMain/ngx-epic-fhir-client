@@ -19,15 +19,15 @@ import { Reference } from './reference';
 /**
  * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
  */
-export interface UsageContext { 
-    id?: string;
-    /**
-     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
-     */
-    extension?: Array<Extension>;
-    code: Coding;
-    valueCodeableConcept?: CodeableConcept;
-    valueQuantity?: Quantity;
-    valueRange?: Range;
-    valueReference?: Reference;
+export interface UsageContext {
+  id?: string;
+  /**
+   * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+   */
+  extension?: Array<Extension>;
+  code: Coding;
+  valueCodeableConcept?: CodeableConcept;
+  valueQuantity?: Quantity;
+  valueRange?: Range;
+  valueReference?: Reference;
 }

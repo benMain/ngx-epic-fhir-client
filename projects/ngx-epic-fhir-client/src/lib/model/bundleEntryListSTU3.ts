@@ -14,6 +14,6 @@ import { ListSTU3 } from './listSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryListSTU3 { 
-    resource?: ListSTU3;
+export interface BundleEntryListSTU3 {
+  resource?: ListSTU3;
 }

@@ -18,30 +18,30 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 Organization FHIR resource.
  */
-export interface OrganizationR4 { 
-    /**
-     * <p>Whether the organization's record is in active use.</p>
-     */
-    active: boolean;
-    address: Address;
-    /**
-     * <p>The synonyms for the organization.</p>
-     */
-    alias: string;
-    extension: Extension;
-    /**
-     * <p>The Organization FHIR ID.</p>
-     */
-    id?: string;
-    identifier: Identifier;
-    /**
-     * <p>The name used for the organization.</p>
-     */
-    name: string;
-    partOf: Reference;
-    /**
-     * <p>The phone number, fax number, and emergency phone number.</p>
-     */
-    telecom: any;
-    type: CodeableConcept;
+export interface OrganizationR4 {
+  /**
+   * <p>Whether the organization's record is in active use.</p>
+   */
+  active: boolean;
+  address: Array<Address>;
+  /**
+   * <p>The synonyms for the organization.</p>
+   */
+  alias: string;
+  extension: Array<Extension>;
+  /**
+   * <p>The Organization FHIR ID.</p>
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  /**
+   * <p>The name used for the organization.</p>
+   */
+  name: string;
+  partOf: Reference;
+  /**
+   * <p>The phone number, fax number, and emergency phone number.</p>
+   */
+  telecom: Array<any>;
+  type: Array<CodeableConcept>;
 }

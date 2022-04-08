@@ -10,20 +10,17 @@
  * Do not edit the class manually.
  */
 
-/**
- * <p>Shows links to the entire Binary textual results of the report. <p>Available starting in the November 2021 version of Epic and in the August 2021 version with special updates.
- */
-export interface DiagnosticReportR4PresentedForm { 
-    /**
-     * Mime content type code.
-     */
-    contentType?: string;
-    /**
-     * Label to display in place of the data.
-     */
-    title?: string;
-    /**
-     * Binary link for the textual content.
-     */
-    url?: string;
+export interface DiagnosticReportR4PresentedForm {
+  /**
+   * Mime content type code.
+   */
+  contentType?: string;
+  /**
+   * Label to display in place of the data.
+   */
+  title?: string;
+  /**
+   * Binary link for the textual content.
+   */
+  url?: string;
 }

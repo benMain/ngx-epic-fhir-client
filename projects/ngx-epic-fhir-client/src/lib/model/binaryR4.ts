@@ -13,17 +13,17 @@
 /**
  * A single instance of a FHIR Binary resource.
  */
-export interface BinaryR4 { 
-    /**
-     * This is always \"application/pdf\" for radiology result data.
-     */
-    contentType?: string;
-    /**
-     * The note or document content as a base64-encoded value.
-     */
-    data?: string;
-    /**
-     * <p>The Binary FHIR ID.</p>
-     */
-    id?: string;
+export interface BinaryR4 {
+  /**
+   * This is always \"application/pdf\" for radiology result data.
+   */
+  contentType?: string;
+  /**
+   * The note or document content as a base64-encoded value.
+   */
+  data?: string;
+  /**
+   * <p>The Binary FHIR ID.</p>
+   */
+  id?: string;
 }

@@ -16,8 +16,8 @@ import { Reference } from './reference';
 /**
  * Context details.
  */
-export interface DocumentReferenceSTU3Context { 
-    encounter: Reference;
-    period: Period;
-    practiceSetting: CodeableConcept;
+export interface DocumentReferenceSTU3Context {
+  encounter: Reference;
+  period: Period;
+  practiceSetting: CodeableConcept;
 }

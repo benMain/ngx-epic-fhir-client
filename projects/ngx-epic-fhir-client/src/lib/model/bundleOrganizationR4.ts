@@ -14,9 +14,9 @@ import { BundleEntryOrganizationR4 } from './bundleEntryOrganizationR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleOrganizationR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryOrganizationR4>;
+export interface BundleOrganizationR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryOrganizationR4>;
 }

@@ -20,56 +20,68 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface DeviceR4 { 
-    /**
-     * Area code and phone number.
-     */
-    contact: any;
-    deviceName: DeviceR4DeviceName;
-    /**
-     * Distinct identification code.
-     */
-    distinctIdentifier: string;
-    /**
-     * <p>Device expiration date.</p>
-     */
-    expirationDate: string;
-    location: Reference;
-    /**
-     * <p>Device lot number.</p>
-     */
-    lotNumber: string;
-    /**
-     * <p>Date of device manufacture.</p>
-     */
-    manufactureDate: string;
-    /**
-     * <p>Device manufacturer.</p>
-     */
-    manufacturer: string;
-    /**
-     * <p>Device model number.</p>
-     */
-    modelNumber: string;
-    note: Annotation;
-    owner: Reference;
-    parent: Reference;
-    patient: Reference;
-    /**
-     * Implant type information, including: <ul><li>Permanence <li>Radioactive <li>Site <li>Laterality <li>Size <li>GUDID request status <li>GUDID MRI safety information <li>GUDID contains dry or latex rubber <li>GMDN Preferred term name</ul>
-     */
-    property: any;
-    safety: CodeableConcept;
-    /**
-     * <p>Device serial number.</p>
-     */
-    serialNumber: string;
-    specialization?: DeviceR4Specialization;
-    /**
-     * <p>One of the following values:</p> <ul>   <li>active</li>   <li>inactive</li>   <li>entered-in-error</li>   <li>unknown</li> </ul>
-     */
-    status: string;
-    type: CodeableConcept;
-    udiCarrier: DeviceR4UdiCarrier;
-    version?: DeviceR4Version;
+export interface DeviceR4 {
+  /**
+   * Area code and phone number.
+   */
+  contact: Array<any>;
+  /**
+   * <p>Device name and type details.</p>
+   */
+  deviceName: Array<DeviceR4DeviceName>;
+  /**
+   * Distinct identification code.
+   */
+  distinctIdentifier: string;
+  /**
+   * <p>Device expiration date.</p>
+   */
+  expirationDate: string;
+  location: Reference;
+  /**
+   * <p>Device lot number.</p>
+   */
+  lotNumber: string;
+  /**
+   * <p>Date of device manufacture.</p>
+   */
+  manufactureDate: string;
+  /**
+   * <p>Device manufacturer.</p>
+   */
+  manufacturer: string;
+  /**
+   * <p>Device model number.</p>
+   */
+  modelNumber: string;
+  note: Array<Annotation>;
+  owner: Reference;
+  parent: Reference;
+  patient: Reference;
+  /**
+   * Implant type information, including: <ul><li>Permanence <li>Radioactive <li>Site <li>Laterality <li>Size <li>GUDID request status <li>GUDID MRI safety information <li>GUDID contains dry or latex rubber <li>GMDN Preferred term name</ul>
+   */
+  property: Array<any>;
+  safety: Array<CodeableConcept>;
+  /**
+   * <p>Device serial number.</p>
+   */
+  serialNumber: string;
+  /**
+   * Specialization information.
+   */
+  specialization?: Array<DeviceR4Specialization>;
+  /**
+   * <p>One of the following values:</p> <ul>   <li>active</li>   <li>inactive</li>   <li>entered-in-error</li>   <li>unknown</li> </ul>
+   */
+  status: string;
+  type: CodeableConcept;
+  /**
+   * <p>Device carrier identification details.</p> <p>Under FDA regulations, all medical devices are required to include a Unique Device Identifier (UDI) on device labels and packages, in both human-readable and barcode format. The FDA also maintains a public database of medical devices and UDI information called the <a href=\"https://accessgudid.nlm.nih.gov/\">Global Unique Device Identification Database (GUDID)</a>.</p> <p>A Unique Device Identifier (UDI) is a unique numeric or alphanumeric code that is comprised of two components:</p> <ul>   <li>Device Identifier (DI) (\"Static UDI\") – a mandatory, fixed portion of a UDI that identifiers the labeler and specific version or model of a device.</li>   <li>Production Identifiers (PI) (\"Dynamic UDI\") – a conditional, variable portion of a UDI that identifies one or more of the following:</li>   <ul>   <li>Lot or batch number within which a device was manufactured</li>   <li>Serial number of a specific device</li>   <li>Expiration date of a specific device</li>   <li>Production date of a specific device</li>   <li>Distinct identification code for a human cell, tissue, or cellular- and tissue-based product</li> </ul> </ul> <p>When documenting a UDI for an implant in OpTime, you will need to use an identifier that is in a valid format for the selected issuer. Here are some example UDIs you can use for testing:</p> <table class=\"table table-hover\"> <tr>   <th>UDI Type / Issuer</th>   <th>Example Device ID</th> </tr> <tr>   <td>ICCBBA</td>   <td>W4184228005T0473</td> </tr> <tr>   <td>HIBC</td>   <td>MDLXMAG120200</td> </tr> <tr>   <td>GS1</td>   <td>00822409025305</td> </tr> </table>
+   */
+  udiCarrier: Array<DeviceR4UdiCarrier>;
+  /**
+   * Version information.
+   */
+  version?: Array<DeviceR4Version>;
 }

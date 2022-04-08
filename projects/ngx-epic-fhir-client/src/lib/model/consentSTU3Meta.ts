@@ -13,9 +13,9 @@
 /**
  * The document metadata.
  */
-export interface ConsentSTU3Meta { 
-    /**
-     * Available in Netherlands environments only. This element shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective
-     */
-    profile: string;
+export interface ConsentSTU3Meta {
+  /**
+   * Available in Netherlands environments only. This element shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective
+   */
+  profile: string;
 }

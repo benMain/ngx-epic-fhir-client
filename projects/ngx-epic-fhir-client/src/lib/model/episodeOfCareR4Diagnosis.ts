@@ -11,9 +11,6 @@
  */
 import { Reference } from './reference';
 
-/**
- * Returns the list of diagnoses associated with the episode. Deleted episodes are not included.
- */
-export interface EpisodeOfCareR4Diagnosis { 
-    condition?: Reference;
+export interface EpisodeOfCareR4Diagnosis {
+  condition?: Reference;
 }

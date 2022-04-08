@@ -11,9 +11,6 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * Component information.
- */
-export interface ObservationR4Component { 
-    code: CodeableConcept;
+export interface ObservationR4Component {
+  code?: CodeableConcept;
 }

@@ -9,11 +9,8 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { DocumentReferenceSTU3ContentAttachment } from './documentReferenceSTU3ContentAttachment';
+import { DocumentReferenceSTU3Attachment } from './documentReferenceSTU3Attachment';
 
-/**
- * Where to access the document.
- */
-export interface DocumentReferenceSTU3Content { 
-    attachment?: DocumentReferenceSTU3ContentAttachment;
+export interface DocumentReferenceSTU3Content {
+  attachment?: DocumentReferenceSTU3Attachment;
 }

@@ -9,11 +9,8 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { CarePlanDSTU2ActivityDetail } from './carePlanDSTU2ActivityDetail';
+import { CarePlanDSTU2Detail } from './carePlanDSTU2Detail';
 
-/**
- * Action to occur as part of the plan.
- */
-export interface CarePlanDSTU2Activity { 
-    detail?: CarePlanDSTU2ActivityDetail;
+export interface CarePlanDSTU2Activity {
+  detail?: CarePlanDSTU2Detail;
 }

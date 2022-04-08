@@ -19,20 +19,20 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface DeviceUseStatementSTU3 { 
-    bodySite: CodeableConcept;
-    device?: Reference;
-    extension: Extension;
-    /**
-     * The DeviceUseStatement FHIR ID.
-     */
-    id?: string;
-    meta: DeviceUseStatementSTU3Meta;
-    note: Annotation;
-    /**
-     * <p>One of the following values:</p> <ul> <li>active</li> <li>completed</li> <li>intended</li> <li>stopped</li> <p>*For external devices, this is hard coded to a value of active.</p> 
-     */
-    status: string;
-    subject?: Reference;
-    whenUsed: Period;
+export interface DeviceUseStatementSTU3 {
+  bodySite: CodeableConcept;
+  device?: Reference;
+  extension: Array<Extension>;
+  /**
+   * The DeviceUseStatement FHIR ID.
+   */
+  id?: string;
+  meta: DeviceUseStatementSTU3Meta;
+  note: Array<Annotation>;
+  /**
+   * <p>One of the following values:</p> <ul> <li>active</li> <li>completed</li> <li>intended</li> <li>stopped</li> <p>*For external devices, this is hard coded to a value of active.</p>
+   */
+  status: string;
+  subject?: Reference;
+  whenUsed: Period;
 }

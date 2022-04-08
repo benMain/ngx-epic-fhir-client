@@ -14,6 +14,6 @@ import { CoverageR4 } from './coverageR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryCoverageR4 { 
-    resource?: CoverageR4;
+export interface BundleEntryCoverageR4 {
+  resource?: CoverageR4;
 }

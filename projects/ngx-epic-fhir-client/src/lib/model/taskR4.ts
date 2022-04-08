@@ -16,33 +16,33 @@ import { Reference } from './reference';
 /**
  * A single instance of an R4 Task FHIR resource.
  */
-export interface TaskR4 { 
-    /**
-     * The date and time when the task was created.
-     */
-    authoredOn?: string;
-    basedOn?: Reference;
-    code?: CodeableConcept;
-    encounter?: Reference;
-    _for?: Reference;
-    /**
-     * The FHIR intent code: TaskIntent.
-     */
-    intent?: string;
-    /**
-     * The date and time when the task was last modified.
-     */
-    lastModified?: string;
-    extension: Extension;
-    owner?: Reference;
-    /**
-     * The FHIR priority code: RequestPriority.
-     */
-    priority?: string;
-    requester?: Reference;
-    /**
-     * The FHIR status code: TaskStatus.
-     */
-    status?: string;
-    statusReason: CodeableConcept;
+export interface TaskR4 {
+  /**
+   * The date and time when the task was created.
+   */
+  authoredOn?: string;
+  basedOn?: Array<Reference>;
+  code?: CodeableConcept;
+  encounter?: Reference;
+  _for?: Reference;
+  /**
+   * The FHIR intent code: TaskIntent.
+   */
+  intent?: string;
+  /**
+   * The date and time when the task was last modified.
+   */
+  lastModified?: string;
+  extension: Array<Extension>;
+  owner?: Reference;
+  /**
+   * The FHIR priority code: RequestPriority.
+   */
+  priority?: string;
+  requester?: Reference;
+  /**
+   * The FHIR status code: TaskStatus.
+   */
+  status?: string;
+  statusReason: CodeableConcept;
 }

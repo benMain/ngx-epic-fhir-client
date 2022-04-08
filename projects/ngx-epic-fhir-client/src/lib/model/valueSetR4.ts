@@ -14,14 +14,14 @@ import { ValueSetR4Expansion } from './valueSetR4Expansion';
 /**
  * A single ValueSet resource.
  */
-export interface ValueSetR4 { 
-    expansion: ValueSetR4Expansion;
-    /**
-     * The ValueSet FHIR ID.
-     */
-    id?: string;
-    /**
-     * Status of the ValueSet. Always \"active\".
-     */
-    status?: string;
+export interface ValueSetR4 {
+  expansion: ValueSetR4Expansion;
+  /**
+   * The ValueSet FHIR ID.
+   */
+  id?: string;
+  /**
+   * Status of the ValueSet. Always \"active\".
+   */
+  status?: string;
 }

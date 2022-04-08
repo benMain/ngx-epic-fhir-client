@@ -14,9 +14,9 @@ import { BundleEntryFamilyMemberHistoryDSTU2 } from './bundleEntryFamilyMemberHi
 /**
  * Contains a collection of resources.
  */
-export interface BundleFamilyMemberHistoryDSTU2 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryFamilyMemberHistoryDSTU2>;
+export interface BundleFamilyMemberHistoryDSTU2 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryFamilyMemberHistoryDSTU2>;
 }

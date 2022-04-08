@@ -18,27 +18,30 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 DiagnosticReport resource.
  */
-export interface DiagnosticReportR4 { 
-    category?: CodeableConcept;
-    code?: CodeableConcept;
-    /**
-     * Clinically relevant time/time period for report.
-     */
-    effectiveDateTime?: string;
-    encounter?: Reference;
-    identifier?: Identifier;
-    /**
-     * DateTime this version was released.  Available starting in the February 2022 version of Epic and in the November 2021 version with special updates.
-     */
-    issued?: string;
-    performer?: Reference;
-    presentedForm?: DiagnosticReportR4PresentedForm;
-    result?: Reference;
-    resultsInterpreter: Reference;
-    extension: Extension;
-    /**
-     * The status of the report. You can find the list of values here: <a href=\"http://hl7.org/fhir/diagnostic-report-status\">http://hl7.org/fhir/diagnostic-report-status</a>.
-     */
-    status?: string;
-    subject?: Reference;
+export interface DiagnosticReportR4 {
+  category?: Array<CodeableConcept>;
+  code?: CodeableConcept;
+  /**
+   * Clinically relevant time/time period for report.
+   */
+  effectiveDateTime?: string;
+  encounter?: Reference;
+  identifier?: Array<Identifier>;
+  /**
+   * DateTime this version was released.  Available starting in the February 2022 version of Epic and in the November 2021 version with special updates.
+   */
+  issued?: string;
+  performer?: Array<Reference>;
+  /**
+   * <p>Shows links to the entire Binary textual results of the report. <p>Available starting in the November 2021 version of Epic and in the August 2021 version with special updates.
+   */
+  presentedForm?: Array<DiagnosticReportR4PresentedForm>;
+  result?: Array<Reference>;
+  resultsInterpreter: Array<Reference>;
+  extension: Array<Extension>;
+  /**
+   * The status of the report. You can find the list of values here: <a href=\"http://hl7.org/fhir/diagnostic-report-status\">http://hl7.org/fhir/diagnostic-report-status</a>.
+   */
+  status?: string;
+  subject?: Reference;
 }

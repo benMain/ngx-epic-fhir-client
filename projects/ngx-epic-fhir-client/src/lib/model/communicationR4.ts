@@ -15,21 +15,24 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 Communication FHIR resource.
  */
-export interface CommunicationR4 { 
-    basedOn?: Reference;
-    encounter?: Reference;
-    inResponseTo: Reference;
-    partOf: Reference;
-    payload?: CommunicationR4Payload;
-    recipient?: Reference;
-    sender?: Reference;
-    /**
-     * The date and time when the communication was sent.
-     */
-    sent?: string;
-    /**
-     * The FHIR status code (EventStatus).
-     */
-    status?: string;
-    subject?: Reference;
+export interface CommunicationR4 {
+  basedOn?: Array<Reference>;
+  encounter?: Reference;
+  inResponseTo: Array<Reference>;
+  partOf: Array<Reference>;
+  /**
+   * <p>Message or Attachment (PDF) payload.</p>
+   */
+  payload?: Array<CommunicationR4Payload>;
+  recipient?: Array<Reference>;
+  sender?: Reference;
+  /**
+   * The date and time when the communication was sent.
+   */
+  sent?: string;
+  /**
+   * The FHIR status code (EventStatus).
+   */
+  status?: string;
+  subject?: Reference;
 }

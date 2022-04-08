@@ -11,22 +11,19 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * The value and unit of the dosage.
- */
-export interface MedicationStatementDSTU2Dosage { 
-    /**
-     * True if taken as needed (PRN). False otherwise.
-     */
-    asNeededBoolean: boolean;
-    method?: CodeableConcept;
-    /**
-     * The medication administer amount.
-     */
-    quantityQuantity?: any;
-    route?: CodeableConcept;
-    /**
-     * The frequency.
-     */
-    timing?: any;
+export interface MedicationStatementDSTU2Dosage {
+  /**
+   * True if taken as needed (PRN). False otherwise.
+   */
+  asNeededBoolean?: boolean;
+  method?: CodeableConcept;
+  /**
+   * The medication administer amount.
+   */
+  quantityQuantity?: any;
+  route?: CodeableConcept;
+  /**
+   * The frequency.
+   */
+  timing?: any;
 }

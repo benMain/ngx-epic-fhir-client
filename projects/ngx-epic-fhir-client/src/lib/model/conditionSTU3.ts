@@ -18,30 +18,30 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface ConditionSTU3 { 
-    abatementPeriod: Period;
-    /**
-     * The date the condition was noted.
-     */
-    assertedDate: string;
-    category: CodeableConcept;
-    /**
-     * The status of the problem. Can be active, inactive, or resolved. 
-     */
-    clinicalStatus?: string;
-    code?: CodeableConcept;
-    context: Reference;
-    /**
-     * The FHIR ID for this Condition.
-     */
-    id?: string;
-    meta: ConditionSTU3Meta;
-    note: Annotation;
-    onsetPeriod: Period;
-    severity: CodeableConcept;
-    subject?: Reference;
-    /**
-     * If this is on the patient's local chart, the value is \"confirmed\". If it is outside data, it is \"unconfirmed\".
-     */
-    verificationStatus?: string;
+export interface ConditionSTU3 {
+  abatementPeriod: Period;
+  /**
+   * The date the condition was noted.
+   */
+  assertedDate: string;
+  category: Array<CodeableConcept>;
+  /**
+   * The status of the problem. Can be active, inactive, or resolved.
+   */
+  clinicalStatus?: string;
+  code?: CodeableConcept;
+  context: Reference;
+  /**
+   * The FHIR ID for this Condition.
+   */
+  id?: string;
+  meta: ConditionSTU3Meta;
+  note: Array<Annotation>;
+  onsetPeriod: Period;
+  severity: CodeableConcept;
+  subject?: Reference;
+  /**
+   * If this is on the patient's local chart, the value is \"confirmed\". If it is outside data, it is \"unconfirmed\".
+   */
+  verificationStatus?: string;
 }

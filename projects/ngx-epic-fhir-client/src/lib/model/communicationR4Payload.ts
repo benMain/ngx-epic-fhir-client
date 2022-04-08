@@ -11,13 +11,10 @@
  */
 import { Reference } from './reference';
 
-/**
- * <p>Message or Attachment (PDF) payload.</p>
- */
-export interface CommunicationR4Payload { 
-    contentReference?: Reference;
-    /**
-     * <p>Contains the content. Append all payload.contentString elements together to form the entire message body.</p>
-     */
-    contentString?: string;
+export interface CommunicationR4Payload {
+  contentReference?: Reference;
+  /**
+   * <p>Contains the content. Append all payload.contentString elements together to form the entire message body.</p>
+   */
+  contentString?: string;
 }

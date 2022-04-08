@@ -21,35 +21,41 @@ import { Reference } from './reference';
 /**
  * A single Encounter resource.
  */
-export interface EncounterR4 { 
-    extension: Extension;
-    account?: Reference;
-    /**
-     * Classification of patient encounter. For organizations in the Netherlands, this element includes only the ACT encounter code, following the same logic used for Care Everywhere encounter CDA documents. This element is available starting in the November 2021 version of Epic. 
-     */
-    _class?: any;
-    /**
-     * Reference to the Condition (Problem) resource. Returns the principal problem for the hospital encounter. Used only for hospital encounters. This element is available starting in the November 2021 version of Epic. 
-     */
-    diagnosis: any;
-    episodeOfCare: Reference;
-    hospitalization: EncounterR4Hospitalization;
-    /**
-     * The Encounter FHIR ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    location: EncounterR4Location;
-    participant?: EncounterR4Participant;
-    partOf: Reference;
-    period: Period;
-    priority: CodeableConcept;
-    reasonCode: CodeableConcept;
-    serviceType: CodeableConcept;
-    /**
-     * The encounter status. Full list of statuses can be found <a href=\"https://www.hl7.org/fhir/valueset-encounter-status.html\">here</a>.
-     */
-    status?: string;
-    subject?: Reference;
-    type: CodeableConcept;
+export interface EncounterR4 {
+  extension: Array<Extension>;
+  account?: Array<Reference>;
+  /**
+   * Classification of patient encounter. For organizations in the Netherlands, this element includes only the ACT encounter code, following the same logic used for Care Everywhere encounter CDA documents. This element is available starting in the November 2021 version of Epic.
+   */
+  _class?: any;
+  /**
+   * Reference to the Condition (Problem) resource. Returns the principal problem for the hospital encounter. Used only for hospital encounters. This element is available starting in the November 2021 version of Epic.
+   */
+  diagnosis: Array<any>;
+  episodeOfCare: Array<Reference>;
+  hospitalization: EncounterR4Hospitalization;
+  /**
+   * The Encounter FHIR ID.
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  /**
+   * Can return a department, location, hospital room, or bed. Department and location are determined dynamically depending on a variety of factors.
+   */
+  location: Array<EncounterR4Location>;
+  /**
+   * List of participants involved in the encounter.
+   */
+  participant?: Array<EncounterR4Participant>;
+  partOf: Reference;
+  period: Period;
+  priority: CodeableConcept;
+  reasonCode: Array<CodeableConcept>;
+  serviceType: CodeableConcept;
+  /**
+   * The encounter status. Full list of statuses can be found <a href=\"https://www.hl7.org/fhir/valueset-encounter-status.html\">here</a>.
+   */
+  status?: string;
+  subject?: Reference;
+  type: Array<CodeableConcept>;
 }

@@ -14,9 +14,9 @@ import { BundleEntryConditionDSTU2 } from './bundleEntryConditionDSTU2';
 /**
  * Contains a collection of resources.
  */
-export interface BundleConditionDSTU2 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryConditionDSTU2>;
+export interface BundleConditionDSTU2 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryConditionDSTU2>;
 }

@@ -16,17 +16,17 @@ import { Reference } from './reference';
 /**
  * A single instance of a Flag resource.
  */
-export interface FlagSTU3 { 
-    category: CodeableConcept;
-    code?: CodeableConcept;
-    /**
-     * The Flag FHIR ID.
-     */
-    id?: string;
-    period: Period;
-    /**
-     * The status of the FYI.
-     */
-    status?: string;
-    subject?: Reference;
+export interface FlagSTU3 {
+  category: CodeableConcept;
+  code?: CodeableConcept;
+  /**
+   * The Flag FHIR ID.
+   */
+  id?: string;
+  period: Period;
+  /**
+   * The status of the FYI.
+   */
+  status?: string;
+  subject?: Reference;
 }

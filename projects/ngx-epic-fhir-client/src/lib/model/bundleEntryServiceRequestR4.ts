@@ -14,6 +14,6 @@ import { ServiceRequestR4 } from './serviceRequestR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryServiceRequestR4 { 
-    resource?: ServiceRequestR4;
+export interface BundleEntryServiceRequestR4 {
+  resource?: ServiceRequestR4;
 }

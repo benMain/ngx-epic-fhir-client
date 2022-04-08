@@ -15,7 +15,7 @@ import { MedicationDSTU2Product } from './medicationDSTU2Product';
 /**
  * An instance of the DSTU2 Medication FHIR resource.
  */
-export interface MedicationDSTU2 { 
-    code: CodeableConcept;
-    product: MedicationDSTU2Product;
+export interface MedicationDSTU2 {
+  code: CodeableConcept;
+  product: MedicationDSTU2Product;
 }

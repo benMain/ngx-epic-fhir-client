@@ -16,17 +16,17 @@ import { Reference } from './reference';
 /**
  * Collection details.
  */
-export interface SpecimenSTU3Collection { 
-    bodySite: CodeableConcept;
-    extension: Extension;
-    /**
-     * Instant derived from the date and time of collection. When there is no date, this item returns null.
-     */
-    collectedDateTime: string;
-    collector: Reference;
-    method: CodeableConcept;
-    /**
-     * Total collection volume.
-     */
-    quantity: any;
+export interface SpecimenSTU3Collection {
+  bodySite: CodeableConcept;
+  extension: Array<Extension>;
+  /**
+   * Instant derived from the date and time of collection. When there is no date, this item returns null.
+   */
+  collectedDateTime: string;
+  collector: Reference;
+  method: CodeableConcept;
+  /**
+   * Total collection volume.
+   */
+  quantity: any;
 }

@@ -9,19 +9,19 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { QuestionnaireResponseR4ItemAnswer } from './questionnaireResponseR4ItemAnswer';
+import { QuestionnaireResponseR4Answer } from './questionnaireResponseR4Answer';
 
-/**
- * <p>Answers to the questions in the questionnaire.</p>
- */
-export interface QuestionnaireResponseR4Item { 
-    answer: QuestionnaireResponseR4ItemAnswer;
-    /**
-     * This property lists the questionnaire ID, the question ID, along with the DAT of the question as a dot-delimited (.) string.
-     */
-    linkId?: string;
-    /**
-     * The prompt of the question or question group.
-     */
-    text: string;
+export interface QuestionnaireResponseR4Item {
+  /**
+   * <p>The answer submitted for the question.</p> <p>Single-valued answer to the question. Depending on the type of question, the value sent will be one of the following types:</p> <ul>   <li>valueBoolean</li>   <li>valueDecimal</li>   <li>valueCoding</li>   <li>valueDate</li>   <li>valueTime</li>   <li>valueString</li>   <li>valueQuantity</li>   <li>valueAttachment</li> </ul>
+   */
+  answer?: Array<QuestionnaireResponseR4Answer>;
+  /**
+   * This property lists the questionnaire ID, the question ID, along with the DAT of the question as a dot-delimited (.) string.
+   */
+  linkId?: string;
+  /**
+   * The prompt of the question or question group.
+   */
+  text?: string;
 }

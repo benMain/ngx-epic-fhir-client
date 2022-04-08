@@ -19,27 +19,27 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface OrganizationSTU3 { 
-    /**
-     * <p>Whether the organization's record is in active use.</p>
-     */
-    active: boolean;
-    address: Address;
-    extension: Extension;
-    /**
-     * <p>The Organization FHIR ID.</p>
-     */
-    id?: string;
-    identifier: Identifier;
-    meta: OrganizationSTU3Meta;
-    /**
-     * <p>The name used for the organization.</p>
-     */
-    name: string;
-    partOf: Reference;
-    /**
-     * <p>The phone number, fax number, and emergency phone number.</p>
-     */
-    telecom: any;
-    type: CodeableConcept;
+export interface OrganizationSTU3 {
+  /**
+   * <p>Whether the organization's record is in active use.</p>
+   */
+  active: boolean;
+  address: Array<Address>;
+  extension: Array<Extension>;
+  /**
+   * <p>The Organization FHIR ID.</p>
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  meta: OrganizationSTU3Meta;
+  /**
+   * <p>The name used for the organization.</p>
+   */
+  name: string;
+  partOf: Reference;
+  /**
+   * <p>The phone number, fax number, and emergency phone number.</p>
+   */
+  telecom: Array<any>;
+  type: Array<CodeableConcept>;
 }

@@ -11,9 +11,6 @@
  */
 import { Reference } from './reference';
 
-/**
- * The organization where the medication was verified.
- */
-export interface MedicationDispenseR4Performer { 
-    actor?: Reference;
+export interface MedicationDispenseR4Performer {
+  actor?: Reference;
 }

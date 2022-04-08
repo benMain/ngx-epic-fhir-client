@@ -11,9 +11,6 @@
  */
 import { Reference } from './reference';
 
-/**
- * Each entry is a BackboneElement with the \"item\" property populated with a reference to the Condition resource and the \"display\" property populated with the problem name. 
- */
-export interface ListR4Entry { 
-    item?: Reference;
+export interface ListR4Entry {
+  item?: Reference;
 }

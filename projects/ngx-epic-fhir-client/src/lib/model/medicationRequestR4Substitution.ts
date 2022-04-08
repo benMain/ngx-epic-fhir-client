@@ -13,9 +13,9 @@
 /**
  * A Response Type
  */
-export interface MedicationRequestR4Substitution { 
-    /**
-     * Whether substitution is allowed or not.
-     */
-    allowedBoolean?: boolean;
+export interface MedicationRequestR4Substitution {
+  /**
+   * Whether substitution is allowed or not.
+   */
+  allowedBoolean?: boolean;
 }

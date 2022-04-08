@@ -14,6 +14,6 @@ import { DiagnosticReportDSTU2 } from './diagnosticReportDSTU2';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryDiagnosticReportDSTU2 { 
-    resource?: DiagnosticReportDSTU2;
+export interface BundleEntryDiagnosticReportDSTU2 {
+  resource?: DiagnosticReportDSTU2;
 }

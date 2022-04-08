@@ -11,9 +11,6 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * Specialization information.
- */
-export interface DeviceR4Specialization { 
-    systemType?: CodeableConcept;
+export interface DeviceR4Specialization {
+  systemType?: CodeableConcept;
 }

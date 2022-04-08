@@ -14,6 +14,6 @@ import { CodeableConcept } from './codeableConcept';
 /**
  * Vaccine administration/non-administration reasons.
  */
-export interface ImmunizationDSTU2Explanation { 
-    reasonNotGiven: CodeableConcept;
+export interface ImmunizationDSTU2Explanation {
+  reasonNotGiven: Array<CodeableConcept>;
 }

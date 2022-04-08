@@ -20,27 +20,27 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface DeviceRequestSTU3 { 
-    /**
-     * The date on which a request was made, or the day of the order that contains it.
-     */
-    authoredOn: string;
-    basedOn: Reference;
-    codeCodeableConcept?: CodeableConcept;
-    context: Reference;
-    identifier: Identifier;
-    intent?: CodeableConcept;
-    meta: DeviceRequestSTU3Meta;
-    occurrencePeriod: Period;
-    extension: Extension;
-    /**
-     * <p>The priority of a request. Can be one of the following:</p> <ul> <li>routine</li> <li>urgent</li> <li>asap</li> <li>stat</li> </ul>
-     */
-    priority: string;
-    requester: DeviceRequestSTU3Requester;
-    /**
-     * <p>The status of a request. Can be one of the following:</p> <ul> <li>active</li> <li>completed</li> <li>draft</li> <li>cancelled</li> <li>entered-in-error</li> <li>unknown</li> </ul>
-     */
-    status: string;
-    subject?: Reference;
+export interface DeviceRequestSTU3 {
+  /**
+   * The date on which a request was made, or the day of the order that contains it.
+   */
+  authoredOn: string;
+  basedOn: Array<Reference>;
+  codeCodeableConcept?: CodeableConcept;
+  context: Reference;
+  identifier: Array<Identifier>;
+  intent?: CodeableConcept;
+  meta: DeviceRequestSTU3Meta;
+  occurrencePeriod: Period;
+  extension: Array<Extension>;
+  /**
+   * <p>The priority of a request. Can be one of the following:</p> <ul> <li>routine</li> <li>urgent</li> <li>asap</li> <li>stat</li> </ul>
+   */
+  priority: string;
+  requester: DeviceRequestSTU3Requester;
+  /**
+   * <p>The status of a request. Can be one of the following:</p> <ul> <li>active</li> <li>completed</li> <li>draft</li> <li>cancelled</li> <li>entered-in-error</li> <li>unknown</li> </ul>
+   */
+  status: string;
+  subject?: Reference;
 }

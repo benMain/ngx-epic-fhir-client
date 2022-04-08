@@ -15,11 +15,14 @@ import { NutritionOrderR4OralDietTexture } from './nutritionOrderR4OralDietTextu
 /**
  * The details of a diet order.
  */
-export interface NutritionOrderR4OralDiet { 
-    /**
-     * The name of a diet.
-     */
-    instruction: string;
-    texture: NutritionOrderR4OralDietTexture;
-    type: CodeableConcept;
+export interface NutritionOrderR4OralDiet {
+  /**
+   * The name of a diet.
+   */
+  instruction: string;
+  /**
+   * Texture information
+   */
+  texture: Array<NutritionOrderR4OralDietTexture>;
+  type: Array<CodeableConcept>;
 }

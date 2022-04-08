@@ -14,6 +14,9 @@ import { DocumentReferenceDSTU2ContextRelated } from './documentReferenceDSTU2Co
 /**
  * Context details.
  */
-export interface DocumentReferenceDSTU2Context { 
-    related?: DocumentReferenceDSTU2ContextRelated;
+export interface DocumentReferenceDSTU2Context {
+  /**
+   * The associated encounter.
+   */
+  related?: Array<DocumentReferenceDSTU2ContextRelated>;
 }

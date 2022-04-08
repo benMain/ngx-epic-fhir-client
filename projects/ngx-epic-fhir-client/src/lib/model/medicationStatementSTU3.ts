@@ -21,29 +21,32 @@ import { Reference } from './reference';
 /**
  * An instance of the STU3 MedicationStatement resource.
  */
-export interface MedicationStatementSTU3 { 
-    extension: Extension;
-    basedOn?: Reference;
-    category?: CodeableConcept;
-    /**
-     * The date the prescription was written.
-     */
-    dateAsserted?: string;
-    dosage?: MedicationStatementSTU3Dosage;
-    effectivePeriod?: Period;
-    identifier?: Identifier;
-    informationSource?: Reference;
-    medicationCodeableConcept?: CodeableConcept;
-    medicationReference?: Reference;
-    meta: MedicationStatementSTU3Meta;
-    note?: Annotation;
-    /**
-     * The order status of the medication.
-     */
-    status?: string;
-    subject?: Reference;
-    /**
-     * This element is set to \"unk\" for unknown.
-     */
-    taken?: string;
+export interface MedicationStatementSTU3 {
+  extension: Array<Extension>;
+  basedOn?: Array<Reference>;
+  category?: CodeableConcept;
+  /**
+   * The date the prescription was written.
+   */
+  dateAsserted?: string;
+  /**
+   * The value and unit of the dosage.
+   */
+  dosage?: Array<MedicationStatementSTU3Dosage>;
+  effectivePeriod?: Period;
+  identifier?: Array<Identifier>;
+  informationSource?: Reference;
+  medicationCodeableConcept?: CodeableConcept;
+  medicationReference?: Reference;
+  meta: MedicationStatementSTU3Meta;
+  note?: Array<Annotation>;
+  /**
+   * The order status of the medication.
+   */
+  status?: string;
+  subject?: Reference;
+  /**
+   * This element is set to \"unk\" for unknown.
+   */
+  taken?: string;
 }

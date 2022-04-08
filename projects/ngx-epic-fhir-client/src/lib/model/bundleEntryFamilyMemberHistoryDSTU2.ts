@@ -14,6 +14,6 @@ import { FamilyMemberHistoryR4 } from './familyMemberHistoryR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryFamilyMemberHistoryDSTU2 { 
-    resource?: FamilyMemberHistoryR4;
+export interface BundleEntryFamilyMemberHistoryDSTU2 {
+  resource?: FamilyMemberHistoryR4;
 }

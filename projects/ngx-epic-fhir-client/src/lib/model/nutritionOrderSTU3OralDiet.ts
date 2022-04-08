@@ -10,16 +10,19 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { NutritionOrderSTU3OralDietTexture } from './nutritionOrderSTU3OralDietTexture';
+import { NutritionOrderR4OralDietTexture } from './nutritionOrderR4OralDietTexture';
 
 /**
  * The details of a diet order.
  */
-export interface NutritionOrderSTU3OralDiet { 
-    /**
-     * The name of a diet.
-     */
-    instruction: string;
-    texture: NutritionOrderSTU3OralDietTexture;
-    type: CodeableConcept;
+export interface NutritionOrderSTU3OralDiet {
+  /**
+   * The name of a diet.
+   */
+  instruction: string;
+  /**
+   * Texture information.
+   */
+  texture: Array<NutritionOrderR4OralDietTexture>;
+  type: Array<CodeableConcept>;
 }

@@ -16,12 +16,15 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface ImmunizationRecommendationR4 { 
-    /**
-     * The date when the immunization recommendation was created.
-     */
-    date?: string;
-    extension: Extension;
-    patient?: Reference;
-    recommendation?: ImmunizationRecommendationR4Recommendation;
+export interface ImmunizationRecommendationR4 {
+  /**
+   * The date when the immunization recommendation was created.
+   */
+  date?: string;
+  extension: Array<Extension>;
+  patient?: Reference;
+  /**
+   * The immunization recommendation.
+   */
+  recommendation?: Array<ImmunizationRecommendationR4Recommendation>;
 }

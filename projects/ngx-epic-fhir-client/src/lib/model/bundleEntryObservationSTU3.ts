@@ -14,6 +14,6 @@ import { ObservationSTU3 } from './observationSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryObservationSTU3 { 
-    resource?: ObservationSTU3;
+export interface BundleEntryObservationSTU3 {
+  resource?: ObservationSTU3;
 }

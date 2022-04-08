@@ -17,21 +17,21 @@ import { Reference } from './reference';
 /**
  * An instance of the STU3 NutritionOrder resource.
  */
-export interface NutritionOrderSTU3 { 
-    extension: Extension;
-    /**
-     * The date and time of an order.
-     */
-    dateTime?: string;
-    /**
-     * Identifier.
-     */
-    id?: string;
-    meta: NutritionOrderSTU3Meta;
-    oralDiet: NutritionOrderSTU3OralDiet;
-    patient?: Reference;
-    /**
-     * <p>The status of a nutrition order. Possible statuses include:</p> <ul><li>draft <li>active <li>completed <li>revoked <li>unknown <li>entered-in-error
-     */
-    status: string;
+export interface NutritionOrderSTU3 {
+  extension: Array<Extension>;
+  /**
+   * The date and time of an order.
+   */
+  dateTime?: string;
+  /**
+   * Identifier.
+   */
+  id?: string;
+  meta: NutritionOrderSTU3Meta;
+  oralDiet: NutritionOrderSTU3OralDiet;
+  patient?: Reference;
+  /**
+   * <p>The status of a nutrition order. Possible statuses include:</p> <ul><li>draft <li>active <li>completed <li>revoked <li>unknown <li>entered-in-error
+   */
+  status: string;
 }

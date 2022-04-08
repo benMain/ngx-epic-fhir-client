@@ -14,6 +14,6 @@ import { EncounterSTU3 } from './encounterSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryEncounterSTU3 { 
-    resource?: EncounterSTU3;
+export interface BundleEntryEncounterSTU3 {
+  resource?: EncounterSTU3;
 }

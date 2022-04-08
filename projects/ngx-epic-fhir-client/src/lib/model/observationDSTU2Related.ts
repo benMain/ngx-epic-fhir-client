@@ -11,13 +11,10 @@
  */
 import { Reference } from './reference';
 
-/**
- * A Response Type
- */
-export interface ObservationDSTU2Related { 
-    target?: Reference;
-    /**
-     * How is this related to the observation.
-     */
-    type?: string;
+export interface ObservationDSTU2Related {
+  target?: Reference;
+  /**
+   * How is this related to the observation.
+   */
+  type?: string;
 }

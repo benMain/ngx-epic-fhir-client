@@ -16,23 +16,23 @@ import { Reference } from './reference';
 /**
  * A single Goal resource.
  */
-export interface GoalSTU3 { 
-    addresses: Reference;
-    category: CodeableConcept;
-    description?: CodeableConcept;
-    expressedBy: Reference;
-    /**
-     * The Goal FHIR ID.
-     */
-    id?: string;
-    note: Annotation;
-    /**
-     * When pursuit of the goal begins.
-     */
-    startDate: string;
-    /**
-     * <p>The current status of the goal. The following values are supported:</p> <ul> <li>in-progress</li> <li>achieved</li> <li>cancelled</li> </ul>  <p>The status for received document records is always \"in-progress.\"</p>
-     */
-    status?: string;
-    subject: Reference;
+export interface GoalSTU3 {
+  addresses: Array<Reference>;
+  category: Array<CodeableConcept>;
+  description?: CodeableConcept;
+  expressedBy: Reference;
+  /**
+   * The Goal FHIR ID.
+   */
+  id?: string;
+  note: Array<Annotation>;
+  /**
+   * When pursuit of the goal begins.
+   */
+  startDate: string;
+  /**
+   * <p>The current status of the goal. The following values are supported:</p> <ul> <li>in-progress</li> <li>achieved</li> <li>cancelled</li> </ul>  <p>The status for received document records is always \"in-progress.\"</p>
+   */
+  status?: string;
+  subject: Reference;
 }

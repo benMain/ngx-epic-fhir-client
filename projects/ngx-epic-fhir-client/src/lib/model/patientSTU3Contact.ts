@@ -11,19 +11,16 @@
  */
 import { Address } from './address';
 import { CodeableConcept } from './codeableConcept';
-import { PatientSTU3ContactName } from './patientSTU3ContactName';
+import { PatientSTU3Name } from './patientSTU3Name';
 import { Period } from './period';
 
-/**
- * Contact details.
- */
-export interface PatientSTU3Contact { 
-    address: Address;
-    name: PatientSTU3ContactName;
-    period: Period;
-    relationship: CodeableConcept;
-    /**
-     * <p>Telephone numbers and email address for the contact.</p> <p>For organizations in the Netherlands, this element represents an <a href=\"https://simplifier.net/NictizSTU3-Zib2017/nl-core-contactpoint\">nl-core-contactpoint</a> value.</p> 
-     */
-    telecom: any;
+export interface PatientSTU3Contact {
+  address?: Address;
+  name?: PatientSTU3Name;
+  period?: Period;
+  relationship?: Array<CodeableConcept>;
+  /**
+   * <p>Telephone numbers and email address for the contact.</p> <p>For organizations in the Netherlands, this element represents an <a href=\"https://simplifier.net/NictizSTU3-Zib2017/nl-core-contactpoint\">nl-core-contactpoint</a> value.</p>
+   */
+  telecom?: Array<any>;
 }

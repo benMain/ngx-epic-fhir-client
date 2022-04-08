@@ -14,9 +14,9 @@ import { BundleEntryPractitionerRoleR4 } from './bundleEntryPractitionerRoleR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundlePractitionerRoleR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryPractitionerRoleR4>;
+export interface BundlePractitionerRoleR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryPractitionerRoleR4>;
 }

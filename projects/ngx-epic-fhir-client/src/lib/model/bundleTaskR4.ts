@@ -14,9 +14,9 @@ import { BundleEntryTaskR4 } from './bundleEntryTaskR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleTaskR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryTaskR4>;
+export interface BundleTaskR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryTaskR4>;
 }

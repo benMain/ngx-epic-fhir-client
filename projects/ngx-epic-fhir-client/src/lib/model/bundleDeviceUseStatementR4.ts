@@ -14,9 +14,9 @@ import { BundleEntryDeviceUseStatementR4 } from './bundleEntryDeviceUseStatement
 /**
  * Contains a collection of resources.
  */
-export interface BundleDeviceUseStatementR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryDeviceUseStatementR4>;
+export interface BundleDeviceUseStatementR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryDeviceUseStatementR4>;
 }

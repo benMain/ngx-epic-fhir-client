@@ -18,36 +18,39 @@ import { Period } from './period';
 /**
  * A Response Type
  */
-export interface FamilyMemberHistoryR4 { 
-    /**
-     * Family member’s birth date
-     */
-    bornDate: string;
-    bornPeriod: Period;
-    condition: FamilyMemberHistoryR4Condition;
-    dataAbsentReason: CodeableConcept;
-    /**
-     * When history was recorded or last updated
-     */
-    date: string;
-    /**
-     * Whether or not the family member is deceased
-     */
-    deceasedBoolean: boolean;
-    /**
-     * FHIR ID for this FamilyMemberHistory instance
-     */
-    id?: string;
-    identifier: Identifier;
-    /**
-     * The family member described
-     */
-    name: string;
-    note: Annotation;
-    relationship?: CodeableConcept;
-    sex?: CodeableConcept;
-    /**
-     * Completion status for family member's history. Either \"health-unknown\" or \"completed\".
-     */
-    status?: string;
+export interface FamilyMemberHistoryR4 {
+  /**
+   * Family member’s birth date
+   */
+  bornDate: string;
+  bornPeriod: Period;
+  /**
+   * Condition that the related person had
+   */
+  condition: Array<FamilyMemberHistoryR4Condition>;
+  dataAbsentReason: CodeableConcept;
+  /**
+   * When history was recorded or last updated
+   */
+  date: string;
+  /**
+   * Whether or not the family member is deceased
+   */
+  deceasedBoolean: boolean;
+  /**
+   * FHIR ID for this FamilyMemberHistory instance
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  /**
+   * The family member described
+   */
+  name: string;
+  note: Array<Annotation>;
+  relationship?: CodeableConcept;
+  sex?: CodeableConcept;
+  /**
+   * Completion status for family member's history. Either \"health-unknown\" or \"completed\".
+   */
+  status?: string;
 }

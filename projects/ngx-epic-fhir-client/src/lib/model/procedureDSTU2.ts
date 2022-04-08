@@ -11,27 +11,30 @@
  */
 import { CodeableConcept } from './codeableConcept';
 import { Identifier } from './identifier';
+import { MedicationDispenseR4Performer } from './medicationDispenseR4Performer';
 import { Period } from './period';
-import { ProcedureDSTU2Performer } from './procedureDSTU2Performer';
 import { Reference } from './reference';
 
 /**
  * A Response Type
  */
-export interface ProcedureDSTU2 { 
-    code?: CodeableConcept;
-    identifier?: Identifier;
-    /**
-     * When the procedure was performed.
-     */
-    performedDateTime?: string;
-    performedPeriod?: Period;
-    performer: ProcedureDSTU2Performer;
-    reasonCodeableConcept?: CodeableConcept;
-    reasonReference: Reference;
-    /**
-     * <p>The status of the Procedure. </p> <table class=\"table table-hover\"> <tr> <th>API Value</th> <th><a href=\"http://hl7.org/fhir/DSTU2/valueset-procedure-status.html\">FHIR Event Status</a></th> </tr> <tr> <td>cancelled</td> <td>aborted</td> </tr> <tr> <td>completed</td> <td>completed</td> </tr> </table> <p>*Note: Omitted FHIR event status equivalent values are not returned by this search.</p>
-     */
-    status?: string;
-    subject?: Reference;
+export interface ProcedureDSTU2 {
+  code?: CodeableConcept;
+  identifier?: Array<Identifier>;
+  /**
+   * When the procedure was performed.
+   */
+  performedDateTime?: string;
+  performedPeriod?: Period;
+  /**
+   * Who performed the Procedure.
+   */
+  performer: Array<MedicationDispenseR4Performer>;
+  reasonCodeableConcept?: CodeableConcept;
+  reasonReference: Reference;
+  /**
+   * <p>The status of the Procedure. </p> <table class=\"table table-hover\"> <tr> <th>API Value</th> <th><a href=\"http://hl7.org/fhir/DSTU2/valueset-procedure-status.html\">FHIR Event Status</a></th> </tr> <tr> <td>cancelled</td> <td>aborted</td> </tr> <tr> <td>completed</td> <td>completed</td> </tr> </table> <p>*Note: Omitted FHIR event status equivalent values are not returned by this search.</p>
+   */
+  status?: string;
+  subject?: Reference;
 }

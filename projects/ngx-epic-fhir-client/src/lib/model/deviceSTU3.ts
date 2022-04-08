@@ -18,38 +18,38 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface DeviceSTU3 { 
-    /**
-     * <p>Device expiration date.</p>
-     */
-    expirationDate: string;
-    /**
-     * The Device FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    /**
-     * <p>Device lot number.</p>
-     */
-    lotNumber: string;
-    /**
-     * <p>Date of device manufacture.</p>
-     */
-    manufactureDate: string;
-    /**
-     * <p>Device manufacturer.</p>
-     */
-    manufacturer: string;
-    meta: DeviceSTU3Meta;
-    /**
-     * <p>Device model or catalog number.</p>
-     */
-    model: string;
-    patient: Reference;
-    /**
-     * <p>One of the following values:</p> <ul>   <li>active</li>   <li>inactive</li>   <li>entered-in-error</li>   <li>unknown</li> </ul> <p>Configuration options for device status are available.</p> <p>* For external devices, this is hard coded to a value of active.</p>
-     */
-    status: string;
-    type: CodeableConcept;
-    udi: DeviceSTU3Udi;
+export interface DeviceSTU3 {
+  /**
+   * <p>Device expiration date.</p>
+   */
+  expirationDate: string;
+  /**
+   * The Device FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  /**
+   * <p>Device lot number.</p>
+   */
+  lotNumber: string;
+  /**
+   * <p>Date of device manufacture.</p>
+   */
+  manufactureDate: string;
+  /**
+   * <p>Device manufacturer.</p>
+   */
+  manufacturer: string;
+  meta: DeviceSTU3Meta;
+  /**
+   * <p>Device model or catalog number.</p>
+   */
+  model: string;
+  patient: Reference;
+  /**
+   * <p>One of the following values:</p> <ul>   <li>active</li>   <li>inactive</li>   <li>entered-in-error</li>   <li>unknown</li> </ul> <p>Configuration options for device status are available.</p> <p>* For external devices, this is hard coded to a value of active.</p>
+   */
+  status: string;
+  type: CodeableConcept;
+  udi: DeviceSTU3Udi;
 }

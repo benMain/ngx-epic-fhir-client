@@ -23,39 +23,57 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 ExplanationOfBenefit resource.
  */
-export interface ExplanationOfBenefitR4 { 
-    billablePeriod?: Period;
-    careTeam?: ExplanationOfBenefitR4CareTeam;
-    /**
-     * Date when the claim was created.
-     */
-    created?: string;
-    diagnosis?: ExplanationOfBenefitR4Diagnosis;
-    /**
-     * Description of the status of the adjudication.
-     */
-    disposition?: string;
-    facility?: Reference;
-    /**
-     * The FHIR ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    insurance?: ExplanationOfBenefitR4Insurance;
-    insurer?: Reference;
-    item?: ExplanationOfBenefitR4Item;
-    /**
-     * Non-AP Claims: complete Paid AP claims: complete Claim in the status of \"new\": queued (this status is very rare) All other claims: partial
-     */
-    outcome?: string;
-    patient?: Reference;
-    procedure?: ExplanationOfBenefitR4Procedure;
-    provider?: Reference;
-    /**
-     * Status of the claim. 'active' and 'cancelled' claims can be shown in search requests.
-     */
-    status?: string;
-    subType?: CodeableConcept;
-    supportingInfo?: ExplanationOfBenefitR4SupportingInfo;
-    type?: CodeableConcept;
+export interface ExplanationOfBenefitR4 {
+  billablePeriod?: Period;
+  /**
+   * The members of the team who provided the products and services.
+   */
+  careTeam?: Array<ExplanationOfBenefitR4CareTeam>;
+  /**
+   * Date when the claim was created.
+   */
+  created?: string;
+  /**
+   * Each diagnosis on the claim will have an entry. Rx claims do not support diagnosis.
+   */
+  diagnosis?: Array<ExplanationOfBenefitR4Diagnosis>;
+  /**
+   * Description of the status of the adjudication.
+   */
+  disposition?: string;
+  facility?: Reference;
+  /**
+   * The FHIR ID.
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  /**
+   * Member's ID from the coverage.
+   */
+  insurance?: Array<ExplanationOfBenefitR4Insurance>;
+  insurer?: Reference;
+  /**
+   * Service lines.
+   */
+  item?: Array<ExplanationOfBenefitR4Item>;
+  /**
+   * Non-AP Claims: complete Paid AP claims: complete Claim in the status of \"new\": queued (this status is very rare) All other claims: partial
+   */
+  outcome?: string;
+  patient?: Reference;
+  /**
+   * ICD procedures.
+   */
+  procedure?: Array<ExplanationOfBenefitR4Procedure>;
+  provider?: Reference;
+  /**
+   * Status of the claim. 'active' and 'cancelled' claims can be shown in search requests.
+   */
+  status?: string;
+  subType?: CodeableConcept;
+  /**
+   * The following supporting info is supported: All claims: Received date All Medical claims: Discharge disposition Occurrence span codes Admission type Admission source UB claims: Type of Bill Rx Claims: Record status code Reject Override Code Reject code Fill Number Days Supply DAW Code
+   */
+  supportingInfo?: Array<ExplanationOfBenefitR4SupportingInfo>;
+  type?: CodeableConcept;
 }

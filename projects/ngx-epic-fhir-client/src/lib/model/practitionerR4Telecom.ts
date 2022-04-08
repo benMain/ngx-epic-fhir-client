@@ -10,16 +10,13 @@
  * Do not edit the class manually.
  */
 
-/**
- * Returned only for Epic user-based practitioners. Not returned in a MyChart context.
- */
-export interface PractitionerR4Telecom { 
-    /**
-     * Always set to \"email\"
-     */
-    system?: string;
-    /**
-     * The email for the Epic user-based practitioner. Obtained from the user record.
-     */
-    value: string;
+export interface PractitionerR4Telecom {
+  /**
+   * Always set to \"email\"
+   */
+  system?: string;
+  /**
+   * The email for the Epic user-based practitioner. Obtained from the user record.
+   */
+  value?: string;
 }

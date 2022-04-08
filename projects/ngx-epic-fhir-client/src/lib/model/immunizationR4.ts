@@ -19,46 +19,49 @@ import { Reference } from './reference';
 /**
  * A single Immunization resource.
  */
-export interface ImmunizationR4 { 
-    doseQuantity: ImmunizationDSTU2DoseQuantity;
-    encounter: Reference;
-    /**
-     * Vaccine expiration date.
-     */
-    expirationDate: string;
-    /**
-     * The Immunization FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    /**
-     * Indicates that the dose wasn’t full strength. Replaces the extension \"isSubpotent\" in STU3.
-     */
-    isSubpotent: boolean;
-    location: Reference;
-    /**
-     * Vaccine lot number.
-     */
-    lotNumber: string;
-    manufacturer: Reference;
-    note: Annotation;
-    /**
-     * Vaccination administration date and time (if available). Previously \"date\" in STU3 and earlier.
-     */
-    occurrenceDateTime: string;
-    patient?: Reference;
-    performer: ImmunizationR4Performer;
-    /**
-     * Whether the immunization data is historical and therefore reported by a patient or another system. If historical, \"false\" is returned as this system is not the primary source of the data. 
-     */
-    primarySource: boolean;
-    reportOrigin: CodeableConcept;
-    route: CodeableConcept;
-    site: CodeableConcept;
-    /**
-     * <p>Status of the Immunization. Possible values are:</p> <ul> <li>completed</li> <li>entered-in-error</li> <li>not-done</li> </ul> <p>*Note: incomplete Immunizations are not returned.</p>
-     */
-    status?: string;
-    statusReason: CodeableConcept;
-    vaccineCode?: CodeableConcept;
+export interface ImmunizationR4 {
+  doseQuantity: ImmunizationDSTU2DoseQuantity;
+  encounter: Reference;
+  /**
+   * Vaccine expiration date.
+   */
+  expirationDate: string;
+  /**
+   * The Immunization FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  /**
+   * Indicates that the dose wasn’t full strength. Replaces the extension \"isSubpotent\" in STU3.
+   */
+  isSubpotent: boolean;
+  location: Reference;
+  /**
+   * Vaccine lot number.
+   */
+  lotNumber: string;
+  manufacturer: Reference;
+  note: Array<Annotation>;
+  /**
+   * Vaccination administration date and time (if available). Previously \"date\" in STU3 and earlier.
+   */
+  occurrenceDateTime: string;
+  patient?: Reference;
+  /**
+   * Reference to a Practitioner that participated in the Immunization and the role they played in the interaction. Renamed from \"practitioner\" in STU3.
+   */
+  performer: Array<ImmunizationR4Performer>;
+  /**
+   * Whether the immunization data is historical and therefore reported by a patient or another system. If historical, \"false\" is returned as this system is not the primary source of the data.
+   */
+  primarySource: boolean;
+  reportOrigin: CodeableConcept;
+  route: CodeableConcept;
+  site: CodeableConcept;
+  /**
+   * <p>Status of the Immunization. Possible values are:</p> <ul> <li>completed</li> <li>entered-in-error</li> <li>not-done</li> </ul> <p>*Note: incomplete Immunizations are not returned.</p>
+   */
+  status?: string;
+  statusReason: CodeableConcept;
+  vaccineCode?: CodeableConcept;
 }

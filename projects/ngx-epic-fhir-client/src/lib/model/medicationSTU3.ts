@@ -17,18 +17,21 @@ import { MedicationSTU3Meta } from './medicationSTU3Meta';
 /**
  * A Response Type
  */
-export interface MedicationSTU3 { 
-    code: CodeableConcept;
-    extension: Extension;
-    form: CodeableConcept;
-    ingredient: MedicationSTU3Ingredient;
-    /**
-     * <p>This element is true if this is a brand-name medication.</p>
-     */
-    isBrand: boolean;
-    /**
-     * <p>This element is true if this medication doesn't require a prescription.</p>
-     */
-    isOverTheCounter: boolean;
-    meta: MedicationSTU3Meta;
+export interface MedicationSTU3 {
+  code: CodeableConcept;
+  extension: Array<Extension>;
+  form: CodeableConcept;
+  /**
+   * <p>An ingredient in the medication.</p>
+   */
+  ingredient: Array<MedicationSTU3Ingredient>;
+  /**
+   * <p>This element is true if this is a brand-name medication.</p>
+   */
+  isBrand: boolean;
+  /**
+   * <p>This element is true if this medication doesn't require a prescription.</p>
+   */
+  isOverTheCounter: boolean;
+  meta: MedicationSTU3Meta;
 }

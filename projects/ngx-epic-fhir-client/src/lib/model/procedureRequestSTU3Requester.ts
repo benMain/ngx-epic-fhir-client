@@ -14,6 +14,6 @@ import { Reference } from './reference';
 /**
  * Reference to a practitioner resource who is the authorizing provider for the procedure request.
  */
-export interface ProcedureRequestSTU3Requester { 
-    agent?: Reference;
+export interface ProcedureRequestSTU3Requester {
+  agent?: Reference;
 }

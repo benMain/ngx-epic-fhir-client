@@ -1,88 +1,150 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-    HttpClient
-} from '@angular/common/http';
-import { Configuration } from '../configuration';
 import { firstValueFrom } from 'rxjs';
-import { CapabilityStatement } from '../model/capabilityStatement';
-import { EpicOAuthToken } from '../model/epic-oauth-token';
+import { Configuration } from '../configuration';
+import { CapabilityStatement, EpicOAuthToken } from '../model';
+import { TOKEN_STORAGE_KEY } from '../variables';
+import { LocalStorageService } from './localStorage.service';
 
 @Injectable()
 export class OAuthService {
-    private authorizerUrl: string | undefined;
-    private tokenUrl: string | undefined;
-    private token: EpicOAuthToken = {} as any;
-    constructor(protected readonly httpClient: HttpClient, readonly configuration: Configuration) {
+  authorizerUrl: string | undefined;
+  tokenUrl: string | undefined;
+  token: EpicOAuthToken | undefined;
 
-    }
+  constructor(
+    private readonly httpClient: HttpClient,
+    private readonly configuration: Configuration,
+    private readonly storage: LocalStorageService
+  ) {}
 
-    async checkRunAuthWorkflow() {
-        console.log(`Working through Embedded Auth Workflow`)
-        if (!this.configuration.authCode) {
-            console.log(`Making initial request against EPIC ISS Endpiont ${this.configuration.issUrl ?? 'unknown'} with Epic Client ID: ${this.configuration.epicClientId}`)
-            const capabilityStatement = await this.getCapabilityStatement();
-            const urlSegments = capabilityStatement.rest.find(x => !!x)?.security?.extension.find(x => !!x)?.extension;
+  get oAuthToken() {
+    return this.token as EpicOAuthToken;
+  }
 
-            this.authorizerUrl = urlSegments?.find(x => x.url === "authorize")?.valueUri;
-            this.tokenUrl = urlSegments?.find(x => x.url === "token")?.valueUri;
-            console.log(`Found tokenUrl: ${this.tokenUrl ?? 'unknown'} and authorizerUrl ${this.authorizerUrl} from capabilityStatement: ${JSON.stringify(capabilityStatement)}`)
-            await this.callAuthEndpoint(this.configuration.embeddedApp);
-        }
-        if (!this.tokenUrl) {
-            this.tokenUrl = this.configuration.authCodeState;
-        }
-        await this.callTokenEndpointAndSetLocalTokenVar()
-        return this.token;
-    }
-
-    get oAuthToken() {
-        return this.token;
-    }
-
-    async callTokenEndpointAndSetLocalTokenVar() {
-        const params = new URLSearchParams();
-        params.append('grant_type', 'authorization_code');
-        params.append('code', `${this.configuration.authCode}`);
-        params.append('redirect_uri', `${this.configuration.redirectUri}`);
-        params.append('client_id', `${this.configuration.epicClientId}`)
-        this.token = await firstValueFrom(this.httpClient.post<EpicOAuthToken>(`${this.tokenUrl}`, params))
-        if (!this.configuration.apiKeys) {
-            this.configuration.apiKeys = {
-                Authorization: this.token.access_token,
-            }
+  async checkRunAuthWorkflow() {
+    if (
+      !!this.configuration.launchCode ||
+      (!this.configuration.embeddedApp && !this.configuration.authCode)
+    ) {
+      this.storage.delete(TOKEN_STORAGE_KEY);
+      console.log(
+        `Making initial request against EPIC ISS Endpiont ${
+          this.configuration.issUrl ?? 'unknown'
+        } with Epic Client ID: ${this.configuration.epicClientId}`
+      );
+      const capabilityStatement = await this.getCapabilityStatement();
+      const urlSegments = capabilityStatement.rest
+        .find((x) => !!x)
+        ?.security?.extension.find((x) => !!x)?.extension;
+      this.authorizerUrl = urlSegments?.find(
+        (x) => x.url === 'authorize'
+      )?.valueUri;
+      this.tokenUrl = urlSegments?.find((x) => x.url === 'token')?.valueUri;
+      console.log(
+        `Found tokenUrl: ${this.tokenUrl ?? 'unknown'} and authorizerUrl ${
+          this.authorizerUrl
+        } from capabilityStatement.`
+      );
+      await this.callAuthEndpoint(this.configuration.embeddedApp);
+    } else {
+      this.tokenUrl = this.configuration.authCodeState;
+      const storedToken = this.storage.get<EpicOAuthToken>(TOKEN_STORAGE_KEY);
+      if (!!storedToken) {
+        console.log(`Found Existing Token!`);
+        if (this.isTokenStillValid(storedToken)) {
+          console.log(`Existing Token is Valid`);
+          this.token = storedToken;
         } else {
-            this.configuration.apiKeys['Authorization'] = this.token.access_token;
+          console.log(`Existing Token has expired`);
+          this.storage.delete(TOKEN_STORAGE_KEY);
         }
+      } else {
+        console.log('No Stored Token Found!');
+      }
+      if (!this.token) {
+        await this.callTokenEndpoint();
+      }
+      this.updateConfiguration();
     }
+    return this.token as EpicOAuthToken;
+  }
 
-    callAuthEndpoint(isEmbeddedApp: boolean) {
-        const params: {
-            [param: string]: string | number | boolean | readonly (string | number | boolean)[];
-        } = {
-            scope: 'launch',
-            response_type: 'code',
-            redirect_uri: this.configuration.redirectUri,
-            client_id: this.configuration.epicClientId,
-            state: this.tokenUrl ?? '',
-            aud: this.configuration.issUrl ?? '',
+  async callTokenEndpoint() {
+    const params = new URLSearchParams();
+    params.append('grant_type', 'authorization_code');
+    params.append('code', `${this.configuration.authCode}`);
+    params.append('redirect_uri', `${this.configuration.redirectUri}`);
+    params.append('client_id', `${this.configuration.epicClientId}`);
+    this.token = await firstValueFrom(
+      this.httpClient.post<EpicOAuthToken>(`${this.tokenUrl}`, params, {
+        headers: this.getHeaders({
+          'Content-Type': 'application/x-www-form-urlencoded',
+        }),
+      })
+    );
+    this.token.expires_at = this.getTokenExpiry(this.token);
+    this.storage.set(TOKEN_STORAGE_KEY, this.token);
+    console.log(`Received Token ${JSON.stringify(this.token)}`);
+  }
+  updateConfiguration() {
+    if (!this.configuration.apiKeys) {
+      this.configuration.apiKeys = {
+        Authorization: `Bearer ${this.token?.access_token}`,
+      };
+    } else {
+      this.configuration.apiKeys[
+        'Authorization'
+      ] = `Bearer ${this.token?.access_token}`;
+    }
+  }
+  callAuthEndpoint(isEmbeddedApp: boolean) {
+    const params: { [key: string]: string } = {
+      scope: 'launch',
+      response_type: 'code',
+      redirect_uri: encodeURIComponent(this.configuration.redirectUri),
+      client_id: this.configuration.epicClientId,
+      state: this.tokenUrl ?? '',
+      aud: this.configuration.issUrl ?? '',
+    };
+    if (isEmbeddedApp) {
+      params['launch'] = this.configuration.launchCode ?? '';
+    }
+    let queryParams = '';
+    let paramsArray = [];
+    for (const key of Object.keys(params)) {
+      const val = params[key];
+      paramsArray.push(`${key}=${val}`);
+    }
+    queryParams = paramsArray.join('&');
+    window.location.assign(`${this.authorizerUrl}?${queryParams}`);
+  }
+  getCapabilityStatement() {
+    return firstValueFrom(
+      this.httpClient.get<CapabilityStatement>(
+        `${this.configuration.issUrl}/metadata`,
+        {
+          headers: this.getHeaders({
+            'Epic-Client-ID': this.configuration.epicClientId ?? '',
+          }),
         }
-
-        if (isEmbeddedApp) {
-            params["launch"] = this.configuration.launchCode ?? '';
-        }
-
-        return firstValueFrom(this.httpClient.get(`${this.authorizerUrl}`, { params, }))
-
-    }
-
-    getCapabilityStatement() {
-        return firstValueFrom(this.httpClient.get<CapabilityStatement>(`${this.configuration.issUrl}/metadata`, { headers: this.getHeaders({ 'Epic-Client-ID': this.configuration.epicClientId ?? '' }) }));
-    }
-
-    private getHeaders(additionalHeaders: { [key: string]: string }) {
-        return {
-            Accept: 'application/json',
-            ...additionalHeaders,
-        }
-    }
+      )
+    );
+  }
+  getHeaders(additionalHeaders: { [key: string]: string }) {
+    return {
+      Accept: 'application/json',
+      ...additionalHeaders,
+    };
+  }
+  getTokenExpiry(token: EpicOAuthToken) {
+    const expiryDate = new Date();
+    expiryDate.setSeconds(expiryDate.getSeconds() + token.expires_in);
+    return expiryDate.getTime();
+  }
+  isTokenStillValid(token: EpicOAuthToken) {
+    const instant = new Date().getTime();
+    console.log(`Now: ${instant} | Token Expires: ${token.expires_at}`);
+    return instant < token.expires_at ?? instant;
+  }
 }

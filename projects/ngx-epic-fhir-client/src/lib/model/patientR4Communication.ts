@@ -11,13 +11,10 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * A list of languages used to communicate with the patient, along with an indicator of which is preferred.
- */
-export interface PatientR4Communication { 
-    language?: CodeableConcept;
-    /**
-     * Whether the language is the patient's preferred language.
-     */
-    preferred: boolean;
+export interface PatientR4Communication {
+  language?: CodeableConcept;
+  /**
+   * Whether the language is the patient's preferred language.
+   */
+  preferred?: boolean;
 }

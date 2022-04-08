@@ -18,19 +18,19 @@ import { SpecimenR4Collection } from './specimenR4Collection';
 /**
  * A single Specimen resource.
  */
-export interface SpecimenR4 { 
-    accessionIdentifier: Identifier;
-    collection: SpecimenR4Collection;
-    /**
-     * The Specimen FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    note: Annotation;
-    /**
-     * The time when the specimen was received for processing. Available starting in November 2021 version of Epic.
-     */
-    receivedTime: string;
-    subject?: Reference;
-    type: CodeableConcept;
+export interface SpecimenR4 {
+  accessionIdentifier: Identifier;
+  collection: SpecimenR4Collection;
+  /**
+   * The Specimen FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  note: Array<Annotation>;
+  /**
+   * The time when the specimen was received for processing. Available starting in November 2021 version of Epic.
+   */
+  receivedTime: string;
+  subject?: Reference;
+  type: CodeableConcept;
 }

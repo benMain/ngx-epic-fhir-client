@@ -14,6 +14,6 @@ import { AppointmentSTU3 } from './appointmentSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryAppointmentSTU3 { 
-    resource?: AppointmentSTU3;
+export interface BundleEntryAppointmentSTU3 {
+  resource?: AppointmentSTU3;
 }

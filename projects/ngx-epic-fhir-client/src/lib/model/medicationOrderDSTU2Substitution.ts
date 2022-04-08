@@ -14,6 +14,6 @@ import { CodeableConcept } from './codeableConcept';
 /**
  * Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen, and in others it does not matter. This block explains the prescriber's intent. If nothing is specified substitution may be done.
  */
-export interface MedicationOrderDSTU2Substitution { 
-    type?: CodeableConcept;
+export interface MedicationOrderDSTU2Substitution {
+  type?: CodeableConcept;
 }

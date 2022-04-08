@@ -14,6 +14,6 @@ import { Period } from './period';
 /**
  * The time period that this document is valid for.
  */
-export interface ConsentR4Provision { 
-    period?: Period;
+export interface ConsentR4Provision {
+  period?: Period;
 }

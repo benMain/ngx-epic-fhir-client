@@ -14,6 +14,6 @@ import { QuestionnaireR4 } from './questionnaireR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryQuestionnaireR4 { 
-    resource?: QuestionnaireR4;
+export interface BundleEntryQuestionnaireR4 {
+  resource?: QuestionnaireR4;
 }

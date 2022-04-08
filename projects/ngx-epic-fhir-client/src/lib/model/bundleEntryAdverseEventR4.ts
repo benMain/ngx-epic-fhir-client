@@ -14,6 +14,6 @@ import { AdverseEventR4 } from './adverseEventR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryAdverseEventR4 { 
-    resource?: AdverseEventR4;
+export interface BundleEntryAdverseEventR4 {
+  resource?: AdverseEventR4;
 }

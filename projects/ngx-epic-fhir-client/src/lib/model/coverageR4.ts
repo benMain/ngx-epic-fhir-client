@@ -19,29 +19,32 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface CoverageR4 { 
-    beneficiary?: Reference;
-    extension: Extension;
-    _class: CoverageR4Class;
-    /**
-     * The dependent.
-     */
-    dependent: string;
-    /**
-     * The FHIR Coverage ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    payor?: Reference;
-    period: Period;
-    relationship: CodeableConcept;
-    /**
-     * <p>Financial Resource Status Code. The following values are supported:</p> <ul>   <li>active</li>   <li>cancelled</li>   <li>draft</li> </ul>
-     */
-    status?: string;
-    subscriber: Reference;
-    /**
-     * Subscriber ID
-     */
-    subscriberId: string;
+export interface CoverageR4 {
+  beneficiary?: Reference;
+  extension: Array<Extension>;
+  /**
+   * Coverage classification details.
+   */
+  _class: Array<CoverageR4Class>;
+  /**
+   * The dependent.
+   */
+  dependent: string;
+  /**
+   * The FHIR Coverage ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  payor?: Array<Reference>;
+  period: Period;
+  relationship: CodeableConcept;
+  /**
+   * <p>Financial Resource Status Code. The following values are supported:</p> <ul>   <li>active</li>   <li>cancelled</li>   <li>draft</li> </ul>
+   */
+  status?: string;
+  subscriber: Reference;
+  /**
+   * Subscriber ID
+   */
+  subscriberId: string;
 }

@@ -11,9 +11,6 @@
  */
 import { Extension } from './extension';
 
-/**
- * The policy of the consent document.
- */
-export interface ConsentSTU3Policy { 
-    extension?: Extension;
+export interface ConsentSTU3Policy {
+  extension?: Array<Extension>;
 }

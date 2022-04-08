@@ -11,13 +11,10 @@
  */
 import { Extension } from './extension';
 
-/**
- * The policy of the consent document.
- */
-export interface ConsentR4Policy { 
-    extension?: Extension;
-    /**
-     * Always set to \"http://hl7.org/fhir/StructureDefinition/data-absent-reason\".
-     */
-    uri?: string;
+export interface ConsentR4Policy {
+  extension?: Array<Extension>;
+  /**
+   * Always set to \"http://hl7.org/fhir/StructureDefinition/data-absent-reason\".
+   */
+  uri?: string;
 }

@@ -15,16 +15,19 @@ import { RequestGroupR4Action } from './requestGroupR4Action';
 /**
  * An instance of the R4 RequestGroup FHIR resource.
  */
-export interface RequestGroupR4 { 
-    action: RequestGroupR4Action;
-    basedOn: Reference;
-    /**
-     * For oncology RequestGroup, this always equals \"plan\".
-     */
-    intent?: string;
-    /**
-     * Plan/cycle status value. Supported values include: <ul> <li>Planned</li> <li>Scheduled</li> <li>Completed</li> <li>Deleted</li> <li>Started</li> <li>Canceled</li> <li>Given Externally</li> <li>Unscheduled</li> <li>Non-Treatment Orders</li> </ul>
-     */
-    status?: string;
-    subject: Reference;
+export interface RequestGroupR4 {
+  /**
+   * Treatment order information.
+   */
+  action: Array<RequestGroupR4Action>;
+  basedOn: Array<Reference>;
+  /**
+   * For oncology RequestGroup, this always equals \"plan\".
+   */
+  intent?: string;
+  /**
+   * Plan/cycle status value. Supported values include: <ul> <li>Planned</li> <li>Scheduled</li> <li>Completed</li> <li>Deleted</li> <li>Started</li> <li>Canceled</li> <li>Given Externally</li> <li>Unscheduled</li> <li>Non-Treatment Orders</li> </ul>
+   */
+  status?: string;
+  subject: Reference;
 }

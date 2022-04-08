@@ -11,17 +11,14 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * ICD procedures.
- */
-export interface ExplanationOfBenefitR4Procedure { 
-    /**
-     * Date of the procedure.
-     */
-    date?: string;
-    procedureCodeableConcept?: CodeableConcept;
-    /**
-     * The sequence ID.
-     */
-    sequence: any;
+export interface ExplanationOfBenefitR4Procedure {
+  /**
+   * Date of the procedure.
+   */
+  date?: string;
+  procedureCodeableConcept?: CodeableConcept;
+  /**
+   * The sequence ID.
+   */
+  sequence?: any;
 }

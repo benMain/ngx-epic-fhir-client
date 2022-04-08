@@ -16,13 +16,16 @@ import { MedicationR4Ingredient } from './medicationR4Ingredient';
 /**
  * An instance of the R4 Medication FHIR resource.
  */
-export interface MedicationR4 { 
-    code: CodeableConcept;
-    extension: Extension;
-    form: CodeableConcept;
-    /**
-     * The Medication FHIR ID.
-     */
-    id?: string;
-    ingredient: MedicationR4Ingredient;
+export interface MedicationR4 {
+  code: CodeableConcept;
+  extension: Array<Extension>;
+  form: CodeableConcept;
+  /**
+   * The Medication FHIR ID.
+   */
+  id?: string;
+  /**
+   * An ingredient in the medication.
+   */
+  ingredient: Array<MedicationR4Ingredient>;
 }

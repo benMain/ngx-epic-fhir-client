@@ -14,6 +14,6 @@ import { DeviceRequestSTU3 } from './deviceRequestSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryDeviceRequestSTU3 { 
-    resource?: DeviceRequestSTU3;
+export interface BundleEntryDeviceRequestSTU3 {
+  resource?: DeviceRequestSTU3;
 }

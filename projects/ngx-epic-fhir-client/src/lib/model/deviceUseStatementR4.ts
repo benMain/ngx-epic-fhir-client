@@ -17,18 +17,18 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface DeviceUseStatementR4 { 
-    bodySite: CodeableConcept;
-    device?: Reference;
-    extension: Extension;
-    /**
-     * The DeviceUseStatement FHIR ID.
-     */
-    id?: string;
-    note: Annotation;
-    /**
-     * <p>One of the following values:</p> <ul> <li>active</li> <li>completed</li> <li>intended</li> <li>stopped</li> </ul>
-     */
-    status: string;
-    subject?: Reference;
+export interface DeviceUseStatementR4 {
+  bodySite: CodeableConcept;
+  device?: Reference;
+  extension: Array<Extension>;
+  /**
+   * The DeviceUseStatement FHIR ID.
+   */
+  id?: string;
+  note: Array<Annotation>;
+  /**
+   * <p>One of the following values:</p> <ul> <li>active</li> <li>completed</li> <li>intended</li> <li>stopped</li> </ul>
+   */
+  status: string;
+  subject?: Reference;
 }

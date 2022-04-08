@@ -14,9 +14,9 @@ import { BundleEntryProcedureSTU3 } from './bundleEntryProcedureSTU3';
 /**
  * Contains a collection of resources.
  */
-export interface BundleProcedureSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryProcedureSTU3>;
+export interface BundleProcedureSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryProcedureSTU3>;
 }

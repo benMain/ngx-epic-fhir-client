@@ -10,12 +10,9 @@
  * Do not edit the class manually.
  */
 
-/**
- * Contains parameters related to the practitioner photo.
- */
-export interface PractitionerR4Photo { 
-    /**
-     * The URI or URL where the photo can be found. If this is a BLOB key, we will return a URL to a binary resource.
-     */
-    url: string;
+export interface PractitionerR4Photo {
+  /**
+   * The URI or URL where the photo can be found. If this is a BLOB key, we will return a URL to a binary resource.
+   */
+  url?: string;
 }

@@ -9,8 +9,8 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { AllergyIntoleranceR4Reaction } from './allergyIntoleranceR4Reaction';
 import { AllergyIntoleranceSTU3Meta } from './allergyIntoleranceSTU3Meta';
-import { AllergyIntoleranceSTU3Reaction } from './allergyIntoleranceSTU3Reaction';
 import { Annotation } from './annotation';
 import { CodeableConcept } from './codeableConcept';
 import { Period } from './period';
@@ -19,35 +19,38 @@ import { Reference } from './reference';
 /**
  * A single AllergyIntolerance resource.
  */
-export interface AllergyIntoleranceSTU3 { 
-    /**
-     * The date the allergy was recorded in Epic.
-     */
-    assertedDate: string;
-    /**
-     * <p>The category of the allergy.</p> <p>The following default values are supported, but additional values may be configured by each Epic organization:</p> <ul> <li>food <li>medication <li>environment <li>biologic </ul> <p>Starting in the May 2021 version of Epic, multiple category values can be returned in this element.</p>
-     */
-    category?: string;
-    /**
-     * The current status of the allergy. Possible values include: • active • resolved • inactive  Starting in the February 2022 version of Epic, or in the November 2021 version by special update, if no known allergies on file, value will be \"active\". In earlier versions of Epic, this element is not returned if no known allergies are on file.
-     */
-    clinicalStatus?: string;
-    code: CodeableConcept;
-    /**
-     * Refers to the risk of clinical harm of a reaction to the substance.
-     */
-    criticality?: string;
-    /**
-     * The AllergyIntolerance FHIR ID.
-     */
-    id?: string;
-    meta: AllergyIntoleranceSTU3Meta;
-    note: Annotation;
-    onsetPeriod: Period;
-    patient?: Reference;
-    reaction: AllergyIntoleranceSTU3Reaction;
-    /**
-     * If the allergy is on the patient's chart, this element specifies \"confirmed\". If it is a newly created allergy and and still needs to be reconciled, it is \"unconfirmed\".
-     */
-    verificationStatus?: string;
+export interface AllergyIntoleranceSTU3 {
+  /**
+   * The date the allergy was recorded in Epic.
+   */
+  assertedDate: string;
+  /**
+   * <p>The category of the allergy.</p> <p>The following default values are supported, but additional values may be configured by each Epic organization:</p> <ul> <li>food <li>medication <li>environment <li>biologic </ul> <p>Starting in the May 2021 version of Epic, multiple category values can be returned in this element.</p>
+   */
+  category?: string;
+  /**
+   * The current status of the allergy. Possible values include: • active • resolved • inactive  Starting in the February 2022 version of Epic, or in the November 2021 version by special update, if no known allergies on file, value will be \"active\". In earlier versions of Epic, this element is not returned if no known allergies are on file.
+   */
+  clinicalStatus?: string;
+  code: CodeableConcept;
+  /**
+   * Refers to the risk of clinical harm of a reaction to the substance.
+   */
+  criticality?: string;
+  /**
+   * The AllergyIntolerance FHIR ID.
+   */
+  id?: string;
+  meta: AllergyIntoleranceSTU3Meta;
+  note: Array<Annotation>;
+  onsetPeriod: Period;
+  patient?: Reference;
+  /**
+   * List of known reactions the patient had to the substance.
+   */
+  reaction: Array<AllergyIntoleranceR4Reaction>;
+  /**
+   * If the allergy is on the patient's chart, this element specifies \"confirmed\". If it is a newly created allergy and and still needs to be reconciled, it is \"unconfirmed\".
+   */
+  verificationStatus?: string;
 }

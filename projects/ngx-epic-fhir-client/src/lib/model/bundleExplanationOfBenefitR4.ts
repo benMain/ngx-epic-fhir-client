@@ -14,9 +14,9 @@ import { BundleEntryExplanationOfBenefitR4 } from './bundleEntryExplanationOfBen
 /**
  * Contains a collection of resources.
  */
-export interface BundleExplanationOfBenefitR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryExplanationOfBenefitR4>;
+export interface BundleExplanationOfBenefitR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryExplanationOfBenefitR4>;
 }

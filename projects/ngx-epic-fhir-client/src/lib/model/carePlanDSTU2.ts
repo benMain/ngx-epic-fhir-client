@@ -15,17 +15,20 @@ import { Reference } from './reference';
 /**
  * A single CarePlan resource.
  */
-export interface CarePlanDSTU2 { 
-    activity?: CarePlanDSTU2Activity;
-    addresses: Reference;
-    goal: Reference;
-    /**
-     * The CarePlan FHIR ID.
-     */
-    id?: string;
-    /**
-     * Status of the CarePlan. Always returns \"Active\".
-     */
-    status?: string;
-    subject?: Reference;
+export interface CarePlanDSTU2 {
+  /**
+   * Action to occur as part of the plan.
+   */
+  activity?: Array<CarePlanDSTU2Activity>;
+  addresses: Array<Reference>;
+  goal: Array<Reference>;
+  /**
+   * The CarePlan FHIR ID.
+   */
+  id?: string;
+  /**
+   * Status of the CarePlan. Always returns \"Active\".
+   */
+  status?: string;
+  subject?: Reference;
 }

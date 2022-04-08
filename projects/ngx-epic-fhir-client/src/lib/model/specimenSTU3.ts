@@ -19,23 +19,23 @@ import { SpecimenSTU3Meta } from './specimenSTU3Meta';
 /**
  * A Response Type
  */
-export interface SpecimenSTU3 { 
-    collection: SpecimenSTU3Collection;
-    /**
-     * The specimen’s FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    meta: SpecimenSTU3Meta;
-    note: Annotation;
-    /**
-     * Processing and processing step details.
-     */
-    processing?: any;
-    /**
-     * The time when the specimen was received for processing.
-     */
-    receivedTime: string;
-    subject?: Reference;
-    type: CodeableConcept;
+export interface SpecimenSTU3 {
+  collection: SpecimenSTU3Collection;
+  /**
+   * The specimen’s FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  meta: SpecimenSTU3Meta;
+  note: Array<Annotation>;
+  /**
+   * Processing and processing step details.
+   */
+  processing?: Array<any>;
+  /**
+   * The time when the specimen was received for processing.
+   */
+  receivedTime: string;
+  subject?: Reference;
+  type: CodeableConcept;
 }

@@ -14,9 +14,9 @@ import { BundleEntryDiagnosticReportSTU3 } from './bundleEntryDiagnosticReportST
 /**
  * Contains a collection of resources.
  */
-export interface BundleDiagnosticReportSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryDiagnosticReportSTU3>;
+export interface BundleDiagnosticReportSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryDiagnosticReportSTU3>;
 }

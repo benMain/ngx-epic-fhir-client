@@ -14,18 +14,18 @@ import { Period } from './period';
 /**
  * Medication supply authorization.
  */
-export interface MedicationRequestR4DispenseRequest { 
-    /**
-     * The duration.
-     */
-    expectedSupplyDuration: any;
-    /**
-     * The number of discrete refills for the medication.
-     */
-    numberOfRepeatsAllowed: any;
-    /**
-     * The quantity.
-     */
-    quantity: any;
-    validityPeriod: Period;
+export interface MedicationRequestR4DispenseRequest {
+  /**
+   * The duration.
+   */
+  expectedSupplyDuration: any;
+  /**
+   * The number of discrete refills for the medication.
+   */
+  numberOfRepeatsAllowed: any;
+  /**
+   * The quantity.
+   */
+  quantity: any;
+  validityPeriod: Period;
 }

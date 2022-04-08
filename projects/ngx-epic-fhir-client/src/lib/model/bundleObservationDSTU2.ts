@@ -14,9 +14,9 @@ import { BundleEntryObservationDSTU2 } from './bundleEntryObservationDSTU2';
 /**
  * Contains a collection of resources.
  */
-export interface BundleObservationDSTU2 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryObservationDSTU2>;
+export interface BundleObservationDSTU2 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryObservationDSTU2>;
 }

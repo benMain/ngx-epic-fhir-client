@@ -15,20 +15,20 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 ServiceRequest resource.
  */
-export interface ServiceRequestR4 { 
-    /**
-     * FHIR ID for this ServiceRequest instance.
-     */
-    id?: string;
-    identifier?: Identifier;
-    /**
-     * Request intent. Always \"proposal\".
-     */
-    intent?: string;
-    /**
-     * Request status. Always \"unknown\".
-     */
-    status?: string;
-    subject?: Reference;
-    supportingInfo: Reference;
+export interface ServiceRequestR4 {
+  /**
+   * FHIR ID for this ServiceRequest instance.
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  /**
+   * Request intent. Always \"proposal\".
+   */
+  intent?: string;
+  /**
+   * Request status. Always \"unknown\".
+   */
+  status?: string;
+  subject?: Reference;
+  supportingInfo: Array<Reference>;
 }

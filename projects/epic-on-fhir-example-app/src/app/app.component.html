@@ -1,0 +1,78 @@
+<mat-toolbar color="primary">
+    <span>Lumeris Direct Contracting Voluntary Alignment Smart On Fhir App</span>
+</mat-toolbar>
+
+
+<form class="example-form" [formGroup]="voluntaryAlignmentForm" *ngIf="ready">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Direct Contracting Entity</mat-label>
+        <mat-select id="dcEntity" formControlName="dcEntity">
+            <mat-option *ngFor="let dcEntity of entities" [value]="dcEntity.directContractingEntityId">
+                {{dcEntity.displayName}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput id="firstName" type="text" formControlName="firstName">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput id="lastName" type="text" formControlName="lastName">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Medicare Beneficiary Identifier</mat-label>
+        <input matInput id="mbi" type="text" formControlName="mbi">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput id="dob" formControlName="dob" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Phone Number</mat-label>
+        <input matInput id="phoneNumber" type="text" formControlName="phoneNumber">
+    </mat-form-field>
+
+    <mat-divider [inset]="true"></mat-divider>
+    <div formGroupName="prospectAddress">
+        <h4>Prospect Address</h4>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Line One</mat-label>
+            <input matInput type="text" formControlName="lineOne">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Line Two</mat-label>
+            <input matInput type="text" formControlName="lineTwo">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Line Three</mat-label>
+            <input matInput type="text" formControlName="lineThree">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>City</mat-label>
+            <input matInput type="text" formControlName="city">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>State</mat-label>
+            <input matInput type="text" formControlName="state">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Zip Code</mat-label>
+            <input matInput type="text" formControlName="zip">
+        </mat-form-field>
+    </div>
+</form>

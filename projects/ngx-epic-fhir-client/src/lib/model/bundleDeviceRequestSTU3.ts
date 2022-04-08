@@ -14,9 +14,9 @@ import { BundleEntryDeviceRequestSTU3 } from './bundleEntryDeviceRequestSTU3';
 /**
  * Contains a collection of resources.
  */
-export interface BundleDeviceRequestSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryDeviceRequestSTU3>;
+export interface BundleDeviceRequestSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryDeviceRequestSTU3>;
 }

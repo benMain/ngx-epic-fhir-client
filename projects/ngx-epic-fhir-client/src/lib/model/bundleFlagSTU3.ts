@@ -14,9 +14,9 @@ import { BundleEntryFlagSTU3 } from './bundleEntryFlagSTU3';
 /**
  * Contains a collection of resources.
  */
-export interface BundleFlagSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryFlagSTU3>;
+export interface BundleFlagSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryFlagSTU3>;
 }

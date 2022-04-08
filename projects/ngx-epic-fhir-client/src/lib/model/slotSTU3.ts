@@ -14,18 +14,18 @@ import { Reference } from './reference';
 /**
  * An instance of the STU3 Slot resource.
  */
-export interface SlotSTU3 { 
-    /**
-     * The end time.
-     */
-    end?: string;
-    schedule?: Reference;
-    /**
-     * The start time.
-     */
-    start?: string;
-    /**
-     * Will be busy-tentative, but only included if returned by $find.
-     */
-    status?: string;
+export interface SlotSTU3 {
+  /**
+   * The end time.
+   */
+  end?: string;
+  schedule?: Reference;
+  /**
+   * The start time.
+   */
+  start?: string;
+  /**
+   * Will be busy-tentative, but only included if returned by $find.
+   */
+  status?: string;
 }

@@ -14,9 +14,9 @@ import { BundleEntryDocumentReferenceSTU3 } from './bundleEntryDocumentReference
 /**
  * Contains a collection of resources.
  */
-export interface BundleDocumentReferenceSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryDocumentReferenceSTU3>;
+export interface BundleDocumentReferenceSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryDocumentReferenceSTU3>;
 }

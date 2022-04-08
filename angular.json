@@ -24,12 +24,123 @@
           },
           "defaultConfiguration": "production"
         },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-epic-fhir-client/src/**/*.ts"
+            ]
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/ngx-epic-fhir-client/src/test.ts",
             "tsConfig": "projects/ngx-epic-fhir-client/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-epic-fhir-client/karma.conf.js"
+          }
+        }
+      }
+    },
+    "epic-on-fhir-example-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/epic-on-fhir-example-app",
+      "sourceRoot": "projects/epic-on-fhir-example-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/epic-on-fhir-example-app",
+            "index": "projects/epic-on-fhir-example-app/src/index.html",
+            "main": "projects/epic-on-fhir-example-app/src/main.ts",
+            "polyfills": "projects/epic-on-fhir-example-app/src/polyfills.ts",
+            "tsConfig": "projects/epic-on-fhir-example-app/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/epic-on-fhir-example-app/src/favicon.ico",
+              "projects/epic-on-fhir-example-app/src/assets"
+            ],
+            "styles": [
+              "projects/epic-on-fhir-example-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/epic-on-fhir-example-app/src/environments/environment.ts",
+                  "with": "projects/epic-on-fhir-example-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "epic-on-fhir-example-app:build:production"
+            },
+            "development": {
+              "browserTarget": "epic-on-fhir-example-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "epic-on-fhir-example-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/epic-on-fhir-example-app/src/test.ts",
+            "polyfills": "projects/epic-on-fhir-example-app/src/polyfills.ts",
+            "tsConfig": "projects/epic-on-fhir-example-app/tsconfig.spec.json",
+            "karmaConfig": "projects/epic-on-fhir-example-app/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/epic-on-fhir-example-app/src/favicon.ico",
+              "projects/epic-on-fhir-example-app/src/assets"
+            ],
+            "styles": [
+              "projects/epic-on-fhir-example-app/src/styles.scss"
+            ],
+            "scripts": []
           }
         }
       }

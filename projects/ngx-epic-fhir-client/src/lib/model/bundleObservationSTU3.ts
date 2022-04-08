@@ -14,9 +14,9 @@ import { BundleEntryObservationSTU3 } from './bundleEntryObservationSTU3';
 /**
  * Contains a collection of resources.
  */
-export interface BundleObservationSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryObservationSTU3>;
+export interface BundleObservationSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryObservationSTU3>;
 }

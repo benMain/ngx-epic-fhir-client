@@ -14,6 +14,6 @@ import { CarePlanDSTU2 } from './carePlanDSTU2';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryCarePlanDSTU2 { 
-    resource?: CarePlanDSTU2;
+export interface BundleEntryCarePlanDSTU2 {
+  resource?: CarePlanDSTU2;
 }

@@ -14,7 +14,7 @@ import { CodeableConcept } from './codeableConcept';
 import { Extension } from './extension';
 import { Identifier } from './identifier';
 import { PatientR4Communication } from './patientR4Communication';
-import { PatientR4Name } from './patientR4Name';
+import { PatientR4Name1 } from './patientR4Name1';
 import { PatientR4Telecom } from './patientR4Telecom';
 import { PatientSTU3Contact } from './patientSTU3Contact';
 import { PatientSTU3Meta } from './patientSTU3Meta';
@@ -23,44 +23,56 @@ import { Reference } from './reference';
 /**
  * A single Patient resource.
  */
-export interface PatientSTU3 { 
-    /**
-     * Whether or not the patient record is active.
-     */
-    active?: boolean;
-    address?: Address;
-    extension: Extension;
-    /**
-     * The patient's date of birth in the format YYYY-MM-DD.
-     */
-    birthDate: string;
-    communication: PatientR4Communication;
-    contact: PatientSTU3Contact;
-    /**
-     * Whether the patient is deceased. 
-     */
-    deceasedBoolean?: boolean;
-    /**
-     * The date and time of death.
-     */
-    deceasedDateTime?: string;
-    /**
-     * The patient's legal sex.
-     */
-    gender?: string;
-    generalPractitioner: Reference;
-    /**
-     * The patient FHIR ID.
-     */
-    id?: string;
-    identifier?: Identifier;
-    managingOrganization: Reference;
-    maritalStatus: CodeableConcept;
-    meta: PatientSTU3Meta;
-    /**
-     * The patient's birth order.
-     */
-    multipleBirthInteger: any;
-    name?: PatientR4Name;
-    telecom: PatientR4Telecom;
+export interface PatientSTU3 {
+  /**
+   * Whether or not the patient record is active.
+   */
+  active?: boolean;
+  address?: Array<Address>;
+  extension: Array<Extension>;
+  /**
+   * The patient's date of birth in the format YYYY-MM-DD.
+   */
+  birthDate: string;
+  /**
+   * A list of languages used to communicate with the patient, along with an indicator of which is preferred.
+   */
+  communication: Array<PatientR4Communication>;
+  /**
+   * Contact details.
+   */
+  contact: Array<PatientSTU3Contact>;
+  /**
+   * Whether the patient is deceased.
+   */
+  deceasedBoolean?: boolean;
+  /**
+   * The date and time of death.
+   */
+  deceasedDateTime?: string;
+  /**
+   * The patient's legal sex.
+   */
+  gender?: string;
+  generalPractitioner: Array<Reference>;
+  /**
+   * The patient FHIR ID.
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  managingOrganization: Reference;
+  maritalStatus: CodeableConcept;
+  meta: PatientSTU3Meta;
+  /**
+   * The patient's birth order.
+   */
+  multipleBirthInteger: any;
+  /**
+   * <p>The patient's name.</p> <ul> <li>Starting in the May 2020 version of Epic, this element includes both the patient's \"official\" name, which is the patient's legal name, and the patient's \"usual\" name, which is the patient's preferred name. <ul><li>If the patient does not have a preferred name defined in your system, the \"usual\" name also holds the patient's legal name.</li> <li>In a patient-facing context, this web service always shows the patient's preferred name, unless a user has security point 'Only Show Legal Name'.</li></ul></li> <li>In February 2020 and earlier, this element returns only the patient's legal name with a use code of \"usual\".</li> </ul>
+   */
+  name?: Array<PatientR4Name1>;
+  /**
+   * Telephone numbers and email addresses for the patient, along with their use (i.e. home, work, etc.)
+   */
+  telecom: Array<PatientR4Telecom>;
 }

@@ -15,17 +15,17 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 PractitionerRole resource.
  */
-export interface PractitionerRoleR4 { 
-    /**
-     * Whether the unique address is active.
-     */
-    active: boolean;
-    code: CodeableConcept;
-    location: Reference;
-    practitioner: Reference;
-    specialty: CodeableConcept;
-    /**
-     * Contact information specific to the unique address.
-     */
-    telecom: any;
+export interface PractitionerRoleR4 {
+  /**
+   * Whether the unique address is active.
+   */
+  active: boolean;
+  code: Array<CodeableConcept>;
+  location: Array<Reference>;
+  practitioner: Reference;
+  specialty: Array<CodeableConcept>;
+  /**
+   * Contact information specific to the unique address.
+   */
+  telecom: Array<any>;
 }

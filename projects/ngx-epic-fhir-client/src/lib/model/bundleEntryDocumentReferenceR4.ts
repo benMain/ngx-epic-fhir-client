@@ -14,6 +14,6 @@ import { DocumentReferenceR4 } from './documentReferenceR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryDocumentReferenceR4 { 
-    resource?: DocumentReferenceR4;
+export interface BundleEntryDocumentReferenceR4 {
+  resource?: DocumentReferenceR4;
 }

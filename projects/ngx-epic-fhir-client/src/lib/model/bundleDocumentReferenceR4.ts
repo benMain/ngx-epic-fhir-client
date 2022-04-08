@@ -14,9 +14,9 @@ import { BundleEntryDocumentReferenceR4 } from './bundleEntryDocumentReferenceR4
 /**
  * Contains a collection of resources.
  */
-export interface BundleDocumentReferenceR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryDocumentReferenceR4>;
+export interface BundleDocumentReferenceR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryDocumentReferenceR4>;
 }

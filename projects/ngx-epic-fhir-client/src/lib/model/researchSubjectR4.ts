@@ -16,21 +16,21 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 ResearchSubject resource.
  */
-export interface ResearchSubjectR4 { 
-    /**
-     * The study branch the subject is part of.
-     */
-    assignedArm: string;
-    /**
-     * The FHIR ID
-     */
-    id?: string;
-    identifier: Identifier;
-    individual?: Reference;
-    period: Period;
-    /**
-     * <p>The progression of a study subject through a study. <p>Contains values from the research subject status value set. Mapping might vary from one Epic organization to another.
-     */
-    status?: string;
-    study?: Reference;
+export interface ResearchSubjectR4 {
+  /**
+   * The study branch the subject is part of.
+   */
+  assignedArm: string;
+  /**
+   * The FHIR ID
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  individual?: Reference;
+  period: Period;
+  /**
+   * <p>The progression of a study subject through a study. <p>Contains values from the research subject status value set. Mapping might vary from one Epic organization to another.
+   */
+  status?: string;
+  study?: Reference;
 }

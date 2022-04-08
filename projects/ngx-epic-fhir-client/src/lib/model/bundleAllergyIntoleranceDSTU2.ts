@@ -14,9 +14,9 @@ import { BundleEntryAllergyIntoleranceDSTU2 } from './bundleEntryAllergyIntolera
 /**
  * Contains a collection of resources.
  */
-export interface BundleAllergyIntoleranceDSTU2 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryAllergyIntoleranceDSTU2>;
+export interface BundleAllergyIntoleranceDSTU2 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryAllergyIntoleranceDSTU2>;
 }

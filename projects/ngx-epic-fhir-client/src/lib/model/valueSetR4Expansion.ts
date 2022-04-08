@@ -15,15 +15,21 @@ import { ValueSetR4ExpansionParameter } from './valueSetR4ExpansionParameter';
 /**
  * ValueSet expansion details.
  */
-export interface ValueSetR4Expansion { 
-    contains: ValueSetR4ExpansionContains;
-    parameter?: ValueSetR4ExpansionParameter;
-    /**
-     * Time that the ValueSet expansion occurred.
-     */
-    timestamp?: string;
-    /**
-     * Total number of codes in the expansion.
-     */
-    total: any;
+export interface ValueSetR4Expansion {
+  /**
+   * Array of codes in the ValueSet.
+   */
+  contains: Array<ValueSetR4ExpansionContains>;
+  /**
+   * Parameter that controlled the expansion process.
+   */
+  parameter?: Array<ValueSetR4ExpansionParameter>;
+  /**
+   * Time that the ValueSet expansion occurred.
+   */
+  timestamp?: string;
+  /**
+   * Total number of codes in the expansion.
+   */
+  total: any;
 }

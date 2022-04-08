@@ -10,54 +10,57 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { ObservationSTU3Component } from './observationSTU3Component';
+import { ObservationR4Component } from './observationR4Component';
 import { ObservationSTU3Meta } from './observationSTU3Meta';
 import { Reference } from './reference';
 
 /**
  * A single Observation FHIR resource.
  */
-export interface ObservationSTU3 { 
-    bodySite?: CodeableConcept;
-    category?: CodeableConcept;
-    code?: CodeableConcept;
-    /**
-     * Comments about the observation value.
-     */
-    comment: string;
-    component?: ObservationSTU3Component;
-    dataAbsentReason: CodeableConcept;
-    /**
-     * The date and time the observation was taken.
-     */
-    effectiveDateTime?: string;
-    /**
-     * The date and time the observation was documented. This is always the current time.
-     */
-    issued?: string;
-    meta: ObservationSTU3Meta;
-    method: CodeableConcept;
-    performer?: Reference;
-    /**
-     * The status of the observation. This is set to amended or final depending on whether the field has been corrected.
-     */
-    status?: string;
-    subject?: Reference;
-    valueCodeableConcept?: CodeableConcept;
-    /**
-     * This element is populated if the data type is date. Only one of the value* elements is required.
-     */
-    valueDateTime?: string;
-    /**
-     * This element is populated if a value has units or the data type is numeric. Only one of the value* elements is required.
-     */
-    valueQuantity?: any;
-    /**
-     * This element is populated if a value doesn't have units or the data type is string. Only one of the value[x] elements is required.
-     */
-    valueString?: string;
-    /**
-     * This element is populated if the data type is time. Only one of the value* elements is required.
-     */
-    valueTime?: string;
+export interface ObservationSTU3 {
+  bodySite?: CodeableConcept;
+  category?: Array<CodeableConcept>;
+  code?: CodeableConcept;
+  /**
+   * Comments about the observation value.
+   */
+  comment: string;
+  /**
+   * A Response Type
+   */
+  component?: Array<ObservationR4Component>;
+  dataAbsentReason: CodeableConcept;
+  /**
+   * The date and time the observation was taken.
+   */
+  effectiveDateTime?: string;
+  /**
+   * The date and time the observation was documented. This is always the current time.
+   */
+  issued?: string;
+  meta: ObservationSTU3Meta;
+  method: CodeableConcept;
+  performer?: Array<Reference>;
+  /**
+   * The status of the observation. This is set to amended or final depending on whether the field has been corrected.
+   */
+  status?: string;
+  subject?: Reference;
+  valueCodeableConcept?: CodeableConcept;
+  /**
+   * This element is populated if the data type is date. Only one of the value* elements is required.
+   */
+  valueDateTime?: string;
+  /**
+   * This element is populated if a value has units or the data type is numeric. Only one of the value* elements is required.
+   */
+  valueQuantity?: any;
+  /**
+   * This element is populated if a value doesn't have units or the data type is string. Only one of the value[x] elements is required.
+   */
+  valueString?: string;
+  /**
+   * This element is populated if the data type is time. Only one of the value* elements is required.
+   */
+  valueTime?: string;
 }

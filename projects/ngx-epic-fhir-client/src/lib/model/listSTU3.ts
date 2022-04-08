@@ -10,29 +10,32 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { ListSTU3Entry } from './listSTU3Entry';
+import { ListR4Entry } from './listR4Entry';
 
 /**
  * An instance of the STU3 List resource
  */
-export interface ListSTU3 { 
-    code?: CodeableConcept;
-    /**
-     * When the list was prepared.
-     */
-    date?: string;
-    emptyReason?: CodeableConcept;
-    entry?: ListSTU3Entry;
-    /**
-     * The processing mode that applies to this list. Always \"snapshot\".  Values can be found <a href=\"https://www.hl7.org/fhir/valueset-list-mode.html\">here</a>.
-     */
-    mode?: string;
-    /**
-     * Status of the patient list. Always \"current\".  Values can be found <a href=\"https://www.hl7.org/fhir/valueset-list-status.html\">here</a>.
-     */
-    status?: string;
-    /**
-     * The descriptive name for the list.
-     */
-    title?: string;
+export interface ListSTU3 {
+  code?: CodeableConcept;
+  /**
+   * When the list was prepared.
+   */
+  date?: string;
+  emptyReason?: CodeableConcept;
+  /**
+   * Array of responses.
+   */
+  entry?: Array<ListR4Entry>;
+  /**
+   * The processing mode that applies to this list. Always \"snapshot\".  Values can be found <a href=\"https://www.hl7.org/fhir/valueset-list-mode.html\">here</a>.
+   */
+  mode?: string;
+  /**
+   * Status of the patient list. Always \"current\".  Values can be found <a href=\"https://www.hl7.org/fhir/valueset-list-status.html\">here</a>.
+   */
+  status?: string;
+  /**
+   * The descriptive name for the list.
+   */
+  title?: string;
 }

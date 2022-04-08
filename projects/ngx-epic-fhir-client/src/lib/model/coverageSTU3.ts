@@ -19,25 +19,25 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface CoverageSTU3 { 
-    beneficiary?: Reference;
-    extension: Extension;
-    /**
-     * The dependent.
-     */
-    dependent?: string;
-    identifier?: Identifier;
-    meta: CoverageSTU3Meta;
-    payor?: Reference;
-    period?: Period;
-    relationship?: CodeableConcept;
-    /**
-     * <p>Financial Resource Status Code. The following values are supported:</p> <ul>   <li>active</li>   <li>cancelled</li>   <li>draft</li> </ul>
-     */
-    status?: string;
-    subscriber?: Reference;
-    /**
-     * Subscriber ID
-     */
-    subscriberId?: string;
+export interface CoverageSTU3 {
+  beneficiary?: Reference;
+  extension: Array<Extension>;
+  /**
+   * The dependent.
+   */
+  dependent?: string;
+  identifier?: Array<Identifier>;
+  meta: CoverageSTU3Meta;
+  payor?: Array<Reference>;
+  period?: Period;
+  relationship?: CodeableConcept;
+  /**
+   * <p>Financial Resource Status Code. The following values are supported:</p> <ul>   <li>active</li>   <li>cancelled</li>   <li>draft</li> </ul>
+   */
+  status?: string;
+  subscriber?: Reference;
+  /**
+   * Subscriber ID
+   */
+  subscriberId?: string;
 }

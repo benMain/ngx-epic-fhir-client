@@ -16,25 +16,25 @@ import { Extension } from './extension';
 /**
  * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
  */
-export interface Meta { 
-    id?: string;
-    /**
-     * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
-     */
-    extension?: Array<Extension>;
-    versionId?: string;
-    lastUpdated?: string;
-    source?: string;
-    /**
-     * A list of profiles (references to [[[StructureDefinition]]] resources) that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].
-     */
-    profile?: Array<Canonical>;
-    /**
-     * Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.
-     */
-    security?: Array<Coding>;
-    /**
-     * Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.
-     */
-    tag?: Array<Coding>;
+export interface Meta {
+  id?: string;
+  /**
+   * May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
+   */
+  extension?: Array<Extension>;
+  versionId?: string;
+  lastUpdated?: string;
+  source?: string;
+  /**
+   * A list of profiles (references to [[[StructureDefinition]]] resources) that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].
+   */
+  profile?: Array<Canonical>;
+  /**
+   * Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.
+   */
+  security?: Array<Coding>;
+  /**
+   * Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.
+   */
+  tag?: Array<Coding>;
 }

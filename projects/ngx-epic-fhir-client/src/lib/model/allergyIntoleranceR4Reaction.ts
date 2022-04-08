@@ -11,17 +11,14 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * A Response Type
- */
-export interface AllergyIntoleranceR4Reaction { 
-    /**
-     * The name of the reaction.
-     */
-    description?: string;
-    manifestation?: CodeableConcept;
-    /**
-     * <p>The degree of the patient's reaction. Possible values are:</p> <li>mild</li> <li>moderate</li> <li>severe</li> </ul>
-     */
-    severity?: string;
+export interface AllergyIntoleranceR4Reaction {
+  /**
+   * The name of the reaction.
+   */
+  description?: string;
+  manifestation?: Array<CodeableConcept>;
+  /**
+   * <p>The degree of the patient's reaction. Possible values are:</p> <li>mild</li> <li>moderate</li> <li>severe</li> </ul>
+   */
+  severity?: string;
 }

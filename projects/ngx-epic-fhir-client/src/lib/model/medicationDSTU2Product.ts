@@ -14,6 +14,6 @@ import { CodeableConcept } from './codeableConcept';
 /**
  * <p>Information that only applies to products (not packages).</p>
  */
-export interface MedicationDSTU2Product { 
-    form: CodeableConcept;
+export interface MedicationDSTU2Product {
+  form: CodeableConcept;
 }

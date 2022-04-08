@@ -14,6 +14,6 @@ import { TaskR4 } from './taskR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryTaskR4 { 
-    resource?: TaskR4;
+export interface BundleEntryTaskR4 {
+  resource?: TaskR4;
 }

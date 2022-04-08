@@ -14,9 +14,9 @@ import { BundleEntryConsentSTU3 } from './bundleEntryConsentSTU3';
 /**
  * Contains a collection of resources.
  */
-export interface BundleConsentSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryConsentSTU3>;
+export interface BundleConsentSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryConsentSTU3>;
 }

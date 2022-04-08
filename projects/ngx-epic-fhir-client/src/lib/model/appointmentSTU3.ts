@@ -18,41 +18,41 @@ import { Reference } from './reference';
 /**
  * An instance of the STU3 Appointment resource.
  */
-export interface AppointmentSTU3 { 
-    extension: Extension;
-    appointmentType: CodeableConcept;
-    /**
-     * The appointment notes.
-     */
-    comment: string;
-    /**
-     * The date when the appointment was created.
-     */
-    created: string;
-    /**
-     * The appointment end time.
-     */
-    end: string;
-    identifier: Identifier;
-    meta: AppointmentSTU3Meta;
-    /**
-     * The estimated length of the appointment.
-     */
-    minutesDuration: any;
-    /**
-     * Patient, providers, and locations associated with the appointment.
-     */
-    participant?: any;
-    reason: CodeableConcept;
-    serviceType: CodeableConcept;
-    slot: Reference;
-    specialty: CodeableConcept;
-    /**
-     * The appointment start time.
-     */
-    start: string;
-    /**
-     * The appointment status.
-     */
-    status?: string;
+export interface AppointmentSTU3 {
+  extension: Array<Extension>;
+  appointmentType: CodeableConcept;
+  /**
+   * The appointment notes.
+   */
+  comment: string;
+  /**
+   * The date when the appointment was created.
+   */
+  created: string;
+  /**
+   * The appointment end time.
+   */
+  end: string;
+  identifier: Array<Identifier>;
+  meta: AppointmentSTU3Meta;
+  /**
+   * The estimated length of the appointment.
+   */
+  minutesDuration: any;
+  /**
+   * Patient, providers, and locations associated with the appointment.
+   */
+  participant?: Array<any>;
+  reason: Array<CodeableConcept>;
+  serviceType: Array<CodeableConcept>;
+  slot: Array<Reference>;
+  specialty: Array<CodeableConcept>;
+  /**
+   * The appointment start time.
+   */
+  start: string;
+  /**
+   * The appointment status.
+   */
+  status?: string;
 }

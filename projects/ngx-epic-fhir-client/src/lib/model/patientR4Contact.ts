@@ -11,19 +11,16 @@
  */
 import { Address } from './address';
 import { CodeableConcept } from './codeableConcept';
-import { PatientR4ContactName } from './patientR4ContactName';
+import { PatientR4Name } from './patientR4Name';
 import { Period } from './period';
 
-/**
- * Contact details.
- */
-export interface PatientR4Contact { 
-    address: Address;
-    name: PatientR4ContactName;
-    period: Period;
-    relationship: CodeableConcept;
-    /**
-     * A Response Type
-     */
-    telecom: any;
+export interface PatientR4Contact {
+  address?: Address;
+  name?: PatientR4Name;
+  period?: Period;
+  relationship?: Array<CodeableConcept>;
+  /**
+   * A Response Type
+   */
+  telecom?: Array<any>;
 }

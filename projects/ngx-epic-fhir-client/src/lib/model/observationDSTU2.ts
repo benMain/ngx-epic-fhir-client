@@ -18,39 +18,45 @@ import { Reference } from './reference';
 /**
  * A single Observation FHIR resource.
  */
-export interface ObservationDSTU2 { 
-    bodySite?: CodeableConcept;
-    code?: CodeableConcept;
-    /**
-     * Comments about the observation value.
-     */
-    comments?: string;
-    dataAbsentReason?: CodeableConcept;
-    /**
-     * Date the observation applies to.
-     */
-    effectiveDateTime?: string;
-    encounter?: Reference;
-    identifier: Identifier;
-    interpretation?: CodeableConcept;
-    /**
-     * Date/Time this result was documented or made available.
-     */
-    issued: string;
-    performer?: Reference;
-    referenceRange: ObservationDSTU2ReferenceRange;
-    related: ObservationDSTU2Related;
-    /**
-     * Status of the observation - hard coded to either Amended or Final depending on if the field has been corrected or not. Deleted observations will not be returned.
-     */
-    status?: string;
-    subject?: Reference;
-    /**
-     * Only one value[x] element will be returned - when a value has units we will use valueQuantity.
-     */
-    valueQuantity?: any;
-    /**
-     * Only one value[x] element will be returned - when we do not have a unit we will use valueString.
-     */
-    valueString?: string;
+export interface ObservationDSTU2 {
+  bodySite?: CodeableConcept;
+  code?: CodeableConcept;
+  /**
+   * Comments about the observation value.
+   */
+  comments?: string;
+  dataAbsentReason?: CodeableConcept;
+  /**
+   * Date the observation applies to.
+   */
+  effectiveDateTime?: string;
+  encounter?: Reference;
+  identifier: Array<Identifier>;
+  interpretation?: CodeableConcept;
+  /**
+   * Date/Time this result was documented or made available.
+   */
+  issued: string;
+  performer?: Array<Reference>;
+  /**
+   * A Response Type
+   */
+  referenceRange: Array<ObservationDSTU2ReferenceRange>;
+  /**
+   * A Response Type
+   */
+  related: Array<ObservationDSTU2Related>;
+  /**
+   * Status of the observation - hard coded to either Amended or Final depending on if the field has been corrected or not. Deleted observations will not be returned.
+   */
+  status?: string;
+  subject?: Reference;
+  /**
+   * Only one value[x] element will be returned - when a value has units we will use valueQuantity.
+   */
+  valueQuantity?: any;
+  /**
+   * Only one value[x] element will be returned - when we do not have a unit we will use valueString.
+   */
+  valueString?: string;
 }

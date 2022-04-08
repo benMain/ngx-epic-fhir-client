@@ -11,9 +11,6 @@
  */
 import { Reference } from './reference';
 
-/**
- * Member's ID from the coverage.
- */
-export interface ExplanationOfBenefitR4Insurance { 
-    coverage?: Reference;
+export interface ExplanationOfBenefitR4Insurance {
+  coverage?: Reference;
 }

@@ -11,15 +11,12 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * Each diagnosis on the claim will have an entry. Rx claims do not support diagnosis.
- */
-export interface ExplanationOfBenefitR4Diagnosis { 
-    diagnosisCodeableConcept?: CodeableConcept;
-    packageCode?: CodeableConcept;
-    /**
-     * The sequence ID.
-     */
-    sequence: any;
-    type?: CodeableConcept;
+export interface ExplanationOfBenefitR4Diagnosis {
+  diagnosisCodeableConcept?: CodeableConcept;
+  packageCode?: CodeableConcept;
+  /**
+   * The sequence ID.
+   */
+  sequence?: any;
+  type?: Array<CodeableConcept>;
 }

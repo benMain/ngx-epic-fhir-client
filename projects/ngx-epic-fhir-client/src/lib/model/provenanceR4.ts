@@ -15,15 +15,18 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface ProvenanceR4 { 
-    agent?: ProvenanceR4Agent;
-    /**
-     * Provenance FHIR ID.
-     */
-    id?: string;
-    /**
-     * Timestamp that the activity was recorded or updated.
-     */
-    recorded?: string;
-    target?: Reference;
+export interface ProvenanceR4 {
+  /**
+   * Actors involved, such as the author and transmitter.
+   */
+  agent?: Array<ProvenanceR4Agent>;
+  /**
+   * Provenance FHIR ID.
+   */
+  id?: string;
+  /**
+   * Timestamp that the activity was recorded or updated.
+   */
+  recorded?: string;
+  target?: Array<Reference>;
 }

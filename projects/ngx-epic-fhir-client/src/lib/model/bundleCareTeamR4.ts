@@ -14,9 +14,9 @@ import { BundleEntryCareTeamR4 } from './bundleEntryCareTeamR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleCareTeamR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryCareTeamR4>;
+export interface BundleCareTeamR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryCareTeamR4>;
 }

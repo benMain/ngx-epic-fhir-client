@@ -15,25 +15,25 @@ import { Reference } from './reference';
 /**
  * A single Goal resource.
  */
-export interface GoalDSTU2 { 
-    addresses: Reference;
-    author: Reference;
-    category: CodeableConcept;
-    /**
-     * What the goal entails. SNOMED code or other text describing the goal.
-     */
-    description?: string;
-    /**
-     * The Goal FHIR ID.
-     */
-    id?: string;
-    /**
-     * When pursuit of the goal begins.
-     */
-    startDate: string;
-    /**
-     * <p>The current status of the goal. The following values are supported:</p> <ul> <li>in-progress,</li> <li>achieved</li> <li>cancelled</li> </ul>
-     */
-    status?: string;
-    subject: Reference;
+export interface GoalDSTU2 {
+  addresses: Array<Reference>;
+  author: Reference;
+  category: Array<CodeableConcept>;
+  /**
+   * What the goal entails. SNOMED code or other text describing the goal.
+   */
+  description?: string;
+  /**
+   * The Goal FHIR ID.
+   */
+  id?: string;
+  /**
+   * When pursuit of the goal begins.
+   */
+  startDate: string;
+  /**
+   * <p>The current status of the goal. The following values are supported:</p> <ul> <li>in-progress,</li> <li>achieved</li> <li>cancelled</li> </ul>
+   */
+  status?: string;
+  subject: Reference;
 }

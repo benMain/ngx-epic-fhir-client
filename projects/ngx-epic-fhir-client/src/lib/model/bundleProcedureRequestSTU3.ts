@@ -14,9 +14,9 @@ import { BundleEntryProcedureRequestSTU3 } from './bundleEntryProcedureRequestST
 /**
  * Contains a collection of resources.
  */
-export interface BundleProcedureRequestSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryProcedureRequestSTU3>;
+export interface BundleProcedureRequestSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryProcedureRequestSTU3>;
 }

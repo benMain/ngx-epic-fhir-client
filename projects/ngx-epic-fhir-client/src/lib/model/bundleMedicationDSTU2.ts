@@ -14,9 +14,9 @@ import { BundleEntryMedicationDSTU2 } from './bundleEntryMedicationDSTU2';
 /**
  * Contains a collection of resources.
  */
-export interface BundleMedicationDSTU2 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryMedicationDSTU2>;
+export interface BundleMedicationDSTU2 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryMedicationDSTU2>;
 }

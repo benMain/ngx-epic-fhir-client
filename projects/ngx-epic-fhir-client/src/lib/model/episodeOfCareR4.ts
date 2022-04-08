@@ -19,20 +19,23 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface EpisodeOfCareR4 { 
-    extension: Extension;
-    diagnosis: EpisodeOfCareR4Diagnosis;
-    /**
-     * EpisodeOfCare FHIR ID
-     */
-    id?: string;
-    identifier?: Identifier;
-    patient?: Reference;
-    period?: Period;
-    /**
-     * The episode status of active, finished, or cancelled. These correspond to the Epic episode statuses of active, resolved, and deleted, respectively. 
-     */
-    status?: string;
-    team?: Reference;
-    type?: CodeableConcept;
+export interface EpisodeOfCareR4 {
+  extension: Array<Extension>;
+  /**
+   * Returns the list of diagnoses associated with the episode. Deleted episodes are not included.
+   */
+  diagnosis: Array<EpisodeOfCareR4Diagnosis>;
+  /**
+   * EpisodeOfCare FHIR ID
+   */
+  id?: string;
+  identifier?: Array<Identifier>;
+  patient?: Reference;
+  period?: Period;
+  /**
+   * The episode status of active, finished, or cancelled. These correspond to the Epic episode statuses of active, resolved, and deleted, respectively.
+   */
+  status?: string;
+  team?: Array<Reference>;
+  type?: Array<CodeableConcept>;
 }

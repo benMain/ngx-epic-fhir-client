@@ -14,12 +14,9 @@ import { Extension } from './extension';
 import { Period } from './period';
 import { Reference } from './reference';
 
-/**
- * List of participants involved in the encounter.
- */
-export interface EncounterR4Participant { 
-    individual?: Reference;
-    period: Period;
-    extension?: Extension;
-    type: CodeableConcept;
+export interface EncounterR4Participant {
+  individual?: Reference;
+  period?: Period;
+  extension?: Array<Extension>;
+  type?: Array<CodeableConcept>;
 }

@@ -16,23 +16,23 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 Condition resource.
  */
-export interface ConditionR4 { 
-    bodySite: CodeableConcept;
-    code: CodeableConcept;
-    encounter: Reference;
-    /**
-     * The condition FHIR ID
-     */
-    id?: string;
-    note: Annotation;
-    /**
-     * The date the condition began.
-     */
-    onsetDateTime: string;
-    /**
-     * The date the condition was recorded.
-     */
-    recordedDate: string;
-    recorder: Reference;
-    subject?: Reference;
+export interface ConditionR4 {
+  bodySite: Array<CodeableConcept>;
+  code: CodeableConcept;
+  encounter: Reference;
+  /**
+   * The condition FHIR ID
+   */
+  id?: string;
+  note: Array<Annotation>;
+  /**
+   * The date the condition began.
+   */
+  onsetDateTime: string;
+  /**
+   * The date the condition was recorded.
+   */
+  recordedDate: string;
+  recorder: Reference;
+  subject?: Reference;
 }

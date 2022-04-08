@@ -14,6 +14,6 @@ import { PatientSTU3 } from './patientSTU3';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryPatientSTU3 { 
-    resource?: PatientSTU3;
+export interface BundleEntryPatientSTU3 {
+  resource?: PatientSTU3;
 }

@@ -16,30 +16,33 @@ import { Reference } from './reference';
 /**
  * An instance of the R4 QuestionnaireResponse FHIR resource.
  */
-export interface QuestionnaireResponseR4 { 
-    /**
-     * <p>Date and time the answers were gathered (in UTC). The default is the current time.</p>
-     */
-    authored: string;
-    encounter: Reference;
-    /**
-     * Identifier for this QuestionnaireResponse resource.
-     */
-    id?: string;
-    identifier?: Identifier;
-    item: QuestionnaireResponseR4Item;
-    /**
-     * Language the questionnaire was answered in. For questionnaire response records that do not list the submission language, no language code is returned. 
-     */
-    language: string;
-    /**
-     * <p>The FHIR questionnaire.</p>
-     */
-    questionnaire: string;
-    source: Reference;
-    /**
-     * <p>Set to In-progress, unless all questionnaires are answered. If all questionnaires are answered, set to Completed.</p>
-     */
-    status?: string;
-    subject: Reference;
+export interface QuestionnaireResponseR4 {
+  /**
+   * <p>Date and time the answers were gathered (in UTC). The default is the current time.</p>
+   */
+  authored: string;
+  encounter: Reference;
+  /**
+   * Identifier for this QuestionnaireResponse resource.
+   */
+  id?: string;
+  identifier?: Identifier;
+  /**
+   * <p>Answers to the questions in the questionnaire.</p>
+   */
+  item: Array<QuestionnaireResponseR4Item>;
+  /**
+   * Language the questionnaire was answered in. For questionnaire response records that do not list the submission language, no language code is returned.
+   */
+  language: string;
+  /**
+   * <p>The FHIR questionnaire.</p>
+   */
+  questionnaire: string;
+  source: Reference;
+  /**
+   * <p>Set to In-progress, unless all questionnaires are answered. If all questionnaires are answered, set to Completed.</p>
+   */
+  status?: string;
+  subject: Reference;
 }

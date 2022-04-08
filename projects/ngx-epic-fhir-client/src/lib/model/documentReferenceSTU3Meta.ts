@@ -13,9 +13,9 @@
 /**
  * The document metadata.
  */
-export interface DocumentReferenceSTU3Meta { 
-    /**
-     * Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/IHE.MHD.Minimal.DocumentReference
-     */
-    profile: string;
+export interface DocumentReferenceSTU3Meta {
+  /**
+   * Available in Netherlands environments only. This environment shows that this API conforms to the profile connected to the following canonical url: http://nictiz.nl/fhir/StructureDefinition/IHE.MHD.Minimal.DocumentReference
+   */
+  profile: string;
 }

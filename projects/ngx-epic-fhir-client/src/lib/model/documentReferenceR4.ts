@@ -10,42 +10,45 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
+import { DocumentReferenceR4Context } from './documentReferenceR4Context';
 import { DocumentReferenceSTU3Content } from './documentReferenceSTU3Content';
-import { DocumentReferenceSTU3Context } from './documentReferenceSTU3Context';
 import { Identifier } from './identifier';
 import { Reference } from './reference';
 
 /**
  * An instance of the R4 DocumentReference resource.
  */
-export interface DocumentReferenceR4 { 
-    authenticator: Reference;
-    author: Reference;
-    category?: CodeableConcept;
-    content?: DocumentReferenceSTU3Content;
-    context: DocumentReferenceSTU3Context;
-    /**
-     * The instant when the study was finalized. If the study was addended, returns the instant when the last addendum was finalized.
-     */
-    date?: string;
-    /**
-     * The name of the procedure.
-     */
-    description: string;
-    /**
-     * If the study is addended, returns \"amended\". Otherwise, returns \"final\".
-     */
-    docStatus: string;
-    /**
-     * The DocumentReference FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    masterIdentifier?: Identifier;
-    /**
-     * The status of the result. Always \"current\".
-     */
-    status?: string;
-    subject?: Reference;
-    type?: CodeableConcept;
+export interface DocumentReferenceR4 {
+  authenticator: Reference;
+  author: Array<Reference>;
+  category?: Array<CodeableConcept>;
+  /**
+   * Where to access the document.
+   */
+  content?: Array<DocumentReferenceSTU3Content>;
+  context: DocumentReferenceR4Context;
+  /**
+   * The instant when the study was finalized. If the study was addended, returns the instant when the last addendum was finalized.
+   */
+  date?: string;
+  /**
+   * The name of the procedure.
+   */
+  description: string;
+  /**
+   * If the study is addended, returns \"amended\". Otherwise, returns \"final\".
+   */
+  docStatus: string;
+  /**
+   * The DocumentReference FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  masterIdentifier?: Identifier;
+  /**
+   * The status of the result. Always \"current\".
+   */
+  status?: string;
+  subject?: Reference;
+  type?: CodeableConcept;
 }

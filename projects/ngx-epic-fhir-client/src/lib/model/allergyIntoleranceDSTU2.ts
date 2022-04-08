@@ -17,34 +17,37 @@ import { Reference } from './reference';
 /**
  * A single AllergyIntolerance resource.
  */
-export interface AllergyIntoleranceDSTU2 { 
-    /**
-     * Refers to food, medication, or environmental allergies.
-     */
-    category: string;
-    /**
-     * Refers to the risk of clinical harm of a reaction to the substance.
-     */
-    criticality: string;
-    /**
-     * The AllergyIntolerance FHIR ID.
-     */
-    id?: string;
-    note: Annotation;
-    /**
-     * Date allergy was first noticed.
-     */
-    onset?: string;
-    patient?: Reference;
-    reaction?: AllergyIntoleranceDSTU2Reaction;
-    /**
-     * The date the allergy was added to the patient.
-     */
-    recordedDate: string;
-    recorder: Reference;
-    /**
-     * Confirmation status of the resource. The only options we will send for this field will be \"confirmed\" for active allergies or \"resolved\" for expired allergies. Otherwise, we will send nothing.
-     */
-    status: string;
-    substance?: CodeableConcept;
+export interface AllergyIntoleranceDSTU2 {
+  /**
+   * Refers to food, medication, or environmental allergies.
+   */
+  category: string;
+  /**
+   * Refers to the risk of clinical harm of a reaction to the substance.
+   */
+  criticality: string;
+  /**
+   * The AllergyIntolerance FHIR ID.
+   */
+  id?: string;
+  note: Annotation;
+  /**
+   * Date allergy was first noticed.
+   */
+  onset?: string;
+  patient?: Reference;
+  /**
+   * List of known reactions the patient had to the substance.
+   */
+  reaction?: Array<AllergyIntoleranceDSTU2Reaction>;
+  /**
+   * The date the allergy was added to the patient.
+   */
+  recordedDate: string;
+  recorder: Reference;
+  /**
+   * Confirmation status of the resource. The only options we will send for this field will be \"confirmed\" for active allergies or \"resolved\" for expired allergies. Otherwise, we will send nothing.
+   */
+  status: string;
+  substance?: CodeableConcept;
 }

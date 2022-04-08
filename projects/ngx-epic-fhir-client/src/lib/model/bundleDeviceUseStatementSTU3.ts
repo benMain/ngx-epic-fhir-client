@@ -14,9 +14,9 @@ import { BundleEntryDeviceUseStatementSTU3 } from './bundleEntryDeviceUseStateme
 /**
  * Contains a collection of resources.
  */
-export interface BundleDeviceUseStatementSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryDeviceUseStatementSTU3>;
+export interface BundleDeviceUseStatementSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryDeviceUseStatementSTU3>;
 }

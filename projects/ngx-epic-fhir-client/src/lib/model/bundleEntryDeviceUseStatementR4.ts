@@ -14,6 +14,6 @@ import { DeviceUseStatementR4 } from './deviceUseStatementR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryDeviceUseStatementR4 { 
-    resource?: DeviceUseStatementR4;
+export interface BundleEntryDeviceUseStatementR4 {
+  resource?: DeviceUseStatementR4;
 }

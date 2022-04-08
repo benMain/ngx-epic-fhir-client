@@ -14,6 +14,6 @@ import { LocationR4 } from './locationR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryLocationR4 { 
-    resource?: LocationR4;
+export interface BundleEntryLocationR4 {
+  resource?: LocationR4;
 }

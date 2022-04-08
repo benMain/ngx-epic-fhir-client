@@ -14,10 +14,10 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface RelatedPersonR4 { 
-    /**
-     * <p>The name of the RelatedPerson.</p>
-     */
-    name: any;
-    patient?: Reference;
+export interface RelatedPersonR4 {
+  /**
+   * <p>The name of the RelatedPerson.</p>
+   */
+  name: Array<any>;
+  patient?: Reference;
 }

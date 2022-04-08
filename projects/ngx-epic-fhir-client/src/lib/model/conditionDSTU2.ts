@@ -15,34 +15,34 @@ import { Reference } from './reference';
 /**
  * A single Condition resource.
  */
-export interface ConditionDSTU2 { 
-    /**
-     * Date the problem was resolved.
-     */
-    abatementDateTime: string;
-    asserter?: Reference;
-    category?: CodeableConcept;
-    /**
-     * The status of the problem. Can be active, inactive, or resolved. 
-     */
-    clinicalStatus?: string;
-    code?: CodeableConcept;
-    /**
-     * Date the problem was added to the patient’s chart.
-     */
-    dateRecorded: string;
-    /**
-     * The Condition FHIR ID.
-     */
-    id?: string;
-    /**
-     * Free text comment.
-     */
-    notes?: string;
-    /**
-     * Date the problem began.
-     */
-    onsetDateTime?: string;
-    patient?: Reference;
-    severity?: CodeableConcept;
+export interface ConditionDSTU2 {
+  /**
+   * Date the problem was resolved.
+   */
+  abatementDateTime: string;
+  asserter?: Reference;
+  category?: CodeableConcept;
+  /**
+   * The status of the problem. Can be active, inactive, or resolved.
+   */
+  clinicalStatus?: string;
+  code?: CodeableConcept;
+  /**
+   * Date the problem was added to the patient’s chart.
+   */
+  dateRecorded: string;
+  /**
+   * The Condition FHIR ID.
+   */
+  id?: string;
+  /**
+   * Free text comment.
+   */
+  notes?: string;
+  /**
+   * Date the problem began.
+   */
+  onsetDateTime?: string;
+  patient?: Reference;
+  severity?: CodeableConcept;
 }

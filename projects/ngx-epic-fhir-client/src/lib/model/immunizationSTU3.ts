@@ -22,47 +22,50 @@ import { Reference } from './reference';
 /**
  * A single Immunization resource.
  */
-export interface ImmunizationSTU3 { 
-    /**
-     * Vaccination administration date and time (if available).
-     */
-    date: string;
-    doseQuantity: ImmunizationDSTU2DoseQuantity;
-    encounter: Reference;
-    /**
-     * Vaccine expiration date.
-     */
-    expirationDate: string;
-    explanation: ImmunizationDSTU2Explanation;
-    /**
-     * The Immunization FHIR ID.
-     */
-    id?: string;
-    identifier: Identifier;
-    extension: Extension;
-    location: Reference;
-    /**
-     * Vaccine lot number.
-     */
-    lotNumber: string;
-    manufacturer: Reference;
-    meta: ImmunizationSTU3Meta;
-    note: Annotation;
-    /**
-     * Flag for whether the immunization was given.
-     */
-    notGiven: boolean;
-    patient?: Reference;
-    practitioner: ImmunizationSTU3Practitioner;
-    /**
-     * Whether the immunization data is historical and therefore reported by a patient or another system. If historical, \"false\" is returned as this system is not the primary source of the data. 
-     */
-    primarySource?: boolean;
-    route: CodeableConcept;
-    site: CodeableConcept;
-    /**
-     * <p>Status of the Immunization. Possible values are:</p> <ul> <li>completed</li> <li>entered-in-error</li> </ul> <p>*Note: deferred and incomplete Immunizations are not returned.</p>
-     */
-    status?: string;
-    vaccineCode?: CodeableConcept;
+export interface ImmunizationSTU3 {
+  /**
+   * Vaccination administration date and time (if available).
+   */
+  date: string;
+  doseQuantity: ImmunizationDSTU2DoseQuantity;
+  encounter: Reference;
+  /**
+   * Vaccine expiration date.
+   */
+  expirationDate: string;
+  explanation: ImmunizationDSTU2Explanation;
+  /**
+   * The Immunization FHIR ID.
+   */
+  id?: string;
+  identifier: Array<Identifier>;
+  extension: Array<Extension>;
+  location: Reference;
+  /**
+   * Vaccine lot number.
+   */
+  lotNumber: string;
+  manufacturer: Reference;
+  meta: ImmunizationSTU3Meta;
+  note: Array<Annotation>;
+  /**
+   * Flag for whether the immunization was given.
+   */
+  notGiven: boolean;
+  patient?: Reference;
+  /**
+   * Reference to a Practitioner that participated in the Immunization and the role they played in the interaction.
+   */
+  practitioner: Array<ImmunizationSTU3Practitioner>;
+  /**
+   * Whether the immunization data is historical and therefore reported by a patient or another system. If historical, \"false\" is returned as this system is not the primary source of the data.
+   */
+  primarySource?: boolean;
+  route: CodeableConcept;
+  site: CodeableConcept;
+  /**
+   * <p>Status of the Immunization. Possible values are:</p> <ul> <li>completed</li> <li>entered-in-error</li> </ul> <p>*Note: deferred and incomplete Immunizations are not returned.</p>
+   */
+  status?: string;
+  vaccineCode?: CodeableConcept;
 }

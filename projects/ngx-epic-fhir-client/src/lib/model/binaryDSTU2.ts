@@ -13,13 +13,13 @@
 /**
  * A Response Type
  */
-export interface BinaryDSTU2 { 
-    /**
-     * <p>The actual content.</p>
-     */
-    content?: string;
-    /**
-     * <p>MimeType of the binary content. This is always \"application/xml\" as CDA documents are the only Binary content supported.</p>
-     */
-    contentType?: string;
+export interface BinaryDSTU2 {
+  /**
+   * <p>The actual content.</p>
+   */
+  content?: string;
+  /**
+   * <p>MimeType of the binary content. This is always \"application/xml\" as CDA documents are the only Binary content supported.</p>
+   */
+  contentType?: string;
 }

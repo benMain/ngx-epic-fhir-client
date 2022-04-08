@@ -14,6 +14,6 @@ import { CareTeamR4 } from './careTeamR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryCareTeamR4 { 
-    resource?: CareTeamR4;
+export interface BundleEntryCareTeamR4 {
+  resource?: CareTeamR4;
 }

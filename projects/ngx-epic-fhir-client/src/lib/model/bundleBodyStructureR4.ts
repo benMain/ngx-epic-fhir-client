@@ -14,9 +14,9 @@ import { BundleEntryBodyStructureR4 } from './bundleEntryBodyStructureR4';
 /**
  * Contains a collection of resources.
  */
-export interface BundleBodyStructureR4 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryBodyStructureR4>;
+export interface BundleBodyStructureR4 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryBodyStructureR4>;
 }

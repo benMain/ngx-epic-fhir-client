@@ -11,25 +11,22 @@
  */
 import { CodeableConcept } from './codeableConcept';
 
-/**
- * A Response Type
- */
-export interface ObservationDSTU2ReferenceRange { 
-    /**
-     * Age range.
-     */
-    age?: any;
-    /**
-     * High range.
-     */
-    high?: any;
-    /**
-     * Low range.
-     */
-    low?: any;
-    meaning?: CodeableConcept;
-    /**
-     * Text based reference range.
-     */
-    text?: string;
+export interface ObservationDSTU2ReferenceRange {
+  /**
+   * Age range.
+   */
+  age?: any;
+  /**
+   * High range.
+   */
+  high?: any;
+  /**
+   * Low range.
+   */
+  low?: any;
+  meaning?: CodeableConcept;
+  /**
+   * Text based reference range.
+   */
+  text?: string;
 }

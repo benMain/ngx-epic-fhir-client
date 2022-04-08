@@ -14,6 +14,6 @@ import { DiagnosticReportR4 } from './diagnosticReportR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryDiagnosticReportR4 { 
-    resource?: DiagnosticReportR4;
+export interface BundleEntryDiagnosticReportR4 {
+  resource?: DiagnosticReportR4;
 }

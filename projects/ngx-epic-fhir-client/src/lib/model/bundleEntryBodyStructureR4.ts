@@ -14,6 +14,6 @@ import { BodyStructureR4 } from './bodyStructureR4';
 /**
  * Entry in the bundle.
  */
-export interface BundleEntryBodyStructureR4 { 
-    resource?: BodyStructureR4;
+export interface BundleEntryBodyStructureR4 {
+  resource?: BodyStructureR4;
 }

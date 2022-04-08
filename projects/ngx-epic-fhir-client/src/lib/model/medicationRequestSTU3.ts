@@ -21,40 +21,43 @@ import { Reference } from './reference';
 /**
  * A Response Type
  */
-export interface MedicationRequestSTU3 { 
-    /**
-     * The date the prescription was written.
-     */
-    authoredOn?: string;
-    category?: CodeableConcept;
-    /**
-     * Contains resources referenced from the supportingInformation element. Currently, body weight and height Observations are supported (LOINC 8302-2 for height and LOINC 29463-7 for weight).
-     */
-    contained?: any;
-    /**
-     * Medication supply authorization.
-     */
-    dispenseRequest?: any;
-    dosageInstruction?: MedicationRequestSTU3DosageInstruction;
-    groupIdentifier?: Identifier;
-    identifier?: Identifier;
-    /**
-     * Hardcoded to \"order\".
-     */
-    intent?: string;
-    medicationCodeableConcept?: CodeableConcept;
-    medicationReference?: Reference;
-    note?: Annotation;
-    extension?: Extension;
-    priorPrescription?: Reference;
-    recorder?: Reference;
-    requester?: MedicationRequestSTU3Requester;
-    /**
-     * The status of the medication request.
-     */
-    status?: string;
-    modifierExtension?: Extension;
-    subject?: Reference;
-    substitution?: MedicationRequestSTU3Substitution;
-    supportingInformation?: Reference;
+export interface MedicationRequestSTU3 {
+  /**
+   * The date the prescription was written.
+   */
+  authoredOn?: string;
+  category?: CodeableConcept;
+  /**
+   * Contains resources referenced from the supportingInformation element. Currently, body weight and height Observations are supported (LOINC 8302-2 for height and LOINC 29463-7 for weight).
+   */
+  contained?: Array<any>;
+  /**
+   * Medication supply authorization.
+   */
+  dispenseRequest?: any;
+  /**
+   * A Response Type
+   */
+  dosageInstruction?: Array<MedicationRequestSTU3DosageInstruction>;
+  groupIdentifier?: Identifier;
+  identifier?: Array<Identifier>;
+  /**
+   * Hardcoded to \"order\".
+   */
+  intent?: string;
+  medicationCodeableConcept?: CodeableConcept;
+  medicationReference?: Reference;
+  note?: Array<Annotation>;
+  extension?: Array<Extension>;
+  priorPrescription?: Reference;
+  recorder?: Reference;
+  requester?: MedicationRequestSTU3Requester;
+  /**
+   * The status of the medication request.
+   */
+  status?: string;
+  modifierExtension?: Array<Extension>;
+  subject?: Reference;
+  substitution?: MedicationRequestSTU3Substitution;
+  supportingInformation?: Array<Reference>;
 }

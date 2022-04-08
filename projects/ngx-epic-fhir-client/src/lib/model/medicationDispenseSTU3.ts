@@ -18,21 +18,27 @@ import { MedicationDispenseSTU3Meta } from './medicationDispenseSTU3Meta';
 import { Reference } from './reference';
 
 /**
- * A single instance of the MedicationDispense resource. 
+ * A single instance of the MedicationDispense resource.
  */
-export interface MedicationDispenseSTU3 { 
-    extension: Extension;
-    authorizingPrescription: Reference;
-    category?: CodeableConcept;
-    context: Reference;
-    dosageInstruction?: MedicationDispenseSTU3DosageInstruction;
-    identifier: Identifier;
-    medicationReference?: Reference;
-    meta: MedicationDispenseSTU3Meta;
-    performer: MedicationDispenseR4Performer;
-    /**
-     * <p>The status of the medication dispense. Can be either:</p> <ul> <li>Completed</li> <li>Entered-in-error</li> </ul>
-     */
-    status: string;
-    subject?: Reference;
+export interface MedicationDispenseSTU3 {
+  extension: Array<Extension>;
+  authorizingPrescription: Array<Reference>;
+  category?: CodeableConcept;
+  context: Reference;
+  /**
+   * A Response Type
+   */
+  dosageInstruction?: Array<MedicationDispenseSTU3DosageInstruction>;
+  identifier: Array<Identifier>;
+  medicationReference?: Reference;
+  meta: MedicationDispenseSTU3Meta;
+  /**
+   * The organization where the medication was verified.
+   */
+  performer: Array<MedicationDispenseR4Performer>;
+  /**
+   * <p>The status of the medication dispense. Can be either:</p> <ul> <li>Completed</li> <li>Entered-in-error</li> </ul>
+   */
+  status: string;
+  subject?: Reference;
 }

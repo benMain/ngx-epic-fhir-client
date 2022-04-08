@@ -14,9 +14,9 @@ import { BundleEntryImmunizationRecommendationSTU3 } from './bundleEntryImmuniza
 /**
  * Contains a collection of resources.
  */
-export interface BundleImmunizationRecommendationSTU3 { 
-    /**
-     * Entry in the bundle.
-     */
-    entry?: Array<BundleEntryImmunizationRecommendationSTU3>;
+export interface BundleImmunizationRecommendationSTU3 {
+  /**
+   * Entry in the bundle.
+   */
+  entry?: Array<BundleEntryImmunizationRecommendationSTU3>;
 }

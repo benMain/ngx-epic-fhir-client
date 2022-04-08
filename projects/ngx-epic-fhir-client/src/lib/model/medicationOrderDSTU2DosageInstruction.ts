@@ -10,25 +10,22 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { MedicationOrderDSTU2DosageInstructionDoseQuantity } from './medicationOrderDSTU2DosageInstructionDoseQuantity';
-import { MedicationOrderDSTU2DosageInstructionDoseRange } from './medicationOrderDSTU2DosageInstructionDoseRange';
-import { MedicationOrderDSTU2DosageInstructionTiming } from './medicationOrderDSTU2DosageInstructionTiming';
+import { MedicationOrderDSTU2DoseQuantity } from './medicationOrderDSTU2DoseQuantity';
+import { MedicationOrderDSTU2DoseRange } from './medicationOrderDSTU2DoseRange';
+import { MedicationOrderDSTU2Timing } from './medicationOrderDSTU2Timing';
 
-/**
- * Indicates how the medication is to be used by the patient.
- */
-export interface MedicationOrderDSTU2DosageInstruction { 
-    /**
-     * If set to true, indicates that the medication is only taken when needed within the specified schedule rather than at every scheduled dose.
-     */
-    asNeededBoolean: boolean;
-    doseQuantity?: MedicationOrderDSTU2DosageInstructionDoseQuantity;
-    doseRange?: MedicationOrderDSTU2DosageInstructionDoseRange;
-    method?: CodeableConcept;
-    route?: CodeableConcept;
-    /**
-     * Free text dosage instructions can be used for cases where the instructions are too complex to code. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication.
-     */
-    text?: string;
-    timing?: MedicationOrderDSTU2DosageInstructionTiming;
+export interface MedicationOrderDSTU2DosageInstruction {
+  /**
+   * If set to true, indicates that the medication is only taken when needed within the specified schedule rather than at every scheduled dose.
+   */
+  asNeededBoolean?: boolean;
+  doseQuantity?: MedicationOrderDSTU2DoseQuantity;
+  doseRange?: MedicationOrderDSTU2DoseRange;
+  method?: CodeableConcept;
+  route?: CodeableConcept;
+  /**
+   * Free text dosage instructions can be used for cases where the instructions are too complex to code. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication.
+   */
+  text?: string;
+  timing?: MedicationOrderDSTU2Timing;
 }

@@ -10,40 +10,37 @@
  * Do not edit the class manually.
  */
 
-/**
- * Parameter that controlled the expansion process.
- */
-export interface ValueSetR4ExpansionParameter { 
-    /**
-     * Parameter name as assigned by the client or server.
-     */
-    name?: string;
-    /**
-     * Parameter value.
-     */
-    valueBoolean: boolean;
-    /**
-     * Parameter value.
-     */
-    valueCode: string;
-    /**
-     * Parameter value.
-     */
-    valueDateTime: string;
-    /**
-     * Parameter value.
-     */
-    valueDecimal: any;
-    /**
-     * Parameter value.
-     */
-    valueInteger: any;
-    /**
-     * Parameter value.
-     */
-    valueString: string;
-    /**
-     * Parameter value.
-     */
-    valueUri: string;
+export interface ValueSetR4ExpansionParameter {
+  /**
+   * Parameter name as assigned by the client or server.
+   */
+  name?: string;
+  /**
+   * Parameter value.
+   */
+  valueBoolean?: boolean;
+  /**
+   * Parameter value.
+   */
+  valueCode?: string;
+  /**
+   * Parameter value.
+   */
+  valueDateTime?: string;
+  /**
+   * Parameter value.
+   */
+  valueDecimal?: any;
+  /**
+   * Parameter value.
+   */
+  valueInteger?: any;
+  /**
+   * Parameter value.
+   */
+  valueString?: string;
+  /**
+   * Parameter value.
+   */
+  valueUri?: string;
 }

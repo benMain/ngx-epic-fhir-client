@@ -10,31 +10,31 @@
  * Do not edit the class manually.
  */
 import { CodeableConcept } from './codeableConcept';
-import { MedicationRequestR4DosageInstructionDoseAndRate } from './medicationRequestR4DosageInstructionDoseAndRate';
-import { MedicationRequestR4DosageInstructionTiming } from './medicationRequestR4DosageInstructionTiming';
+import { MedicationRequestR4DoseAndRate } from './medicationRequestR4DoseAndRate';
+import { MedicationRequestR4Timing } from './medicationRequestR4Timing';
 
-/**
- * Dosage instruction details.
- */
-export interface MedicationRequestR4DosageInstruction { 
-    /**
-     * Whether the frequency is PRN.
-     */
-    asNeededBoolean: boolean;
-    doseAndRate: MedicationRequestR4DosageInstructionDoseAndRate;
-    method: CodeableConcept;
-    /**
-     * <p>The patient instructions for the prescription.</p> <p>For a multi-line sig, this is the same.</p>
-     */
-    patientInstruction: string;
-    route: CodeableConcept;
-    /**
-     * This element is populated only for multi-line sigs.
-     */
-    sequence: any;
-    /**
-     * <p>The patient instructions for the prescription.</p> <p>For a multi-line sig, this is the same.</p>
-     */
-    text: string;
-    timing: MedicationRequestR4DosageInstructionTiming;
+export interface MedicationRequestR4DosageInstruction {
+  /**
+   * Whether the frequency is PRN.
+   */
+  asNeededBoolean?: boolean;
+  /**
+   * A Response Type
+   */
+  doseAndRate?: Array<MedicationRequestR4DoseAndRate>;
+  method?: CodeableConcept;
+  /**
+   * <p>The patient instructions for the prescription.</p> <p>For a multi-line sig, this is the same.</p>
+   */
+  patientInstruction?: string;
+  route?: CodeableConcept;
+  /**
+   * This element is populated only for multi-line sigs.
+   */
+  sequence?: any;
+  /**
+   * <p>The patient instructions for the prescription.</p> <p>For a multi-line sig, this is the same.</p>
+   */
+  text?: string;
+  timing?: MedicationRequestR4Timing;
 }
