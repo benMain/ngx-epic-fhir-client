@@ -33,7 +33,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatFormFieldModule,
     MatInputModule,
     EpicOnFhirModule.forRoot(
-      forRootInitializer('cf9940a1-aad3-4dc9-80cc-58ed6fcc33d2', true)
+      forRootInitializer('cf9940a1-aad3-4dc9-80cc-58ed6fcc33d2')
     ),
   ],
   providers: [],

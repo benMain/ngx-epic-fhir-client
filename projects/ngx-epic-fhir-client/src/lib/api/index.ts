@@ -148,5 +148,3 @@ export * from './updateCommunityResourceR4.service';
 export * from './updateLDAWR4.service';
 export * from './updateLDAWSTU3.service';
 export * from './valueSet.service';
-export * from './localStorage.service';
-export * from './oauth.service';

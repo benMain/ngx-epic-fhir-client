@@ -53,14 +53,34 @@ export class AppComponent implements OnInit {
     private readonly oauthService: OAuthService,
     private readonly appointmentService: AppointmentService,
     private readonly practitionerService: PractitionerService
-  ) { }
+  ) {}
   async ngOnInit() {
-    const patientId = this.oauthService.oAuthToken.patient ?? '';
+    const patientId =
+      this.oauthService.oAuthToken.patient ?? 'erXuFYUfucBZaryVksYEcMg3';
     console.log(JSON.stringify(this.oauthService.oAuthToken));
-    this.patient = await firstValueFrom(
-      this.patientService.patientReadSTU3(patientId)
-    );
-    const address = this.patient.address?.find((x) => !!x);
+    if (!!patientId) {
+      this.patient = await firstValueFrom(
+        this.patientService.patientReadSTU3(patientId)
+      );
+    } else {
+      // family=lufhir&given=kazuya&birthdate=1986-02-23
+      this.patient = (
+        await firstValueFrom(
+          this.patientService.patientSearchR4(
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            '1987-11-09',
+            'lopez',
+            undefined,
+            'camilla'
+          )
+        )
+      ).entry?.find((x) => !!x) as any;
+    }
+
+    const address = this.patient?.address?.find((x) => !!x);
     const appointmentsBundle = await firstValueFrom(
       this.appointmentService.appointmentSearchSTU3(`Patient/${patientId}`)
     );
@@ -80,7 +100,7 @@ export class AppComponent implements OnInit {
     // const practitioner = await firstValueFrom(this.practitionerService.practitionerReadSTU3(practitionerId));
     // console.log(JSON.stringify(practitioner));
     this.voluntaryAlignmentForm.patchValue({
-      firstName: this.patient.name
+      firstName: this.patient?.name
         ?.find((x) => x.use === 'official')
         ?.given?.find((x) => !!x),
     });

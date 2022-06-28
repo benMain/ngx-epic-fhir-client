@@ -1,8 +1,5 @@
-import { OAuthService } from './api';
-import { EpicOAuthToken } from './model';
+import { OAuthService } from './services';
 
-export function appInitializerFactory(
-  service: OAuthService
-): () => Promise<EpicOAuthToken> {
+export function appInitializerFactory(service: OAuthService): () => void {
   return () => service.checkRunAuthWorkflow();
 }
