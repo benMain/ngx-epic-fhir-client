@@ -5,3 +5,5 @@ export * from './lib/api.module';
 export * from './lib/configuration';
 export * from './lib/model';
 export * from './lib/api';
+export * from './lib/services';
+export * from './lib/components';

@@ -11,7 +11,6 @@ export interface ConfigurationParameters {
   redirectUri: string;
   authCode?: string;
   authCodeState?: string;
-  embeddedApp: boolean;
 }
 
 export class Configuration {
@@ -27,7 +26,6 @@ export class Configuration {
   redirectUri: string;
   authCode?: string;
   authCodeState?: string;
-  embeddedApp: boolean;
 
   constructor(configurationParameters: ConfigurationParameters = {} as any) {
     this.apiKeys = configurationParameters.apiKeys;
@@ -42,7 +40,6 @@ export class Configuration {
     this.redirectUri = configurationParameters.redirectUri;
     this.authCode = configurationParameters.authCode;
     this.authCodeState = configurationParameters.authCodeState;
-    this.embeddedApp = configurationParameters.embeddedApp;
   }
 
   /**

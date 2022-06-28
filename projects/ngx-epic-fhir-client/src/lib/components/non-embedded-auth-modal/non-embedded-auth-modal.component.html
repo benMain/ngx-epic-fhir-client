@@ -1,0 +1,21 @@
+<dialog id="serverModal">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">EPIC Server Selection</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="dismiss()">Exit</button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="FhirRevision4Server">R4 Server</label>
+        <select name="FhirRevision4Server" id="FhirRevision4Server" [(ngModel)]="validR4Endpoint">
+        <option *ngFor="let endpoint of r4Endpoints"[ngValue]="endpoint">
+          {{ endpoint.name }}
+        </option>
+      </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="dismiss()">Proceed</button>
+  </div>
+</dialog>

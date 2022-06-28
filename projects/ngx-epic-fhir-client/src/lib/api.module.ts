@@ -158,17 +158,19 @@ import { UpdateCommunityResourceR4Service } from './api/updateCommunityResourceR
 import { UpdateLDAWR4Service } from './api/updateLDAWR4.service';
 import { UpdateLDAWSTU3Service } from './api/updateLDAWSTU3.service';
 import { ValueSetService } from './api/valueSet.service';
-import { OAuthService } from './api/oauth.service';
+import { OAuthService, LocalStorageService, ModalService } from './services';
 import { appInitializerFactory } from './app-initializer';
-import { LocalStorageService } from './api';
+import { NonEmbeddedAuthModalComponent } from './components';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [],
-  declarations: [],
+  imports: [FormsModule],
+  declarations: [NonEmbeddedAuthModalComponent],
   exports: [],
   providers: [
     OAuthService,
     LocalStorageService,
+    ModalService,
     {
       provide: APP_INITIALIZER,
       useFactory: appInitializerFactory,
@@ -364,22 +366,16 @@ export class EpicOnFhirModule {
  * @returns
  */
 
-export function forRootInitializer(
-  epicClientId: string,
-  isAppEmbedded: boolean,
-  issUrl?: string,
-  redirectUri?: string
-) {
+export function forRootInitializer(epicClientId: string, redirectUri?: string) {
   return () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params: ConfigurationParameters = {
-      issUrl: issUrl ?? urlSearchParams.get('iss') ?? undefined,
+      issUrl: urlSearchParams.get('iss') ?? undefined,
       launchCode: urlSearchParams.get('launch') ?? undefined,
       epicClientId: epicClientId,
       redirectUri: redirectUri ?? window.location.origin,
       authCode: urlSearchParams.get('code') ?? undefined,
       authCodeState: urlSearchParams.get('state') ?? undefined,
-      embeddedApp: isAppEmbedded, // Embedded Or StandAlone
     };
     return new Configuration(params);
   };

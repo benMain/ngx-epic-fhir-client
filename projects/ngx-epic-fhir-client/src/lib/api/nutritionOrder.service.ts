@@ -27,7 +27,7 @@ import { BundleNutritionOrderSTU3 } from '../model/bundleNutritionOrderSTU3';
 import { NutritionOrderR4 } from '../model/nutritionOrderR4';
 import { NutritionOrderSTU3 } from '../model/nutritionOrderSTU3';
 
-import { BASE_PATH, COLLECTION_FORMATS } from '../variables';
+import { BASE_PATH } from '../variables';
 import { Configuration } from '../configuration';
 
 @Injectable()
